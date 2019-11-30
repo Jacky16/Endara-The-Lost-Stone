@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerLifeManager : MonoBehaviour
 {
-    private int myLife = 100;
+    [SerializeField] float myLife = 100;
     private PlayerMovement player;
     [SerializeField] Image imageLife;
 
@@ -17,7 +17,7 @@ public class PlayerLifeManager : MonoBehaviour
 
     private void Update()
     {
-        CalcularPorcentajeVida();
+        ImageLifeManagerValue();
         if(myLife <= 0)
         {
             player.PlayerDead();
@@ -28,13 +28,13 @@ public class PlayerLifeManager : MonoBehaviour
         myLife -= life; 
     }
 
-    public int LifePlayer()
+    public float LifePlayer()
     {
         return myLife;
     }
-    public void CalcularPorcentajeVida()
+    public void ImageLifeManagerValue()
     {
-        int porcentaje = (myLife * 1) / myLife;
+        float porcentaje = (myLife * 1) / 100;
         imageLife.fillAmount = porcentaje;
     }
 }

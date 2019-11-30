@@ -8,8 +8,8 @@ public class Enemy_1 : MonoBehaviour
     public Transform player;
     public float maxAngle;
     public float maxRadius;
+    [SerializeField] GameObject explosionPrefab;
 
-    
     // Componentes
     [SerializeField] NavMeshAgent navMeshAgent;
     [SerializeField] Transform[] pathEnemy;
@@ -76,7 +76,8 @@ public class Enemy_1 : MonoBehaviour
     }
     private void Start()
     {
-        explosionRand = Random.Range(0,1);
+        explosionRand = 1;
+        Debug.Log("Explosion Rand: " + explosionRand);
     }
 
 
@@ -85,12 +86,11 @@ public class Enemy_1 : MonoBehaviour
         inFOV(transform, player, maxAngle, maxRadius);
         if (isInFov)
         {
-            navMeshAgent.SetDestination(player.position);
+            AttackPlayer();
         }else
         {
             Path();
         }
-        Debug.Log(isInFov);
     }
     public void Path()
     {
@@ -115,15 +115,25 @@ public class Enemy_1 : MonoBehaviour
     {
         if(explosionRand == 0)
         {
-
-        }else if(explosionRand == 1)
+            navMeshAgent.SetDestination(player.position);
+        }
+        else if(explosionRand == 1)
         {
+            navMeshAgent.SetDestination(player.position);
+            if(Vector3.Distance(transform.position,player.position) < 5)
+            {
+                navMeshAgent.speed = 0;
+                anim.SetTrigger("Explosion");
+                
+            }
 
         }
     }
     public void Explosion()
     {
-
+        gameObject.SetActive(false);
+        Instantiate(explosionPrefab, transform.position,Quaternion.identity);
+        Destroy(this.gameObject,0.1f);
     }
     IEnumerator DelayMovement()
     {
@@ -131,12 +141,7 @@ public class Enemy_1 : MonoBehaviour
         yield return new WaitForSeconds(1f);
         canPath = true;
     }
-    IEnumerator AttackExplosion()
-    {
-        navMeshAgent.SetDestination(pathEnemy[nextPosition].position);
-        yield return new WaitForSeconds(2f);
-        navMeshAgent.SetDestination(pathEnemy[nextPosition].position);
-        anim.SetTrigger("Explosion");
-    }
+   
+
 
 }
