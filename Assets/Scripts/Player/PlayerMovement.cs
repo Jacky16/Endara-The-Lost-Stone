@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController player;
     public Animator anim;
     public Camera mainCam;
+    [SerializeField] PlayerLifeManager playerLifeManager;
 
     [Header("Velocidad")]
     
@@ -30,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 camRight;
     private float horizontal;
     private float vertical;
-    private bool jump;
     private int maxJumps = 2;
     private int currentJump = 0;
  
@@ -44,10 +44,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Fuerza de empuje")]
     public float pushPower = 2f;
 
-    
-    [Header("Objetos invisible")]
-    public GameObject[] objetosInvisibles;
-    private bool isVisible = false;
+ 
     //maquinas de estados
     enum PlayerStates{idle,walking,jumping};
     PlayerStates playerStates;
@@ -150,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
         camForward = camForward.normalized;
         camRight = camRight.normalized;
     }
+
     public void PlayerDead()
     {
         Destroy(this.gameObject);
@@ -161,59 +159,52 @@ public class PlayerMovement : MonoBehaviour
         vertical = v;
     }
     
+    public void RestarVida(int cantidadARestar)
+    {
+        playerLifeManager.RestarLife(cantidadARestar);
+    }
     
-    //public void AnimationsManagers(){
-    //    anim.SetFloat("Speed", speed);
-    //    anim.SetBool("Jump",CanJump());
-
-    //}
    
     
 
     
 
     
-        private void OnControllerColliderHit(ControllerColliderHit hit)
-        {
-            ////Salto entre plataformas
-            //if (!player.isGrounded && hit.normal.y < 0.1f)
-            //{
-            //Debug.Log("He saltado en entre plataformas");
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        ////Salto entre plataformas
+        //if (!player.isGrounded && hit.normal.y < 0.1f)
+        //{
+        //Debug.Log("He saltado en entre plataformas");
 
-            //if (Input.GetKeyDown(KeyCode.Space))
-            //    {
-            //    verticalVelocity = jumpForce;
-            //    movePlayer = hit.normal * 1.5f;
-            //    }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //    {
+        //    verticalVelocity = jumpForce;
+        //    movePlayer = hit.normal * 1.5f;
+        //    }
             
-            //}
-        float valueMass;
-        Rigidbody rb = hit.collider.attachedRigidbody;
-            if (rb == null || rb.isKinematic)
-            {
-                return;
-            }
-
-            if (hit.moveDirection.y < -0.3f)
-            {
-                return;
-            }
-
-            valueMass = rb.mass;
-            Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
-
-            rb.velocity = (pushDir * pushPower) / valueMass;
-        
-        }
-
-
-        private void OntriggerEnter(Collider other)
+        //}
+    float valueMass;
+    Rigidbody rb = hit.collider.attachedRigidbody;
+        if (rb == null || rb.isKinematic)
         {
-            if (other.CompareTag("Gafas"))
-            {
-                isVisible = true;
-            }
+            return;
         }
+
+        if (hit.moveDirection.y < -0.3f)
+        {
+            return;
+        }
+
+        valueMass = rb.mass;
+        Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+
+        rb.velocity = (pushDir * pushPower) / valueMass;
+        
+    }
+
+
+    
     
 
 

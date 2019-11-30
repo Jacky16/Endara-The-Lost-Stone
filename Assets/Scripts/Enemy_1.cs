@@ -9,11 +9,17 @@ public class Enemy_1 : MonoBehaviour
     public float maxAngle;
     public float maxRadius;
 
-    private bool isInFov = false;
+    
+    // Componentes
     [SerializeField] NavMeshAgent navMeshAgent;
     [SerializeField] Transform[] pathEnemy;
+    [SerializeField] Animator anim;
+    //Variables booleanas
+    private bool isInFov = false;
     bool canPath = true;
+    //Variables int
     int nextPosition = 0;
+    int explosionRand;
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
@@ -68,7 +74,11 @@ public class Enemy_1 : MonoBehaviour
             }
         }
     }
-    
+    private void Start()
+    {
+        explosionRand = Random.Range(0,1);
+    }
+
 
     private void Update()
     {
@@ -101,11 +111,32 @@ public class Enemy_1 : MonoBehaviour
             }
         }
     }
-  IEnumerator DelayMovement()
+    public void AttackPlayer()
+    {
+        if(explosionRand == 0)
+        {
+
+        }else if(explosionRand == 1)
+        {
+
+        }
+    }
+    public void Explosion()
+    {
+
+    }
+    IEnumerator DelayMovement()
     {
         canPath = false;
         yield return new WaitForSeconds(1f);
         canPath = true;
+    }
+    IEnumerator AttackExplosion()
+    {
+        navMeshAgent.SetDestination(pathEnemy[nextPosition].position);
+        yield return new WaitForSeconds(2f);
+        navMeshAgent.SetDestination(pathEnemy[nextPosition].position);
+        anim.SetTrigger("Explosion");
     }
 
 }
