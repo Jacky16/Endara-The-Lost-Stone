@@ -10,7 +10,7 @@ public class ExplosionEnemy1 : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            PlayerLifeManager playerLifeManager = GameObject.Find("Life Manager").GetComponent<PlayerLifeManager>();
+            PlayerLifeManager playerLifeManager = GameObject.Find("Player Life Manager").GetComponent<PlayerLifeManager>();
             playerLifeManager.RestarLife(damageExplosion);
         }
     }

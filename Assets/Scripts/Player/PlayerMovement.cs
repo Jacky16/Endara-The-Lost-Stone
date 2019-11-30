@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(Animator))]
@@ -147,7 +148,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void PlayerDead()
     {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
+        SceneManager.LoadScene("LostScreen");
+        
     }
         
     
@@ -199,10 +202,17 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = (pushDir * pushPower) / valueMass;
         
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Final")
+        {
+            SceneManager.LoadScene("VictoryScreen");
+        }
+    }
 
 
-    
-    
+
+
 
 
 
