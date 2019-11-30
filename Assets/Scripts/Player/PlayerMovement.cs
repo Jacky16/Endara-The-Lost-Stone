@@ -48,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
     //maquinas de estados
     enum PlayerStates{idle,walking,jumping};
     PlayerStates playerStates;
+    //variables booleanas
+    bool canMove = false;
 
     
 
@@ -56,19 +58,14 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         player = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>();
-        
+        anim = GetComponent<Animator>();        
     }
     void Update()
     {
-       Movimiento();
-        
-        Debug.Log("Player Speed: " + speed);
-        
-        
+          Movimiento();
     }
- 
-   public void Movimiento(){
+
+    public void Movimiento(){
 
 
         anim.SetBool("IsGrounded", player.isGrounded);
