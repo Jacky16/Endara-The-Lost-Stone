@@ -158,18 +158,16 @@ public class PlayerMovement : MonoBehaviour
         horizontal = h;
         vertical = v;
     }
+    public void MeleAtack()
+    {
+        anim.SetTrigger("Attack");
+    }
     
     public void RestarVida(int cantidadARestar)
     {
         playerLifeManager.RestarLife(cantidadARestar);
     }
-    
-   
-    
 
-    
-
-    
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         ////Salto entre plataformas
