@@ -15,7 +15,6 @@ public class TimeManager : MonoBehaviour
         currentTime = startTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
         CountDown();

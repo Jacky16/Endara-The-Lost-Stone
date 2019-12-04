@@ -6,10 +6,13 @@ public class PickUpObjects : MonoBehaviour
 {
     public GameObject objectToPickup;
     public GameObject PickedObject;
-    public Transform interactionZone;
-   
+    Transform interactionZone;
 
-    // Update is called once per frame
+
+    private void Start()
+    {
+        interactionZone = GameObject.FindGameObjectWithTag("InteractionZone").GetComponent<Transform>();
+    }
     void Update()
     {
 
@@ -46,6 +49,8 @@ public class PickUpObjects : MonoBehaviour
                 PickedObject = null;
             }
         }
+
+        //Throw  Object 
         if (Input.GetMouseButtonDown(0) && PickedObject != null)
         {
             StartCoroutine(ThrowObject());
@@ -62,7 +67,7 @@ public class PickUpObjects : MonoBehaviour
         PickedObject.GetComponent<Rigidbody>().useGravity = true;
         PickedObject.GetComponent<Rigidbody>().isKinematic = false;
         PickedObject.GetComponent<BoxCollider>().isTrigger = true;
-        PickedObject.GetComponent<Rigidbody>().AddForce(transform.forward * 100, ForceMode.Impulse);
+        PickedObject.GetComponent<Rigidbody>().AddForce(interactionZone.forward + transform.forward * 20, ForceMode.Impulse);
         yield return new WaitForSeconds(0.1f);
         PickedObject.GetComponent<BoxCollider>().isTrigger = false;
     }

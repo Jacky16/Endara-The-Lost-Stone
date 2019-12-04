@@ -5179,7 +5179,6 @@ GameObject:
   - component: {fileID: 3252668622307985477}
   - component: {fileID: 3252668622307985479}
   - component: {fileID: 3252668622307985498}
-  - component: {fileID: 3252668622383617195}
   - component: {fileID: 3252668622383617172}
   - component: {fileID: 3252668622383617194}
   m_Layer: 8
@@ -5278,11 +5277,11 @@ MonoBehaviour:
   player: {fileID: 3252668622307985477}
   anim: {fileID: 3252668620762729185}
   mainCam: {fileID: 0}
+  playerLifeManager: {fileID: 0}
   speed: 5
   gravity: 5
   jumpForce: 3
   pushPower: 2
-  objetosInvisibles: []
 --- !u!114 &3252668622307985498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5302,19 +5301,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   Distance: 1.5
---- !u!135 &3252668622383617195
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3252668620753221831}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3252668622383617172
 MonoBehaviour:
   m_ObjectHideFlags: 0
