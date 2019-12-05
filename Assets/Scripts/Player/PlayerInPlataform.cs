@@ -19,10 +19,11 @@ public class PlayerInPlataform : MonoBehaviour
     }
     public void movementInPlataforms()
     {
+        Debug.Log(player.isGrounded);
         if (player.isGrounded)
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, -transform.up, out hit))
+            if (Physics.Raycast(player.transform.position, -transform.up * 6, out hit,default))
             {
                 GameObject groundedIn = hit.collider.gameObject;
                 groundName = groundedIn.name;
@@ -49,9 +50,5 @@ public class PlayerInPlataform : MonoBehaviour
             lastGroundPosition = Vector3.zero;
         }
     }
-    private void OnDrawGizmos()
-    {
-
-        Gizmos.DrawWireSphere(transform.position, player.height / 4.2f);
-    }
+   
 }

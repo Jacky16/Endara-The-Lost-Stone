@@ -15,11 +15,8 @@ public class PlataformerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-            Movement();
+          Movement();
 
-        
-       
     }
     public void Movement()
     {
@@ -31,7 +28,7 @@ public class PlataformerController : MonoBehaviour
             platformRb.MovePosition(Vector3.MoveTowards(platformRb.position, platformsPositions[nextPosition].position, speed * Time.deltaTime));
 
         }
-        if (Vector3.Distance(platformRb.position,platformsPositions[nextPosition].position) <= 0)
+        if (Vector3.Distance(platformRb.position,platformsPositions[nextPosition].position) <= 1)
         {
             StartCoroutine(delayMovement(timeBetweenPoints));
 

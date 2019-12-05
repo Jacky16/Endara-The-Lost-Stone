@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PickUpObjects : MonoBehaviour
 {
-    public GameObject objectToPickup;
-    public GameObject PickedObject;
+    [HideInInspector]public GameObject objectToPickup;
+    [HideInInspector]public GameObject PickedObject;
     Transform interactionZone;
 
 
@@ -15,11 +15,7 @@ public class PickUpObjects : MonoBehaviour
     }
     void Update()
     {
-
         catchObjjects();
-
-            
-        
     }
 
     public void catchObjjects()

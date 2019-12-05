@@ -8,13 +8,11 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Componentes")]
-    public Rigidbody rb;
-    public InputManager inputManager;
-    public CharacterController player;
-    public Animator anim;
+    InputManager inputManager;
+    CharacterController player;
+    Animator anim;
     public Camera mainCam;
-    [SerializeField] PlayerLifeManager playerLifeManager;
+    PlayerLifeManager playerLifeManager;
 
     [Header("Velocidad")]
     
@@ -55,11 +53,12 @@ public class PlayerMovement : MonoBehaviour
     
 
 
-    private void Awake()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody>();
         player = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>();        
+        anim = GetComponent<Animator>();
+        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
+        //playerLifeManager = GameObject.Find("Player Life Manager").GetComponent<PlayerLifeManager>();
     }
     void Update()
     {
@@ -112,7 +111,6 @@ public class PlayerMovement : MonoBehaviour
     }
     public void JumpPlayer()
     {
-        Debug.Log(currentJump);
         if (player.isGrounded && maxJumps > currentJump && Input.GetButtonDown("Jump"))
         {
             Debug.Log(1);
