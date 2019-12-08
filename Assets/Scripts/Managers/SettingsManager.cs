@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 
@@ -13,13 +15,19 @@ public class SettingsManager : MonoBehaviour
     public GameObject canvasSettingsAudio;
     public GameObject canvasSettingsVideo;
     public AudioMixer audioMixer;
+    public GameObject canvasSettings;
+    public GameObject canvasPauseManager;
+
     //Slider Variables
+    [Header("Sliders Ajustes")]
     public Slider sliderVolumenGeneral;
     public Slider sliderVolumenFX;
     public Slider sliderVolumenMusica;
 
     //DropDown variables
+    [Header("DropDown Ajustes")]
     public TMPro.TMP_Dropdown resolutionDropdown;
+    public TMPro.TMP_Dropdown qualitySettingsDropdown;
     Resolution[] resolutions;
     private void Start()
     {
@@ -52,7 +60,15 @@ public class SettingsManager : MonoBehaviour
         mainMenuManager.canvasMainMenu.SetActive(true);
         mainMenuManager.canvasAjustes.SetActive(false);
         canvasSettingsAudio.SetActive(false);
-
+        canvasSettingsVideo.SetActive(false);
+    }
+   
+    public void DisabledMenuSettings()
+    {
+        canvasSettingsAudio.SetActive(false);
+        canvasSettingsVideo.SetActive(false);
+        canvasSettings.SetActive(false);
+        canvasPauseManager.SetActive(true);
     }
     public void VolumeManager()
     {
@@ -70,6 +86,10 @@ public class SettingsManager : MonoBehaviour
     {
         Screen.fullScreen = fullScreen;
     }
+    public void SetQuality()
+    {
+        QualitySettings.SetQualityLevel(qualitySettingsDropdown.value);
+    }
     public void ResolutionStart()
     {
         resolutions = Screen.resolutions;
@@ -79,7 +99,7 @@ public class SettingsManager : MonoBehaviour
         
         for (int i = 0; i < resolutions.Length; i++)
         {
-            string optionResolution = resolutions[i].width + "x" + resolutions[i].height;
+            string optionResolution = resolutions[i].width + "x" + resolutions[i].height +" "+ resolutions[i].refreshRate + "Hz";
             resolutionsList.Add(optionResolution);
             if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
             {

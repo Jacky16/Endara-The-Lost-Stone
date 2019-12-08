@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PauseManager : MonoBehaviour
 {
@@ -10,7 +12,7 @@ public class PauseManager : MonoBehaviour
     void Start()
     {
         canvasPause.SetActive(false);
-       // canvasSettings.SetActive(false);
+        canvasSettings.SetActive(false);
     }
     private void Update()
     {
@@ -32,8 +34,12 @@ public class PauseManager : MonoBehaviour
     }
     public void Settings()
     {
-    // canvasSettings.SetActive(true);
-
+        canvasSettings.SetActive(true);
+        canvasPause.SetActive(false);
+    }
+    public void ExitToMainMenuFromOtherSceen()
+    {
+        SceneManager.LoadScene("MainMenuScreen");
     }
     public void ExitGame()
     {

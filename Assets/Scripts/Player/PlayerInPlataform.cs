@@ -13,7 +13,7 @@ public class PlayerInPlataform : MonoBehaviour
     Quaternion lastRot;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         movementInPlataforms();
     }
@@ -23,7 +23,7 @@ public class PlayerInPlataform : MonoBehaviour
         if (player.isGrounded)
         {
             RaycastHit hit;
-            if (Physics.Raycast(player.transform.position, -transform.up * 6, out hit,default))
+            if (Physics.Raycast(transform.position, -transform.up * 6, out hit,default))
             {
                 GameObject groundedIn = hit.collider.gameObject;
                 groundName = groundedIn.name;
@@ -50,5 +50,9 @@ public class PlayerInPlataform : MonoBehaviour
             lastGroundPosition = Vector3.zero;
         }
     }
-   
+    private void OnDrawGizmos()
+    {
+       // Debug.DrawLine(player.transform.position / 8, player.transform.position + 6);
+    }
+
 }

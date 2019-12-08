@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-[RequireComponent(typeof(Rigidbody))]
+//[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
@@ -13,17 +13,13 @@ public class PlayerMovement : MonoBehaviour
     Animator anim;
     public Camera mainCam;
     PlayerLifeManager playerLifeManager;
+    GodManager godManager;
 
     [Header("Velocidad")]
-    
     public float speed = 6.5F;
-    
-    
-    
+  
     [Header("Controles")]
-
     //[Range(0,1000)][SerializeField] float speedAceleration;
-   
     private Vector3 playerInput;
     private Vector3 movePlayer;
     private Vector3 camForward;
@@ -43,14 +39,18 @@ public class PlayerMovement : MonoBehaviour
     [Header("Fuerza de empuje")]
     public float pushPower = 2f;
 
+    float unitsGod;
  
-    //maquinas de estados
+    //Maquinas de estados
     enum PlayerStates{idle,walking,jumping};
     PlayerStates playerStates;
-    //variables booleanas
-    bool canMove = false;
 
-    
+    //Variables booleanas
+    bool canMove = false;
+    public bool isGod;
+
+
+
 
 
     private void Start()
@@ -58,7 +58,8 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
-        //playerLifeManager = GameObject.Find("Player Life Manager").GetComponent<PlayerLifeManager>();
+        playerLifeManager = GameObject.Find("Player Life Manager").GetComponent<PlayerLifeManager>();
+        godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
     }
     void Update()
     {
@@ -95,19 +96,46 @@ public class PlayerMovement : MonoBehaviour
     }
     public void SetGravity()
     {
-        if (player.isGrounded )
+        if (isGod)
         {
-            fallvelocity = -gravity * Time.deltaTime;
-            movePlayer.y = fallvelocity;
+            ModeGod();
         }
         else
         {
-            fallvelocity -= gravity * Time.deltaTime;
-            movePlayer.y = fallvelocity;
-            anim.SetFloat("PlayerVerticalVelocity", player.velocity.y);
+            if (player.isGrounded)
+            {
+                fallvelocity = -gravity * Time.deltaTime;
+                movePlayer.y = fallvelocity;
+            }
+            else
+            {
+                fallvelocity -= gravity * Time.deltaTime;
+                movePlayer.y = fallvelocity;
+                anim.SetFloat("PlayerVerticalVelocity", player.velocity.y);
+            }
         }
        
        
+       
+    }
+    public void ModeGod()
+    {
+        unitsGod = godManager.UnitsToJumpInModeGod();
+        if (isGod)
+        {
+            Debug.Log("Es Dios");
+            if (Input.GetKey(KeyCode.Space))
+            {
+                movePlayer.y += unitsGod;
+            }
+            else if (Input.GetKey(KeyCode.LeftShift))
+            {
+                movePlayer.y -= unitsGod;
+
+            }
+            
+            playerLifeManager.enabled = false;
+        }
     }
     public void JumpPlayer()
     {

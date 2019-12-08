@@ -11,8 +11,12 @@ public class PlataformerController : MonoBehaviour
     private int nextPosition = 0;
     private bool canMove = true;
     public float timeBetweenPoints = 0.5f;
+    public GameObject gameObjectPlayer;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        //gameObjectPlayer = GameObject.Find("Player");
+    }
     void Update()
     {
           Movement();
@@ -48,5 +52,19 @@ public class PlataformerController : MonoBehaviour
         canMove = false;
         yield return new WaitForSeconds(time);
         canMove = true;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject == gameObjectPlayer)
+        {
+            gameObjectPlayer.transform.parent = transform;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == gameObjectPlayer)
+        {
+            gameObjectPlayer.transform.parent = null;
+        }
     }
 }
