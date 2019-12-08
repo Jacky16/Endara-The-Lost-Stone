@@ -223,7 +223,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   volumeAnchorOverride: {fileID: 0}
-  antialiasing: 0
+  antialiasing: 1
   SMAAQuality: 2
   dithering: 0
   stopNaNs: 0
@@ -1969,11 +1969,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_VideoSettings
       objectReference: {fileID: 0}
-    - target: {fileID: 2722255465621032115, guid: 4ddc510fdcd5a454583fc923257e913a,
+    - target: {fileID: 2722255466266446859, guid: 4ddc510fdcd5a454583fc923257e913a,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2123134916}
     - target: {fileID: 2722255465621032119, guid: 4ddc510fdcd5a454583fc923257e913a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2079,71 +2079,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2722255465855499790, guid: 4ddc510fdcd5a454583fc923257e913a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722255465855499790, guid: 4ddc510fdcd5a454583fc923257e913a,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.21800001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722255465855499790, guid: 4ddc510fdcd5a454583fc923257e913a,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.21800001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722255466266446859, guid: 4ddc510fdcd5a454583fc923257e913a,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2123134916}
-    - target: {fileID: 2722255465946008923, guid: 4ddc510fdcd5a454583fc923257e913a,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722255465946008923, guid: 4ddc510fdcd5a454583fc923257e913a,
-        type: 3}
-      propertyPath: m_Options.m_Options.Array.data[0].m_Text
-      value: Bajos
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722255465946008923, guid: 4ddc510fdcd5a454583fc923257e913a,
-        type: 3}
-      propertyPath: m_Options.m_Options.Array.data[1].m_Text
-      value: Medios
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722255465946008923, guid: 4ddc510fdcd5a454583fc923257e913a,
-        type: 3}
-      propertyPath: m_Options.m_Options.Array.data[2].m_Text
-      value: Altos
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722255465946008923, guid: 4ddc510fdcd5a454583fc923257e913a,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722255465946008923, guid: 4ddc510fdcd5a454583fc923257e913a,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2722255465946008923, guid: 4ddc510fdcd5a454583fc923257e913a,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2123134916}
-    - target: {fileID: 2722255465946008923, guid: 4ddc510fdcd5a454583fc923257e913a,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetQuality
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722255465946008923, guid: 4ddc510fdcd5a454583fc923257e913a,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ddc510fdcd5a454583fc923257e913a, type: 3}
 --- !u!1001 &3699498718496565670

@@ -63,14 +63,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+
           Movimiento();
     }
 
     public void Movimiento(){
-
-
         anim.SetBool("IsGrounded", player.isGrounded);
-
         Axis(inputManager.H(),inputManager.V());
         playerInput = new Vector3(horizontal, 0, vertical);
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
@@ -80,22 +78,17 @@ public class PlayerMovement : MonoBehaviour
         Vector3 rotationDirection = playerInput.x * camRight + playerInput.z * camForward;
         if (Input.anyKey)
         {
-            transform.rotation = Quaternion.LookRotation(rotationDirection.normalized , Vector3.up);
-
+            Vector3 currentRotation = rotationDirection.normalized;
+            transform.rotation = Quaternion.LookRotation(currentRotation , Vector3.up);
         }
-
         movePlayer = playerInput.x * camRight + playerInput.z * camForward;
-        SetGravity();
-        
+        SetGravity(); 
         JumpPlayer();
-               
-
-
         player.Move(movePlayer  * speed * Time.deltaTime);
- 
     }
     public void SetGravity()
     {
+
         if (isGod)
         {
             ModeGod();
@@ -113,13 +106,11 @@ public class PlayerMovement : MonoBehaviour
                 movePlayer.y = fallvelocity;
                 anim.SetFloat("PlayerVerticalVelocity", player.velocity.y);
             }
-        }
-       
-       
-       
+        }  
     }
     public void ModeGod()
     {
+
         unitsGod = godManager.UnitsToJumpInModeGod();
         if (isGod)
         {
@@ -142,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
         if (player.isGrounded && maxJumps > currentJump && Input.GetButtonDown("Jump"))
         {
             Debug.Log(1);
+
             fallvelocity = jumpForce;
             movePlayer.y = fallvelocity;
             anim.SetTrigger("PlayerJump");

@@ -29,9 +29,22 @@ public class SettingsManager : MonoBehaviour
     public TMPro.TMP_Dropdown resolutionDropdown;
     public TMPro.TMP_Dropdown qualitySettingsDropdown;
     Resolution[] resolutions;
+
+    float generalVolume;
+    float fxVolume;
+    float musicVolume;
+
+    float currentVolumeGeneral;
+    float currentVolumeFx;
+    float curreVolumeMusic;
+
     private void Start()
     {
         ResolutionStart();
+
+        sliderVolumenGeneral.value = PlayerPrefs.GetFloat("GeneralVolume");
+        sliderVolumenMusica.value = PlayerPrefs.GetFloat("MusicVolume");
+        sliderVolumenFX.value = PlayerPrefs.GetFloat("FxVolume");
 
     }
     void Update()
@@ -72,9 +85,31 @@ public class SettingsManager : MonoBehaviour
     }
     public void VolumeManager()
     {
-        audioMixer.SetFloat("generalVolume", sliderVolumenGeneral.value);
-        audioMixer.SetFloat("fxVolume", sliderVolumenFX.value);
-        audioMixer.SetFloat("musicVolume",sliderVolumenMusica.value);
+
+        //Asignar el valor del slider en las variables
+        generalVolume = sliderVolumenGeneral.value;
+        fxVolume = sliderVolumenFX.value;
+        musicVolume = sliderVolumenMusica.value;
+        //Asignar el valor de las variables en los player prefs
+        PlayerPrefs.SetFloat("GeneralVolume", generalVolume);
+        PlayerPrefs.SetFloat("FxVolume", fxVolume);
+        PlayerPrefs.SetFloat("MusicVolume", musicVolume);
+
+        //Assignar los valores de playerprefs a los volumenes actuales
+
+        currentVolumeGeneral = PlayerPrefs.GetFloat("GeneralVolume");
+        currentVolumeFx = PlayerPrefs.GetFloat("FxVolume");
+        curreVolumeMusic = PlayerPrefs.GetFloat("MusicVolume");
+
+        generalVolume = currentVolumeGeneral;
+        musicVolume = curreVolumeMusic;
+        fxVolume = currentVolumeFx;
+
+
+
+        audioMixer.SetFloat("generalVolume", currentVolumeGeneral);
+        audioMixer.SetFloat("fxVolume", fxVolume);
+        audioMixer.SetFloat("musicVolume", musicVolume);
 
     }
     public void SetResolution(int resolutionIndex)
