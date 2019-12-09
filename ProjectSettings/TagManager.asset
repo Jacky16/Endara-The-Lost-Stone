@@ -7,6 +7,8 @@ TagManager:
   - Final
   - InteractionZone
   - PlayerInteraction
+  - TransformObjectPickUp
+  - Caja
   layers:
   - Default
   - TransparentFX

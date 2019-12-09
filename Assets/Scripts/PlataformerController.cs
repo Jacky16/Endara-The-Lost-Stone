@@ -53,18 +53,18 @@ public class PlataformerController : MonoBehaviour
         yield return new WaitForSeconds(time);
         canMove = true;
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject == gameObjectPlayer)
-        {
-            gameObjectPlayer.transform.parent = transform;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject == gameObjectPlayer)
-        {
-            gameObjectPlayer.transform.parent = null;
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if(other.gameObject == gameObjectPlayer)
+    //    {
+    //        gameObjectPlayer.transform.parent = transform;
+    //    }
+    //}
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject == gameObjectPlayer)
+    //    {
+    //        gameObjectPlayer.transform.parent = null;
+    //    }
+    //}
 }

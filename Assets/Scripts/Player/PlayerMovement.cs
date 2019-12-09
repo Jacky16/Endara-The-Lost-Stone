@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
  
   
     [Header("Gravedad")]
-    [SerializeField] float gravity = 9.8f;
+    [SerializeField] float gravity;
     [SerializeField] float jumpForce;
     
     float fallvelocity;
@@ -60,6 +60,8 @@ public class PlayerMovement : MonoBehaviour
         inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         playerLifeManager = GameObject.Find("Player Life Manager").GetComponent<PlayerLifeManager>();
         godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
     }
     void Update()
     {
@@ -67,8 +69,20 @@ public class PlayerMovement : MonoBehaviour
           Movimiento();
     }
 
+    bool jumping = false;
+    float jumpingTime = 0f;
     public void Movimiento(){
-        anim.SetBool("IsGrounded", player.isGrounded);
+        if (jumping)
+        {
+            jumpingTime += Time.deltaTime;
+            if (jumpingTime > 0.5f)
+            {
+                jumping = !player.isGrounded;
+            }
+        }
+
+
+        anim.SetBool("IsGrounded", player.isGrounded && !jumping);
         Axis(inputManager.H(),inputManager.V());
         playerInput = new Vector3(horizontal, 0, vertical);
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
@@ -130,15 +144,17 @@ public class PlayerMovement : MonoBehaviour
     }
     public void JumpPlayer()
     {
-        if (player.isGrounded && maxJumps > currentJump && Input.GetButtonDown("Jump"))
+        if (player.isGrounded && !jumping && maxJumps > currentJump && Input.GetButtonDown("Jump"))
         {
             Debug.Log(1);
 
             fallvelocity = jumpForce;
             movePlayer.y = fallvelocity;
             anim.SetTrigger("PlayerJump");
+            jumping = true;
+            jumpingTime = 0f;
             currentJump = 2;
-        }else if ((player.isGrounded || maxJumps == currentJump) && Input.GetButtonDown("Jump"))
+        }else if ((player.isGrounded  || maxJumps == currentJump) && Input.GetButtonDown("Jump"))
         {
             Debug.Log(2);
 

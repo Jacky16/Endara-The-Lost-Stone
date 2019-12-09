@@ -24,13 +24,15 @@ public class PauseManager : MonoBehaviour
     {
         if (Input.GetKeyDown(pauseKeyCode)){
             canvasPause.SetActive(true);
-            Time.timeScale = 0;
+            Time.timeScale = 0.01f;
+            Cursor.visible = true;
         }
     }
     public void Resume()
     {
         canvasPause.SetActive(false);
         Time.timeScale = 1;
+        Cursor.visible = false;
     }
     public void Settings()
     {

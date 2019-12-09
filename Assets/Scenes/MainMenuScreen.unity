@@ -1969,6 +1969,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_VideoSettings
       objectReference: {fileID: 0}
+    - target: {fileID: 2722255465621032115, guid: 4ddc510fdcd5a454583fc923257e913a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2722255466266446859, guid: 4ddc510fdcd5a454583fc923257e913a,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target

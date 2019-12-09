@@ -11,7 +11,7 @@ public class PickUpObjects : MonoBehaviour
 
     private void Start()
     {
-        interactionZone = GameObject.FindGameObjectWithTag("InteractionZone").GetComponent<Transform>();
+        interactionZone = GameObject.FindGameObjectWithTag("TransformObjectPickUp").GetComponent<Transform>();
     }
     void Update()
     {
@@ -24,6 +24,7 @@ public class PickUpObjects : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
+                Debug.Log("He pillado el objeto");
                 PickedObject = objectToPickup;
                 PickedObject.GetComponent<ObjetoPickeable>().isPickeable = false;
                 PickedObject.transform.SetParent(interactionZone);
