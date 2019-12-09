@@ -17,7 +17,7 @@ public class PlataformerController : MonoBehaviour
     {
         //gameObjectPlayer = GameObject.Find("Player");
     }
-    void Update()
+    void FixedUpdate()
     {
           Movement();
 

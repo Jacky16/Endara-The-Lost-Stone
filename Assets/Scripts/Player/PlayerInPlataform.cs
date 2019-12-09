@@ -26,21 +26,17 @@ public class PlayerInPlataform : MonoBehaviour
     }
     public void movementInPlataforms()
     {
-        Debug.Log(isInPlattform);
-        //if (isInPlattform)
+        if (isInPlattform)
         {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.2f, platformLayerMask))
             {
-                //playerMovement.gravity = 0;
-
                 GameObject groundedIn = hit.collider.gameObject;
                 groundName = groundedIn.name;
                 groundPosition = groundedIn.transform.position;
                 if (groundPosition != lastGroundPosition && groundName == lastGroundName)
                 {
                     this.transform.position += groundPosition - lastGroundPosition;
-                    transform.parent = groundedIn.transform;
 
                 }
                 if (actualRot != lastRot && groundName == lastGroundName)
@@ -53,35 +49,36 @@ public class PlayerInPlataform : MonoBehaviour
                 lastGroundName = groundName;
                 lastGroundPosition = groundPosition;
             }
+            
         }
-        //else if (!isInPlattform)
-        //{
-        //    lastGroundName = null;
-        //    lastGroundPosition = Vector3.zero;
-        //    transform.parent = null;
-        //    playerMovement.gravity = 6;
+        else if (!isInPlattform)
+        {
+            lastGroundName = null;
+            lastGroundPosition = Vector3.zero;
 
-        //}
+
+        }
+
     }
     //private void OnDrawGizmos()
     //{
     //   // Debug.DrawLine(player.transform.position / 8, player.transform.position + 6);
     //}
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if(other.tag == "Caja")
-    //    {
-    //        isInPlattform = true;
-    //    }
-       
-    //}
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.tag == "Caja")
-    //    {
-    //        isInPlattform = false;
-    //    }
-    //}
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Caja")
+        {
+            isInPlattform = true;
+        }
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Caja")
+        {
+            isInPlattform = false;
+        }
+    }
 
 }
 

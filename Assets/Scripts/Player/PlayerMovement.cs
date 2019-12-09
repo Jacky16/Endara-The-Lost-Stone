@@ -102,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void SetGravity()
     {
+        Debug.Log("Fall velocity is: " + player.velocity.y);
 
         if (isGod)
         {
