@@ -35,6 +35,7 @@ public class PauseManager : MonoBehaviour
         canvasPause.SetActive(false);
         Time.timeScale = 1;
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public void Settings()
     {

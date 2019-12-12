@@ -29,11 +29,14 @@ public class GodManager : MonoBehaviour
             canvasModeGod.SetActive(true);
             textSpaceUp.text = "Space = Up " + UnitsToJumpInModeGod().ToString() + " Units";
             textSpaceDown.text = "Space = Down " + UnitsToJumpInModeGod().ToString() + " Units";
-
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         else
         {
             canvasModeGod.SetActive(false);
+            //Cursor.visible = false;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
         
     }
