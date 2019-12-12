@@ -1,22 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PickUpObjects : MonoBehaviour
 {
     [HideInInspector]public GameObject objectToPickup;
     [HideInInspector]public GameObject PickedObject;
     Transform interactionZone;
+    [SerializeField] GameObject canvasCatchObject;
+
     bool canThrow;
 
 
     private void Start()
     {
         interactionZone = GameObject.FindGameObjectWithTag("TransformObjectPickUp").GetComponent<Transform>();
+        canvasCatchObject.SetActive(false);
+
     }
     void Update()
     {
         catchObjjects();
+        if(objectToPickup != null)
+        {
+            canvasCatchObject.SetActive(true);
+
+        }
+        else
+        {
+            canvasCatchObject.SetActive(false);
+            canvasCatchObject.GetComponentInChildren<TextMeshProUGUI>().text = "Boton Izquierdo del raton para lanzar";
+
+        }
     }
 
     public void catchObjjects()
@@ -54,8 +70,8 @@ public class PickUpObjects : MonoBehaviour
 
         //Throw  Object 
         if (Input.GetMouseButtonDown(0) && PickedObject != null && CanThrow())
-
         {
+
             StartCoroutine(ThrowObject());
 
             Debug.Log("Lo he lanzado");
@@ -70,7 +86,7 @@ public class PickUpObjects : MonoBehaviour
         PickedObject.GetComponent<Rigidbody>().useGravity = true;
         PickedObject.GetComponent<Rigidbody>().isKinematic = false;
         PickedObject.GetComponent<BoxCollider>().isTrigger = true;
-        PickedObject.GetComponent<Rigidbody>().velocity = gameObject.transform.forward + transform.forward * 35;
+        PickedObject.GetComponent<Rigidbody>().velocity = gameObject.transform.forward + transform.forward * 25;
             //AddForce(, ForceMode.Impulse);
         yield return new WaitForSeconds(0.1f);
         PickedObject.GetComponent<BoxCollider>().isTrigger = false;

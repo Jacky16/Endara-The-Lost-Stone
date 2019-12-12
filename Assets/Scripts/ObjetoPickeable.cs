@@ -5,11 +5,15 @@ using UnityEngine;
 public class ObjetoPickeable : MonoBehaviour
 {
     public bool isPickeable = true;
+    private void Start()
+    {
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "PlayerInteraction")
         {
             other.GetComponentInParent<PickUpObjects>().objectToPickup = this.gameObject;
+
         }
     }
     private void OnTriggerExit(Collider other)
@@ -17,6 +21,7 @@ public class ObjetoPickeable : MonoBehaviour
         if (other.tag == "PlayerInteraction")
         {
             other.GetComponentInParent<PickUpObjects>().objectToPickup = null;
+
         }
     }
 }
