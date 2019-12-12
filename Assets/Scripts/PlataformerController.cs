@@ -13,14 +13,10 @@ public class PlataformerController : MonoBehaviour
     public float timeBetweenPoints = 0.5f;
     public GameObject gameObjectPlayer;
 
-    private void Start()
-    {
-        //gameObjectPlayer = GameObject.Find("Player");
-    }
+    
     void FixedUpdate()
     {
           Movement();
-
     }
     public void Movement()
     {

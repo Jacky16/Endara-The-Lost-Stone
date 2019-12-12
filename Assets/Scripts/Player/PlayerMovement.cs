@@ -60,13 +60,14 @@ public class PlayerMovement : MonoBehaviour
         inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         playerLifeManager = GameObject.Find("Player Life Manager").GetComponent<PlayerLifeManager>();
         godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
-        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+
     }
     void Update()
     {
-
-          Movimiento();
+        Movimiento();
     }
 
     bool jumping = false;
@@ -90,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("PlayerWalkVelovity", playerInput.magnitude * speed);
         CamDirection();
         Vector3 rotationDirection = playerInput.x * camRight + playerInput.z * camForward;
-        if (Input.anyKey)
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
             Vector3 currentRotation = rotationDirection.normalized;
             transform.rotation = Quaternion.LookRotation(currentRotation , Vector3.up);
@@ -102,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void SetGravity()
     {
-        Debug.Log("Fall velocity is: " + player.velocity.y);
+        //Debug.Log("Fall velocity is: " + player.velocity.y);
 
         if (isGod)
         {
@@ -184,6 +185,8 @@ public class PlayerMovement : MonoBehaviour
     public void PlayerDead()
     {
         //Destroy(this.gameObject);
+        Cursor.visible = true;
+
         SceneManager.LoadScene("LostScreen");
         
     }

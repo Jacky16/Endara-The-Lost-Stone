@@ -78,6 +78,8 @@ public class Enemy_1 : MonoBehaviour
     {
         explosionRand = 1;
         Debug.Log("Explosion Rand: " + explosionRand);
+        nextPosition = Random.Range(0, 3);
+        navMeshAgent.speed = Random.Range(2, 4);
     }
 
 
@@ -103,7 +105,7 @@ public class Enemy_1 : MonoBehaviour
             Debug.Log("he llegado");
             nextPosition++;
             StartCoroutine(DelayMovement());
-            
+            Debug.Log(nextPosition);
             
             if(nextPosition >= pathEnemy.Length)
             {
@@ -135,13 +137,29 @@ public class Enemy_1 : MonoBehaviour
         Instantiate(explosionPrefab, transform.position,Quaternion.identity);
         Destroy(this.gameObject,0.1f);
     }
+    public void Dead()
+    {
+        gameObject.SetActive(false);
+        GameObject g = explosionPrefab;
+        g.GetComponent<SphereCollider>().enabled = false;
+        Instantiate(g, transform.position, Quaternion.identity);
+        Destroy(this.gameObject, 0.1f);
+    }
     IEnumerator DelayMovement()
     {
         canPath = false;
         yield return new WaitForSeconds(1f);
         canPath = true;
     }
-   
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Caja")
+        {
+            Dead();
+            Destroy(collision.gameObject);
+        }
+    }
+
 
 
 }

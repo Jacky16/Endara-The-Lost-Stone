@@ -16,6 +16,7 @@ public class GodManager : MonoBehaviour
     {
         playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         unitsGravityModeGod = 5;
+
     }
     void Update()
     {
@@ -28,6 +29,7 @@ public class GodManager : MonoBehaviour
             canvasModeGod.SetActive(true);
             textSpaceUp.text = "Space = Up " + UnitsToJumpInModeGod().ToString() + " Units";
             textSpaceDown.text = "Space = Down " + UnitsToJumpInModeGod().ToString() + " Units";
+
         }
         else
         {
