@@ -30,7 +30,7 @@ public class PlayerLifeManager : MonoBehaviour
     public void RestarLife(int life)
     {
         currentLifePlayer -= life;
-        //rectTransformLifeBar.rect.DoShakeAnchorPos(0.2f, 0.3, 1);
+        rectTransformLifeBar.DOShakeAnchorPos(100f, 1);
     }
 
     public float LifePlayer()

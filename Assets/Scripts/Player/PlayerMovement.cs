@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
     //Variables booleanas
     bool canMove = false;
     public bool isGod;
+    [SerializeField] bool isInitialPosition;
 
 
     private void Start()
@@ -60,7 +61,15 @@ public class PlayerMovement : MonoBehaviour
         godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        transform.position = initialPosition.position;
+        if (isInitialPosition)
+        {
+            transform.position = initialPosition.position;
+
+        }
+        else
+        {
+            return;
+        }
     }
     void Update()
     {
