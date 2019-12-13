@@ -9,6 +9,7 @@ public class PickUpObjects : MonoBehaviour
     [HideInInspector]public GameObject PickedObject;
     Transform interactionZone;
     [SerializeField] GameObject canvasCatchObject;
+    [SerializeField] GameObject canvasThrowObject;
 
     bool canThrow;
 
@@ -21,7 +22,6 @@ public class PickUpObjects : MonoBehaviour
     }
     void Update()
     {
-        catchObjjects();
         if(objectToPickup != null)
         {
             canvasCatchObject.SetActive(true);
@@ -30,10 +30,24 @@ public class PickUpObjects : MonoBehaviour
         else
         {
             canvasCatchObject.SetActive(false);
-            canvasCatchObject.GetComponentInChildren<TextMeshProUGUI>().text = "Boton Izquierdo del raton para lanzar";
+			canvasThrowObject.SetActive(false);
 
-        }
+            //canvasCatchObject.GetComponentInChildren<TextMeshProUGUI>().text = "Boton Izquierdo del raton para lanzar";
+		}
+
+		if(PickedObject != null)
+		{
+		canvasCatchObject.SetActive(false);
+		}
+		else
+		{
+		}
     }
+	void FixedUpdate()
+	{
+	        catchObjjects();
+
+	}
 
     public void catchObjjects()
     {
@@ -41,6 +55,8 @@ public class PickUpObjects : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
+				canvasThrowObject.SetActive(true);
+
                 Debug.Log("He pillado el objeto");
                 PickedObject = objectToPickup;
                 PickedObject.GetComponent<ObjetoPickeable>().isPickeable = false;
@@ -54,11 +70,12 @@ public class PickUpObjects : MonoBehaviour
         }
         else if (PickedObject != null)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F)) //Soltar el objeto
             {
                 
                 PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
                 PickedObject.transform.SetParent(null);
+				canvasThrowObject.SetActive(false);
 
                 PickedObject.GetComponent<Rigidbody>().useGravity = true;
                 PickedObject.GetComponent<Rigidbody>().isKinematic = false;
@@ -82,6 +99,8 @@ public class PickUpObjects : MonoBehaviour
     {
         PickedObject.transform.SetParent(null);
         //PickedObject = null;
+		canvasThrowObject.SetActive(false);
+
         PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
         PickedObject.GetComponent<Rigidbody>().useGravity = true;
         PickedObject.GetComponent<Rigidbody>().isKinematic = false;

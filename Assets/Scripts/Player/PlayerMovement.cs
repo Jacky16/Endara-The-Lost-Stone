@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public Camera mainCam;
     PlayerLifeManager playerLifeManager;
     GodManager godManager;
+    public Transform initialPosition;
 
     [Header("Velocidad")]
     public float speed = 6.5F;
@@ -50,9 +51,6 @@ public class PlayerMovement : MonoBehaviour
     public bool isGod;
 
 
-
-
-
     private void Start()
     {
         player = GetComponent<CharacterController>();
@@ -62,8 +60,7 @@ public class PlayerMovement : MonoBehaviour
         godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-
-
+        transform.position = initialPosition.position;
     }
     void Update()
     {

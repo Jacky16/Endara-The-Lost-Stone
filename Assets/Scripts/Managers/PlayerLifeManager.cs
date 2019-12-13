@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 
 public class PlayerLifeManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class PlayerLifeManager : MonoBehaviour
     public float currentLifePlayer;
     private PlayerMovement player;
     [SerializeField] Image imageLife;
+    [SerializeField] RectTransform rectTransformLifeBar;
 
     private void Start()
     {
@@ -27,7 +29,8 @@ public class PlayerLifeManager : MonoBehaviour
     }
     public void RestarLife(int life)
     {
-        currentLifePlayer -= life; 
+        currentLifePlayer -= life;
+        //rectTransformLifeBar.rect.DoShakeAnchorPos(0.2f, 0.3, 1);
     }
 
     public float LifePlayer()
