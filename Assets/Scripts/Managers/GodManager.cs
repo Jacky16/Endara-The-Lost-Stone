@@ -31,9 +31,15 @@ public class GodManager : MonoBehaviour
             textSpaceDown.text = "Space = Down " + UnitsToJumpInModeGod().ToString() + " Units";
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+           
         }
         else
         {
+            if (Input.GetKeyDown(KeyCode.F10))
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
             canvasModeGod.SetActive(false);
             //Cursor.visible = false;
             //Cursor.lockState = CursorLockMode.Locked;

@@ -21,6 +21,7 @@ public class PlayerLifeManager : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("La vida player es: " + currentLifePlayer);
         ImageLifeManagerValue();
         if(currentLifePlayer <= 0)
         {
@@ -30,7 +31,7 @@ public class PlayerLifeManager : MonoBehaviour
     public void RestarLife(int life)
     {
         currentLifePlayer -= life;
-        rectTransformLifeBar.DOShakeAnchorPos(100f, 1);
+       // rectTransformLifeBar.DOShakeAnchorPos(100f, 1);
     }
 
     public float LifePlayer()
