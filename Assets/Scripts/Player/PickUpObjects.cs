@@ -20,9 +20,11 @@ public class PickUpObjects : MonoBehaviour
         canvasCatchObject.SetActive(false);
 
     }
-    void Update()
-    {
-        if(objectToPickup != null)
+   
+	void Update()
+	{
+	        catchObjjects();
+        if (objectToPickup != null)
         {
             canvasCatchObject.SetActive(true);
 
@@ -30,24 +32,19 @@ public class PickUpObjects : MonoBehaviour
         else
         {
             canvasCatchObject.SetActive(false);
-			canvasThrowObject.SetActive(false);
+            canvasThrowObject.SetActive(false);
 
             //canvasCatchObject.GetComponentInChildren<TextMeshProUGUI>().text = "Boton Izquierdo del raton para lanzar";
-		}
+        }
 
-		if(PickedObject != null)
-		{
-		canvasCatchObject.SetActive(false);
-		}
-		else
-		{
-		}
+        if (PickedObject != null)
+        {
+            canvasCatchObject.SetActive(false);
+        }
+        else
+        {
+        }
     }
-	void FixedUpdate()
-	{
-	        catchObjjects();
-
-	}
 
     public void catchObjjects()
     {
