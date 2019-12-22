@@ -8,6 +8,7 @@ public class GemaManager : MonoBehaviour
     enum States { Selected,Unselected,Mouseover};
     States myStates;
     bool isMouseOver;
+    bool isInMenu;
     [SerializeField]
     GameObject canvasMainMenu;
     [SerializeField]
@@ -28,13 +29,24 @@ public class GemaManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                //myStates = States.Selected;
-                Selected();
+                
+               
+                    Selected();
+
+               
             }
-            transform.DOLocalRotate(new Vector3(90, 360, 0), 5, RotateMode.FastBeyond360).SetEase(Ease.Linear);
+            transform.DOLocalRotate(new Vector3(90, 180, 0), 2, RotateMode.FastBeyond360);
+            transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 2);
 
         }
-       
+        else
+        {
+            transform.DOLocalRotate(new Vector3(90, 0, 0), 2, RotateMode.FastBeyond360);
+            transform.DOScale(new Vector3(1, 1,1), 2);
+
+
+        }
+
 
     }
     private void OnMouseOver()
@@ -53,14 +65,25 @@ public class GemaManager : MonoBehaviour
    
     public void Selected()
     {
-        transform.DOLocalMoveZ(-0.2f, 0.3f).SetEase(Ease.InCubic).OnStart(() => ActiveCanvasMainMenu()).OnPlay(() => DoAnimationsButtons());
-        transform.DOLocalRotate(new Vector3(90, 360, 0), 5, RotateMode.FastBeyond360).SetEase(Ease.Linear);
+        if (isInMenu)
+        {
+            
+        }
+        else
+        {
+            transform.DOScale(new Vector3(1, 1, 1), 3);
+            transform.DOLocalMoveZ(-0.2f, 0.3f).SetEase(Ease.InCubic).OnStart(() => ActiveCanvasMainMenu()).OnPlay(() => DoAnimationsButtons());
+            transform.DOLocalRotate(new Vector3(90, 360, 0), 0.4f);
+        }
+
+        
     }
     public void Unselected()
     {
         //transform.DOLocalRotate(new Vector3(90, 0, 0), 2.5f, RotateMode.FastBeyond360).SetEase(Ease.Linear); 
-
         transform.DOLocalMoveZ(0f, 1f).SetEase(Ease.OutCubic).OnPlay(() => DoRewindAnimationsButtons());
+        transform.DOLocalRotate(new Vector3(90, 0, 0), 0.4f);
+
 
     }
     public void ActiveCanvasMainMenu()
@@ -83,6 +106,7 @@ public class GemaManager : MonoBehaviour
         rectTransformPlayButton.DOScale(new Vector2(1, 1), 0.2f).SetEase(Ease.OutCubic);
         rectTransformExitButton.DOScale(new Vector2(1, 1), 0.2f).SetEase(Ease.OutCubic);
         rectTransformSettingsButton.DOScale(new Vector2(1, 1), 0.2f).SetEase(Ease.OutCubic);
+        isInMenu = true;
 
 
     }
@@ -95,6 +119,8 @@ public class GemaManager : MonoBehaviour
         rectTransformPlayButton.DOScale(new Vector2(0, 0), 0.2f).SetEase(Ease.OutCubic);
         rectTransformExitButton.DOScale(new Vector2(0, 0), 0.2f).SetEase(Ease.OutCubic);
         rectTransformSettingsButton.DOScale(new Vector2(0, 0), 0.2f).SetEase(Ease.OutCubic);
+
+        isInMenu = false;
 
 
     }
