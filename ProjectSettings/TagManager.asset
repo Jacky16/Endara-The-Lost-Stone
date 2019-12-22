@@ -9,6 +9,7 @@ TagManager:
   - PlayerInteraction
   - TransformObjectPickUp
   - Caja
+  - SwitchCamera
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - PostProcessing
   - Transparent
-  - 
+  - SwitchCamera
   - 
   - 
   - 
