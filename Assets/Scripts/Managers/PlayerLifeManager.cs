@@ -21,7 +21,7 @@ public class PlayerLifeManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("La vida player es: " + currentLifePlayer);
+        //Debug.Log("La vida player es: " + currentLifePlayer);
         ImageLifeManagerValue();
         if(currentLifePlayer <= 0)
         {

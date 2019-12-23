@@ -77,7 +77,7 @@ public class Enemy_1 : MonoBehaviour
     private void Start()
     {
         explosionRand = 1;
-        Debug.Log("Explosion Rand: " + explosionRand);
+        //Debug.Log("Explosion Rand: " + explosionRand);
         nextPosition = Random.Range(0, 3);
         navMeshAgent.speed = Random.Range(2, 4);
     }
@@ -102,10 +102,10 @@ public class Enemy_1 : MonoBehaviour
         }
         if(Vector3.Distance(transform.position,pathEnemy[nextPosition].position) <= navMeshAgent.stoppingDistance)
         {
-            Debug.Log("he llegado");
+            //Debug.Log("he llegado");
             nextPosition++;
             StartCoroutine(DelayMovement());
-            Debug.Log(nextPosition);
+            //Debug.Log(nextPosition);
             
             if(nextPosition >= pathEnemy.Length)
             {
