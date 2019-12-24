@@ -11,7 +11,6 @@ public class PickUpObjects : MonoBehaviour
     [SerializeField] GameObject canvasCatchObject;
     [SerializeField] GameObject canvasThrowObject;
 
-    bool canThrow;
 
 
     private void Start()
@@ -20,10 +19,10 @@ public class PickUpObjects : MonoBehaviour
         canvasCatchObject.SetActive(false);
 
     }
-   
-	void Update()
-	{
-	        catchObjjects();
+
+    void Update()
+    {
+        catchObjjects();
         if (objectToPickup != null)
         {
             canvasCatchObject.SetActive(true);
@@ -52,7 +51,7 @@ public class PickUpObjects : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-				canvasThrowObject.SetActive(true);
+                canvasThrowObject.SetActive(true);
 
                 Debug.Log("He pillado el objeto");
                 PickedObject = objectToPickup;
@@ -69,10 +68,10 @@ public class PickUpObjects : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F)) //Soltar el objeto
             {
-                
+
                 PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
                 PickedObject.transform.SetParent(null);
-				canvasThrowObject.SetActive(false);
+                canvasThrowObject.SetActive(false);
 
                 PickedObject.GetComponent<Rigidbody>().useGravity = true;
                 PickedObject.GetComponent<Rigidbody>().isKinematic = false;
@@ -91,25 +90,25 @@ public class PickUpObjects : MonoBehaviour
             Debug.Log("Lo he lanzado");
         }
     }
-    
+
     IEnumerator ThrowObject()
     {
         PickedObject.transform.SetParent(null);
         //PickedObject = null;
-		canvasThrowObject.SetActive(false);
+        canvasThrowObject.SetActive(false);
 
         PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
         PickedObject.GetComponent<Rigidbody>().useGravity = true;
         PickedObject.GetComponent<Rigidbody>().isKinematic = false;
         PickedObject.GetComponent<BoxCollider>().isTrigger = true;
         PickedObject.GetComponent<Rigidbody>().velocity = gameObject.transform.forward + transform.forward * 25;
-            //AddForce(, ForceMode.Impulse);
+        //AddForce(, ForceMode.Impulse);
         yield return new WaitForSeconds(0.1f);
         PickedObject.GetComponent<BoxCollider>().isTrigger = false;
     }
     public bool CanThrow()
     {
-        if(PickedObject.GetComponent<ObjetoPickeable>().isPickeable == true)
+        if (PickedObject.GetComponent<ObjetoPickeable>().isPickeable == true)
         {
             return false;
         }

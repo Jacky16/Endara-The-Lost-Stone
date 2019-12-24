@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 //[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CharacterController))]

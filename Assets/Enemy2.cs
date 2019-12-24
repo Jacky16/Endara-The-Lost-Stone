@@ -67,8 +67,8 @@ public class Enemy2 : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(EnemyStates);
-        Debug.Log("esta en el campo de vision: " + isInFov);
+        //Debug.Log(EnemyStates);
+        //Debug.Log("esta en el campo de vision: " + isInFov);
         
         float BetweenDistance = Vector3.Distance(transform.position, player.position);
         //Persecucion
