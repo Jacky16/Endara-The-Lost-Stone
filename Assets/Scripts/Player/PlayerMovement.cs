@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("PlayerWalkVelovity", playerInput.magnitude * speed);
         CamDirection();
         Vector3 rotationDirection = playerInput.x * camRight + playerInput.z * camForward;
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        if (inputManager.IsJostickLeftPressed() || inputManager.IsWASDIsPressed())
         {
             Vector3 currentRotation = rotationDirection.normalized;
             transform.rotation = Quaternion.LookRotation(currentRotation , Vector3.up);

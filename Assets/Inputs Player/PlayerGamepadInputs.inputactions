@@ -2,20 +2,12 @@
     "name": "PlayerGamepadInputs",
     "maps": [
         {
-            "name": "Gamplay",
+            "name": "Player_Keyboard",
             "id": "e4580587-6727-4d84-b04e-df87282912db",
             "actions": [
                 {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "94cce2b3-b46d-4e78-8886-f0d889733c43",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Movement",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "ffe72b99-7cae-48cc-9d0d-0e062624f55f",
                     "expectedControlType": "",
                     "processors": "",
@@ -24,29 +16,120 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "e435c134-9f15-4f76-ac05-9a130d4d6c68",
-                    "path": "<XInputController>/buttonSouth",
+                    "name": "2D Vector",
+                    "id": "39120b5d-0db7-47dc-82d4-36b164818ba8",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "dc111d3d-6945-4d69-ae74-b9673c78b9fc",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "bc7d6b6d-f168-4105-b6b4-a5fdd3f5d133",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "15ef4a36-ee75-4621-94e2-e2d38af7ee72",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "84c77a64-37eb-49cb-91b5-33c353354ec9",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Player_GamepadXbox",
+            "id": "84fd66fd-2008-4a5c-9adf-dd884a6679ea",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Value",
+                    "id": "30d60f97-bb3c-4ebb-8605-9fba17631b0b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "CameraMovement",
+                    "type": "Value",
+                    "id": "dace94d2-0304-4bc6-86ec-c3aae8d47ffc",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "40e013eb-1278-4ff9-9289-1a58e676404d",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "4a0ffefb-25b3-4b31-94bb-6a041cb694f4",
-                    "path": "<Gamepad>/leftStick",
+                    "id": "11a4b08e-b8e2-4a09-af2f-bb034fd2d266",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
+                    "processors": "NormalizeVector2",
+                    "groups": "New control scheme",
+                    "action": "CameraMovement",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "New control scheme",
+            "bindingGroup": "New control scheme",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }
