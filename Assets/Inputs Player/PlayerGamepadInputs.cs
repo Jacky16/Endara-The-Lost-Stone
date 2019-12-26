@@ -104,6 +104,22 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""CatchObject"",
+                    ""type"": ""Button"",
+                    ""id"": ""fd6865e5-8797-49ed-b4ed-97fe641f047a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""ThrowObject"",
+                    ""type"": ""Button"",
+                    ""id"": ""5d359124-116d-44dc-84a8-d7ab9054639b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -126,6 +142,28 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""processors"": ""NormalizeVector2"",
                     ""groups"": ""New control scheme"",
                     ""action"": ""CameraMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""05b3e80d-feba-41de-a244-3f77325e81a6"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": ""New control scheme"",
+                    ""action"": ""CatchObject"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cbfe6761-a658-4d54-a58b-d3cdf0443684"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ThrowObject"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -153,6 +191,8 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         m_Player_GamepadXbox = asset.FindActionMap("Player_GamepadXbox", throwIfNotFound: true);
         m_Player_GamepadXbox_Movement = m_Player_GamepadXbox.FindAction("Movement", throwIfNotFound: true);
         m_Player_GamepadXbox_CameraMovement = m_Player_GamepadXbox.FindAction("CameraMovement", throwIfNotFound: true);
+        m_Player_GamepadXbox_CatchObject = m_Player_GamepadXbox.FindAction("CatchObject", throwIfNotFound: true);
+        m_Player_GamepadXbox_ThrowObject = m_Player_GamepadXbox.FindAction("ThrowObject", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -237,12 +277,16 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
     private IPlayer_GamepadXboxActions m_Player_GamepadXboxActionsCallbackInterface;
     private readonly InputAction m_Player_GamepadXbox_Movement;
     private readonly InputAction m_Player_GamepadXbox_CameraMovement;
+    private readonly InputAction m_Player_GamepadXbox_CatchObject;
+    private readonly InputAction m_Player_GamepadXbox_ThrowObject;
     public struct Player_GamepadXboxActions
     {
         private @PlayerGamepadInputs m_Wrapper;
         public Player_GamepadXboxActions(@PlayerGamepadInputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Player_GamepadXbox_Movement;
         public InputAction @CameraMovement => m_Wrapper.m_Player_GamepadXbox_CameraMovement;
+        public InputAction @CatchObject => m_Wrapper.m_Player_GamepadXbox_CatchObject;
+        public InputAction @ThrowObject => m_Wrapper.m_Player_GamepadXbox_ThrowObject;
         public InputActionMap Get() { return m_Wrapper.m_Player_GamepadXbox; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -258,6 +302,12 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                 @CameraMovement.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnCameraMovement;
                 @CameraMovement.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnCameraMovement;
                 @CameraMovement.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnCameraMovement;
+                @CatchObject.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnCatchObject;
+                @CatchObject.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnCatchObject;
+                @CatchObject.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnCatchObject;
+                @ThrowObject.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnThrowObject;
+                @ThrowObject.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnThrowObject;
+                @ThrowObject.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnThrowObject;
             }
             m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface = instance;
             if (instance != null)
@@ -268,6 +318,12 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                 @CameraMovement.started += instance.OnCameraMovement;
                 @CameraMovement.performed += instance.OnCameraMovement;
                 @CameraMovement.canceled += instance.OnCameraMovement;
+                @CatchObject.started += instance.OnCatchObject;
+                @CatchObject.performed += instance.OnCatchObject;
+                @CatchObject.canceled += instance.OnCatchObject;
+                @ThrowObject.started += instance.OnThrowObject;
+                @ThrowObject.performed += instance.OnThrowObject;
+                @ThrowObject.canceled += instance.OnThrowObject;
             }
         }
     }
@@ -289,5 +345,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnCameraMovement(InputAction.CallbackContext context);
+        void OnCatchObject(InputAction.CallbackContext context);
+        void OnThrowObject(InputAction.CallbackContext context);
     }
 }

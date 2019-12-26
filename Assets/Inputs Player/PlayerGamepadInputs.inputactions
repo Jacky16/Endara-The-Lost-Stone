@@ -91,6 +91,22 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "CatchObject",
+                    "type": "Button",
+                    "id": "fd6865e5-8797-49ed-b4ed-97fe641f047a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "ThrowObject",
+                    "type": "Button",
+                    "id": "5d359124-116d-44dc-84a8-d7ab9054639b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -113,6 +129,28 @@
                     "processors": "NormalizeVector2",
                     "groups": "New control scheme",
                     "action": "CameraMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "05b3e80d-feba-41de-a244-3f77325e81a6",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "CatchObject",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cbfe6761-a658-4d54-a58b-d3cdf0443684",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThrowObject",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

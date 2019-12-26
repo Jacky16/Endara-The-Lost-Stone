@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
+
 
 public class PickUpObjects : MonoBehaviour
 {
@@ -22,35 +24,26 @@ public class PickUpObjects : MonoBehaviour
 
     void Update()
     {
-        catchObjjects();
         if (objectToPickup != null)
         {
             canvasCatchObject.SetActive(true);
-
         }
         else
         {
             canvasCatchObject.SetActive(false);
             canvasThrowObject.SetActive(false);
-
-            //canvasCatchObject.GetComponentInChildren<TextMeshProUGUI>().text = "Boton Izquierdo del raton para lanzar";
         }
 
         if (PickedObject != null)
         {
             canvasCatchObject.SetActive(false);
-        }
-        else
-        {
-        }
+        }   
     }
-
-    public void catchObjjects()
+    public void PillarElObjeto()
     {
         if (objectToPickup != null && objectToPickup.GetComponent<ObjetoPickeable>().isPickeable == true && PickedObject == null)
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
+            
                 canvasThrowObject.SetActive(true);
 
                 Debug.Log("He pillado el objeto");
@@ -61,14 +54,11 @@ public class PickUpObjects : MonoBehaviour
                 PickedObject.GetComponent<Rigidbody>().useGravity = false;
                 PickedObject.GetComponent<Rigidbody>().isKinematic = true;
                 PickedObject.GetComponent<BoxCollider>().isTrigger = true;
-
-            }
-        }
-        else if (PickedObject != null)
+            
+                
+        }else if(PickedObject != null)
         {
-            if (Input.GetKeyDown(KeyCode.F)) //Soltar el objeto
-            {
-
+           
                 PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
                 PickedObject.transform.SetParent(null);
                 canvasThrowObject.SetActive(false);
@@ -76,22 +66,22 @@ public class PickUpObjects : MonoBehaviour
                 PickedObject.GetComponent<Rigidbody>().useGravity = true;
                 PickedObject.GetComponent<Rigidbody>().isKinematic = false;
                 PickedObject.GetComponent<BoxCollider>().isTrigger = false;
+                PickedObject.GetComponent<Rigidbody>().AddForce(Vector3.down * 4);
+
 
                 PickedObject = null;
-            }
+            
+            
         }
 
-        //Throw  Object 
-        if (Input.GetMouseButtonDown(0) && PickedObject != null && CanThrow())
-        {
-
-            StartCoroutine(ThrowObject());
-
-            Debug.Log("Lo he lanzado");
-        }
     }
+    public void ThrowObject()
+    {
+        StartCoroutine(ThrowObjectCoroutine());
+    }
+   
 
-    IEnumerator ThrowObject()
+    IEnumerator ThrowObjectCoroutine()
     {
         PickedObject.transform.SetParent(null);
         //PickedObject = null;
@@ -117,4 +107,6 @@ public class PickUpObjects : MonoBehaviour
             return true;
         }
     }
+    
+   
 }

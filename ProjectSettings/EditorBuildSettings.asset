@@ -8,19 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LogoScreen.unity
     guid: 783dabb6f188ce7468a012ad49069119
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenuScreen.unity
     guid: d6534e4619f074ffb997d1abcadf071e
   - enabled: 1
     path: Assets/Scenes/GamePlayScreen.unity
     guid: 3a885cddb43ddb0439b164d03c63fdc6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LostScreen.unity
     guid: 858faa55405c947dfbb62f77ee7bfa09
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/VictoryScreen.unity
     guid: 165b813d0d3184e5891b919f3dddc468
   m_configObjects:
