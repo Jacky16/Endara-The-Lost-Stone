@@ -43,12 +43,15 @@ public class Enemy2 : MonoBehaviour
                 float angle = Vector3.Angle(checkingObject.forward, betweenDistance);
                 if (angle <= maxAngle)
                 {
+                   
                     Ray ray = new Ray(checkingObject.position, betweenDistance);
                     RaycastHit hit;
                     if (Physics.Raycast(ray, out hit, maxRadius))
                     {
-                        if (hit.collider.tag == "Player" || hit.collider.name == "Player")
+                       
+                        if(hit.transform == target.transform)
                         {
+                            Debug.Log("IsInFov");
                             isInFov = true;
                         }
                     }
@@ -72,21 +75,19 @@ public class Enemy2 : MonoBehaviour
         
         float BetweenDistance = Vector3.Distance(transform.position, player.position);
         //Persecucion
-        if (BetweenDistance > 10 && BetweenDistance < maxRadius) 
+        if (BetweenDistance > 10 && BetweenDistance < maxRadius && isInFov) 
         {
             EnemyStates = States.Chase;
-        }
-        //Atacando
-        if (BetweenDistance <= 10 )
+        }else if (BetweenDistance <= 10 && isInFov)
         {
+            //Atacando
             EnemyStates = States.Attack;
-        }
-        
-        //Siguiendo el Path
-        if (BetweenDistance > maxRadius)
+        }else if(BetweenDistance > maxRadius)   
         {
+            //Siguiendo el Path
             EnemyStates = States.FollowPath;
         }
+
         StateMachine();
          
     }
@@ -127,6 +128,10 @@ public class Enemy2 : MonoBehaviour
         Vector3 rotationDirection = (player.position - transform.position).normalized;
         Quaternion rotationToPlayer = Quaternion.LookRotation(rotationDirection);
         transform.rotation = Quaternion.Lerp(transform.rotation,rotationToPlayer, 1 * Time.deltaTime);
+        if (!isInFov)
+        {
+            EnemyStates = States.FollowPath;
+        }
         //Instanciar rocas
     }
 
@@ -138,6 +143,10 @@ public class Enemy2 : MonoBehaviour
     {
         navMeshAgent.SetDestination(player.position);
         navMeshAgent.speed = speed;
+        if (!isInFov)
+        {
+            EnemyStates = States.FollowPath;
+        }
     }
     IEnumerator DelayMovement()
     {
