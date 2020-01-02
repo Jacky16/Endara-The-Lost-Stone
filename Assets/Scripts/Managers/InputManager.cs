@@ -7,12 +7,14 @@ public class InputManager : MonoBehaviour
 {
     public PlayerMovement player;
     [SerializeField]PickUpObjects pickUpsObjects;
-    PlayerGamepadInputs playerInputs;
+    public PlayerGamepadInputs playerInputs;
     [SerializeField] CinemachineFreeLook playerCameraFreeLook;
+    //Variables bools para los controles de movimiento
     bool isJostickLeftPressed;
     bool isJostickRightPressed;
     bool isWASDIsPressed;
-    bool catchObject;
+    //Variables bool para los controles de interaccion
+    bool canJump;
     Vector2 vector2Axis;
     [SerializeField] bool useGamepad;
     private void Awake()
@@ -23,7 +25,19 @@ public class InputManager : MonoBehaviour
         ReadValuesGamePad();
         CheckButtonArePressed();
         ChangeAxisCamera();
-        
+        if (isJostickLeftPressed || isJostickRightPressed)
+        {
+            Debug.Log("Estoy tocando el mando...");
+            useGamepad = true;
+
+        }else if(Input.anyKey)
+        {
+            useGamepad = false;
+        }
+        else
+        {
+            useGamepad = true;
+        }
 
         //Enviar info al player
         player.Axis(H(),V());
@@ -69,21 +83,21 @@ public class InputManager : MonoBehaviour
         playerInputs.Player_Keyboard.Movement.performed += x => WASDTrue();
         playerInputs.Player_Keyboard.Movement.canceled += x => WASDFalse();
 
-        //Comprobacion de pulsacion del boton de cojer en el Gamepad(X)
+        //Comprobacion de pulsacion del boton de cojer en el Gamepad(X) y con el teclado(F)
        
-
-        if (playerInputs.Player_GamepadXbox.CatchObject.triggered)
+        if (playerInputs.Player_Keyboard.CatchObject.triggered || playerInputs.Player_GamepadXbox.CatchObject.triggered)
         {
             pickUpsObjects.PillarElObjeto();
         }
-        if (playerInputs.Player_GamepadXbox.ThrowObject.triggered)
+        if (playerInputs.Player_Keyboard.TrowObject.triggered || playerInputs.Player_GamepadXbox.ThrowObject.triggered)
         {
             pickUpsObjects.ThrowObject();
         }
 
-
-
-
+        //Comprobación de boton de saltar en el Gamepad(A)
+        playerInputs.Player_GamepadXbox.Jump.performed += x => ButtonJumpTrue();
+        playerInputs.Player_GamepadXbox.Jump.canceled += x => ButtonJumpFalse();
+        Debug.Log(canJump);
     }
     
 
@@ -105,7 +119,7 @@ public class InputManager : MonoBehaviour
             playerCameraFreeLook.m_YAxis.m_InputAxisName = "Mouse Y";
         }
     }
-    //Variables bool para comprobar si se esta tocando las teclas de movimiento
+    //Metodos bool para comprobar si se esta tocando las teclas de movimiento
     void WASDTrue()
     {
         isWASDIsPressed = true;
@@ -115,7 +129,7 @@ public class InputManager : MonoBehaviour
         isWASDIsPressed = false;
     }
 
-    //Variables bool para comprobar el JostickLeft si es presionado
+    //Metodos bool para comprobar el JostickLeft si es presionado
     void JostickLeftTrue()
     {
         isJostickLeftPressed = true;
@@ -125,7 +139,7 @@ public class InputManager : MonoBehaviour
         isJostickLeftPressed = false;
     }
 
-    //Variables bool para comprobar el JostickLeft si es presionado
+    //Metodos bool para comprobar el JostickLeft si es presionado
     void JostickRightTrue()
     {
         isJostickRightPressed = true;
@@ -133,6 +147,15 @@ public class InputManager : MonoBehaviour
     void JostickRightFalse()
     {
         isJostickRightPressed = false;
+    }
+    //Metodos bool para comprobar el boton de salto
+    void ButtonJumpTrue()
+    {
+        canJump = true;
+    }
+    void ButtonJumpFalse()
+    {
+        canJump = false;
     }
 
     //Recogue los valores para los inputs
@@ -151,10 +174,13 @@ public class InputManager : MonoBehaviour
     {
         return isJostickRightPressed;
     }
-   
     public bool IsWASDIsPressed() 
     {
         return isWASDIsPressed;
+    }
+    public bool CanJump()
+    {
+        return canJump;
     }
     //Logica para el input System
     public void OnEnable()

@@ -153,23 +153,30 @@ public class PlayerMovement : MonoBehaviour
     }
     public void JumpPlayer()
     {
-        if (player.isGrounded && !jumping && maxJumps > currentJump && Input.GetButtonDown("Jump"))
+        if (player.isGrounded && !jumping && maxJumps > currentJump)
         {
-            Debug.Log(1);
+            if (inputManager.playerInputs.Player_GamepadXbox.Jump.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
+            {
+                fallvelocity = jumpForce;
+                movePlayer.y = fallvelocity;
+                anim.SetTrigger("PlayerJump");
+                jumping = true;
+                jumpingTime = 0f;
+                currentJump = 2;
+            }
 
-            fallvelocity = jumpForce;
-            movePlayer.y = fallvelocity;
-            anim.SetTrigger("PlayerJump");
-            jumping = true;
-            jumpingTime = 0f;
-            currentJump = 2;
-        }else if ((player.isGrounded  || maxJumps == currentJump) && Input.GetButtonDown("Jump"))
+        }
+        else if ((player.isGrounded  || maxJumps == currentJump))
         {
-            Debug.Log(2);
+            if (inputManager.playerInputs.Player_GamepadXbox.Jump.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
+            {
+                fallvelocity = jumpForce;
+                movePlayer.y = fallvelocity;
+                currentJump = 0;
+            }
 
-            fallvelocity = jumpForce;
-            movePlayer.y = fallvelocity;
-            currentJump = 0;
+
+
 
         }
         else if(player.isGrounded)
