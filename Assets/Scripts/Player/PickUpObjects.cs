@@ -84,7 +84,7 @@ public class PickUpObjects : MonoBehaviour
             PickedObject.GetComponent<Rigidbody>().useGravity = true;
             PickedObject.GetComponent<Rigidbody>().isKinematic = false;
             PickedObject.GetComponent<BoxCollider>().isTrigger = true;
-            PickedObject.GetComponent<Rigidbody>().velocity = gameObject.transform.forward + transform.forward * 25;
+            PickedObject.GetComponent<Rigidbody>().velocity = gameObject.transform.forward + Camera.main.transform.forward * 25;
             PickedObject.GetComponent<BoxCollider>().isTrigger = false;
             PickedObject = null;
 

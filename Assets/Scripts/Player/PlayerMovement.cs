@@ -75,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Movimiento();
+        AimingManager();
     }
 
     bool jumping = false;
@@ -108,6 +109,11 @@ public class PlayerMovement : MonoBehaviour
         JumpPlayer();
         player.Move(movePlayer  * speed * Time.deltaTime);
     }
+    void AimingManager()
+    {
+        anim.SetBool("Aiming", inputManager.IsRightClickMousePressed());
+        
+    }
     public void SetGravity()
     {
         //Debug.Log("Fall velocity is: " + player.velocity.y);
@@ -131,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }  
     }
-    public void ModeGod()
+    void ModeGod()
     {
 
         unitsGod = godManager.UnitsToJumpInModeGod();
@@ -151,7 +157,7 @@ public class PlayerMovement : MonoBehaviour
             playerLifeManager.enabled = false;
         }
     }
-    public void JumpPlayer()
+    void JumpPlayer()
     {
         if (player.isGrounded && !jumping && maxJumps > currentJump)
         {
@@ -184,7 +190,7 @@ public class PlayerMovement : MonoBehaviour
             currentJump = 0;
         }
     }
-    public void CamDirection()
+    void CamDirection()
     {
         camForward = mainCam.transform.forward;
         camRight = mainCam.transform.right;
@@ -195,7 +201,6 @@ public class PlayerMovement : MonoBehaviour
         camForward = camForward.normalized;
         camRight = camRight.normalized;
     }
-
     public void PlayerDead()
     {
         //Destroy(this.gameObject);
@@ -204,8 +209,6 @@ public class PlayerMovement : MonoBehaviour
         SceneManager.LoadScene("LostScreen");
         
     }
-        
-    
     public void Axis(float h, float v){
         horizontal = h;
         vertical = v;
@@ -214,13 +217,11 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetTrigger("Attack");
     }
-    
     public void RestarVida(int cantidadARestar)
     {
         playerLifeManager.RestarLife(cantidadARestar);
     }
-
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    void OnControllerColliderHit(ControllerColliderHit hit)
     {
         ////Salto entre plataformas
         //if (!player.isGrounded && hit.normal.y < 0.1f)
@@ -252,21 +253,12 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = (pushDir * pushPower) / valueMass;
         
     }
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Final")
         {
             SceneManager.LoadScene("VictoryScreen");
         }
     }
-
-
-
-
-
-
-
-
-
 
 }

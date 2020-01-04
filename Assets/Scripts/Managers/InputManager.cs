@@ -15,6 +15,8 @@ public class InputManager : MonoBehaviour
     bool isWASDIsPressed;
     //Variables bool para los controles de interaccion
     bool canJump;
+    bool isMouseRightClickPressed;
+    bool isButtonGampedadAimPressed;
     Vector2 vector2Axis;
     [SerializeField] bool useGamepad;
     private void Awake()
@@ -45,8 +47,6 @@ public class InputManager : MonoBehaviour
         MeleAttack();
 
     }
-
-
 
     void MeleAttack()
     {
@@ -97,11 +97,18 @@ public class InputManager : MonoBehaviour
         //Comprobación de boton de saltar en el Gamepad(A)
         playerInputs.Player_GamepadXbox.Jump.performed += x => ButtonJumpTrue();
         playerInputs.Player_GamepadXbox.Jump.canceled += x => ButtonJumpFalse();
-        Debug.Log(canJump);
-    }
-    
 
-    
+        //Comprobacion del boton de apuntar en el raton(Click Derecho)
+        playerInputs.Player_Keyboard.Aim.performed += x => RightClickMouseTrue();
+        playerInputs.Player_Keyboard.Aim.canceled += x => RightClickMouseFalse();
+        //Debug.Log(IsRightClickMousePressed());
+        //Comprobacion del boton de apuntar en el Gamepad(LT/R2)
+       // playerInputs.playe
+
+    }
+
+
+
     void ChangeAxisCamera()
     {
         if (useGamepad)
@@ -138,7 +145,16 @@ public class InputManager : MonoBehaviour
     {
         isJostickLeftPressed = false;
     }
-
+    void RightClickMouseTrue()
+    {
+        isMouseRightClickPressed = true;
+    }
+    void RightClickMouseFalse()
+    {
+        isMouseRightClickPressed = false;
+    }
+    
+    
     //Metodos bool para comprobar el JostickLeft si es presionado
     void JostickRightTrue()
     {
@@ -181,6 +197,14 @@ public class InputManager : MonoBehaviour
     public bool CanJump()
     {
         return canJump;
+    }
+    public bool IsRightClickMousePressed()
+    {
+        return isMouseRightClickPressed;
+    }
+    public bool IsAimButtonGamepadPressed()
+    {
+        return isButtonGampedadAimPressed;
     }
     //Logica para el input System
     public void OnEnable()

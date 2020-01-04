@@ -49,6 +49,14 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""Button"",
+                    ""id"": ""fe567242-effb-42be-ad9c-ea97a0622e4f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -137,6 +145,17 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""TrowObject"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ea415ee7-140c-4735-b316-40a8179ae89a"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -266,6 +285,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         m_Player_Keyboard_CatchObject = m_Player_Keyboard.FindAction("Catch Object", throwIfNotFound: true);
         m_Player_Keyboard_Jump = m_Player_Keyboard.FindAction("Jump", throwIfNotFound: true);
         m_Player_Keyboard_TrowObject = m_Player_Keyboard.FindAction("TrowObject", throwIfNotFound: true);
+        m_Player_Keyboard_Aim = m_Player_Keyboard.FindAction("Aim", throwIfNotFound: true);
         // Player_GamepadXbox
         m_Player_GamepadXbox = asset.FindActionMap("Player_GamepadXbox", throwIfNotFound: true);
         m_Player_GamepadXbox_Movement = m_Player_GamepadXbox.FindAction("Movement", throwIfNotFound: true);
@@ -326,6 +346,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Keyboard_CatchObject;
     private readonly InputAction m_Player_Keyboard_Jump;
     private readonly InputAction m_Player_Keyboard_TrowObject;
+    private readonly InputAction m_Player_Keyboard_Aim;
     public struct Player_KeyboardActions
     {
         private @PlayerGamepadInputs m_Wrapper;
@@ -334,6 +355,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         public InputAction @CatchObject => m_Wrapper.m_Player_Keyboard_CatchObject;
         public InputAction @Jump => m_Wrapper.m_Player_Keyboard_Jump;
         public InputAction @TrowObject => m_Wrapper.m_Player_Keyboard_TrowObject;
+        public InputAction @Aim => m_Wrapper.m_Player_Keyboard_Aim;
         public InputActionMap Get() { return m_Wrapper.m_Player_Keyboard; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -355,6 +377,9 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                 @TrowObject.started -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnTrowObject;
                 @TrowObject.performed -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnTrowObject;
                 @TrowObject.canceled -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnTrowObject;
+                @Aim.started -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnAim;
+                @Aim.performed -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnAim;
+                @Aim.canceled -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnAim;
             }
             m_Wrapper.m_Player_KeyboardActionsCallbackInterface = instance;
             if (instance != null)
@@ -371,6 +396,9 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                 @TrowObject.started += instance.OnTrowObject;
                 @TrowObject.performed += instance.OnTrowObject;
                 @TrowObject.canceled += instance.OnTrowObject;
+                @Aim.started += instance.OnAim;
+                @Aim.performed += instance.OnAim;
+                @Aim.canceled += instance.OnAim;
             }
         }
     }
@@ -455,6 +483,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         void OnCatchObject(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnTrowObject(InputAction.CallbackContext context);
+        void OnAim(InputAction.CallbackContext context);
     }
     public interface IPlayer_GamepadXboxActions
     {

@@ -10,6 +10,7 @@ TagManager:
   - TransformObjectPickUp
   - Caja
   - SwitchCamera
+  - Cubo
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Transparent
   - SwitchCamera
   - Player
-  - 
+  - Laser
   - 
   - 
   - 
