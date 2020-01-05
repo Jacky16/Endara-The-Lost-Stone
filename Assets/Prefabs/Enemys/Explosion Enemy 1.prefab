@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1976856940074912842}
   - component: {fileID: 933854670348152544}
   - component: {fileID: 1970963976114194038}
-  - component: {fileID: 8728470291236704296}
   m_Layer: 0
   m_Name: Explosion Enemy 1
   m_TagString: Untagged
@@ -58,9 +57,9 @@ SphereCollider:
   m_GameObject: {fileID: 3501516909131087612}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 7.25
+  m_Radius: 4.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1970963976114194038
 Rigidbody:
@@ -78,19 +77,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
---- !u!114 &8728470291236704296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3501516909131087612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18e408ba7ad59bc439ac0fd98d1d75e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageExplosion: 1
 --- !u!1 &4354631116765210434
 GameObject:
   m_ObjectHideFlags: 0

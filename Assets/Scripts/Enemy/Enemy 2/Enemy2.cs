@@ -10,12 +10,13 @@ public class Enemy2 : MonoBehaviour
     [SerializeField] float maxAngle;
     [SerializeField] float maxRadius;
     [SerializeField] float speed;
-    
+    [SerializeField] float radiusAttack;
 
     //Componentes
-    [SerializeField] NavMeshAgent navMeshAgent;
+    [Header("Componentes")]
+    NavMeshAgent navMeshAgent;
+    Animator anim;
     [SerializeField] Transform[] pathEnemy;
-    [SerializeField] Animator anim;
     //Variables booleanas
     private bool isInFov = false;
     bool canPath = true;
@@ -28,6 +29,8 @@ public class Enemy2 : MonoBehaviour
     private void Start()
     {
         speed = Random.Range(2, 4);
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
         //nextPosition = 0;
     }
 
@@ -72,24 +75,27 @@ public class Enemy2 : MonoBehaviour
     {
         //Debug.Log(EnemyStates);
         //Debug.Log("esta en el campo de vision: " + isInFov);
-        
+
+        //Distancia entre el enemigo y el player
         float BetweenDistance = Vector3.Distance(transform.position, player.position);
-        //Persecucion
-        if (BetweenDistance > 10 && BetweenDistance < maxRadius && isInFov) 
+        //Persecucion: si es mayor que el radio de ataque y si la distancia al player es menor que el radio y maximo y en el campo de vision
+        if (BetweenDistance > radiusAttack && BetweenDistance < maxRadius && isInFov)
         {
             EnemyStates = States.Chase;
-        }else if (BetweenDistance <= 10 && isInFov)
+        }
+        //Ataque : si la distancia es menor que el radio de ataque y si esta en el campo de vision
+        else if (BetweenDistance <= radiusAttack && isInFov)
         {
             //Atacando
             EnemyStates = States.Attack;
-        }else if(BetweenDistance > maxRadius)   
+        }
+        //Path: sigue la ruta si la distancia es mayor que el radio maximo
+        else if (BetweenDistance > maxRadius)
         {
             //Siguiendo el Path
             EnemyStates = States.FollowPath;
         }
-
         StateMachine();
-         
     }
     public void StateMachine()
     {
@@ -167,7 +173,7 @@ public class Enemy2 : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, maxRadius);
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 10);
+        Gizmos.DrawWireSphere(transform.position, radiusAttack);
 
         Vector3 fovLine1 = Quaternion.AngleAxis(maxAngle, transform.up) * transform.forward * maxRadius;
         Vector3 fovLine2 = Quaternion.AngleAxis(-maxAngle, transform.up) * transform.forward * maxRadius;

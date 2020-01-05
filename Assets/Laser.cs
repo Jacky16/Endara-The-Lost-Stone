@@ -11,8 +11,9 @@ public class Laser : MonoBehaviour
     [Header("Tipos de cubo")]
     public bool cuboPadre;
     public bool cuboHijo;
-    public bool cuboFinal;
-    [SerializeField]bool activarRaycast;
+    [Header("Bools para combrobar si recibe el Raycast")]
+
+    [SerializeField] bool activarRaycast;
     [SerializeField] bool reciboRaycast;
     GameObject cuboHijoGameObject;
 
@@ -31,10 +32,7 @@ public class Laser : MonoBehaviour
         {
             DesactivarLineRender();
         }
-        else if (cuboFinal)
-        {
-            DesactivarLineRender();
-        }
+        
     }
 
     // Update is called once per frame
@@ -58,16 +56,6 @@ public class Laser : MonoBehaviour
             DesactivarLineRender();
             activarRaycast = false;
 
-        //}else if (cuboFinal && reciboRaycast) // Recibe Raycast el CUBO FINAL
-        //{
-        //    activarRaycast = true;
-        //    ActivarLineRenderer();
-        //}
-        //else if (cuboFinal && !reciboRaycast) //Deja de recibir el Raycast el CUBO FINAL
-        //{
-        //    activarRaycast = false;
-
-        //    DesactivarLineRender();
         }else if (!reciboRaycast && !cuboPadre)
         {
             DesactivarLineRender();
@@ -102,23 +90,22 @@ public class Laser : MonoBehaviour
                     //Como recibe el Raycast, ponemos la variable a true
                     cuboHijoGameObject.GetComponent<Laser>().reciboRaycast = true;
 
-
-
-
                 }
                
                 else if (hit.transform.name != "Cubo") 
                 {
-
+                    //Desactiva el Line Renderer y el raycast de todos los cubos cuando no colsiona el rayo excepto el ultimo
                     cuboHijoGameObject.GetComponent<Laser>().reciboRaycast = false;
                     cuboHijoGameObject.GetComponent<Laser>().activarRaycast = false;
                     cuboHijoGameObject.GetComponent<Laser>().DesactivarLineRender();
-                    GameObject [] cubos = GameObject.FindGameObjectsWithTag("Cubo");
+                    
                     if (!cuboPadre)
                     {
                         DesactivarLineRender();
                     }
-                    foreach(GameObject g in cubos)
+                    //Manera para desactivar el LineRenderer del ultimo cubo
+                    GameObject[] cubos = GameObject.FindGameObjectsWithTag("Cubo");
+                    foreach (GameObject g in cubos)
                     {
                         if (!g.GetComponent<Laser>().cuboPadre)
                         {
@@ -131,18 +118,6 @@ public class Laser : MonoBehaviour
 
 
                 }
-                //else if(hit.transform.name == "Cubo_Final")
-                //{
-                //    //if (cuboDeDelante.GetComponent<Laser>().cuboHijo)
-                //    //{
-                //    //    cuboDeDelante.GetComponent<Laser>().reciboRaycast = false;
-                //    //    cuboDeDelante.GetComponent<Laser>().activarRaycast = false;
-
-                //    //    cuboDeDelante.GetComponent<Laser>().DesactivarLineRender();
-                //    //    //cuboDeDelante = null;
-
-                //    //}
-                //}
 
 
             }
