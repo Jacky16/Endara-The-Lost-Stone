@@ -6,21 +6,21 @@ using UnityEngine.AI;
 public abstract class Enemy : MonoBehaviour
 {
     
-    [SerializeField] int life = 100;
-    [SerializeField] float attackDamage;
+    [SerializeField] protected int life = 100;
+    [SerializeField] protected float attackDamage;
     [SerializeField] float velocity;
-
+    
     //Ajustes del enemigo
     [SerializeField] protected Transform player;
     [SerializeField] float maxAngle;
     [SerializeField] float maxRadius;
     [SerializeField] float speed;
-    [SerializeField] float radiusAttack;
+    [SerializeField] protected float radiusAttack;
 
     //Componentes
     [Header("Componentes")]
-    protected NavMeshAgent navMeshAgent;
-    protected Animator anim;
+    [SerializeField] protected NavMeshAgent navMeshAgent;
+    [SerializeField] protected Animator anim;
     [SerializeField] Transform[] pathEnemy;
     //Variables booleanas
     protected bool isInFov = false;
@@ -34,7 +34,7 @@ public abstract class Enemy : MonoBehaviour
     private void Start()
     {
         speed = Random.Range(2, 4);
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent = this.GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         //nextPosition = 0;
     }

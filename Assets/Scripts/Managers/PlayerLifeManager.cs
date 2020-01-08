@@ -28,9 +28,10 @@ public class PlayerLifeManager : MonoBehaviour
             player.PlayerDead();
         }
     }
-    public void RestarLife(int life)
+    public void RestarLife(float life)
     {
         currentLifePlayer -= life;
+        Debug.Log("Vida del player: " + currentLifePlayer);
        // rectTransformLifeBar.DOShakeAnchorPos(100f, 1);
     }
 

@@ -5,8 +5,14 @@ using UnityEngine.AI;
 
 public class Enemy_1 : Enemy
 {
-   
-    public void AttackPlayer()
+    [SerializeField] GameObject explosionPrefab;
+    float explosionRand;
+    float damageExplosion = 14;
+    private void Start()
+    {
+        explosionRand = 1;
+    }
+    public override void AttackPlayer()
     {
         if (explosionRand == 0)
         {
@@ -25,9 +31,14 @@ public class Enemy_1 : Enemy
     }
     public void Explosion()
     {
-        gameObject.SetActive(false);
-        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        GameObject g = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        g.GetComponent<ExplosionEnemy1>().GetDamage(DamageExplosion());
+
         Destroy(this.gameObject, 0.1f);
+    }
+    public float DamageExplosion()
+    {
+        return damageExplosion/3.0f;
     }
    
 }

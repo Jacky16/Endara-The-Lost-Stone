@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class ExplosionEnemy1 : MonoBehaviour
 {
-    [SerializeField] int damageExplosion;
-
+    float damageExplosion = 0;
+   
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.gameObject.name == "Player")
         {
             PlayerLifeManager playerLifeManager = GameObject.Find("Player Life Manager").GetComponent<PlayerLifeManager>();
             playerLifeManager.RestarLife(damageExplosion);
+            Debug.Log(damageExplosion);
+            Destroy(this.gameObject, 2f);
         }
     }
-    private void Update()
+    public void GetDamage(float damage)
     {
-        Destroy(gameObject, 2);
+        damageExplosion = damage;
     }
+    
+
 }
