@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class Enemy2 : Enemy
 {
+    [SerializeField] GameObject rockPrefab;
+    float counter;
+    [SerializeField] float timeToShoot;
     public override void AttackPlayer()
     {
         navMeshAgent.speed = 0;

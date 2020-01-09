@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public abstract class Enemy : MonoBehaviour
 {
-    
     [SerializeField] protected int life = 100;
     [SerializeField] protected float attackDamage;
     [SerializeField] float velocity;
@@ -24,7 +23,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] Transform[] pathEnemy;
     //Variables booleanas
     protected bool isInFov = false;
-    bool canPath = true;
+    protected bool canPath = true;
     //Variables int
     int nextPosition = 0;
 
