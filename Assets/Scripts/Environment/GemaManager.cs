@@ -29,11 +29,7 @@ public class GemaManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                
-               
-                    Selected();
-
-               
+              Selected(); 
             }
             transform.DOLocalRotate(new Vector3(90, 180, 0), 2, RotateMode.FastBeyond360);
             transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 2);
@@ -43,8 +39,6 @@ public class GemaManager : MonoBehaviour
         {
             transform.DOLocalRotate(new Vector3(90, 0, 0), 2, RotateMode.FastBeyond360);
             transform.DOScale(new Vector3(1, 1,1), 2);
-
-
         }
 
 
@@ -65,11 +59,7 @@ public class GemaManager : MonoBehaviour
    
     public void Selected()
     {
-        if (isInMenu)
-        {
-            
-        }
-        else
+        if(!isInMenu)
         {
             transform.DOScale(new Vector3(1, 1, 1), 3);
             transform.DOLocalMoveZ(-0.2f, 0.3f).SetEase(Ease.InCubic).OnStart(() => ActiveCanvasMainMenu()).OnPlay(() => DoAnimationsButtons());

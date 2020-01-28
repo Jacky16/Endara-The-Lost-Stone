@@ -76,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Movimiento();
         AimingManager();
+       
     }
 
     bool jumping = false;
@@ -84,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
         if (jumping)
         {
             jumpingTime += Time.deltaTime;
-            if (jumpingTime > 0.5f)
+            if (jumpingTime > 0.3f)
             {
                 jumping = !player.isGrounded;
             }
