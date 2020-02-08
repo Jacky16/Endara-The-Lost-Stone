@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     bool canMove = false;
     public bool isGod;
     [SerializeField] bool isInitialPosition;
+    private bool doubleJump = true;
 
 
     private void Start()
@@ -76,22 +77,13 @@ public class PlayerMovement : MonoBehaviour
     {
         Movimiento();
         AimingManager();
+       
     }
 
     bool jumping = false;
     float jumpingTime = 0f;
     public void Movimiento(){
-        if (jumping)
-        {
-            jumpingTime += Time.deltaTime;
-            if (jumpingTime > 0.5f)
-            {
-                jumping = !player.isGrounded;
-            }
-        }
-
-
-        anim.SetBool("IsGrounded", player.isGrounded && !jumping);
+        anim.SetBool("IsGrounded", player.isGrounded);
         Axis(inputManager.H(),inputManager.V());
         playerInput = new Vector3(horizontal, 0, vertical);
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
@@ -135,7 +127,9 @@ public class PlayerMovement : MonoBehaviour
                 movePlayer.y = fallvelocity;
                 anim.SetFloat("PlayerVerticalVelocity", player.velocity.y);
             }
-        }  
+            anim.SetBool("IsGrouded", player.isGrounded);
+
+        }
     }
     void ModeGod()
     {
@@ -159,36 +153,43 @@ public class PlayerMovement : MonoBehaviour
     }
     void JumpPlayer()
     {
-        if (player.isGrounded && !jumping && maxJumps > currentJump)
+        
+        //if (player.isGrounded && !jumping && maxJumps > currentJump)
+        //{
+
+
+        //}
+        //else if ((player.isGrounded  || maxJumps == currentJump))
+        //{
+        //    if (inputManager.playerInputs.Player_GamepadXbox.Jump.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
+        //    {
+        //        fallvelocity = jumpForce;
+        //        movePlayer.y = fallvelocity;
+        //        currentJump = 0;
+        //    }
+        //}
+        //else if(player.isGrounded)
+        //{
+        //    currentJump = 0;
+        //}
+
+        if (inputManager.playerInputs.Player_GamepadXbox.Jump.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
         {
-            if (inputManager.playerInputs.Player_GamepadXbox.Jump.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
-            {
-                fallvelocity = jumpForce;
-                movePlayer.y = fallvelocity;
-                anim.SetTrigger("PlayerJump");
-                jumping = true;
-                jumpingTime = 0f;
-                currentJump = 2;
-            }
+            if (!doubleJump)
+                return;
 
+            if (!player.isGrounded)
+                doubleJump = false;
+
+            fallvelocity = jumpForce;
+            movePlayer.y = fallvelocity; 
         }
-        else if ((player.isGrounded  || maxJumps == currentJump))
+
+        if (!doubleJump && player.isGrounded)
         {
-            if (inputManager.playerInputs.Player_GamepadXbox.Jump.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
-            {
-                fallvelocity = jumpForce;
-                movePlayer.y = fallvelocity;
-                currentJump = 0;
-            }
-
-
-
-
+            doubleJump = true;
         }
-        else if(player.isGrounded)
-        {
-            currentJump = 0;
-        }
+
     }
     void CamDirection()
     {

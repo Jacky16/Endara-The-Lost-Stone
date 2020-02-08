@@ -81,7 +81,7 @@ public class Laser : MonoBehaviour
                 lineRenderer.SetPosition(1, direction);
 
 
-                if (hit.transform.name == "Cubo") // Choca con un cubo hijo
+                if (hit.transform.tag == "Cubo") // Choca con un cubo hijo
                 {
 
                     //Obtener el cubo que tiene delante
@@ -92,7 +92,7 @@ public class Laser : MonoBehaviour
 
                 }
                
-                else if (hit.transform.name != "Cubo") 
+                else if (hit.transform.tag != "Cubo") 
                 {
                     //Desactiva el Line Renderer y el raycast de todos los cubos cuando no colsiona el rayo excepto el ultimo
                     cuboHijoGameObject.GetComponent<Laser>().reciboRaycast = false;
@@ -115,24 +115,18 @@ public class Laser : MonoBehaviour
                         }
                     }
                     cuboHijoGameObject = null;
-
-
                 }
-
 
             }
         }
-  
     }
     public void ActivarLineRenderer()
     {
         lineRenderer.enabled = true;
-
     }
     public void DesactivarLineRender()
     {
         lineRenderer.enabled = false;
-
     }
     
 }
