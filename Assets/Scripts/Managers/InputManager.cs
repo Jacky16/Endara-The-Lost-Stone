@@ -32,7 +32,7 @@ public class InputManager : MonoBehaviour
             Debug.Log("Estoy tocando el mando...");
             useGamepad = true;
 
-        }else if(Input.anyKey)
+        }else if(Input.anyKey || Input.GetAxis("Mouse Y") > 0.01f || Input.GetAxis("Mouse X") > 0.01f)
         {
             useGamepad = false;
         }

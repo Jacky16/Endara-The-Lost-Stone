@@ -18,6 +18,11 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 500
     min: 0
+  directionalTransmissionMultiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 1
   cascadeShadowSplitCount:
     m_OverrideState: 1
     m_Value: 4
@@ -60,10 +65,10 @@ MonoBehaviour:
   m_AdvancedMode: 0
   skyType:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 3
   skyAmbientMode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   fogType:
     m_OverrideState: 1
     m_Value: 3
@@ -82,7 +87,6 @@ MonoBehaviour:
   components:
   - {fileID: -6392416365363326284}
   - {fileID: -1973168576840183219}
-  - {fileID: 2075963938979374802}
   - {fileID: 8374968368696692050}
 --- !u!114 &2075963938979374802
 MonoBehaviour:

@@ -22,7 +22,7 @@ public class PauseManager : MonoBehaviour
     // Update is called once per frame
     public void Pause()
     {
-        if (Input.GetKeyDown(pauseKeyCode)){
+        if (Input.GetKeyDown(KeyCode.Escape)){
             canvasPause.SetActive(true);
             Time.timeScale = 0.01f;
             Cursor.visible = true;

@@ -63,10 +63,10 @@ public class PlayerMovement : MonoBehaviour
         godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        movePlayer.y = 0;
         if (isInitialPosition)
         {
             transform.position = initialPosition.position;
-
         }
         else
         {
@@ -77,29 +77,28 @@ public class PlayerMovement : MonoBehaviour
     {
         Movimiento();
         AimingManager();
-       
     }
-
-    bool jumping = false;
-    float jumpingTime = 0f;
     public void Movimiento(){
-        anim.SetBool("IsGrounded", player.isGrounded);
+        print(player.isGrounded);
+        //print(movePlayer.y);
+        anim.SetBool("isGrounded", player.isGrounded);
         Axis(inputManager.H(),inputManager.V());
         playerInput = new Vector3(horizontal, 0, vertical);
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
 
-        anim.SetFloat("PlayerWalkVelovity", playerInput.magnitude * speed);
+        anim.SetFloat("PlayerWalkVelocity", playerInput.magnitude * speed);
+
         CamDirection();
         Vector3 rotationDirection = playerInput.x * camRight + playerInput.z * camForward;
         if (inputManager.IsJostickLeftPressed() || inputManager.IsWASDIsPressed())
         {
             Vector3 currentRotation = rotationDirection.normalized;
-            transform.rotation = Quaternion.LookRotation(currentRotation , Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentRotation),1);
         }
         movePlayer = playerInput.x * camRight + playerInput.z * camForward;
         SetGravity(); 
         JumpPlayer();
-        player.Move(movePlayer  * speed * Time.deltaTime);
+        player.Move(movePlayer  * (speed * Time.deltaTime));
     }
     void AimingManager()
     {
@@ -116,6 +115,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            anim.SetBool("isGrounded", player.isGrounded);
+
             if (player.isGrounded)
             {
                 fallvelocity = -gravity * Time.deltaTime;
@@ -127,7 +128,6 @@ public class PlayerMovement : MonoBehaviour
                 movePlayer.y = fallvelocity;
                 anim.SetFloat("PlayerVerticalVelocity", player.velocity.y);
             }
-            anim.SetBool("IsGrouded", player.isGrounded);
 
         }
     }
@@ -153,36 +153,24 @@ public class PlayerMovement : MonoBehaviour
     }
     void JumpPlayer()
     {
-        
-        //if (player.isGrounded && !jumping && maxJumps > currentJump)
-        //{
-
-
-        //}
-        //else if ((player.isGrounded  || maxJumps == currentJump))
-        //{
-        //    if (inputManager.playerInputs.Player_GamepadXbox.Jump.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
-        //    {
-        //        fallvelocity = jumpForce;
-        //        movePlayer.y = fallvelocity;
-        //        currentJump = 0;
-        //    }
-        //}
-        //else if(player.isGrounded)
-        //{
-        //    currentJump = 0;
-        //}
 
         if (inputManager.playerInputs.Player_GamepadXbox.Jump.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
         {
             if (!doubleJump)
+            {
                 return;
 
+            }
+
             if (!player.isGrounded)
+            {
                 doubleJump = false;
 
+            }
+
             fallvelocity = jumpForce;
-            movePlayer.y = fallvelocity; 
+            movePlayer.y = fallvelocity;
+            anim.SetTrigger("PlayerJump");
         }
 
         if (!doubleJump && player.isGrounded)
