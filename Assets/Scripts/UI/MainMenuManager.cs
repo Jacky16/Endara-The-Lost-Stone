@@ -20,8 +20,9 @@ public class MainMenuManager : MonoBehaviour
     //}
     public void Ajustes()
     {
-        canvasMainMenu.SetActive(false);
+       
         canvasAjustes.SetActive(true);
+        canvasMainMenu.SetActive(false);
     }
     public void ContenidoExtra()
     {
