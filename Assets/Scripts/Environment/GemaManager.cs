@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.InputSystem;
 
 public class GemaManager : MonoBehaviour
 {
@@ -34,6 +35,10 @@ public class GemaManager : MonoBehaviour
             transform.DOLocalRotate(new Vector3(90, 180, 0), 2, RotateMode.FastBeyond360);
             transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 2);
 
+        }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Selected();
         }
         else
         {

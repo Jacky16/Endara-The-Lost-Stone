@@ -1,14 +1,14 @@
 fileFormatVersion: 2
 guid: 56017796325958e4cad72b3c805f722f
 ModelImporter:
-  serializedVersion: 19300
+  serializedVersion: 26
   internalIDToNameTable:
   - first:
       74: 5539831331247536789
     second: Jump
   externalObjects: {}
   materials:
-    materialImportMode: 1
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -41,15 +41,15 @@ ModelImporter:
       name: Jump
       takeName: Jump
       internalID: 0
-      firstFrame: 48
-      lastFrame: 88
+      firstFrame: 11
+      lastFrame: 124
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -65,7 +65,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 10.8
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -104,6 +104,7 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
+  copyAvatar: 0
   humanDescription:
     serializedVersion: 3
     human:
@@ -1814,10 +1815,8 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
