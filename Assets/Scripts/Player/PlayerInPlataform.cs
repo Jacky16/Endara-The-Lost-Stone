@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInPlataform : MonoBehaviour
 {
-    [SerializeField] CharacterController player;
+    CharacterController player;
     private Vector3 groundPosition;
     private Vector3 lastGroundPosition;
     private string groundName;
@@ -19,6 +19,7 @@ public class PlayerInPlataform : MonoBehaviour
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        player = GetComponent<CharacterController>();
     }
     void LateUpdate()
     {

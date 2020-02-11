@@ -76,7 +76,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Movimiento();
-        AimingManager();
     }
     public void Movimiento(){
         print(player.isGrounded);
@@ -100,11 +99,11 @@ public class PlayerMovement : MonoBehaviour
         JumpPlayer();
         player.Move(movePlayer  * (speed * Time.deltaTime));
     }
-    void AimingManager()
-    {
-        anim.SetBool("Aiming", inputManager.IsRightClickMousePressed());
+    //void AimingManager()
+    //{
+    //    anim.SetBool("Aiming", inputManager.IsRightClickMousePressed());
         
-    }
+    //}
     public void SetGravity()
     {
         //Debug.Log("Fall velocity is: " + player.velocity.y);

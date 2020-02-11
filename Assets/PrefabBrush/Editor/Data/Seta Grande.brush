@@ -1,0 +1,26 @@
+Layer Selection: Terrain
+Brush Max Size: 10
+Brush Size: 3,55
+Fill Mode: False
+Fill Rate: 0,5
+
+Game Object: Assets/Assets_Endara/Prefabs/Props/Setas/Seta.prefab
+Layer: Default
+Toggle: True
+Slider: 1
+Lock Orientation Toggle: False
+Random Rotation Toggle: True
+Random Rotation X: False
+Random Rotation Y: True
+Random Rotation Z: False
+Random Scale Toggle: True
+Random Scale Min: 2
+Random Scale Max: 1
+Fixed Rotation Toggle: False
+Fixed Rotation X: 0
+Fixed Rotation Y: 90
+Fixed Rotation Z: 0
+Depth: 0
+
+Group Names:
+Setas 2n zona
