@@ -166,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
                 doubleJump = false;
 
             }
-
+            Debug.Log("He saltado");
             fallvelocity = jumpForce;
             movePlayer.y = fallvelocity;
             anim.SetTrigger("PlayerJump");

@@ -10,14 +10,14 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
-        //canvasAjustes.SetActive(false);
+        canvasAjustes.SetActive(false);
     }
 
     //Metodos Main Menu
-    //public void NuevaPartida()
-    //{
-    //    SceneManager.LoadScene(2);
-    //}
+    public void Play()
+    {
+        SceneManager.LoadScene("GamePlayScreen");
+    }
     public void Ajustes()
     {
        
