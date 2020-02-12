@@ -1,8 +1,8 @@
-Layer Selection: Default
-Brush Max Size: 10
-Brush Size: 1,66
-Fill Mode: False
-Fill Rate: 0,5
+Layer Selection: Terrain
+Brush Max Size: 20
+Brush Size: 11,26
+Fill Mode: True
+Fill Rate: 0,416
 
 Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes/Seta.prefab
 Layer: Default
@@ -15,7 +15,7 @@ Random Rotation Y: False
 Random Rotation Z: False
 Random Scale Toggle: True
 Random Scale Min: 2
-Random Scale Max: 2
+Random Scale Max: 3
 Fixed Rotation Toggle: False
 Fixed Rotation X: 0
 Fixed Rotation Y: 0
@@ -33,7 +33,7 @@ Random Rotation Y: False
 Random Rotation Z: False
 Random Scale Toggle: True
 Random Scale Min: 2
-Random Scale Max: 2
+Random Scale Max: 1
 Fixed Rotation Toggle: True
 Fixed Rotation X: 90
 Fixed Rotation Y: 0
@@ -44,13 +44,31 @@ Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes/Seta_Grande_03.pre
 Layer: Default
 Toggle: True
 Slider: 1
-Lock Orientation Toggle: True
+Lock Orientation Toggle: False
 Random Rotation Toggle: False
 Random Rotation X: False
 Random Rotation Y: False
 Random Rotation Z: False
 Random Scale Toggle: True
 Random Scale Min: 1,2
+Random Scale Max: 1
+Fixed Rotation Toggle: True
+Fixed Rotation X: 90
+Fixed Rotation Y: 0
+Fixed Rotation Z: 0
+Depth: 0
+
+Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes/Seta_Grande_01.prefab
+Layer: Default
+Toggle: True
+Slider: 1
+Lock Orientation Toggle: False
+Random Rotation Toggle: False
+Random Rotation X: False
+Random Rotation Y: False
+Random Rotation Z: False
+Random Scale Toggle: True
+Random Scale Min: 1
 Random Scale Max: 1
 Fixed Rotation Toggle: True
 Fixed Rotation X: 90
