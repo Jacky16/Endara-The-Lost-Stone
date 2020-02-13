@@ -22,6 +22,10 @@ public class GemaManager : MonoBehaviour
     {
 
         Unselected();
+        Sequence gemaIdle = DOTween.Sequence();
+        gemaIdle.Append(transform.DOLocalRotate(new Vector3(0, 360, 0),10,RotateMode.FastBeyond360).SetEase(Ease.Linear));
+      
+        gemaIdle.SetLoops(-1);
     }
     private void Update()
     {
@@ -32,8 +36,7 @@ public class GemaManager : MonoBehaviour
             {
               Selected(); 
             }
-            transform.DOLocalRotate(new Vector3(90, 180, 0), 2, RotateMode.FastBeyond360);
-            transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 2);
+           
 
         }
         else if (Input.GetKeyDown(KeyCode.Space))
@@ -42,8 +45,7 @@ public class GemaManager : MonoBehaviour
         }
         else
         {
-            transform.DOLocalRotate(new Vector3(90, 0, 0), 2, RotateMode.FastBeyond360);
-            transform.DOScale(new Vector3(1, 1,1), 2);
+            
         }
 
 
@@ -52,44 +54,44 @@ public class GemaManager : MonoBehaviour
     {
         
         isMouseOver = true;
+        transform.DOScale(new Vector3(1.3f, 1.3f, 1.3f), 1).SetEase(Ease.InCubic);
 
     }
   
     private void OnMouseExit()
     {
         isMouseOver = false;
-     
+        transform.DOScale(new Vector3(1f, 1, 1f), 1).SetEase(Ease.OutCubic);
+
 
     }
-   
+
     public void Selected()
     {
         if(!isInMenu)
         {
-            transform.DOScale(new Vector3(1, 1, 1), 3);
-            transform.DOLocalMoveZ(-0.2f, 0.3f).SetEase(Ease.InCubic).OnStart(() => ActiveCanvasMainMenu()).OnPlay(() => DoAnimationsButtons());
-            transform.DOLocalRotate(new Vector3(90, 360, 0), 0.4f);
+            //transform.DOScale(new Vector3(1, 1, 1), 3);
+            //transform.DOLocalMoveZ(-0.2f, 0.3f).SetEase(Ease.InCubic).OnStart(() => ActiveCanvasMainMenu()).OnPlay(() => DoAnimationsButtons());
+            //transform.DOLocalRotate(new Vector3(90, 360, 0), 0.4f);
         }
 
         
     }
     public void Unselected()
     {
-        //transform.DOLocalRotate(new Vector3(90, 0, 0), 2.5f, RotateMode.FastBeyond360).SetEase(Ease.Linear); 
-        transform.DOLocalMoveZ(0f, 1f).SetEase(Ease.OutCubic).OnPlay(() => DoRewindAnimationsButtons());
-        transform.DOLocalRotate(new Vector3(90, 0, 0), 0.4f);
+        //transform.DOLocalMoveZ(0f, 1f).SetEase(Ease.OutCubic).OnPlay(() => DoRewindAnimationsButtons());
 
 
     }
     public void ActiveCanvasMainMenu()
     {
-        canvasMainMenu.SetActive(true);
+        //canvasMainMenu.SetActive(true);
 
     }
     public void DesactiveCanvasMainMenu()
     {
 
-        canvasMainMenu.SetActive(false);
+       // canvasMainMenu.SetActive(false);
 
     }
     public void DoAnimationsButtons()

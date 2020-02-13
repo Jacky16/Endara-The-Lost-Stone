@@ -89,11 +89,15 @@ public class PlayerMovement : MonoBehaviour
 
         CamDirection();
         Vector3 rotationDirection = playerInput.x * camRight + playerInput.z * camForward;
-        if (inputManager.IsJostickLeftPressed() || inputManager.IsWASDIsPressed())
+        Vector3 currentRotation = rotationDirection;
+        Quaternion lastRotation;
+
+        if (movePlayer != Vector3.zero)
         {
-            Vector3 currentRotation = rotationDirection.normalized;
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentRotation),1);
+            transform.localRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentRotation),1);
+            lastRotation = transform.localRotation;
         }
+      
         movePlayer = playerInput.x * camRight + playerInput.z * camForward;
         SetGravity(); 
         JumpPlayer();

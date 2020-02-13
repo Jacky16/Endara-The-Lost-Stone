@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9212562137717304727}
   - component: {fileID: 9212562137717304726}
   - component: {fileID: 9212562137717304725}
+  - component: {fileID: 6458615637788417373}
   m_Layer: 0
   m_Name: Cubo_Hijo_Laser
   m_TagString: Cubo
@@ -58,6 +59,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -93,7 +95,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.2, y: 1.2, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!120 &9212562137717304727
 LineRenderer:
@@ -109,6 +111,7 @@ LineRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -237,3 +240,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &6458615637788417373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212562137717304724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa165618d5087e45b3856d1d26af34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPickeable: 1

@@ -44,6 +44,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Rotation",
+                    "type": "Button",
+                    "id": "f9af53d7-376b-4e88-a8f5-75e9e0d92fed",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -117,7 +125,7 @@
                     "name": "",
                     "id": "19cc08c9-f94c-447d-a8e1-0d17f52b701e",
                     "path": "<Keyboard>/space",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
@@ -143,6 +151,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "01722395-6935-4c79-a8bf-997d07e6b30c",
+                    "path": "<Keyboard>/r",
+                    "interactions": "Hold(duration=0.1,pressPoint=0.1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotation",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -199,7 +218,7 @@
                     "id": "40e013eb-1278-4ff9-9289-1a58e676404d",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "StickDeadzone",
                     "groups": "New control scheme",
                     "action": "Movement",
                     "isComposite": false,

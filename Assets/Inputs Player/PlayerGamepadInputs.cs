@@ -57,6 +57,14 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Rotation"",
+                    ""type"": ""Button"",
+                    ""id"": ""f9af53d7-376b-4e88-a8f5-75e9e0d92fed"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -130,7 +138,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""19cc08c9-f94c-447d-a8e1-0d17f52b701e"",
                     ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
+                    ""interactions"": ""Tap"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
@@ -156,6 +164,17 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""01722395-6935-4c79-a8bf-997d07e6b30c"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -212,7 +231,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""id"": ""40e013eb-1278-4ff9-9289-1a58e676404d"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone"",
                     ""groups"": ""New control scheme"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
@@ -286,6 +305,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         m_Player_Keyboard_Jump = m_Player_Keyboard.FindAction("Jump", throwIfNotFound: true);
         m_Player_Keyboard_TrowObject = m_Player_Keyboard.FindAction("TrowObject", throwIfNotFound: true);
         m_Player_Keyboard_Aim = m_Player_Keyboard.FindAction("Aim", throwIfNotFound: true);
+        m_Player_Keyboard_Rotation = m_Player_Keyboard.FindAction("Rotation", throwIfNotFound: true);
         // Player_GamepadXbox
         m_Player_GamepadXbox = asset.FindActionMap("Player_GamepadXbox", throwIfNotFound: true);
         m_Player_GamepadXbox_Movement = m_Player_GamepadXbox.FindAction("Movement", throwIfNotFound: true);
@@ -347,6 +367,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Keyboard_Jump;
     private readonly InputAction m_Player_Keyboard_TrowObject;
     private readonly InputAction m_Player_Keyboard_Aim;
+    private readonly InputAction m_Player_Keyboard_Rotation;
     public struct Player_KeyboardActions
     {
         private @PlayerGamepadInputs m_Wrapper;
@@ -356,6 +377,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player_Keyboard_Jump;
         public InputAction @TrowObject => m_Wrapper.m_Player_Keyboard_TrowObject;
         public InputAction @Aim => m_Wrapper.m_Player_Keyboard_Aim;
+        public InputAction @Rotation => m_Wrapper.m_Player_Keyboard_Rotation;
         public InputActionMap Get() { return m_Wrapper.m_Player_Keyboard; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -380,6 +402,9 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                 @Aim.started -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnAim;
                 @Aim.performed -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnAim;
                 @Aim.canceled -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnAim;
+                @Rotation.started -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnRotation;
+                @Rotation.performed -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnRotation;
+                @Rotation.canceled -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnRotation;
             }
             m_Wrapper.m_Player_KeyboardActionsCallbackInterface = instance;
             if (instance != null)
@@ -399,6 +424,9 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                 @Aim.started += instance.OnAim;
                 @Aim.performed += instance.OnAim;
                 @Aim.canceled += instance.OnAim;
+                @Rotation.started += instance.OnRotation;
+                @Rotation.performed += instance.OnRotation;
+                @Rotation.canceled += instance.OnRotation;
             }
         }
     }
@@ -484,6 +512,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnTrowObject(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
+        void OnRotation(InputAction.CallbackContext context);
     }
     public interface IPlayer_GamepadXboxActions
     {

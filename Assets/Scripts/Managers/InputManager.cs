@@ -94,6 +94,11 @@ public class InputManager : MonoBehaviour
             pickUpsObjects.ThrowObject();
         }
 
+        if (playerInputs.Player_Keyboard.Rotation.triggered)
+        {
+            pickUpsObjects.Rotate();
+        }
+
         //Comprobación de boton de saltar en el Gamepad(A)
         playerInputs.Player_GamepadXbox.Jump.performed += x => ButtonJumpTrue();
         playerInputs.Player_GamepadXbox.Jump.canceled += x => ButtonJumpFalse();

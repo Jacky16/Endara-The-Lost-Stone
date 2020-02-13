@@ -106,6 +106,30 @@ public class PickUpObjects : MonoBehaviour
             return true;
         }
     }
-    
-   
+
+    public void Rotate()
+    {
+        if (PickedObject){
+            StartCoroutine(Rotate(Vector3.up, 15, 1.0f));
+
+        }
+
+
+    }
+    IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
+    {
+        Quaternion from = transform.rotation;
+        Quaternion to = transform.rotation;
+
+        to *= Quaternion.Euler(axis * angle);
+
+        float elapsed = 0.0f;
+        while (elapsed < duration)
+        {
+            PickedObject.transform.localRotation = Quaternion.Slerp(from, to, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        transform.rotation = to;
+    }
 }

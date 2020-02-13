@@ -5,11 +5,7 @@ using DG.Tweening;
 
 public class RotationObject : MonoBehaviour
 {
-    public void Rotate()
-    {
-        transform.localRotation = Quaternion.LerpUnclamped(transform.localRotation, Quaternion.Euler(0, 15, 0), 1);
-        Debug.Log("Hola");
-    }
+    
 
     IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
     {
