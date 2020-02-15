@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 //[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(Animator))]
@@ -103,11 +104,7 @@ public class PlayerMovement : MonoBehaviour
         JumpPlayer();
         player.Move(movePlayer  * (speed * Time.deltaTime));
     }
-    //void AimingManager()
-    //{
-    //    anim.SetBool("Aiming", inputManager.IsRightClickMousePressed());
-        
-    //}
+    
     public void SetGravity()
     {
         //Debug.Log("Fall velocity is: " + player.velocity.y);
@@ -176,12 +173,15 @@ public class PlayerMovement : MonoBehaviour
             movePlayer.y = fallvelocity;
             anim.SetTrigger("PlayerJump");
         }
-
+        Debug.Log("He saltado");
+        fallvelocity = jumpForce;
+        movePlayer.y = fallvelocity;
+        anim.SetTrigger("PlayerJump");
         if (!doubleJump && player.isGrounded)
         {
             doubleJump = true;
         }
-
+     
     }
     void CamDirection()
     {
@@ -208,7 +208,12 @@ public class PlayerMovement : MonoBehaviour
     }
     public void MeleAtack()
     {
-        anim.SetTrigger("Attack");
+        Vector3 direction = movePlayer.normalized;
+        
+        Sequence attackSequence = DOTween.Sequence();
+        attackSequence.Append(transform.DOLocalMove(direction, 1));
+       
+
     }
     public void RestarVida(int cantidadARestar)
     {
