@@ -155,7 +155,7 @@ public class MainMenuManager : MonoBehaviour
         rectButtonsPlay_1.DOAnchorPos(new Vector2(-1500, 0), 0.3f).SetEase(Ease.OutQuad);
         if(rectButtonsPlay_2!= null)
         {
-            rectButtonsPlay_2.DOAnchorPos(new Vector2(1500, 0), 0.3f).SetEase(Ease.OutQuad);
+            rectButtonsPlay_2.DOAnchorPos(new Vector2(1500 , 0), 0.3f).SetEase(Ease.OutQuad);
 
         }
         isFocus = false;

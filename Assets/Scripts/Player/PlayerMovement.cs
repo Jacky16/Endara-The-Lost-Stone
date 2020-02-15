@@ -159,10 +159,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (inputManager.playerInputs.Player_GamepadXbox.Jump.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
         {
-            Debug.Log("He saltado");
-            fallvelocity = jumpForce;
-            movePlayer.y = fallvelocity;
-            anim.SetTrigger("PlayerJump");
+           
             if (!doubleJump)
             {
                 return;
@@ -174,7 +171,10 @@ public class PlayerMovement : MonoBehaviour
                 doubleJump = false;
 
             }
-           
+            Debug.Log("He saltado");
+            fallvelocity = jumpForce;
+            movePlayer.y = fallvelocity;
+            anim.SetTrigger("PlayerJump");
         }
 
         if (!doubleJump && player.isGrounded)
