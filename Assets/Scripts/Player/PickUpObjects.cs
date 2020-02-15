@@ -110,7 +110,7 @@ public class PickUpObjects : MonoBehaviour
     public void Rotate()
     {
         if (PickedObject){
-            StartCoroutine(Rotate(Vector3.up, 15, 1.0f));
+            StartCoroutine(Rotate(Vector3.up, 2.5f, 0f));
 
         }
 
@@ -118,18 +118,17 @@ public class PickUpObjects : MonoBehaviour
     }
     IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
     {
-        Quaternion from = transform.rotation;
-        Quaternion to = transform.rotation;
+        Quaternion from = transform.localRotation;
+        Quaternion to = PickedObject.transform.localRotation;
 
         to *= Quaternion.Euler(axis * angle);
 
-        float elapsed = 0.0f;
-        while (elapsed < duration)
-        {
-            PickedObject.transform.localRotation = Quaternion.Slerp(from, to, elapsed / duration);
-            elapsed += Time.deltaTime;
-            yield return null;
-        }
-        transform.rotation = to;
+        PickedObject.transform.localRotation = Quaternion.SlerpUnclamped(PickedObject.transform.localRotation, to, duration);
+        PickedObject.GetComponent<BoxCollider>().isTrigger = true;
+        yield return null;
+        
+        
+
+        transform.localRotation = to;
     }
 }

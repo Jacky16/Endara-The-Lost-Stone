@@ -90,15 +90,15 @@ public class PlayerMovement : MonoBehaviour
         CamDirection();
         Vector3 rotationDirection = playerInput.x * camRight + playerInput.z * camForward;
         Vector3 currentRotation = rotationDirection;
-        Quaternion lastRotation;
-
-        if (movePlayer != Vector3.zero)
-        {
-            transform.localRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentRotation),1);
-            lastRotation = transform.localRotation;
-        }
-      
         movePlayer = playerInput.x * camRight + playerInput.z * camForward;
+
+        if (movePlayer != Vector3.zero || Input.anyKey)
+        {
+        }
+        //transform.localRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentRotation), 1);
+        transform.LookAt(transform.position + movePlayer);
+
+
         SetGravity(); 
         JumpPlayer();
         player.Move(movePlayer  * (speed * Time.deltaTime));
@@ -159,6 +159,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (inputManager.playerInputs.Player_GamepadXbox.Jump.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
         {
+            Debug.Log("He saltado");
+            fallvelocity = jumpForce;
+            movePlayer.y = fallvelocity;
+            anim.SetTrigger("PlayerJump");
             if (!doubleJump)
             {
                 return;
@@ -170,10 +174,7 @@ public class PlayerMovement : MonoBehaviour
                 doubleJump = false;
 
             }
-            Debug.Log("He saltado");
-            fallvelocity = jumpForce;
-            movePlayer.y = fallvelocity;
-            anim.SetTrigger("PlayerJump");
+           
         }
 
         if (!doubleJump && player.isGrounded)

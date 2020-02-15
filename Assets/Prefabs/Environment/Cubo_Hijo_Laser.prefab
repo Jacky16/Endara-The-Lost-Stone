@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9212562137717304726}
   - component: {fileID: 9212562137717304725}
   - component: {fileID: 6458615637788417373}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cubo_Hijo_Laser
   m_TagString: Cubo
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 30519
   direction: {x: 0.1, y: -1, z: 0}
   startPoint: {x: 0.1, y: -1, z: 0}
   cuboPadre: 0
@@ -238,7 +238,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 2
 --- !u!114 &6458615637788417373
 MonoBehaviour:

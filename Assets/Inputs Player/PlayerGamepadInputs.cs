@@ -40,7 +40,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""id"": ""d1ce0838-4af2-4f1d-be8e-1de2e3a8749c"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""TrowObject"",
