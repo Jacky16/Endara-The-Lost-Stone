@@ -79,7 +79,11 @@ public class Laser : MonoBehaviour
                 direction.z = hit.distance;
                 //Asignar la posicion del Raycast al Linerenderer
                 lineRenderer.SetPosition(1, direction);
-
+                if (hit.transform.gameObject.tag == "Solution")
+                {
+                    print(hit.transform.tag);
+                    hit.transform.gameObject.GetComponent<Animator>().SetTrigger("Iluminate");
+                }
 
                 if (hit.transform.tag == "Cubo") // Choca con un cubo hijo
                 {
@@ -95,9 +99,13 @@ public class Laser : MonoBehaviour
                 else if (hit.transform.tag != "Cubo") 
                 {
                     //Desactiva el Line Renderer y el raycast de todos los cubos cuando no colsiona el rayo excepto el ultimo
+                   if(cuboHijoGameObject != null)
                     cuboHijoGameObject.GetComponent<Laser>().reciboRaycast = false;
                     cuboHijoGameObject.GetComponent<Laser>().activarRaycast = false;
                     cuboHijoGameObject.GetComponent<Laser>().DesactivarLineRender();
+                    
+
+                  
                     
                     if (!cuboPadre)
                     {
@@ -116,6 +124,7 @@ public class Laser : MonoBehaviour
                     }
                     cuboHijoGameObject = null;
                 }
+                 
 
             }
         }

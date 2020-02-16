@@ -8,9 +8,9 @@ TagManager:
   - InteractionZone
   - PlayerInteraction
   - TransformObjectPickUp
-  - Caja
   - SwitchCamera
   - Cubo
+  - Solution
   layers:
   - Default
   - TransparentFX

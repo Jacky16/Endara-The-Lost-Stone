@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
-
+using DG.Tweening;
 
 public class PickUpObjects : MonoBehaviour
 {
@@ -28,6 +28,7 @@ public class PickUpObjects : MonoBehaviour
         if (objectToPickup != null)
         {
             canvasCatchObject.SetActive(true);
+           
         }
         else
         {
@@ -107,14 +108,19 @@ public class PickUpObjects : MonoBehaviour
         }
     }
 
-    public void Rotate()
+    public void Rotate_R(float grades)
     {
-        if (PickedObject){
-            StartCoroutine(Rotate(Vector3.up, 2.5f, 0f));
+        if (objectToPickup.tag == "Cubo" || PickedObject.tag == "Cubo")
+        {
+            objectToPickup.transform.DOLocalRotate(new Vector3(0, grades, 0), 0.2f, RotateMode.LocalAxisAdd);
 
         }
+    } 
+    public void Rotate_L(float grades)
+    {
+        if (objectToPickup.tag == "Cubo" || PickedObject.tag == "Cubo")
 
-
+            objectToPickup.transform.DOLocalRotate(new Vector3(0, -grades, 0), 0.2f, RotateMode.LocalAxisAdd);
     }
     IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
     {

@@ -158,7 +158,7 @@
                     "name": "",
                     "id": "01722395-6935-4c79-a8bf-997d07e6b30c",
                     "path": "<Keyboard>/r",
-                    "interactions": "Hold(duration=0.1,pressPoint=0.1)",
+                    "interactions": "Press(pressPoint=0.5)",
                     "processors": "",
                     "groups": "",
                     "action": "Rotation",
@@ -172,7 +172,7 @@
             "id": "84fd66fd-2008-4a5c-9adf-dd884a6679ea",
             "actions": [
                 {
-                    "name": "Movement",
+                    "name": "LeftJostyck",
                     "type": "Value",
                     "id": "30d60f97-bb3c-4ebb-8605-9fba17631b0b",
                     "expectedControlType": "",
@@ -180,7 +180,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "CameraMovement",
+                    "name": "RightJostyck",
                     "type": "Value",
                     "id": "dace94d2-0304-4bc6-86ec-c3aae8d47ffc",
                     "expectedControlType": "",
@@ -188,7 +188,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "CatchObject",
+                    "name": "X",
                     "type": "Button",
                     "id": "fd6865e5-8797-49ed-b4ed-97fe641f047a",
                     "expectedControlType": "Button",
@@ -196,7 +196,7 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "ThrowObject",
+                    "name": "RT",
                     "type": "Button",
                     "id": "5d359124-116d-44dc-84a8-d7ab9054639b",
                     "expectedControlType": "",
@@ -204,9 +204,25 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "Jump",
+                    "name": "A",
                     "type": "Button",
                     "id": "a3a0f1d1-ea38-4afd-b24f-6d39a3df409f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.1)"
+                },
+                {
+                    "name": "RE",
+                    "type": "Button",
+                    "id": "3a2d1a27-4410-4216-93d0-069618aae35c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.1)"
+                },
+                {
+                    "name": "LB",
+                    "type": "Button",
+                    "id": "cca3d4f8-8635-4020-8afc-10a2eb982ebe",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Press(pressPoint=0.1)"
@@ -220,7 +236,7 @@
                     "interactions": "",
                     "processors": "StickDeadzone",
                     "groups": "New control scheme",
-                    "action": "Movement",
+                    "action": "LeftJostyck",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -231,7 +247,7 @@
                     "interactions": "",
                     "processors": "NormalizeVector2",
                     "groups": "New control scheme",
-                    "action": "CameraMovement",
+                    "action": "RightJostyck",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -242,7 +258,7 @@
                     "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "New control scheme",
-                    "action": "CatchObject",
+                    "action": "X",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -253,7 +269,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ThrowObject",
+                    "action": "RT",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -264,7 +280,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "916ff0ec-dd27-4672-90d0-4aefe05fd432",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f48e1112-4033-41bf-b751-e6f0ba44ef48",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LB",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

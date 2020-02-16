@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ObjetoPickeable : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class ObjetoPickeable : MonoBehaviour
         if (other.tag == "PlayerInteraction")
         {
             other.GetComponentInParent<PickUpObjects>().objectToPickup = this.gameObject;
-
+           
         }
     }
     private void OnTriggerExit(Collider other)
@@ -24,4 +25,5 @@ public class ObjetoPickeable : MonoBehaviour
 
         }
     }
+    
 }

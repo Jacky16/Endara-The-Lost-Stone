@@ -59,7 +59,7 @@ public class InputManager : MonoBehaviour
     {
         if (useGamepad)
         {
-            vector2Axis = playerInputs.Player_GamepadXbox.Movement.ReadValue<Vector2>();
+            vector2Axis = playerInputs.Player_GamepadXbox.LeftJostyck.ReadValue<Vector2>();
         }
         else
         {
@@ -72,12 +72,12 @@ public class InputManager : MonoBehaviour
     void CheckButtonArePressed()
     {
         //Comprobacion de pulsacion de los josticks IZQUIERDOS
-        playerInputs.Player_GamepadXbox.Movement.performed += x => JostickLeftTrue();
-        playerInputs.Player_GamepadXbox.Movement.canceled += x => JostickLeftFalse();
+        playerInputs.Player_GamepadXbox.LeftJostyck.performed += x => JostickLeftTrue();
+        playerInputs.Player_GamepadXbox.LeftJostyck.canceled += x => JostickLeftFalse();
 
         //Comprobacion de pulsacion de los josticks DERECHOS (para la camara)
-        playerInputs.Player_GamepadXbox.CameraMovement.performed += x => JostickRightTrue();
-        playerInputs.Player_GamepadXbox.CameraMovement.canceled += x => JostickRightFalse();
+        playerInputs.Player_GamepadXbox.RightJostyck.performed += x => JostickRightTrue();
+        playerInputs.Player_GamepadXbox.RightJostyck.canceled += x => JostickRightFalse();
 
         //Comprobar si se estan usando las teclas WASD
         playerInputs.Player_Keyboard.Movement.performed += x => WASDTrue();
@@ -85,23 +85,32 @@ public class InputManager : MonoBehaviour
 
         //Comprobacion de pulsacion del boton de cojer en el Gamepad(X) y con el teclado(F)
        
-        if (playerInputs.Player_Keyboard.CatchObject.triggered || playerInputs.Player_GamepadXbox.CatchObject.triggered)
+        if (playerInputs.Player_Keyboard.CatchObject.triggered || playerInputs.Player_GamepadXbox.X.triggered)
         {
             pickUpsObjects.PillarElObjeto();
         }
-        if (playerInputs.Player_Keyboard.TrowObject.triggered || playerInputs.Player_GamepadXbox.ThrowObject.triggered)
+        if (playerInputs.Player_Keyboard.TrowObject.triggered || playerInputs.Player_GamepadXbox.RT.triggered)
         {
             pickUpsObjects.ThrowObject();
         }
 
-        if (playerInputs.Player_Keyboard.Rotation.triggered)
+        //Rotacion del objero pickeado
+        if (playerInputs.Player_GamepadXbox.RE.triggered)
         {
-            pickUpsObjects.Rotate();
+            pickUpsObjects.Rotate_R(15);
+
+        }
+        if (playerInputs.Player_GamepadXbox.LB.triggered)
+        {
+            pickUpsObjects.Rotate_L(15);
+
         }
 
+
+
         //Comprobación de boton de saltar en el Gamepad(A)
-        playerInputs.Player_GamepadXbox.Jump.performed += x => ButtonJumpTrue();
-        playerInputs.Player_GamepadXbox.Jump.canceled += x => ButtonJumpFalse();
+        playerInputs.Player_GamepadXbox.A.performed += x => ButtonJumpTrue();
+        playerInputs.Player_GamepadXbox.A.canceled += x => ButtonJumpFalse();
 
         //Comprobacion del boton de apuntar en el raton(Click Derecho)
         playerInputs.Player_Keyboard.Aim.performed += x => RightClickMouseTrue();
@@ -118,8 +127,8 @@ public class InputManager : MonoBehaviour
     {
         if (useGamepad)
         {
-            playerCameraFreeLook.m_XAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.CameraMovement.ReadValue<Vector2>().x;
-            playerCameraFreeLook.m_YAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.CameraMovement.ReadValue<Vector2>().y;
+            playerCameraFreeLook.m_XAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().x;
+            playerCameraFreeLook.m_YAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().y;
 
             //Cambiar los nombres de los inputs a null
             playerCameraFreeLook.m_XAxis.m_InputAxisName = null;

@@ -21,7 +21,7 @@ public class PlayerInPlataform : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         player = GetComponent<CharacterController>();
     }
-    void LateUpdate()
+    void Update()
     {
         movementInPlataforms();
     }
@@ -38,7 +38,7 @@ public class PlayerInPlataform : MonoBehaviour
                 if (groundPosition != lastGroundPosition && groundName == lastGroundName)
                 {
                     this.transform.position += groundPosition - lastGroundPosition;
-
+                    print( "hola");
                 }
                 if (actualRot != lastRot && groundName == lastGroundName)
                 {

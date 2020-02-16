@@ -154,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
     void JumpPlayer()
     {
 
-        if (inputManager.playerInputs.Player_GamepadXbox.Jump.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
+        if (inputManager.playerInputs.Player_GamepadXbox.A.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
         {
            
             if (!doubleJump)
@@ -173,15 +173,12 @@ public class PlayerMovement : MonoBehaviour
             movePlayer.y = fallvelocity;
             anim.SetTrigger("PlayerJump");
         }
-        Debug.Log("He saltado");
-        fallvelocity = jumpForce;
-        movePlayer.y = fallvelocity;
-        anim.SetTrigger("PlayerJump");
+      
         if (!doubleJump && player.isGrounded)
         {
             doubleJump = true;
         }
-     
+        
     }
     void CamDirection()
     {
@@ -208,11 +205,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void MeleAtack()
     {
-        Vector3 direction = movePlayer.normalized;
-        
-        Sequence attackSequence = DOTween.Sequence();
-        attackSequence.Append(transform.DOLocalMove(direction, 1));
-       
+      
 
     }
     public void RestarVida(int cantidadARestar)
@@ -233,22 +226,26 @@ public class PlayerMovement : MonoBehaviour
         //    }
             
         //}
-    float valueMass;
-    Rigidbody rb = hit.collider.attachedRigidbody;
-        if (rb == null || rb.isKinematic)
+        float valueMass;
+        if(hit.collider.gameObject.name != "Baldosa")
         {
-            return;
+            Rigidbody rb = hit.collider.attachedRigidbody;
+            if (rb == null || rb.isKinematic)
+            {
+                return;
+            }
+
+            if (hit.moveDirection.y < -0.3f)
+            {
+                return;
+            }
+
+            valueMass = rb.mass;
+            Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+
+            rb.velocity = (pushDir * pushPower) / valueMass;
         }
-
-        if (hit.moveDirection.y < -0.3f)
-        {
-            return;
-        }
-
-        valueMass = rb.mass;
-        Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
-
-        rb.velocity = (pushDir * pushPower) / valueMass;
+    
         
     }
     void OnTriggerEnter(Collider other)

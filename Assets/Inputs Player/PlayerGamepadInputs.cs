@@ -171,7 +171,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""01722395-6935-4c79-a8bf-997d07e6b30c"",
                     ""path"": ""<Keyboard>/r"",
-                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
+                    ""interactions"": ""Press(pressPoint=0.5)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Rotation"",
@@ -185,7 +185,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
             ""id"": ""84fd66fd-2008-4a5c-9adf-dd884a6679ea"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""LeftJostyck"",
                     ""type"": ""Value"",
                     ""id"": ""30d60f97-bb3c-4ebb-8605-9fba17631b0b"",
                     ""expectedControlType"": """",
@@ -193,7 +193,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""CameraMovement"",
+                    ""name"": ""RightJostyck"",
                     ""type"": ""Value"",
                     ""id"": ""dace94d2-0304-4bc6-86ec-c3aae8d47ffc"",
                     ""expectedControlType"": """",
@@ -201,7 +201,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""CatchObject"",
+                    ""name"": ""X"",
                     ""type"": ""Button"",
                     ""id"": ""fd6865e5-8797-49ed-b4ed-97fe641f047a"",
                     ""expectedControlType"": ""Button"",
@@ -209,7 +209,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""interactions"": ""Press""
                 },
                 {
-                    ""name"": ""ThrowObject"",
+                    ""name"": ""RT"",
                     ""type"": ""Button"",
                     ""id"": ""5d359124-116d-44dc-84a8-d7ab9054639b"",
                     ""expectedControlType"": """",
@@ -217,9 +217,25 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""interactions"": ""Press""
                 },
                 {
-                    ""name"": ""Jump"",
+                    ""name"": ""A"",
                     ""type"": ""Button"",
                     ""id"": ""a3a0f1d1-ea38-4afd-b24f-6d39a3df409f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(pressPoint=0.1)""
+                },
+                {
+                    ""name"": ""RE"",
+                    ""type"": ""Button"",
+                    ""id"": ""3a2d1a27-4410-4216-93d0-069618aae35c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(pressPoint=0.1)""
+                },
+                {
+                    ""name"": ""LB"",
+                    ""type"": ""Button"",
+                    ""id"": ""cca3d4f8-8635-4020-8afc-10a2eb982ebe"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Press(pressPoint=0.1)""
@@ -233,7 +249,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": ""StickDeadzone"",
                     ""groups"": ""New control scheme"",
-                    ""action"": ""Movement"",
+                    ""action"": ""LeftJostyck"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -244,7 +260,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": ""NormalizeVector2"",
                     ""groups"": ""New control scheme"",
-                    ""action"": ""CameraMovement"",
+                    ""action"": ""RightJostyck"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -255,7 +271,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": ""New control scheme"",
-                    ""action"": ""CatchObject"",
+                    ""action"": ""X"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -266,7 +282,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ThrowObject"",
+                    ""action"": ""RT"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -277,7 +293,29 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Jump"",
+                    ""action"": ""A"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""916ff0ec-dd27-4672-90d0-4aefe05fd432"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RE"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f48e1112-4033-41bf-b751-e6f0ba44ef48"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LB"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -308,11 +346,13 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         m_Player_Keyboard_Rotation = m_Player_Keyboard.FindAction("Rotation", throwIfNotFound: true);
         // Player_GamepadXbox
         m_Player_GamepadXbox = asset.FindActionMap("Player_GamepadXbox", throwIfNotFound: true);
-        m_Player_GamepadXbox_Movement = m_Player_GamepadXbox.FindAction("Movement", throwIfNotFound: true);
-        m_Player_GamepadXbox_CameraMovement = m_Player_GamepadXbox.FindAction("CameraMovement", throwIfNotFound: true);
-        m_Player_GamepadXbox_CatchObject = m_Player_GamepadXbox.FindAction("CatchObject", throwIfNotFound: true);
-        m_Player_GamepadXbox_ThrowObject = m_Player_GamepadXbox.FindAction("ThrowObject", throwIfNotFound: true);
-        m_Player_GamepadXbox_Jump = m_Player_GamepadXbox.FindAction("Jump", throwIfNotFound: true);
+        m_Player_GamepadXbox_LeftJostyck = m_Player_GamepadXbox.FindAction("LeftJostyck", throwIfNotFound: true);
+        m_Player_GamepadXbox_RightJostyck = m_Player_GamepadXbox.FindAction("RightJostyck", throwIfNotFound: true);
+        m_Player_GamepadXbox_X = m_Player_GamepadXbox.FindAction("X", throwIfNotFound: true);
+        m_Player_GamepadXbox_RT = m_Player_GamepadXbox.FindAction("RT", throwIfNotFound: true);
+        m_Player_GamepadXbox_A = m_Player_GamepadXbox.FindAction("A", throwIfNotFound: true);
+        m_Player_GamepadXbox_RE = m_Player_GamepadXbox.FindAction("RE", throwIfNotFound: true);
+        m_Player_GamepadXbox_LB = m_Player_GamepadXbox.FindAction("LB", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -435,20 +475,24 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
     // Player_GamepadXbox
     private readonly InputActionMap m_Player_GamepadXbox;
     private IPlayer_GamepadXboxActions m_Player_GamepadXboxActionsCallbackInterface;
-    private readonly InputAction m_Player_GamepadXbox_Movement;
-    private readonly InputAction m_Player_GamepadXbox_CameraMovement;
-    private readonly InputAction m_Player_GamepadXbox_CatchObject;
-    private readonly InputAction m_Player_GamepadXbox_ThrowObject;
-    private readonly InputAction m_Player_GamepadXbox_Jump;
+    private readonly InputAction m_Player_GamepadXbox_LeftJostyck;
+    private readonly InputAction m_Player_GamepadXbox_RightJostyck;
+    private readonly InputAction m_Player_GamepadXbox_X;
+    private readonly InputAction m_Player_GamepadXbox_RT;
+    private readonly InputAction m_Player_GamepadXbox_A;
+    private readonly InputAction m_Player_GamepadXbox_RE;
+    private readonly InputAction m_Player_GamepadXbox_LB;
     public struct Player_GamepadXboxActions
     {
         private @PlayerGamepadInputs m_Wrapper;
         public Player_GamepadXboxActions(@PlayerGamepadInputs wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Player_GamepadXbox_Movement;
-        public InputAction @CameraMovement => m_Wrapper.m_Player_GamepadXbox_CameraMovement;
-        public InputAction @CatchObject => m_Wrapper.m_Player_GamepadXbox_CatchObject;
-        public InputAction @ThrowObject => m_Wrapper.m_Player_GamepadXbox_ThrowObject;
-        public InputAction @Jump => m_Wrapper.m_Player_GamepadXbox_Jump;
+        public InputAction @LeftJostyck => m_Wrapper.m_Player_GamepadXbox_LeftJostyck;
+        public InputAction @RightJostyck => m_Wrapper.m_Player_GamepadXbox_RightJostyck;
+        public InputAction @X => m_Wrapper.m_Player_GamepadXbox_X;
+        public InputAction @RT => m_Wrapper.m_Player_GamepadXbox_RT;
+        public InputAction @A => m_Wrapper.m_Player_GamepadXbox_A;
+        public InputAction @RE => m_Wrapper.m_Player_GamepadXbox_RE;
+        public InputAction @LB => m_Wrapper.m_Player_GamepadXbox_LB;
         public InputActionMap Get() { return m_Wrapper.m_Player_GamepadXbox; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -458,40 +502,52 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnMovement;
-                @CameraMovement.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnCameraMovement;
-                @CameraMovement.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnCameraMovement;
-                @CameraMovement.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnCameraMovement;
-                @CatchObject.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnCatchObject;
-                @CatchObject.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnCatchObject;
-                @CatchObject.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnCatchObject;
-                @ThrowObject.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnThrowObject;
-                @ThrowObject.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnThrowObject;
-                @ThrowObject.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnThrowObject;
-                @Jump.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnJump;
+                @LeftJostyck.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnLeftJostyck;
+                @LeftJostyck.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnLeftJostyck;
+                @LeftJostyck.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnLeftJostyck;
+                @RightJostyck.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnRightJostyck;
+                @RightJostyck.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnRightJostyck;
+                @RightJostyck.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnRightJostyck;
+                @X.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnX;
+                @X.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnX;
+                @X.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnX;
+                @RT.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnRT;
+                @RT.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnRT;
+                @RT.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnRT;
+                @A.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnA;
+                @A.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnA;
+                @A.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnA;
+                @RE.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnRE;
+                @RE.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnRE;
+                @RE.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnRE;
+                @LB.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnLB;
+                @LB.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnLB;
+                @LB.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnLB;
             }
             m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
-                @CameraMovement.started += instance.OnCameraMovement;
-                @CameraMovement.performed += instance.OnCameraMovement;
-                @CameraMovement.canceled += instance.OnCameraMovement;
-                @CatchObject.started += instance.OnCatchObject;
-                @CatchObject.performed += instance.OnCatchObject;
-                @CatchObject.canceled += instance.OnCatchObject;
-                @ThrowObject.started += instance.OnThrowObject;
-                @ThrowObject.performed += instance.OnThrowObject;
-                @ThrowObject.canceled += instance.OnThrowObject;
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
+                @LeftJostyck.started += instance.OnLeftJostyck;
+                @LeftJostyck.performed += instance.OnLeftJostyck;
+                @LeftJostyck.canceled += instance.OnLeftJostyck;
+                @RightJostyck.started += instance.OnRightJostyck;
+                @RightJostyck.performed += instance.OnRightJostyck;
+                @RightJostyck.canceled += instance.OnRightJostyck;
+                @X.started += instance.OnX;
+                @X.performed += instance.OnX;
+                @X.canceled += instance.OnX;
+                @RT.started += instance.OnRT;
+                @RT.performed += instance.OnRT;
+                @RT.canceled += instance.OnRT;
+                @A.started += instance.OnA;
+                @A.performed += instance.OnA;
+                @A.canceled += instance.OnA;
+                @RE.started += instance.OnRE;
+                @RE.performed += instance.OnRE;
+                @RE.canceled += instance.OnRE;
+                @LB.started += instance.OnLB;
+                @LB.performed += instance.OnLB;
+                @LB.canceled += instance.OnLB;
             }
         }
     }
@@ -516,10 +572,12 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
     }
     public interface IPlayer_GamepadXboxActions
     {
-        void OnMovement(InputAction.CallbackContext context);
-        void OnCameraMovement(InputAction.CallbackContext context);
-        void OnCatchObject(InputAction.CallbackContext context);
-        void OnThrowObject(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
+        void OnLeftJostyck(InputAction.CallbackContext context);
+        void OnRightJostyck(InputAction.CallbackContext context);
+        void OnX(InputAction.CallbackContext context);
+        void OnRT(InputAction.CallbackContext context);
+        void OnA(InputAction.CallbackContext context);
+        void OnRE(InputAction.CallbackContext context);
+        void OnLB(InputAction.CallbackContext context);
     }
 }
