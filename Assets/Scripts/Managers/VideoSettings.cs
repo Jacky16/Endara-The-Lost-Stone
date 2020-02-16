@@ -9,17 +9,13 @@ public class VideoSettings : MonoBehaviour
     public TMPro.TMP_Dropdown resolutionDropdown;
     public TMPro.TMP_Dropdown qualitySettingsDropdown;
     Resolution[] resolutions;
-    void Start()
+ 
+    private void OnEnable()
     {
         ResolutionStart();
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];

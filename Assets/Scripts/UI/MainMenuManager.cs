@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using Cinemachine;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -46,6 +47,10 @@ public class MainMenuManager : MonoBehaviour
     {
         
         StartCoroutine(PlayAnimation());
+    }
+    public void NewGame()
+    {
+        SceneManager.LoadScene("GamePlayScreen");
     }
     public void Options()
     {
