@@ -44,7 +44,7 @@ public class InputManager : MonoBehaviour
         //Enviar info al player
         player.Axis(H(),V());
 
-        MeleAttack();
+        //MeleAttack();
 
     }
 
@@ -72,16 +72,16 @@ public class InputManager : MonoBehaviour
     void CheckButtonArePressed()
     {
         //Comprobacion de pulsacion de los josticks IZQUIERDOS
-        playerInputs.Player_GamepadXbox.LeftJostyck.performed += x => JostickLeftTrue();
-        playerInputs.Player_GamepadXbox.LeftJostyck.canceled += x => JostickLeftFalse();
+        playerInputs.Player_GamepadXbox.LeftJostyck.performed += x => isJostickLeftPressed = true;
+        playerInputs.Player_GamepadXbox.LeftJostyck.canceled += x => isJostickLeftPressed = false;
 
         //Comprobacion de pulsacion de los josticks DERECHOS (para la camara)
-        playerInputs.Player_GamepadXbox.RightJostyck.performed += x => JostickRightTrue();
-        playerInputs.Player_GamepadXbox.RightJostyck.canceled += x => JostickRightFalse();
+        playerInputs.Player_GamepadXbox.RightJostyck.performed += x => isJostickRightPressed = true;
+        playerInputs.Player_GamepadXbox.RightJostyck.canceled += x => isJostickRightPressed = false;
 
         //Comprobar si se estan usando las teclas WASD
-        playerInputs.Player_Keyboard.Movement.performed += x => WASDTrue();
-        playerInputs.Player_Keyboard.Movement.canceled += x => WASDFalse();
+        playerInputs.Player_Keyboard.Movement.performed += x => isWASDIsPressed = true;
+        playerInputs.Player_Keyboard.Movement.canceled += x => isWASDIsPressed = false;
 
         //Comprobacion de pulsacion del boton de cojer en el Gamepad(X) y con el teclado(F)
        
@@ -95,12 +95,12 @@ public class InputManager : MonoBehaviour
         }
 
         //Rotacion del objero pickeado
-        if (playerInputs.Player_GamepadXbox.RE.triggered)
+        if (playerInputs.Player_GamepadXbox.RE.triggered) //Girar a la derecha
         {
             pickUpsObjects.Rotate_R(15);
 
         }
-        if (playerInputs.Player_GamepadXbox.LB.triggered)
+        if (playerInputs.Player_GamepadXbox.LB.triggered) //Girar a la izquierda
         {
             pickUpsObjects.Rotate_L(15);
 
@@ -108,16 +108,14 @@ public class InputManager : MonoBehaviour
 
 
 
-        //Comprobación de boton de saltar en el Gamepad(A)
-        playerInputs.Player_GamepadXbox.A.performed += x => ButtonJumpTrue();
-        playerInputs.Player_GamepadXbox.A.canceled += x => ButtonJumpFalse();
+        ////Comprobación de boton de saltar en el Gamepad(A)
+        //playerInputs.Player_GamepadXbox.A.performed += x => ButtonJumpTrue();
+        //playerInputs.Player_GamepadXbox.A.canceled += x => ButtonJumpFalse();
 
         //Comprobacion del boton de apuntar en el raton(Click Derecho)
         playerInputs.Player_Keyboard.Aim.performed += x => RightClickMouseTrue();
         playerInputs.Player_Keyboard.Aim.canceled += x => RightClickMouseFalse();
-        //Debug.Log(IsRightClickMousePressed());
-        //Comprobacion del boton de apuntar en el Gamepad(LT/R2)
-       // playerInputs.playe
+      
 
     }
 
@@ -140,25 +138,10 @@ public class InputManager : MonoBehaviour
             playerCameraFreeLook.m_YAxis.m_InputAxisName = "Mouse Y";
         }
     }
-    //Metodos bool para comprobar si se esta tocando las teclas de movimiento
-    void WASDTrue()
-    {
-        isWASDIsPressed = true;
-    }
-    void WASDFalse()
-    {
-        isWASDIsPressed = false;
-    }
+   
 
-    //Metodos bool para comprobar el JostickLeft si es presionado
-    void JostickLeftTrue()
-    {
-        isJostickLeftPressed = true;
-    } 
-    void JostickLeftFalse()
-    {
-        isJostickLeftPressed = false;
-    }
+   
+   
     void RightClickMouseTrue()
     {
         isMouseRightClickPressed = true;
@@ -169,24 +152,7 @@ public class InputManager : MonoBehaviour
     }
     
     
-    //Metodos bool para comprobar el JostickLeft si es presionado
-    void JostickRightTrue()
-    {
-        isJostickRightPressed = true;
-    }
-    void JostickRightFalse()
-    {
-        isJostickRightPressed = false;
-    }
-    //Metodos bool para comprobar el boton de salto
-    void ButtonJumpTrue()
-    {
-        canJump = true;
-    }
-    void ButtonJumpFalse()
-    {
-        canJump = false;
-    }
+    
 
     //Recogue los valores para los inputs
     public float H()
