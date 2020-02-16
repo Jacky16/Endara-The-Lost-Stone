@@ -16,6 +16,7 @@ public class Laser : MonoBehaviour
     [SerializeField] bool activarRaycast;
     [SerializeField] bool reciboRaycast;
     GameObject cuboHijoGameObject;
+    GameObject gameObjectSolution;
 
     void Start()
     {
@@ -81,8 +82,15 @@ public class Laser : MonoBehaviour
                 lineRenderer.SetPosition(1, direction);
                 if (hit.transform.gameObject.tag == "Solution")
                 {
-                    print(hit.transform.tag);
-                    hit.transform.gameObject.GetComponent<Animator>().SetTrigger("Iluminate");
+                    gameObjectSolution = hit.transform.gameObject;
+                    gameObjectSolution.GetComponent<Animator>().SetBool("Iluminate",true);
+
+                }
+                else 
+                {
+                    if(gameObjectSolution!= null)
+                    gameObjectSolution.GetComponent<Animator>().SetBool("Iluminate", false);
+                    gameObjectSolution = null;
                 }
 
                 if (hit.transform.tag == "Cubo") // Choca con un cubo hijo

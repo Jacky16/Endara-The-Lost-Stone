@@ -6,6 +6,7 @@ using DG.Tweening;
 public class ObjetoPickeable : MonoBehaviour
 {
     public bool isPickeable = true;
+    public bool isRoteable = false;
     private void Start()
     {
     }

@@ -110,31 +110,27 @@ public class PickUpObjects : MonoBehaviour
 
     public void Rotate_R(float grades)
     {
-        if (objectToPickup.tag == "Cubo" || PickedObject.tag == "Cubo")
+        if (objectToPickup.tag == "Cubo" && objectToPickup.GetComponent<ObjetoPickeable>().isRoteable)
         {
             objectToPickup.transform.DOLocalRotate(new Vector3(0, grades, 0), 0.2f, RotateMode.LocalAxisAdd);
-
+            
+        }else if(PickedObject.tag == "Cubo" && PickedObject.GetComponent<ObjetoPickeable>().isRoteable)
+        {
+            PickedObject.transform.DOLocalRotate(new Vector3(0, grades, 0), 0.2f, RotateMode.LocalAxisAdd);  
         }
     } 
     public void Rotate_L(float grades)
     {
-        if (objectToPickup.tag == "Cubo" || PickedObject.tag == "Cubo")
-
+        if (objectToPickup.tag == "Cubo" && objectToPickup.GetComponent<ObjetoPickeable>().isRoteable)
+        {
             objectToPickup.transform.DOLocalRotate(new Vector3(0, -grades, 0), 0.2f, RotateMode.LocalAxisAdd);
+
+        }
+        else if (PickedObject.tag == "Cubo" && PickedObject.GetComponent<ObjetoPickeable>().isRoteable)
+        {
+            PickedObject.transform.DOLocalRotate(new Vector3(0, -grades, 0), 0.2f, RotateMode.LocalAxisAdd);
+        }
+
     }
-    IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
-    {
-        Quaternion from = transform.localRotation;
-        Quaternion to = PickedObject.transform.localRotation;
-
-        to *= Quaternion.Euler(axis * angle);
-
-        PickedObject.transform.localRotation = Quaternion.SlerpUnclamped(PickedObject.transform.localRotation, to, duration);
-        PickedObject.GetComponent<BoxCollider>().isTrigger = true;
-        yield return null;
-        
-        
-
-        transform.localRotation = to;
-    }
+   
 }
