@@ -7,7 +7,6 @@ public abstract class Enemy : MonoBehaviour
 {
     [SerializeField] protected int life = 100;
     [SerializeField] protected float attackDamage;
-    [SerializeField] float velocity;
     
     //Ajustes del enemigo
     [SerializeField] protected Transform player;
@@ -18,7 +17,7 @@ public abstract class Enemy : MonoBehaviour
 
     //Componentes
     [Header("Componentes")]
-    [SerializeField] protected NavMeshAgent navMeshAgent;
+    protected NavMeshAgent navMeshAgent;
     [SerializeField] protected Animator anim;
     [SerializeField] Transform[] pathEnemy;
     //Variables booleanas
@@ -130,19 +129,26 @@ public abstract class Enemy : MonoBehaviour
     }
     public void Path()
     {
-
-        navMeshAgent.speed = speed;
-        navMeshAgent.SetDestination(pathEnemy[nextPosition].position);
-
-        if (Vector3.Distance(transform.position, pathEnemy[nextPosition].position) <= navMeshAgent.stoppingDistance)
+        if(pathEnemy != null)
         {
-            nextPosition++;
-            //StartCoroutine(DelayMovement());
-            if (nextPosition >= pathEnemy.Length)
+            navMeshAgent.speed = speed;
+            navMeshAgent.SetDestination(pathEnemy[nextPosition].position);
+
+            if (Vector3.Distance(transform.position, pathEnemy[nextPosition].position) <= navMeshAgent.stoppingDistance)
             {
-                nextPosition = 0;
+                nextPosition++;
+                //StartCoroutine(DelayMovement());
+                if (nextPosition >= pathEnemy.Length)
+                {
+                    nextPosition = 0;
+                }
             }
         }
+        else
+        {
+            Debug.LogWarning("No hay una ruta en " + gameObject.name);
+        }
+        
     }
     public abstract void AttackPlayer();
     public void Dead()
