@@ -17,7 +17,7 @@ public abstract class Enemy : MonoBehaviour
 
     //Componentes
     [Header("Componentes")]
-    protected NavMeshAgent navMeshAgent;
+    [SerializeField]protected NavMeshAgent navMeshAgent;
     [SerializeField] protected Animator anim;
     [SerializeField] Transform[] pathEnemy;
     //Variables booleanas
@@ -32,9 +32,8 @@ public abstract class Enemy : MonoBehaviour
     private void Start()
     {
         speed = Random.Range(2, 4);
-        navMeshAgent = this.GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        //nextPosition = 0;
+        nextPosition = 0;
     }
 
 
@@ -129,25 +128,19 @@ public abstract class Enemy : MonoBehaviour
     }
     public void Path()
     {
-        if(pathEnemy != null)
-        {
-            navMeshAgent.speed = speed;
-            navMeshAgent.SetDestination(pathEnemy[nextPosition].position);
+        navMeshAgent.speed = speed;
+        navMeshAgent.SetDestination(pathEnemy[nextPosition].position);
 
-            if (Vector3.Distance(transform.position, pathEnemy[nextPosition].position) <= navMeshAgent.stoppingDistance)
+        if (Vector3.Distance(transform.position, pathEnemy[nextPosition].position) <= navMeshAgent.stoppingDistance)
+        {
+            nextPosition++;
+            //StartCoroutine(DelayMovement());
+            if (nextPosition >= pathEnemy.Length)
             {
-                nextPosition++;
-                //StartCoroutine(DelayMovement());
-                if (nextPosition >= pathEnemy.Length)
-                {
-                    nextPosition = 0;
-                }
+                nextPosition = 0;
             }
         }
-        else
-        {
-            Debug.LogWarning("No hay una ruta en " + gameObject.name);
-        }
+        
         
     }
     public abstract void AttackPlayer();

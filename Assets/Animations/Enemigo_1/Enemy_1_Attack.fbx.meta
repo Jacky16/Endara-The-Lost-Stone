@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 6015b306e5166e74aba7250ad8dc049c
+guid: 95ef1e23fbddb7845ad50c4092acc13d
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
-      74: -6173025332041180341
-    second: explode
+      74: -6239216113759591374
+    second: attack
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -37,7 +37,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 40
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -83,7 +83,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.39999998
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
