@@ -44,4 +44,5 @@ public class PlayerLifeManager : MonoBehaviour
         float porcentaje = (currentLifePlayer * 1) / 100;
         imageLife.fillAmount = porcentaje;
     }
+    
 }

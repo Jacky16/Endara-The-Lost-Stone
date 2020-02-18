@@ -62,8 +62,8 @@ public class PlayerMovement : MonoBehaviour
         inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         playerLifeManager = GameObject.Find("Player Life Manager").GetComponent<PlayerLifeManager>();
         godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
         if (isInitialPosition)
         {
@@ -79,8 +79,6 @@ public class PlayerMovement : MonoBehaviour
         Movimiento();
     }
     public void Movimiento(){
-        print(player.isGrounded);
-        //print(movePlayer.y);
         anim.SetBool("isGrounded", player.isGrounded);
         Axis(inputManager.H(),inputManager.V());
         playerInput = new Vector3(horizontal, 0, vertical);
@@ -254,6 +252,8 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene("VictoryScreen");
         }
+        
     }
+    
 
 }

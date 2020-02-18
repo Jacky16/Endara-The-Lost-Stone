@@ -17,6 +17,13 @@ public class SwitchCamera : MonoBehaviour
             cameraVirtual.Priority = 11;
         }
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            cameraVirtual.Priority = 11;
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")

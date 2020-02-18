@@ -14,6 +14,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] float maxRadius;
     [SerializeField] float speed;
     [SerializeField] protected float radiusAttack;
+    [SerializeField]protected float radiusExplosion;
 
     //Componentes
     [Header("Componentes")]
@@ -76,7 +77,6 @@ public abstract class Enemy : MonoBehaviour
     private void Update()
     {
         CommonUpdate();
-        PepitoUpdateQueMeSaleDeLasNaricesUpdate();
     }
 
     void CommonUpdate()
@@ -92,10 +92,16 @@ public abstract class Enemy : MonoBehaviour
             EnemyStates = States.Chase;
         }
         //Ataque : si la distancia es menor que el radio de ataque y si esta en el campo de vision
-        else if (BetweenDistance <= radiusAttack && isInFov)
+        else if (BetweenDistance <= radiusExplosion && isInFov)
         {
+            
             //Atacando
             EnemyStates = States.Attack;
+            if (BetweenDistance <= radiusAttack && isInFov)
+            {
+                //Atacando
+                EnemyStates = States.Attack;
+            }
         }
         //Path: sigue la ruta si la distancia es mayor que el radio maximo
         else if (BetweenDistance > maxRadius)
@@ -106,10 +112,6 @@ public abstract class Enemy : MonoBehaviour
         StateMachine();
     }
 
-    protected virtual void PepitoUpdateQueMeSaleDeLasNaricesUpdate()
-    {
-
-    }
 
     public void StateMachine()
     {
@@ -128,10 +130,11 @@ public abstract class Enemy : MonoBehaviour
     }
     public void Path()
     {
+
         navMeshAgent.speed = speed;
         navMeshAgent.SetDestination(pathEnemy[nextPosition].position);
 
-        if (Vector3.Distance(transform.position, pathEnemy[nextPosition].position) <= navMeshAgent.stoppingDistance)
+        if (Vector3.Distance(transform.position, pathEnemy[nextPosition].position) < 3)
         {
             nextPosition++;
             //StartCoroutine(DelayMovement());
@@ -180,6 +183,8 @@ public abstract class Enemy : MonoBehaviour
 
         Vector3 fovLine1 = Quaternion.AngleAxis(maxAngle, transform.up) * transform.forward * maxRadius;
         Vector3 fovLine2 = Quaternion.AngleAxis(-maxAngle, transform.up) * transform.forward * maxRadius;
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, radiusExplosion);
 
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(transform.position, fovLine1);
