@@ -19,30 +19,21 @@ public class PlayerLifeManager : MonoBehaviour
         currentLifePlayer = maxLifePlayer;
     }
 
-    private void Update()
-    {
-        //Debug.Log("La vida player es: " + currentLifePlayer);
-        ImageLifeManagerValue();
-        if(currentLifePlayer <= 0)
-        {
-            player.PlayerDead();
-        }
-    }
     public void RestarLife(float life)
     {
         currentLifePlayer -= life;
+        float porcentaje = (LifePlayer() * 1) / 100;
+        imageLife.fillAmount = porcentaje;
         Debug.Log("Vida del player: " + currentLifePlayer);
-       // rectTransformLifeBar.DOShakeAnchorPos(100f, 1);
+        if (currentLifePlayer <= 0)
+        {
+            player.PlayerDead();
+        }
     }
 
     public float LifePlayer()
     {
         return currentLifePlayer;
     }
-    public void ImageLifeManagerValue()
-    {
-        float porcentaje = (currentLifePlayer * 1) / 100;
-        imageLife.fillAmount = porcentaje;
-    }
-    
+   
 }

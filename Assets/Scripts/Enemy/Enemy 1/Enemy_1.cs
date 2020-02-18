@@ -11,25 +11,22 @@ public class Enemy_1 : Enemy
     [SerializeField] GameObject attackZone;
     private void Start()
     {
-        explosionRand = 1;
+        explosionRand = 0;
     }
     public override void AttackPlayer()
     {
-        print(radiusExplosion);
         if (explosionRand == 0)
         {
-            if (Vector3.Distance(transform.position, player.position) < radiusAttack && isInFov)
+            if (BetweenDistance < radiusAttack && isInFov)
             {
                 navMeshAgent.SetDestination(player.position);
-                anim.SetTrigger("Attack");
-                float time = +Time.deltaTime;
                 Debug.Log("Estoy atacando al player");
             }
 
         }
         else if (explosionRand == 1)
         {
-            if (Vector3.Distance(transform.position, player.position) <= radiusExplosion)
+            if (BetweenDistance <= radiusAttack)
             {
                 navMeshAgent.speed = 0;
                 anim.SetTrigger("Explosion");
@@ -60,13 +57,14 @@ public class Enemy_1 : Enemy
         {
             
             StartCoroutine(RestLifePlayer(other));
-            
+            anim.SetTrigger("Attack");
+
         }
     }
     IEnumerator RestLifePlayer(Collider other)
     {
         yield return new WaitForSeconds(1);
-        other.GetComponent<PlayerLifeManager>().RestarLife(attackDamage / 10); // Se divide entre 10 ya que se ejecuta cada segundo y dividirlo el damaga es una forma de que no quite tanto
+        other.GetComponent<PlayerLifeManager>().RestarLife(attackDamage /2); // Se divide entre 10 ya que se ejecuta cada segundo y dividirlo el damaga es una forma de que no quite tanto
 
     }
 }

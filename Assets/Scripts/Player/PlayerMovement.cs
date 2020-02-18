@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     
     [Header("Fuerza de empuje")]
     public float pushPower = 2f;
-
+    [SerializeField] Transform respawnPosition;
     float unitsGod;
  
     //Maquinas de estados
@@ -193,9 +193,16 @@ public class PlayerMovement : MonoBehaviour
     {
         //Destroy(this.gameObject);
         Cursor.visible = true;
+        if (respawnPosition != null)
+        {
+            transform.position = respawnPosition.position;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+        //SceneManager.LoadScene("LostScreen");
 
-        SceneManager.LoadScene("LostScreen");
-        
     }
     public void Axis(float h, float v){
         horizontal = h;
@@ -205,6 +212,10 @@ public class PlayerMovement : MonoBehaviour
     {
       
 
+    }
+    public void SetRespawn(Transform t)
+    {
+        respawnPosition = t;
     }
     public void RestarVida(int cantidadARestar)
     {

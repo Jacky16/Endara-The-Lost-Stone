@@ -14,7 +14,6 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] float maxRadius;
     [SerializeField] float speed;
     [SerializeField] protected float radiusAttack;
-    [SerializeField]protected float radiusExplosion;
 
     //Componentes
     [Header("Componentes")]
@@ -26,7 +25,8 @@ public abstract class Enemy : MonoBehaviour
     protected bool canPath = true;
     //Variables int
     int nextPosition = 0;
-
+    //variables float
+    protected float BetweenDistance;
     //Maquina de estados
     protected enum States { Chase, Attack, FollowPath };
     protected States EnemyStates;
@@ -81,27 +81,18 @@ public abstract class Enemy : MonoBehaviour
 
     void CommonUpdate()
     {
-        //Debug.Log(EnemyStates);
-        //Debug.Log("esta en el campo de vision: " + isInFov);
-
         //Distancia entre el enemigo y el player
-        float BetweenDistance = Vector3.Distance(transform.position, player.position);
+        BetweenDistance = Vector3.Distance(transform.position, player.position);
+
         //Persecucion: si es mayor que el radio de ataque y si la distancia al player es menor que el radio y maximo y en el campo de vision
         if (BetweenDistance > radiusAttack && BetweenDistance < maxRadius && isInFov)
         {
             EnemyStates = States.Chase;
         }
         //Ataque : si la distancia es menor que el radio de ataque y si esta en el campo de vision
-        else if (BetweenDistance <= radiusExplosion && isInFov)
+        else if (BetweenDistance <= radiusAttack && isInFov)
         {
-            
-            //Atacando
             EnemyStates = States.Attack;
-            if (BetweenDistance <= radiusAttack && isInFov)
-            {
-                //Atacando
-                EnemyStates = States.Attack;
-            }
         }
         //Path: sigue la ruta si la distancia es mayor que el radio maximo
         else if (BetweenDistance > maxRadius)
@@ -183,8 +174,6 @@ public abstract class Enemy : MonoBehaviour
 
         Vector3 fovLine1 = Quaternion.AngleAxis(maxAngle, transform.up) * transform.forward * maxRadius;
         Vector3 fovLine2 = Quaternion.AngleAxis(-maxAngle, transform.up) * transform.forward * maxRadius;
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, radiusExplosion);
 
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(transform.position, fovLine1);
