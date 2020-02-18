@@ -11,7 +11,7 @@ public class Enemy_1 : Enemy
     [SerializeField] GameObject attackZone;
     private void Start()
     {
-        explosionRand = 0;
+        explosionRand = Random.Range(0, 1);
     }
     public override void AttackPlayer()
     {

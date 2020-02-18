@@ -210,7 +210,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void MeleAtack()
     {
-      
+        transform.DOLocalRotate(new Vector3(0, 360, 0), .5f,RotateMode.FastBeyond360);
 
     }
     public void SetRespawn(Transform t)

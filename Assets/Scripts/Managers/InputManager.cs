@@ -24,6 +24,7 @@ public class InputManager : MonoBehaviour
         playerInputs = new PlayerGamepadInputs();
     }
     private void Update() {
+        MeleAttack();
         ReadValuesGamePad();
         CheckButtonArePressed();
         ChangeAxisCamera();
