@@ -26,10 +26,13 @@ public class MainMenuManager : MonoBehaviour
     [Header("Animator")]
     [SerializeField] Animator animFocus;
     [SerializeField] Animator animFocusPlay;
+    [SerializeField] Animator animGema;
     [Header("Camara")]
     [SerializeField] Transform cam;
     [SerializeField] Vector3 initialPosition;
     [SerializeField] Vector3 endPosition;
+    [Header("Gema Transform")]
+    [SerializeField] Transform transformGema;
 
 
     bool isFocus;
@@ -40,6 +43,18 @@ public class MainMenuManager : MonoBehaviour
         canvasOptions.SetActive(false);
         canvasPlay.SetActive(false);
         cam.transform.position = initialPosition;
+       
+
+    }
+    private void Update()
+    {
+        //Sequence gemaSecuence = DOTween.Sequence();
+        //gemaSecuence.Append(transformGema.DOLocalMoveY(2f, 5f)).SetEase(Ease.InCubic);
+        //gemaSecuence.Join(transformGema.DOLocalRotate(new Vector3(0, 360, 0), 5, RotateMode.FastBeyond360));
+        //gemaSecuence.Append(transformGema.DOLocalMoveY(1.464f, 1.5f)).SetEase(Ease.OutCubic);
+        //gemaSecuence.Join(transformGema.DOLocalRotate(new Vector3(0, 360, 0), 5, RotateMode.FastBeyond360));
+
+        //gemaSecuence.SetLoops(5);
     }
 
     //Metodos Main Menu
@@ -50,7 +65,11 @@ public class MainMenuManager : MonoBehaviour
     }
     public void NewGame()
     {
-        SceneManager.LoadScene("GamePlayScreen");
+        animGema.SetTrigger("Play");
+        Sequence gemaSecuence = DOTween.Sequence();
+        gemaSecuence.Append(transformGema.DOLocalMoveY(5, 1.5f));
+        gemaSecuence.Join(transformGema.DOLocalRotate(new Vector3(0, 360, 0),1,RotateMode.FastBeyond360));
+        
     }
     public void Options()
     {
