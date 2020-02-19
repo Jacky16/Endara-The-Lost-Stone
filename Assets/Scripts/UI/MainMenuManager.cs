@@ -108,7 +108,7 @@ public class MainMenuManager : MonoBehaviour
         isFocus = true;
         animFocus.SetBool("isFocus", isFocus);
         rectPlay.DOAnchorPos(new Vector2(-1000, 0), 0.3f).SetEase(Ease.InQuad);
-        rectOptions.DOAnchorPos(new Vector2(0, 650), 0.3f).SetEase(Ease.InQuad).OnComplete(() => EnableCanvasOptions());
+        rectOptions.DOAnchorPos(new Vector2(0, 0), 0.3f).SetEase(Ease.InQuad).OnComplete(() => EnableCanvasOptions());
 
         yield return new WaitForSeconds(0.3f);
         rectReturn.DOAnchorPos(new Vector2(0, 0), 0.3f).SetEase(Ease.InQuad);
@@ -128,7 +128,7 @@ public class MainMenuManager : MonoBehaviour
     IEnumerator ReturnOptionsAnimation()
     {
         rectReturn.DOAnchorPos(new Vector2(0, -250), 0.3f).SetEase(Ease.OutQuad);
-        rectTextOptions.DOAnchorPos(new Vector2(0, 152.5f), 0.3f).SetEase(Ease.OutQuad);
+        rectTextOptions.DOAnchorPos(new Vector2(0, 250), 0.3f).SetEase(Ease.OutQuad);
 
         foreach (RectTransform r in rectText)
         {
