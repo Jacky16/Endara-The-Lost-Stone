@@ -44,7 +44,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.3019608, g: 0.15686275, b: 0.14509805, a: 1}
-  m_Intensity: 131072
+  m_Intensity: 4817992.5
   m_Range: 3.366623
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 20
+  m_Intensity: 25.2
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0

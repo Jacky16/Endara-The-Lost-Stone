@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LogoScreen.unity
     guid: 783dabb6f188ce7468a012ad49069119
   - enabled: 1
-    path: Assets/Scenes/MainMenuScreen.unity
+    path: Assets/Scenes/DELTA-MainMenuScreen.unity
     guid: d6534e4619f074ffb997d1abcadf071e
   - enabled: 0
     path: Assets/Scenes/Escenas de pruebas/Escena_Alpha.unity

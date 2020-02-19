@@ -44,7 +44,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.156, g: 0.06568422, b: 0.0957895, a: 1}
-  m_Intensity: 228209.48
+  m_Intensity: 12714755
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 20.8
+  m_Intensity: 26.6
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -604,7 +604,7 @@ Transform:
   m_GameObject: {fileID: 7804684024491317923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 83.1876, y: -83.92338, z: -34.19192}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.1661463, y: 2.166146, z: 2.1661463}
   m_Children:
   - {fileID: 3582729802048324058}
   - {fileID: 1282929603224170524}
