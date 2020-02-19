@@ -607,10 +607,14 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalScale: {x: 3.3701668, y: 3.3701668, z: 3.3701668}
 =======
   m_LocalScale: {x: 2.1661463, y: 2.166146, z: 2.1661463}
 >>>>>>> cdc2022fd2e529159df88ec390c667bc78d82050
+=======
+  m_LocalScale: {x: 1, y: 1, z: 1}
+>>>>>>> parent of 6dcf7af... Caja destruible hecha y hay que poner otra vez las luces en todo el mapa
 =======
   m_LocalScale: {x: 1, y: 1, z: 1}
 >>>>>>> parent of 6dcf7af... Caja destruible hecha y hay que poner otra vez las luces en todo el mapa
