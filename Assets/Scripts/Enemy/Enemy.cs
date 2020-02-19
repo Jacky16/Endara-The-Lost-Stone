@@ -19,6 +19,7 @@ public abstract class Enemy : MonoBehaviour
     [Header("Componentes")]
     [SerializeField]protected NavMeshAgent navMeshAgent;
     [SerializeField] protected Animator anim;
+    [Header("Path Enemy")]
     [SerializeField] Transform[] pathEnemy;
     //Variables booleanas
     protected bool isInFov = false;

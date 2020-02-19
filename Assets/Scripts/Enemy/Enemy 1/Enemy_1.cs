@@ -8,7 +8,6 @@ public class Enemy_1 : Enemy
     [SerializeField] GameObject explosionPrefab;
     float explosionRand;
     [SerializeField]float damageExplosion = 14;
-    [SerializeField] GameObject attackZone;
     private void Start()
     {
         explosionRand = Random.Range(0, 1);
