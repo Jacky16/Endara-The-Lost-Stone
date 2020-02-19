@@ -90,7 +90,6 @@ GameObject:
   - component: {fileID: 4390199509494278498}
   - component: {fileID: 4389891606290153921}
   - component: {fileID: 6556575402651348676}
-  - component: {fileID: 5491387676405254203}
   m_Layer: 0
   m_Name: Caja_Parte_02
   m_TagString: Untagged
@@ -159,20 +158,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5491387676405254203
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 663126979060886183}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2492755199244077833, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!1 &2117772259848185123
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +169,6 @@ GameObject:
   - component: {fileID: 1331920373248448547}
   - component: {fileID: 2620953060072326102}
   - component: {fileID: 4778785963853736949}
-  - component: {fileID: 2333595691357357995}
   m_Layer: 0
   m_Name: Caja_Parte_03
   m_TagString: Untagged
@@ -253,20 +237,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2333595691357357995
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2117772259848185123}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1495075411478671310, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!1 &3111380183771347172
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +248,6 @@ GameObject:
   - component: {fileID: 8851365169180270108}
   - component: {fileID: 9104190752861853924}
   - component: {fileID: 7101434427034719634}
-  - component: {fileID: 3312887489488747824}
   m_Layer: 0
   m_Name: Caja_Parte_01
   m_TagString: Untagged
@@ -347,20 +316,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3312887489488747824
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3111380183771347172}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4155650699408174917, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!1 &3304919912932837483
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,8 +483,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 835907265966802933}
-  - component: {fileID: 1048841510}
-  - component: {fileID: 1048841508}
   m_Layer: 0
   m_Name: Caja
   m_TagString: Untagged
@@ -546,7 +499,7 @@ Transform:
   m_GameObject: {fileID: 4450371041822799334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.37201, y: -5.1304526, z: -6.1746573}
-  m_LocalScale: {x: 2.5000002, y: 2.4999998, z: 2.5}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 8851365169180270108}
   - {fileID: 4390199509494278498}
@@ -562,33 +515,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1048841510
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4450371041822799334}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: -0.43}
---- !u!114 &1048841508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4450371041822799334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f94ce90e5208345a03bb68f2e705d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabBoxDestroyed: {fileID: 4450371041822799334, guid: fcbb71027c14e8c47961204497859faa,
-    type: 3}
 --- !u!1 &4923645731575735715
 GameObject:
   m_ObjectHideFlags: 0
