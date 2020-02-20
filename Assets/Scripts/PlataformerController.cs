@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(Rigidbody))]
 public class PlataformerController : MonoBehaviour
 {
     public Rigidbody platformRb;
@@ -49,18 +49,18 @@ public class PlataformerController : MonoBehaviour
         yield return new WaitForSeconds(time);
         canMove = true;
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if(other.gameObject == gameObjectPlayer)
-    //    {
-    //        gameObjectPlayer.transform.parent = transform;
-    //    }
-    //}
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.gameObject == gameObjectPlayer)
-    //    {
-    //        gameObjectPlayer.transform.parent = null;
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.transform.parent = transform;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.transform.parent = null;
+        }
+    }
 }
