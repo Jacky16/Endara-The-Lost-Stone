@@ -20,7 +20,6 @@ public class Caja : MonoBehaviour
     {
         GameObject go = Instantiate(prefabBoxDestroyed, transform.position, transform.rotation) as GameObject;
         Rigidbody[] rb = go.GetComponentsInChildren<Rigidbody>();
-        Destroy(go, 2);
         foreach (Rigidbody r in rb)
         {
             r.AddExplosionForce(300, transform.position, 30);
