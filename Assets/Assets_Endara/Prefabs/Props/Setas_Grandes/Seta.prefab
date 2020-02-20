@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2124647812
 Transform:
   m_ObjectHideFlags: 0
@@ -44,7 +44,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.156, g: 0.06568422, b: 0.0957895, a: 1}
-  m_Intensity: 12714755
+  m_Intensity: 228209.48
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 26.6
+  m_Intensity: 20.8
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -544,8 +544,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 0
 --- !u!4 &3991041175308684502
 Transform:
   m_ObjectHideFlags: 0
@@ -604,15 +604,7 @@ Transform:
   m_GameObject: {fileID: 7804684024491317923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 83.1876, y: -83.92338, z: -34.19192}
-<<<<<<< HEAD
-<<<<<<< HEAD
   m_LocalScale: {x: 3.3701668, y: 3.3701668, z: 3.3701668}
-=======
-  m_LocalScale: {x: 2.1661463, y: 2.166146, z: 2.1661463}
->>>>>>> cdc2022fd2e529159df88ec390c667bc78d82050
-=======
-  m_LocalScale: {x: 1, y: 1, z: 1}
->>>>>>> parent of 6dcf7af... Caja destruible hecha y hay que poner otra vez las luces en todo el mapa
   m_Children:
   - {fileID: 3582729802048324058}
   - {fileID: 1282929603224170524}
