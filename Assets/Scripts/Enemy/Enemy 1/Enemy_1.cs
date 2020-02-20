@@ -26,6 +26,7 @@ public class Enemy_1 : Enemy
         {
             if (BetweenDistance <= radiusAttack)
             {
+                Invoke("Explosion", 2);
                 navMeshAgent.speed = 0;
                 anim.SetTrigger("Explosion");
                 print("He explotado");
