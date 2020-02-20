@@ -1,10 +1,10 @@
 Layer Selection: Terrain
 Brush Max Size: 20
-Brush Size: 0,1
+Brush Size: 0,52
 Fill Mode: True
 Fill Rate: 0,01
 
-Game Object: Assets/Assets_Endara/Prefabs/Props/Caja.prefab
+Game Object: Assets/Assets_Endara/Prefabs/Props/Piedras/Piedra_01.prefab
 Layer: Default
 Toggle: True
 Slider: 1
@@ -13,14 +13,15 @@ Random Rotation Toggle: True
 Random Rotation X: False
 Random Rotation Y: True
 Random Rotation Z: False
-Random Scale Toggle: False
-Random Scale Min: 0,1
-Random Scale Max: 1
-Fixed Rotation Toggle: False
-Fixed Rotation X: 0
+Random Scale Toggle: True
+Random Scale Min: 1
+Random Scale Max: 2
+Fixed Rotation Toggle: True
+Fixed Rotation X: 90
 Fixed Rotation Y: 0
 Fixed Rotation Z: 0
 Depth: 0
 
 Group Names:
 Cajas
+Piedras_puerta
