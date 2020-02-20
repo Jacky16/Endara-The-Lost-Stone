@@ -28,6 +28,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1962283210774656648}
+  - component: {fileID: 7886916963784233978}
+  - component: {fileID: 8318940144707149588}
   m_Layer: 0
   m_Name: Enemy_2_2
   m_TagString: Untagged
@@ -50,6 +52,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &7886916963784233978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5932643591521256136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088da2c8dd1bc0a4fbff1506cad70785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 100
+  attackDamage: 0
+  player: {fileID: 0}
+  maxAngle: 45
+  maxRadius: 15
+  speed: 1.5
+  radiusAttack: 3.42
+  navMeshAgent: {fileID: 8318940144707149588}
+  anim: {fileID: 0}
+  pathEnemy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  explosionPrefab: {fileID: 3920864053412402681, guid: 920985270a41ebf48869e7480471c256,
+    type: 3}
+  damageExplosion: 14
+--- !u!195 &8318940144707149588
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5932643591521256136}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 2
+  m_Acceleration: 4
+  avoidancePriority: 50
+  m_AngularSpeed: 20
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &4286133694502056491
 PrefabInstance:
   m_ObjectHideFlags: 0
