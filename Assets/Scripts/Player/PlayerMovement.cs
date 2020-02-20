@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerLifeManager playerLifeManager;
     GodManager godManager;
     public Transform initialPosition;
-
+    [SerializeField] CapsuleCollider attackCollider;
     [Header("Velocidad")]
     public float speed = 6.5F;
   
@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        attackCollider.enabled = false;
         player = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
@@ -210,7 +211,8 @@ public class PlayerMovement : MonoBehaviour
     }
     public void MeleAtack()
     {
-        transform.DOLocalRotate(new Vector3(0, 360, 0), .5f,RotateMode.LocalAxisAdd);
+        transform.DOLocalRotate(new Vector3(0, 360, 0), .5f,RotateMode.LocalAxisAdd).OnComplete(() => attackCollider.enabled = false);
+        attackCollider.enabled = true;
 
     }
     public void SetRespawn(Transform t)
