@@ -6,15 +6,14 @@ using UnityEngine.AI;
 public class Enemy_1 : Enemy
 {
     [SerializeField] GameObject explosionPrefab;
-    float explosionRand;
+    [SerializeField]bool explosionRand;
     [SerializeField]float damageExplosion = 14;
     private void Start()
     {
-        explosionRand = Random.Range(0, 1);
     }
     public override void AttackPlayer()
     {
-        if (explosionRand == 0)
+        if (!explosionRand)
         {
             if (BetweenDistance < radiusAttack && isInFov)
             {
@@ -23,7 +22,7 @@ public class Enemy_1 : Enemy
             }
 
         }
-        else if (explosionRand == 1)
+        else
         {
             if (BetweenDistance <= radiusAttack)
             {
@@ -50,20 +49,38 @@ public class Enemy_1 : Enemy
     {
         return attackDamage;
     }
+    public void RestLife(float lifeToRest)
+    {
+        life -= lifeToRest;
+        if(life <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+        print(life);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Cola"))
+        {
+
+            RestLife(other.GetComponent<DamegeAttack>().DamagePlayer());
+            
+        }
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
-            
-            StartCoroutine(RestLifePlayer(other));
             anim.SetTrigger("Attack");
+
+            StartCoroutine(RestLifePlayer(other));
 
         }
     }
     IEnumerator RestLifePlayer(Collider other)
     {
-        yield return new WaitForSeconds(1);
-        other.GetComponent<PlayerLifeManager>().RestarLife(attackDamage /2); // Se divide entre 10 ya que se ejecuta cada segundo y dividirlo el damaga es una forma de que no quite tanto
-
+        yield return new WaitForSeconds(0.25f);
+        other.GetComponent<PlayerLifeManager>().RestarLife(attackDamage /50); // Se divide entre 10 ya que se ejecuta cada segundo y dividirlo el damaga es una forma de que no quite tanto
+        navMeshAgent.speed = 0;
     }
 }

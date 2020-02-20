@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField] protected int life = 100;
+    [SerializeField] protected float life = 100;
     [SerializeField] protected float attackDamage;
     
     //Ajustes del enemigo
