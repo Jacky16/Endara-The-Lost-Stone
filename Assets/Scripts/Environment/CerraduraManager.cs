@@ -17,15 +17,15 @@ public class CerraduraManager : MonoBehaviour
    
     private void Start()
     {
-       
-       
-       
+        camera.Priority = 0;
+
+
+
     }
     private void Update()
     {
         if (isKeyInside)
         {
-            StartCoroutine(CameraSwitch());
 
         }
         else
@@ -35,13 +35,24 @@ public class CerraduraManager : MonoBehaviour
 
         }
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Caja" || other.gameObject.name == "Llave")
         {
             isKeyInside = true;
+            StartCoroutine(CameraSwitch(other));
+
         }
-       
+
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Caja" || other.gameObject.name == "Llave")
+        {
+            other.GetComponent<ObjetoPickeable>().enabled = false;
+
+
+        }
     }
 
 
@@ -50,14 +61,19 @@ public class CerraduraManager : MonoBehaviour
         if ((other.tag == "Caja") || other.gameObject.name == "Llave")
         {
             isKeyInside = false;
+
         }
     }
-    IEnumerator CameraSwitch() 
+    IEnumerator CameraSwitch(Collider other)
     {
-        camera.Priority = 10;
-        yield return new WaitForSeconds(1);
-        gameObjectDoor.SetActive(false);
+        yield return new WaitForSeconds(0.3f);
 
+        camera.Priority = 10;
+        yield return new WaitForSeconds(0.5f);
+        gameObjectDoor.SetActive(false);
+        yield return new WaitForSeconds(1f);
+
+        camera.Priority = 0;
 
     }
 

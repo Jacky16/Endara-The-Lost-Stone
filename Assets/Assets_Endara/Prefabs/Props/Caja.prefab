@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7007247460882887623}
   - component: {fileID: 2117521058810211179}
   - component: {fileID: 8051690737267068321}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hoja004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 4389891606290153921}
   - component: {fileID: 6556575402651348676}
   - component: {fileID: 5491387676405254203}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Caja_Parte_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 2620953060072326102}
   - component: {fileID: 4778785963853736949}
   - component: {fileID: 2333595691357357995}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Caja_Parte_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 9104190752861853924}
   - component: {fileID: 7101434427034719634}
   - component: {fileID: 3312887489488747824}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Caja_Parte_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 2032115094133971915}
   - component: {fileID: 192005381820346578}
   - component: {fileID: 6646301021963035285}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rama_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 4032809634556644435}
   - component: {fileID: 8499316347386756883}
   - component: {fileID: 2543118968095933983}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hoja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 6144203586922257652}
   - component: {fileID: 6330791981064031742}
   - component: {fileID: 2850173494552832631}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hoja003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +679,7 @@ GameObject:
   - component: {fileID: 1543708993981097518}
   - component: {fileID: 3185851275952145995}
   - component: {fileID: 4702162584782418875}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hoja001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 2615232441543628923}
   - component: {fileID: 6107940795822790279}
   - component: {fileID: 1583156565179996835}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rama_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 6923704274096099583}
   - component: {fileID: 5000496345721669395}
   - component: {fileID: 5119871710467843287}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hoja005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 6415501067988790005}
   - component: {fileID: 3312710970704116560}
   - component: {fileID: 4924419433242314958}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hoja002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
