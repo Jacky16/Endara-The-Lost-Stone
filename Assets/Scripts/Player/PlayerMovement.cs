@@ -200,7 +200,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            transform.position = initialPosition.position;
+           
         }
         //SceneManager.LoadScene("LostScreen");
 

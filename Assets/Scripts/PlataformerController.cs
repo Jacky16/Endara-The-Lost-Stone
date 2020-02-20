@@ -25,7 +25,7 @@ public class PlataformerController : MonoBehaviour
         if (canMove)
         {
            
-            platformRb.MovePosition(Vector3.MoveTowards(platformRb.position, platformsPositions[nextPosition].position, speed * Time.deltaTime));
+            transform.position = (Vector3.MoveTowards(transform.position, platformsPositions[nextPosition].position, speed * Time.deltaTime));
 
         }
         if (Vector3.Distance(platformRb.position,platformsPositions[nextPosition].position) <= 1)

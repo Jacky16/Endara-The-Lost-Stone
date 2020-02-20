@@ -8,7 +8,7 @@ public class InputManager : MonoBehaviour
     public PlayerMovement player;
     [SerializeField]PickUpObjects pickUpsObjects;
     public PlayerGamepadInputs playerInputs;
-    [SerializeField] CinemachineFreeLook playerCameraFreeLook;
+    [SerializeField] CinemachineFreeLook playerCameraVirtual;
     //Variables bools para los controles de movimiento
     bool isJostickLeftPressed;
     bool isJostickRightPressed;
@@ -126,17 +126,17 @@ public class InputManager : MonoBehaviour
     {
         if (useGamepad)
         {
-            playerCameraFreeLook.m_XAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().x;
-            playerCameraFreeLook.m_YAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().y;
+            playerCameraVirtual.m_XAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().x;
+            playerCameraVirtual.m_YAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().y;
 
             //Cambiar los nombres de los inputs a null
-            playerCameraFreeLook.m_XAxis.m_InputAxisName = null;
-            playerCameraFreeLook.m_YAxis.m_InputAxisName = null;
+            playerCameraVirtual.m_XAxis.m_InputAxisName = null;
+            playerCameraVirtual.m_YAxis.m_InputAxisName = null;
         }
         else
         {
-            playerCameraFreeLook.m_XAxis.m_InputAxisName = "Mouse X";
-            playerCameraFreeLook.m_YAxis.m_InputAxisName = "Mouse Y";
+            playerCameraVirtual.m_XAxis.m_InputAxisName = "Mouse X";
+            playerCameraVirtual.m_YAxis.m_InputAxisName = "Mouse Y";
         }
     }
    
