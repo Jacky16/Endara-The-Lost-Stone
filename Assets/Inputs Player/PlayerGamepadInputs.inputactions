@@ -52,6 +52,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "7ddda294-3f27-4556-b0c7-b5a555b10279",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -164,6 +172,17 @@
                     "action": "Rotation",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "037ef079-320c-439d-9546-6d02d12b9e14",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -223,6 +242,14 @@
                     "name": "LB",
                     "type": "Button",
                     "id": "cca3d4f8-8635-4020-8afc-10a2eb982ebe",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.1)"
+                },
+                {
+                    "name": "B",
+                    "type": "Button",
+                    "id": "07e0def7-d11f-4ffd-8a0a-6cff6d3f9b25",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Press(pressPoint=0.1)"
@@ -303,6 +330,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "LB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df02995f-1756-4563-b7bb-4f484f143101",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "B",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

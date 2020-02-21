@@ -51,9 +51,10 @@ public class InputManager : MonoBehaviour
 
     void MeleAttack()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (playerInputs.Player_GamepadXbox.B.triggered || playerInputs.Player_Keyboard.Attack.triggered)
         {
             player.MeleAtack();
+            
         }
     }
     void ReadValuesGamePad()
