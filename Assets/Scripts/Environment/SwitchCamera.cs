@@ -8,7 +8,6 @@ public class SwitchCamera : MonoBehaviour
     private void Start()
     {
         cameraVirtual.Priority = 0;
-        cameraVirtual.Follow = null;
 
     }
     private void OnTriggerEnter(Collider other)
@@ -22,7 +21,6 @@ public class SwitchCamera : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            cameraVirtual.Follow = other.transform;
             cameraVirtual.Priority = 11;
         }
     }
@@ -30,7 +28,6 @@ public class SwitchCamera : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            cameraVirtual.Follow = null;
             cameraVirtual.Priority = 0;
         }
     }

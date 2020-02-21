@@ -63,8 +63,8 @@ public class PlayerMovement : MonoBehaviour
         inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         playerLifeManager = GameObject.Find("Player Life Manager").GetComponent<PlayerLifeManager>();
         godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
-        //Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
         if (isInitialPosition)
         {
