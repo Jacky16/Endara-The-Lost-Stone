@@ -9,11 +9,18 @@ public class SpawnBaldosas : MonoBehaviour
     [SerializeField] States Bridge;
     [SerializeField] float speed = 10;
     [SerializeField] float timeToSpawn = 3;
+    float firstTime = 1;
     float time;
     Vector3 direction;
-    [SerializeField]bool isSpawingBaldosas;
+    [SerializeField]bool isSpawingBaldosas = false;
+    private void Start()
+    {
+        timeToSpawn = firstTime;
+        isSpawingBaldosas = false;
+    }
     private void FixedUpdate()
     {
+        timeToSpawn = 3;
         if (isSpawingBaldosas)
         {
             time += Time.deltaTime;

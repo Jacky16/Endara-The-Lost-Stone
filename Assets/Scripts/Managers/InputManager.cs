@@ -99,12 +99,12 @@ public class InputManager : MonoBehaviour
         //Rotacion del objero pickeado
         if (playerInputs.Player_GamepadXbox.RE.triggered) //Girar a la derecha
         {
-            pickUpsObjects.Rotate_R(15);
+            pickUpsObjects.Rotate_R(5);
 
         }
         if (playerInputs.Player_GamepadXbox.LB.triggered) //Girar a la izquierda
         {
-            pickUpsObjects.Rotate_L(15);
+            pickUpsObjects.Rotate_L(5);
 
         }
 
