@@ -203,7 +203,6 @@ public class PlayerMovement : MonoBehaviour
             transform.position = initialPosition.position;
            
         }
-        //SceneManager.LoadScene("LostScreen");
 
     }
     public void Axis(float h, float v){
@@ -265,6 +264,10 @@ public class PlayerMovement : MonoBehaviour
         if(other.tag == "Final")
         {
             SceneManager.LoadScene("VictoryScreen");
+        }
+        if (other.CompareTag("Muerte"))
+        {
+            PlayerDead();
         }
         
     }

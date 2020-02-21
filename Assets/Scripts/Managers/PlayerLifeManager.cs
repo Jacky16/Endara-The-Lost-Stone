@@ -28,15 +28,7 @@ public class PlayerLifeManager : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<PlayerMovement>();
         currentLifePlayer = maxLifePlayer;
     }
-    private void Update()
-    {
-        //currentLifePlayer -= Time.deltaTime * 4;
-    }
-    private void FixedUpdate()
-    {
-        LifeSpritesManager();
-
-    }
+   
 
     public void RestarLife(float life)
     {
@@ -44,6 +36,8 @@ public class PlayerLifeManager : MonoBehaviour
         float porcentaje = (LifePlayer() * 1) / 100;
         //imageLife.fillAmount = porcentaje;
         Debug.Log("Vida del player: " + currentLifePlayer);
+        LifeSpritesManager();
+
         if (currentLifePlayer <= 0)
         {
             player.PlayerDead();
