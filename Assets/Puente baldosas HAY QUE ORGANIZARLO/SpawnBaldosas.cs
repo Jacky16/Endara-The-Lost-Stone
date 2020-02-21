@@ -15,7 +15,7 @@ public class SpawnBaldosas : MonoBehaviour
     [SerializeField]bool isSpawingBaldosas = false;
     private void Start()
     {
-        timeToSpawn = firstTime;
+        //timeToSpawn = firstTime;
         isSpawingBaldosas = false;
     }
     private void FixedUpdate()
