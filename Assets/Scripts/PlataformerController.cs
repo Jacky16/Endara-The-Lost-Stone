@@ -4,16 +4,20 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlataformerController : MonoBehaviour
 {
-    public Rigidbody platformRb;
+    Rigidbody platformRb;
     public Transform[] platformsPositions;
-    public float speed = 5;
+    [SerializeField] float speed = 5;
     private int actualPosition = 0;
     private int nextPosition = 0;
     private bool canMove = true;
-    public float timeBetweenPoints = 0.5f;
-    public GameObject gameObjectPlayer;
+    [SerializeField] float timeBetweenPoints = 0.5f;
 
-    
+    private void Start()
+    {
+        platformRb = GetComponent<Rigidbody>();
+        platformRb.useGravity = false;
+    }
+
     void FixedUpdate()
     {
           Movement();

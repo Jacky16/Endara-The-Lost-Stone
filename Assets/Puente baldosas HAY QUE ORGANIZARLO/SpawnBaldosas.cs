@@ -20,7 +20,6 @@ public class SpawnBaldosas : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        timeToSpawn = 3;
         if (isSpawingBaldosas)
         {
             time += Time.deltaTime;
