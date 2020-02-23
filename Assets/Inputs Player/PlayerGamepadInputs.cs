@@ -274,7 +274,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""id"": ""40e013eb-1278-4ff9-9289-1a58e676404d"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
-                    ""processors"": ""StickDeadzone"",
+                    ""processors"": """",
                     ""groups"": ""New control scheme"",
                     ""action"": ""LeftJostyck"",
                     ""isComposite"": false,

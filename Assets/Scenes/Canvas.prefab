@@ -1754,6 +1754,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_AudioSettings
       objectReference: {fileID: 0}
+    - target: {fileID: 3699498719012747080, guid: c7000502b56f1ac4fab76beb462a6f18,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3699498719012747092, guid: c7000502b56f1ac4fab76beb462a6f18,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2113,7 +2118,7 @@ PrefabInstance:
     - target: {fileID: 2722255465621032115, guid: 4ddc510fdcd5a454583fc923257e913a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2722255465621032119, guid: 4ddc510fdcd5a454583fc923257e913a,
         type: 3}
