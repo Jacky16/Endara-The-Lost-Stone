@@ -19,9 +19,13 @@ public class InputManager : MonoBehaviour
     bool isButtonGampedadAimPressed;
     Vector2 vector2Axis;
     [SerializeField] bool useGamepad;
+    Gamepad gamepad;
+    Keyboard keyboard;
     private void Awake()
     {
         playerInputs = new PlayerGamepadInputs();
+        gamepad = InputSystem.GetDevice<Gamepad>();
+        keyboard = InputSystem.GetDevice<Keyboard>();
     }
     private void Update() {
         MeleAttack();
@@ -41,6 +45,7 @@ public class InputManager : MonoBehaviour
         {
             useGamepad = true;
         }
+        print(gamepad.name);
 
         //Enviar info al player
         player.Axis(H(),V());
@@ -97,16 +102,19 @@ public class InputManager : MonoBehaviour
         }
 
         //Rotacion del objero pickeado
-        if (playerInputs.Player_GamepadXbox.RE.triggered) //Girar a la derecha
+
+        if (Gamepad.current.rightShoulder.isPressed)
         {
             pickUpsObjects.Rotate_R(5);
 
         }
-        if (playerInputs.Player_GamepadXbox.LB.triggered) //Girar a la izquierda
+        if (Gamepad.current.leftShoulder.isPressed)
         {
             pickUpsObjects.Rotate_L(5);
 
         }
+
+
 
 
 

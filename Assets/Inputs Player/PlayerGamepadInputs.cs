@@ -62,9 +62,9 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""name"": ""Rotation"",
                     ""type"": ""Button"",
                     ""id"": ""f9af53d7-376b-4e88-a8f5-75e9e0d92fed"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Hold""
                 },
                 {
                     ""name"": ""Attack"",
@@ -179,7 +179,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""01722395-6935-4c79-a8bf-997d07e6b30c"",
                     ""path"": ""<Keyboard>/r"",
-                    ""interactions"": ""Press(pressPoint=0.5)"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Rotation"",
