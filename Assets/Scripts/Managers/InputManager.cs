@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
-public class InputManager : MonoBehaviour
+public class  InputManager : MonoBehaviour
 {
     public PlayerMovement player;
     [SerializeField]PickUpObjects pickUpsObjects;
-    public PlayerGamepadInputs playerInputs;
+    public static PlayerGamepadInputs playerInputs;
     [SerializeField] CinemachineFreeLook playerCameraVirtual;
     //Variables bools para los controles de movimiento
     bool isJostickLeftPressed;
@@ -34,7 +34,7 @@ public class InputManager : MonoBehaviour
         ChangeAxisCamera();
         if (isJostickLeftPressed || isJostickRightPressed)
         {
-            Debug.Log("Estoy tocando el mando...");
+            //Debug.Log("Estoy tocando el mando...");
             useGamepad = true;
 
         }else if(Input.anyKey || Input.GetAxis("Mouse Y") > 0.01f || Input.GetAxis("Mouse X") > 0.01f)
@@ -45,26 +45,12 @@ public class InputManager : MonoBehaviour
         {
             useGamepad = true;
         }
-        ChangeGamepad();
+        //print(gamepad.name);
+
         //Enviar info al player
         player.Axis(H(),V());
 
         //MeleAttack();
-    }
-    void ChangeGamepad()
-    {
-        InputSystem.onDeviceChange +=(device, change) =>
-     {
-         switch (change)
-         {
-             case InputDeviceChange.Added:
-                 Debug.Log($"Device {device} was added");
-                 break;
-             case InputDeviceChange.Removed:
-                 Debug.Log($"Device {device} was removed");
-                 break;
-         }
-     };
 
     }
 
@@ -147,6 +133,7 @@ public class InputManager : MonoBehaviour
 
     void ChangeAxisCamera()
     {
+        if (PlayerMovement.canMove)
         if (useGamepad)
         {
             playerCameraVirtual.m_XAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().x;

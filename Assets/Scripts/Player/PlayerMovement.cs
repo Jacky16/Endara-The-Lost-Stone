@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerStates playerStates;
 
     //Variables booleanas
-    bool canMove = false;
+    public static bool canMove = true;
     public bool isGod;
     [SerializeField] bool isInitialPosition;
     private bool doubleJump = true;
@@ -76,7 +76,11 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        Movimiento();
+        if (canMove)
+        {
+            Movimiento();
+
+        }
     }
     public void Movimiento(){
         anim.SetBool("isGrounded", player.isGrounded);
@@ -152,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
     void JumpPlayer()
     {
 
-        if (inputManager.playerInputs.Player_GamepadXbox.A.triggered || inputManager.playerInputs.Player_Keyboard.Jump.triggered)
+        if (InputManager.playerInputs.Player_GamepadXbox.A.triggered || InputManager.playerInputs.Player_Keyboard.Jump.triggered)
         {
            
             if (!doubleJump)

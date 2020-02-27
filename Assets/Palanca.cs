@@ -8,11 +8,10 @@ public class Palanca : MonoBehaviour
     [SerializeField] GameObject canvasPalanca;
     [SerializeField] GameObject activateSomething;
     [SerializeField] CinemachineVirtualCamera camera;
-    InputManager inputManager;
     Animator anim;
     private void Start()
     {
-        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
+        //inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         anim = GetComponent<Animator>();
         canvasPalanca.SetActive(false);
     }
@@ -27,7 +26,7 @@ public class Palanca : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
-        if (inputManager.playerInputs.Player_Keyboard.CatchObject.triggered || inputManager.playerInputs.Player_GamepadXbox.X.triggered)
+        if (InputManager.playerInputs.Player_Keyboard.CatchObject.triggered || InputManager.playerInputs.Player_GamepadXbox.X.triggered)
         {
             anim.SetTrigger("Palanca");
                
