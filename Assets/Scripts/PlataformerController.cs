@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(Rigidbody))]
 public class PlataformerController : MonoBehaviour
 {
-    public Rigidbody platformRb;
+    Rigidbody platformRb;
     public Transform[] platformsPositions;
-    public float speed = 5;
+    [SerializeField] float speed = 5;
     private int actualPosition = 0;
     private int nextPosition = 0;
     private bool canMove = true;
-    public float timeBetweenPoints = 0.5f;
-    public GameObject gameObjectPlayer;
+    [SerializeField] float timeBetweenPoints = 0.5f;
 
-    
+    private void Start()
+    {
+        platformRb = GetComponent<Rigidbody>();
+        platformRb.useGravity = false;
+    }
+
     void FixedUpdate()
     {
           Movement();
@@ -25,7 +29,7 @@ public class PlataformerController : MonoBehaviour
         if (canMove)
         {
            
-            platformRb.MovePosition(Vector3.MoveTowards(platformRb.position, platformsPositions[nextPosition].position, speed * Time.deltaTime));
+            transform.position = (Vector3.MoveTowards(transform.position, platformsPositions[nextPosition].position, speed * Time.deltaTime));
 
         }
         if (Vector3.Distance(platformRb.position,platformsPositions[nextPosition].position) <= 1)
@@ -49,18 +53,18 @@ public class PlataformerController : MonoBehaviour
         yield return new WaitForSeconds(time);
         canMove = true;
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if(other.gameObject == gameObjectPlayer)
-    //    {
-    //        gameObjectPlayer.transform.parent = transform;
-    //    }
-    //}
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.gameObject == gameObjectPlayer)
-    //    {
-    //        gameObjectPlayer.transform.parent = null;
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.transform.parent = transform;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.transform.parent = null;
+        }
+    }
 }

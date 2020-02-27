@@ -14,14 +14,7 @@ public class Baldosa : MonoBehaviour
         transform.Translate(position * speed * Time.deltaTime);
 
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == stringCollision)
-        {
-            Destroy(this.gameObject);
-        }
-        
-    }
+   
     //private void OnCollisionEnter(Collision collision)
     //{
     //    if (collision.gameObject.name == "Baldosa")
@@ -36,6 +29,24 @@ public class Baldosa : MonoBehaviour
         speed = f;
         stringCollision = s;
 
+    }
+     private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.transform.parent = transform;
+        }
+        if (other.gameObject.name == stringCollision)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.transform.parent = null;
+        }
     }
 
 

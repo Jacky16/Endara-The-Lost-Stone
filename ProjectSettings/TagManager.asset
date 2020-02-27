@@ -12,6 +12,8 @@ TagManager:
   - Cubo
   - Solution
   - Enemy1
+  - Cola
+  - Muerte
   layers:
   - Default
   - TransparentFX

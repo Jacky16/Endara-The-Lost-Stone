@@ -1,48 +1,48 @@
-Layer Selection: Default
+Layer Selection: Terrain
 Brush Max Size: 20
-Brush Size: 6,44
+Brush Size: 0,65
 Fill Mode: True
-Fill Rate: 0,01
+Fill Rate: 0,066
 
-Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes/Seta.prefab
+Game Object: Assets/Assets_Endara/Prefabs/Props/Flores/Flor_1/Flor_01.prefab
 Layer: Default
 Toggle: True
 Slider: 1
-Lock Orientation Toggle: False
-Random Rotation Toggle: False
+Lock Orientation Toggle: True
+Random Rotation Toggle: True
 Random Rotation X: False
-Random Rotation Y: False
+Random Rotation Y: True
 Random Rotation Z: False
 Random Scale Toggle: True
-Random Scale Min: 2
-Random Scale Max: 3
+Random Scale Min: 0,5
+Random Scale Max: 2
 Fixed Rotation Toggle: False
 Fixed Rotation X: 0
 Fixed Rotation Y: 0
 Fixed Rotation Z: 0
 Depth: 0
 
-Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes/Seta_Grande_02.prefab
+Game Object: Assets/Assets_Endara/Prefabs/Props/Flores/Flor_3/Flor_03_Alargado.prefab
 Layer: Default
-Toggle: True
+Toggle: False
 Slider: 1
-Lock Orientation Toggle: False
+Lock Orientation Toggle: True
 Random Rotation Toggle: True
 Random Rotation X: False
 Random Rotation Y: True
 Random Rotation Z: False
 Random Scale Toggle: True
 Random Scale Min: 2
-Random Scale Max: 1
+Random Scale Max: 5
 Fixed Rotation Toggle: True
 Fixed Rotation X: 90
 Fixed Rotation Y: 0
 Fixed Rotation Z: 0
 Depth: 0
 
-Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes/Seta_Grande_03.prefab
+Game Object: Assets/Assets_Endara/Prefabs/Props/Flores/Flor_4/Flor_04.prefab
 Layer: Default
-Toggle: True
+Toggle: False
 Slider: 1
 Lock Orientation Toggle: False
 Random Rotation Toggle: True
@@ -50,28 +50,10 @@ Random Rotation X: False
 Random Rotation Y: True
 Random Rotation Z: False
 Random Scale Toggle: True
-Random Scale Min: 1,2
-Random Scale Max: 1
-Fixed Rotation Toggle: True
-Fixed Rotation X: 90
-Fixed Rotation Y: 0
-Fixed Rotation Z: 0
-Depth: 0
-
-Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes/Seta_Grande_01.prefab
-Layer: Default
-Toggle: True
-Slider: 1
-Lock Orientation Toggle: False
-Random Rotation Toggle: False
-Random Rotation X: False
-Random Rotation Y: False
-Random Rotation Z: False
-Random Scale Toggle: True
-Random Scale Min: 1
-Random Scale Max: 1
-Fixed Rotation Toggle: True
-Fixed Rotation X: 90
+Random Scale Min: 0,5
+Random Scale Max: 2
+Fixed Rotation Toggle: False
+Fixed Rotation X: 0
 Fixed Rotation Y: 0
 Fixed Rotation Z: 0
 Depth: 0

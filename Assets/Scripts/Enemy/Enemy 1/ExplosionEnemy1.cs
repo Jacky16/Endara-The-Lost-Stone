@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ExplosionEnemy1 : MonoBehaviour
 {
-    float damageExplosion = 0;
+    [SerializeField]float damageExplosion = 0;
    
     private void OnTriggerEnter(Collider other)
     {

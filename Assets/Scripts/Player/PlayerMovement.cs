@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerLifeManager playerLifeManager;
     GodManager godManager;
     public Transform initialPosition;
-
+    [SerializeField] CapsuleCollider attackCollider;
     [Header("Velocidad")]
     public float speed = 6.5F;
   
@@ -57,13 +57,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        attackCollider.enabled = false;
         player = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         playerLifeManager = GameObject.Find("Player Life Manager").GetComponent<PlayerLifeManager>();
         godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
-        //Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
         if (isInitialPosition)
         {
@@ -199,9 +200,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            transform.position = initialPosition.position;
+           
         }
-        //SceneManager.LoadScene("LostScreen");
 
     }
     public void Axis(float h, float v){
@@ -210,7 +211,8 @@ public class PlayerMovement : MonoBehaviour
     }
     public void MeleAtack()
     {
-        transform.DOLocalRotate(new Vector3(0, 360, 0), .5f,RotateMode.FastBeyond360);
+        transform.DOLocalRotate(new Vector3(0, 360, 0), .5f,RotateMode.LocalAxisAdd).OnComplete(() => attackCollider.enabled = false);
+        attackCollider.enabled = true;
 
     }
     public void SetRespawn(Transform t)
@@ -262,6 +264,10 @@ public class PlayerMovement : MonoBehaviour
         if(other.tag == "Final")
         {
             SceneManager.LoadScene("VictoryScreen");
+        }
+        if (other.CompareTag("Muerte"))
+        {
+            PlayerDead();
         }
         
     }

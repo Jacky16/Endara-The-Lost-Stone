@@ -49,6 +49,14 @@
                     "name": "Rotation",
                     "type": "Button",
                     "id": "f9af53d7-376b-4e88-a8f5-75e9e0d92fed",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold"
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "7ddda294-3f27-4556-b0c7-b5a555b10279",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
@@ -158,10 +166,21 @@
                     "name": "",
                     "id": "01722395-6935-4c79-a8bf-997d07e6b30c",
                     "path": "<Keyboard>/r",
-                    "interactions": "Press(pressPoint=0.5)",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "037ef079-320c-439d-9546-6d02d12b9e14",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -226,6 +245,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Press(pressPoint=0.1)"
+                },
+                {
+                    "name": "B",
+                    "type": "Button",
+                    "id": "07e0def7-d11f-4ffd-8a0a-6cff6d3f9b25",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.1)"
                 }
             ],
             "bindings": [
@@ -234,7 +261,7 @@
                     "id": "40e013eb-1278-4ff9-9289-1a58e676404d",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
-                    "processors": "StickDeadzone",
+                    "processors": "",
                     "groups": "New control scheme",
                     "action": "LeftJostyck",
                     "isComposite": false,
@@ -303,6 +330,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "LB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df02995f-1756-4563-b7bb-4f484f143101",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "B",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

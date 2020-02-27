@@ -62,6 +62,14 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""name"": ""Rotation"",
                     ""type"": ""Button"",
                     ""id"": ""f9af53d7-376b-4e88-a8f5-75e9e0d92fed"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold""
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""7ddda294-3f27-4556-b0c7-b5a555b10279"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -171,10 +179,21 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""01722395-6935-4c79-a8bf-997d07e6b30c"",
                     ""path"": ""<Keyboard>/r"",
-                    ""interactions"": ""Press(pressPoint=0.5)"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""037ef079-320c-439d-9546-6d02d12b9e14"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -239,6 +258,14 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Press(pressPoint=0.1)""
+                },
+                {
+                    ""name"": ""B"",
+                    ""type"": ""Button"",
+                    ""id"": ""07e0def7-d11f-4ffd-8a0a-6cff6d3f9b25"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(pressPoint=0.1)""
                 }
             ],
             ""bindings"": [
@@ -247,7 +274,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""id"": ""40e013eb-1278-4ff9-9289-1a58e676404d"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
-                    ""processors"": ""StickDeadzone"",
+                    ""processors"": """",
                     ""groups"": ""New control scheme"",
                     ""action"": ""LeftJostyck"",
                     ""isComposite"": false,
@@ -318,6 +345,17 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""action"": ""LB"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df02995f-1756-4563-b7bb-4f484f143101"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""B"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -344,6 +382,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         m_Player_Keyboard_TrowObject = m_Player_Keyboard.FindAction("TrowObject", throwIfNotFound: true);
         m_Player_Keyboard_Aim = m_Player_Keyboard.FindAction("Aim", throwIfNotFound: true);
         m_Player_Keyboard_Rotation = m_Player_Keyboard.FindAction("Rotation", throwIfNotFound: true);
+        m_Player_Keyboard_Attack = m_Player_Keyboard.FindAction("Attack", throwIfNotFound: true);
         // Player_GamepadXbox
         m_Player_GamepadXbox = asset.FindActionMap("Player_GamepadXbox", throwIfNotFound: true);
         m_Player_GamepadXbox_LeftJostyck = m_Player_GamepadXbox.FindAction("LeftJostyck", throwIfNotFound: true);
@@ -353,6 +392,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         m_Player_GamepadXbox_A = m_Player_GamepadXbox.FindAction("A", throwIfNotFound: true);
         m_Player_GamepadXbox_RE = m_Player_GamepadXbox.FindAction("RE", throwIfNotFound: true);
         m_Player_GamepadXbox_LB = m_Player_GamepadXbox.FindAction("LB", throwIfNotFound: true);
+        m_Player_GamepadXbox_B = m_Player_GamepadXbox.FindAction("B", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -408,6 +448,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Keyboard_TrowObject;
     private readonly InputAction m_Player_Keyboard_Aim;
     private readonly InputAction m_Player_Keyboard_Rotation;
+    private readonly InputAction m_Player_Keyboard_Attack;
     public struct Player_KeyboardActions
     {
         private @PlayerGamepadInputs m_Wrapper;
@@ -418,6 +459,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         public InputAction @TrowObject => m_Wrapper.m_Player_Keyboard_TrowObject;
         public InputAction @Aim => m_Wrapper.m_Player_Keyboard_Aim;
         public InputAction @Rotation => m_Wrapper.m_Player_Keyboard_Rotation;
+        public InputAction @Attack => m_Wrapper.m_Player_Keyboard_Attack;
         public InputActionMap Get() { return m_Wrapper.m_Player_Keyboard; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -445,6 +487,9 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                 @Rotation.started -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnRotation;
                 @Rotation.performed -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnRotation;
                 @Rotation.canceled -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnRotation;
+                @Attack.started -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnAttack;
+                @Attack.performed -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnAttack;
+                @Attack.canceled -= m_Wrapper.m_Player_KeyboardActionsCallbackInterface.OnAttack;
             }
             m_Wrapper.m_Player_KeyboardActionsCallbackInterface = instance;
             if (instance != null)
@@ -467,6 +512,9 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                 @Rotation.started += instance.OnRotation;
                 @Rotation.performed += instance.OnRotation;
                 @Rotation.canceled += instance.OnRotation;
+                @Attack.started += instance.OnAttack;
+                @Attack.performed += instance.OnAttack;
+                @Attack.canceled += instance.OnAttack;
             }
         }
     }
@@ -482,6 +530,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_GamepadXbox_A;
     private readonly InputAction m_Player_GamepadXbox_RE;
     private readonly InputAction m_Player_GamepadXbox_LB;
+    private readonly InputAction m_Player_GamepadXbox_B;
     public struct Player_GamepadXboxActions
     {
         private @PlayerGamepadInputs m_Wrapper;
@@ -493,6 +542,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         public InputAction @A => m_Wrapper.m_Player_GamepadXbox_A;
         public InputAction @RE => m_Wrapper.m_Player_GamepadXbox_RE;
         public InputAction @LB => m_Wrapper.m_Player_GamepadXbox_LB;
+        public InputAction @B => m_Wrapper.m_Player_GamepadXbox_B;
         public InputActionMap Get() { return m_Wrapper.m_Player_GamepadXbox; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -523,6 +573,9 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                 @LB.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnLB;
                 @LB.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnLB;
                 @LB.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnLB;
+                @B.started -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnB;
+                @B.performed -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnB;
+                @B.canceled -= m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface.OnB;
             }
             m_Wrapper.m_Player_GamepadXboxActionsCallbackInterface = instance;
             if (instance != null)
@@ -548,6 +601,9 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                 @LB.started += instance.OnLB;
                 @LB.performed += instance.OnLB;
                 @LB.canceled += instance.OnLB;
+                @B.started += instance.OnB;
+                @B.performed += instance.OnB;
+                @B.canceled += instance.OnB;
             }
         }
     }
@@ -569,6 +625,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         void OnTrowObject(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
         void OnRotation(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
     }
     public interface IPlayer_GamepadXboxActions
     {
@@ -579,5 +636,6 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
         void OnA(InputAction.CallbackContext context);
         void OnRE(InputAction.CallbackContext context);
         void OnLB(InputAction.CallbackContext context);
+        void OnB(InputAction.CallbackContext context);
     }
 }

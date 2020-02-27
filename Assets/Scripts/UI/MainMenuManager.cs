@@ -27,6 +27,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] Animator animFocus;
     [SerializeField] Animator animFocusPlay;
     [SerializeField] Animator animGema;
+    [SerializeField] Animator animFade;
     [Header("Camara")]
     [SerializeField] Transform cam;
     [SerializeField] Vector3 initialPosition;
@@ -46,16 +47,7 @@ public class MainMenuManager : MonoBehaviour
        
 
     }
-    private void Update()
-    {
-        //Sequence gemaSecuence = DOTween.Sequence();
-        //gemaSecuence.Append(transformGema.DOLocalMoveY(2f, 5f)).SetEase(Ease.InCubic);
-        //gemaSecuence.Join(transformGema.DOLocalRotate(new Vector3(0, 360, 0), 5, RotateMode.FastBeyond360));
-        //gemaSecuence.Append(transformGema.DOLocalMoveY(1.464f, 1.5f)).SetEase(Ease.OutCubic);
-        //gemaSecuence.Join(transformGema.DOLocalRotate(new Vector3(0, 360, 0), 5, RotateMode.FastBeyond360));
-
-        //gemaSecuence.SetLoops(5);
-    }
+  
 
     //Metodos Main Menu
     public void Play()
@@ -69,7 +61,19 @@ public class MainMenuManager : MonoBehaviour
         Sequence gemaSecuence = DOTween.Sequence();
         gemaSecuence.Append(transformGema.DOLocalMoveY(5, 1.5f));
         gemaSecuence.Join(transformGema.DOLocalRotate(new Vector3(0, 360, 0),1,RotateMode.FastBeyond360));
+        gemaSecuence.OnComplete(() => LoadGamePlayScreen());
+    }
+    void LoadGamePlayScreen()
+    {
+        animFade.SetTrigger("end");
+        print("He cargado");
+        Invoke("GamePlayScreen", 1);
         
+    }
+    void GamePlayScreen()
+    {
+        SceneManager.LoadScene("GameplayScreen");
+
     }
     public void Options()
     {

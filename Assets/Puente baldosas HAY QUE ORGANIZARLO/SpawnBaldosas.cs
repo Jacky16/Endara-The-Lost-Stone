@@ -9,9 +9,15 @@ public class SpawnBaldosas : MonoBehaviour
     [SerializeField] States Bridge;
     [SerializeField] float speed = 10;
     [SerializeField] float timeToSpawn = 3;
+    float firstTime = 1;
     float time;
     Vector3 direction;
-    [SerializeField]bool isSpawingBaldosas;
+    [SerializeField]bool isSpawingBaldosas = false;
+    private void Start()
+    {
+        //timeToSpawn = firstTime;
+        isSpawingBaldosas = false;
+    }
     private void FixedUpdate()
     {
         if (isSpawingBaldosas)
@@ -30,14 +36,14 @@ public class SpawnBaldosas : MonoBehaviour
         {
             case States.Bridge_1:
                 direction = Vector3.left;
-                GameObject g = Instantiate(baldosaPrefab, transform.position, Quaternion.identity) as GameObject;
+                GameObject g = Instantiate(baldosaPrefab, transform.position, Quaternion.Euler(-90,0,0)) as GameObject;
                 //g.GetComponent<Rigidbody>().velocity = direction * speed * Time.deltaTime;
                 g.GetComponent<Baldosa>().SetMove(direction, speed, "DestroyBaldosas_2");
                 break;
 
             case States.Bridge_2:
                 direction = Vector3.right;
-                GameObject h = Instantiate(baldosaPrefab, transform.position, Quaternion.identity) as GameObject;
+                GameObject h = Instantiate(baldosaPrefab, transform.position, Quaternion.Euler(-90, 0, 0)) as GameObject;
                 //h.GetComponent<Rigidbody>().velocity = direction * speed * Time.deltaTime;
                 h.GetComponent<Baldosa>().SetMove(direction, speed, "DestroyBaldosas_1");
 

@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField] protected int life = 100;
+    [SerializeField] protected float life = 100;
     [SerializeField] protected float attackDamage;
     
     //Ajustes del enemigo
@@ -128,8 +128,9 @@ public abstract class Enemy : MonoBehaviour
 
         if (Vector3.Distance(transform.position, pathEnemy[nextPosition].position) < 3)
         {
+            if(canPath)
             nextPosition++;
-            //StartCoroutine(DelayMovement());
+            StartCoroutine(DelayMovement());
             if (nextPosition >= pathEnemy.Length)
             {
                 nextPosition = 0;

@@ -84,6 +84,12 @@ public class Laser : MonoBehaviour
                 {
                     gameObjectSolution = hit.transform.gameObject;
                     gameObjectSolution.GetComponent<Animator>().SetBool("Iluminate",true);
+                    if (!gameObjectSolution.GetComponent<GemaPuzzle>().IsSolution()){
+
+                        gameObjectSolution.GetComponent<GemaPuzzle>().Solution(true);
+
+                    }
+
 
                 }
                 else 

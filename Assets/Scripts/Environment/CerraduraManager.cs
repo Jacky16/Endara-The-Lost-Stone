@@ -6,62 +6,53 @@ using Cinemachine;
 
 public class CerraduraManager : MonoBehaviour
 {
-    [SerializeField] Transform gameObjectDoor;
- 
-    [SerializeField] GameObject gameObjectLightDoor;
+    [SerializeField] GameObject gameObjectDoor;
+    [SerializeField] CinemachineVirtualCamera camera;
 
-    MeshRenderer meshRendererLightDoor;
-    Light areaLightDoor;
-    Light lightCerradura;
+   
 
     [SerializeField] bool isKeyInside = false;
     bool tweenComplete;
 
-    [SerializeField]Material materialLightDoorOpen;
-    [SerializeField]Material materialLightDoorClose;
+   
     private void Start()
     {
-        //Cerradura componentes
-        lightCerradura = GetComponentInChildren<Light>();
-        //Puerta componentes
-        areaLightDoor = gameObjectLightDoor.GetComponentInChildren<Light>();
-        meshRendererLightDoor = gameObjectLightDoor.GetComponent<MeshRenderer>();
-        DOTween.Init(true, true, LogBehaviour.Verbose).SetCapacity(500, 10);
+        camera.Priority = 0;
+
+
+
     }
     private void Update()
     {
         if (isKeyInside)
         {
-            gameObjectDoor.transform.DOLocalMoveY(4, 2).SetEase(Ease.Linear);
-            DOTween.Complete(gameObjectDoor, tweenComplete = true);
-            //Cambiar el color de la luz de la cerradura
-            lightCerradura.color = Color.green;
-            //Cambiar el color de emisive del objeto luz
-            meshRendererLightDoor.material = materialLightDoorOpen;
-            //Cambiar el color de la luz de la area light de la luz de la puerta
-            areaLightDoor.color = Color.green;
+
         }
         else
         {
-            gameObjectDoor.transform.DOLocalMoveY(0, 2);
-            //Cambiar el color de la luz de la cerradura
-            lightCerradura.color = Color.red;
-            //Cambiar el color de emisive del objeto luz
-            meshRendererLightDoor.material = materialLightDoorClose;
-            //Cambiar el color de la luz de la area light de la luz de la puerta
-            areaLightDoor.color = Color.red;
 
-
+            gameObjectDoor.SetActive(true);
 
         }
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Caja" || other.gameObject.name == "Llave")
         {
             isKeyInside = true;
+            StartCoroutine(CameraSwitch(other));
+
         }
-       
+
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Caja" || other.gameObject.name == "Llave")
+        {
+            other.GetComponent<ObjetoPickeable>().enabled = false;
+
+
+        }
     }
 
 
@@ -70,14 +61,19 @@ public class CerraduraManager : MonoBehaviour
         if ((other.tag == "Caja") || other.gameObject.name == "Llave")
         {
             isKeyInside = false;
+
         }
     }
-    IEnumerator Boxdestroy() 
+    IEnumerator CameraSwitch(Collider other)
     {
-        
-        yield return new WaitForSeconds(2);
-        isKeyInside = false;
-        
+        yield return new WaitForSeconds(1f);
+
+        camera.Priority = 10;
+        yield return new WaitForSeconds(0.5f);
+        gameObjectDoor.SetActive(false);
+        yield return new WaitForSeconds(1f);
+
+        camera.Priority = 0;
 
     }
 

@@ -8,7 +8,7 @@ public class InputManager : MonoBehaviour
     public PlayerMovement player;
     [SerializeField]PickUpObjects pickUpsObjects;
     public PlayerGamepadInputs playerInputs;
-    [SerializeField] CinemachineFreeLook playerCameraFreeLook;
+    [SerializeField] CinemachineFreeLook playerCameraVirtual;
     //Variables bools para los controles de movimiento
     bool isJostickLeftPressed;
     bool isJostickRightPressed;
@@ -19,9 +19,13 @@ public class InputManager : MonoBehaviour
     bool isButtonGampedadAimPressed;
     Vector2 vector2Axis;
     [SerializeField] bool useGamepad;
+    Gamepad gamepad;
+    Keyboard keyboard;
     private void Awake()
     {
         playerInputs = new PlayerGamepadInputs();
+        gamepad = InputSystem.GetDevice<Gamepad>();
+        keyboard = InputSystem.GetDevice<Keyboard>();
     }
     private void Update() {
         MeleAttack();
@@ -41,6 +45,7 @@ public class InputManager : MonoBehaviour
         {
             useGamepad = true;
         }
+        print(gamepad.name);
 
         //Enviar info al player
         player.Axis(H(),V());
@@ -51,9 +56,10 @@ public class InputManager : MonoBehaviour
 
     void MeleAttack()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (playerInputs.Player_GamepadXbox.B.triggered || playerInputs.Player_Keyboard.Attack.triggered)
         {
             player.MeleAtack();
+            
         }
     }
     void ReadValuesGamePad()
@@ -96,16 +102,19 @@ public class InputManager : MonoBehaviour
         }
 
         //Rotacion del objero pickeado
-        if (playerInputs.Player_GamepadXbox.RE.triggered) //Girar a la derecha
+
+        if (Gamepad.current.rightShoulder.isPressed)
         {
-            pickUpsObjects.Rotate_R(15);
+            pickUpsObjects.Rotate_R(5);
 
         }
-        if (playerInputs.Player_GamepadXbox.LB.triggered) //Girar a la izquierda
+        if (Gamepad.current.leftShoulder.isPressed)
         {
-            pickUpsObjects.Rotate_L(15);
+            pickUpsObjects.Rotate_L(5);
 
         }
+
+
 
 
 
@@ -126,17 +135,17 @@ public class InputManager : MonoBehaviour
     {
         if (useGamepad)
         {
-            playerCameraFreeLook.m_XAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().x;
-            playerCameraFreeLook.m_YAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().y;
+            playerCameraVirtual.m_XAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().x;
+            playerCameraVirtual.m_YAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().y;
 
             //Cambiar los nombres de los inputs a null
-            playerCameraFreeLook.m_XAxis.m_InputAxisName = null;
-            playerCameraFreeLook.m_YAxis.m_InputAxisName = null;
+            playerCameraVirtual.m_XAxis.m_InputAxisName = null;
+            playerCameraVirtual.m_YAxis.m_InputAxisName = null;
         }
         else
         {
-            playerCameraFreeLook.m_XAxis.m_InputAxisName = "Mouse X";
-            playerCameraFreeLook.m_YAxis.m_InputAxisName = "Mouse Y";
+            playerCameraVirtual.m_XAxis.m_InputAxisName = "Mouse X";
+            playerCameraVirtual.m_YAxis.m_InputAxisName = "Mouse Y";
         }
     }
    
