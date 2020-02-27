@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a50ff624c1d8f459c8ead42d732025, type: 3}
+  m_Name: Fluor_LightMode
+  m_EditorClassIdentifier: 
+  nameConcept: Fluor_LightMode
+  spriteConcept: {fileID: 21300000, guid: 273780e876b19354aa03e5d9685783da, type: 3}

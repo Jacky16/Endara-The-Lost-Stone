@@ -27,7 +27,6 @@ public class PauseManager : MonoBehaviour
             Time.timeScale = 0.01f;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
         }
     }
     public void Resume()
