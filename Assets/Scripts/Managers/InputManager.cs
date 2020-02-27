@@ -45,12 +45,26 @@ public class InputManager : MonoBehaviour
         {
             useGamepad = true;
         }
-        print(gamepad.name);
-
+        ChangeGamepad();
         //Enviar info al player
         player.Axis(H(),V());
 
         //MeleAttack();
+    }
+    void ChangeGamepad()
+    {
+        InputSystem.onDeviceChange +=(device, change) =>
+     {
+         switch (change)
+         {
+             case InputDeviceChange.Added:
+                 Debug.Log($"Device {device} was added");
+                 break;
+             case InputDeviceChange.Removed:
+                 Debug.Log($"Device {device} was removed");
+                 break;
+         }
+     };
 
     }
 
