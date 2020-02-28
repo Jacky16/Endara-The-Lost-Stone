@@ -4,7 +4,7 @@ Brush Size: 0,65
 Fill Mode: True
 Fill Rate: 0,066
 
-Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes_Emision/Seta_Emision.prefab
+Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes_No_Emision/Seta.prefab
 Layer: Default
 Toggle: True
 Slider: 1
@@ -22,7 +22,7 @@ Fixed Rotation Y: 0
 Fixed Rotation Z: 0
 Depth: 0
 
-Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes_Emision/Seta_Grande_01_Emision.prefab
+Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes_No_Emision/Seta_Grande_01.prefab
 Layer: Default
 Toggle: True
 Slider: 1
@@ -40,7 +40,7 @@ Fixed Rotation Y: 0
 Fixed Rotation Z: 0
 Depth: 0
 
-Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes_Emision/Seta_Grande_02_Emision.prefab
+Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes_No_Emision/Seta_Grande_02.prefab
 Layer: Default
 Toggle: True
 Slider: 1
@@ -58,7 +58,7 @@ Fixed Rotation Y: 0
 Fixed Rotation Z: 0
 Depth: 0
 
-Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes_Emision/Seta_Grande_03_Emision.prefab
+Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes_No_Emision/Seta_Grande_03.prefab
 Layer: Default
 Toggle: True
 Slider: 1

@@ -23,7 +23,7 @@ Material:
   m_Name: Flor_01
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
   m_ShaderKeywords: _DOUBLESIDED_ON _EMISSIVE_COLOR_MAP _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
   m_CustomRenderQueue: 2000
@@ -167,8 +167,8 @@ Material:
     - _DoubleSidedNormalMode: 0
     - _DstBlend: 0
     - _EmissiveColorMode: 1
-    - _EmissiveExposureWeight: 0.939
-    - _EmissiveIntensity: 487.75076
+    - _EmissiveExposureWeight: 1
+    - _EmissiveIntensity: 17981380
     - _EmissiveIntensityUnit: 1
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
@@ -248,8 +248,8 @@ Material:
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: -1, g: -1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 41189.812, g: 41189.812, b: 41189.812, a: 41189.812}
-    - _EmissiveColorLDR: {r: 1, g: 0, b: 0, a: 1}
+    - _EmissiveColor: {r: 13839164, g: 14249395, b: 4234489, a: 17981380}
+    - _EmissiveColorLDR: {r: 0.7696386, g: 0.7924528, b: 0.23549305, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}

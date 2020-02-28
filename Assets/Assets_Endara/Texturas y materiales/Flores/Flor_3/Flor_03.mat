@@ -251,8 +251,8 @@ Material:
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: -1, g: -1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 487.75076, g: 0, b: 0, a: 487.75076}
-    - _EmissiveColorLDR: {r: 1, g: 0, b: 0, a: 1}
+    - _EmissiveColor: {r: 450.9394, g: 193.5636, b: 211.92958, a: 487.75076}
+    - _EmissiveColorLDR: {r: 0.9245283, g: 0.39684942, b: 0.43450388, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
