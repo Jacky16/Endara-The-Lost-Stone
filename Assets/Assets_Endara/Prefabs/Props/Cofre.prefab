@@ -63,7 +63,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c083a65f4ff320d4eafa3ab8ed967385, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You've got Fluor Dark Mode Concept
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -679,13 +679,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2185934103091037284}
-    characterCount: 34
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 5
-    wordCount: 6
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -714,6 +714,7 @@ GameObject:
   - component: {fileID: 6211849025024161909}
   - component: {fileID: 8026927669931753640}
   - component: {fileID: 3990138813092832069}
+  - component: {fileID: 2044199882}
   m_Layer: 0
   m_Name: Cofre
   m_TagString: Untagged
@@ -777,14 +778,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a9dfd3ac974854f857f8744d793843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   concepts:
   - {fileID: 11400000, guid: 3901249478839ac4db6193350d75aa09, type: 2}
   - {fileID: 11400000, guid: 2a46217fe8043fd4f8070744046b98fc, type: 2}
+  - {fileID: 11400000, guid: f711ba4618d24034db511cbe4d63d2a1, type: 2}
+  - {fileID: 11400000, guid: e5ba0f66a1564ce4bbfdf41cc6cf6a25, type: 2}
+  - {fileID: 11400000, guid: 968920ea1493c2444a7740bb7b8334af, type: 2}
+  - {fileID: 11400000, guid: c76538d900da1b54e9a8ea847c5effd1, type: 2}
+  - {fileID: 11400000, guid: 73dca57dacd4cdb4bbe425a00bdad5d0, type: 2}
+  - {fileID: 11400000, guid: 51a83358ba831394ca15c00ca0033a68, type: 2}
   canvasCofre: {fileID: 3778878838212859738}
   canvasConcept: {fileID: 615464376}
   imageConcept: {fileID: 468469574}
   textConcept: {fileID: 2185934103091037284}
+  listConcpets: []
+--- !u!95 &2044199882
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519520416826111155}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 70be7dd0201282b44ad771ec9e43261e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3778878837986319837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,13 +1090,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3956246155563815950}
-  m_LocalRotation: {x: -0.70457417, y: -0, z: -0, w: 0.70963037}
-  m_LocalPosition: {x: 1.79, y: 0.24937896, z: 0.32}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.79, y: 0.24937896, z: 0.404}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1489701506945205920}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -89.590004, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &2452447975452069177
 MeshFilter:
   m_ObjectHideFlags: 0
