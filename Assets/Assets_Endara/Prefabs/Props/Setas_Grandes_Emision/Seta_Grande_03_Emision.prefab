@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 7114265509670353546}
   - component: {fileID: 3568675694504117875}
   m_Layer: 0
-  m_Name: Seta_Grande_03
+  m_Name: Seta_Grande_03_Emision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2297386075455865020
 Transform:
