@@ -9,7 +9,7 @@ using DG.Tweening;
 [RequireComponent(typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
-    InputManager inputManager;
+    [SerializeField]InputManager inputManager;
     CharacterController player;
     Animator anim;
     public Camera mainCam;
@@ -59,7 +59,6 @@ public class PlayerMovement : MonoBehaviour
         attackCollider.enabled = false;
         player = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
-        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         playerLifeManager = GameObject.Find("Player Life Manager").GetComponent<PlayerLifeManager>();
         godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
         Cursor.visible = false;

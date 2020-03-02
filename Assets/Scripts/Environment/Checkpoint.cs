@@ -14,8 +14,14 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            PlayerMovement player = other.GetComponent<PlayerMovement>();
             anim.SetTrigger("Checkpoint");
-            other.GetComponent<PlayerMovement>().SetRespawn(respawnTransform);
+            player.SetRespawn(respawnTransform);
+            SaveData(player);
         }
+    }
+    public void SaveData(PlayerMovement player)
+    {
+        SaveSystem.SavePlayer(player);
     }
 }

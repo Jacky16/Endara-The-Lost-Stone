@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96638848}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2482369, z: 2.87}
+  m_LocalPosition: {x: -0.292, y: 0.2482369, z: 2.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5066857851122942954}
@@ -43,8 +43,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.8290024, y: 1.9283663, z: 2.399887}
+  m_Center: {x: 0.29297256, y: 0.46418315, z: -0.69994354}
 --- !u!114 &96638851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,6 +543,7 @@ GameObject:
   - component: {fileID: 5066857851122942954}
   - component: {fileID: 1487798316}
   - component: {fileID: 526195580234378379}
+  - component: {fileID: 1987918040511289430}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Untagged
@@ -603,3 +604,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1987918040511289430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8073337326467805689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 022d0c10701c4dc4daa29293946c47ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTransform: {fileID: 96638849}

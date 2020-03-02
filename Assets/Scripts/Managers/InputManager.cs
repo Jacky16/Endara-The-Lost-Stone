@@ -103,16 +103,16 @@ public class  InputManager : MonoBehaviour
 
         //Rotacion del objero pickeado
 
-        if (Gamepad.current.rightShoulder.isPressed)
-        {
-            pickUpsObjects.Rotate_R(5);
+        //if (gamepad.rightShoulder.isPressed)
+        //{
+        //    pickUpsObjects.Rotate_R(5);
 
-        }
-        if (Gamepad.current.leftShoulder.isPressed)
-        {
-            pickUpsObjects.Rotate_L(5);
+        //}
+        //if (gamepad.leftShoulder.isPressed)
+        //{
+        //    pickUpsObjects.Rotate_L(5);
 
-        }
+        //}
 
 
 
