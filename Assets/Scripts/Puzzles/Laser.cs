@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    LineRenderer _lineRenderer;
-    [SerializeField] LayerMask _layerMask;
+    LineRenderer lineRenderer;
+    [SerializeField] LayerMask layerMask;
     public Vector3 direction;
     public Vector3 startPoint;
     [Header("Tipos de cubo")]
@@ -13,29 +13,27 @@ public class Laser : MonoBehaviour
     public bool cuboHijo;
     [Header("Bools para combrobar si recibe el Raycast")]
 
-    [SerializeField] bool _activarRaycast;
-    [SerializeField] bool _reciboRaycast;
-    GameObject _cuboHijoGameObject;
-    GameObject _gameObjectSolution;
-    [Header("Materials")]
-    [SerializeField]Material _materialWithEmision;
-    [SerializeField]Material _materialWithoutEmision;
-
+    [SerializeField] bool activarRaycast;
+    [SerializeField] bool reciboRaycast;
+    GameObject cuboHijoGameObject;
+    GameObject gameObjectSolution;
 
     void Start()
     {
-        _lineRenderer = GetComponent<LineRenderer>();
-        direction = new Vector3(.1f, .4f,0);
+        lineRenderer = GetComponent<LineRenderer>();
+        startPoint = new Vector3(0.01f, 0.4f, 0);
+        direction = new Vector3(.1f, .4f, 0);
+        //this.rendererEnabled = true;
         if (cuboPadre)
         {
             ActivarLineRenderer();
+
         }
         else if (cuboHijo)
         {
-            GetComponent<MeshRenderer>().material = _materialWithoutEmision;
-
             DesactivarLineRender();
-        }       
+        }
+
     }
 
     // Update is called once per frame
@@ -45,85 +43,93 @@ public class Laser : MonoBehaviour
         if (cuboPadre)
         {
             ActivarLineRenderer();
-            _activarRaycast = true;
+
+            activarRaycast = true;
         }
-   
-        if(cuboHijo && _reciboRaycast) // Recibe Raycast el CUBO HIJO
+
+        if (cuboHijo && reciboRaycast) // Recibe Raycast el CUBO HIJO
         {
-            _activarRaycast = true;
+            activarRaycast = true;
+
             ActivarLineRenderer();
-        }else if(cuboHijo && !_reciboRaycast ) //Deja de recibir el Raycast el CUBO HIJO
+        }
+        else if (cuboHijo && !reciboRaycast) //Deja de recibir el Raycast el CUBO HIJO
         {
             DesactivarLineRender();
-            _activarRaycast = false;
-        }else if (!_reciboRaycast && !cuboPadre)
+            activarRaycast = false;
+
+        }
+        else if (!reciboRaycast && !cuboPadre)
         {
             DesactivarLineRender();
-            _activarRaycast = false;
-        }else if (_cuboHijoGameObject == null && !cuboPadre)
+            activarRaycast = false;
+        }
+        else if (cuboHijoGameObject == null && !cuboPadre)
         {
             DesactivarLineRender();
         }
+
     }
     public void Raycast()
     {
-        if (_activarRaycast)
+        if (activarRaycast)
         {
             Ray ray = new Ray();
             RaycastHit hit;
-            _lineRenderer.SetPosition(0, startPoint);
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, _layerMask))
+            lineRenderer.SetPosition(0, startPoint);
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
             {
                 //Calcular la distancia entre el punto mas lejano que esta tocando el Raycast
                 direction.z = hit.distance;
                 //Asignar la posicion del Raycast al Linerenderer
-                _lineRenderer.SetPosition(1, direction);
+                lineRenderer.SetPosition(1, direction);
                 if (hit.transform.gameObject.tag == "Solution")
                 {
-                    _gameObjectSolution = hit.transform.gameObject;
-                    _gameObjectSolution.GetComponent<Animator>().SetBool("Iluminate", true);
-                    if (!_gameObjectSolution.GetComponent<GemaPuzzle>().IsSolution())
+                    gameObjectSolution = hit.transform.gameObject;
+                    gameObjectSolution.GetComponent<Animator>().SetBool("Iluminate", true);
+                    if (!gameObjectSolution.GetComponent<GemaPuzzle>().IsSolution())
                     {
 
-                        _gameObjectSolution.GetComponent<GemaPuzzle>().Solution(true);
+                        gameObjectSolution.GetComponent<GemaPuzzle>().Solution(true);
 
                     }
+
+
                 }
                 else
                 {
-                    if (_gameObjectSolution != null)
-                        _gameObjectSolution.GetComponent<Animator>().SetBool("Iluminate", false);
-                    _gameObjectSolution = null;
+                    if (gameObjectSolution != null)
+                        gameObjectSolution.GetComponent<Animator>().SetBool("Iluminate", false);
+                        gameObjectSolution = null;
                 }
 
                 if (hit.transform.tag == "Cubo") // Choca con un cubo hijo
                 {
 
                     //Obtener el cubo que tiene delante
-                    _cuboHijoGameObject = hit.transform.gameObject as GameObject;
-                    _cuboHijoGameObject.GetComponent<MeshRenderer>().material = _materialWithEmision;
+                    cuboHijoGameObject = hit.transform.gameObject as GameObject;
+
                     //Como recibe el Raycast, ponemos la variable a true
-                    _cuboHijoGameObject.GetComponent<Laser>()._reciboRaycast = true;
-                    _cuboHijoGameObject.GetComponent<Laser>().ActivarLineRenderer();
+                    cuboHijoGameObject.GetComponent<Laser>().reciboRaycast = true;
 
                 }
                 else
                 {
-                    _cuboHijoGameObject.GetComponent<MeshRenderer>().material = _materialWithoutEmision;
-                    _cuboHijoGameObject.GetComponent<Laser>()._reciboRaycast = false;
-                    _cuboHijoGameObject.GetComponent<Laser>().DesactivarLineRender();
-
+                    cuboHijoGameObject.GetComponent<Laser>().DesactivarLineRender();
 
                 }
             }
 
-
             else if (hit.transform.tag != "Cubo")
             {
-                ////Desactiva el Line Renderer y el raycast de todos los cubos cuando no colsiona el rayo excepto el ultimo
-                //if (_cuboHijoGameObject != null)
-                //    _cuboHijoGameObject.GetComponent<Laser>()._reciboRaycast = false;
-                //_cuboHijoGameObject.GetComponent<Laser>()._activarRaycast = false;
+                //Desactiva el Line Renderer y el raycast de todos los cubos cuando no colsiona el rayo excepto el ultimo
+                if (cuboHijoGameObject != null)
+                    cuboHijoGameObject.GetComponent<Laser>().reciboRaycast = false;
+                cuboHijoGameObject.GetComponent<Laser>().activarRaycast = false;
+                cuboHijoGameObject.GetComponent<Laser>().DesactivarLineRender();
+
+
+
 
                 if (!cuboPadre)
                 {
@@ -135,24 +141,26 @@ public class Laser : MonoBehaviour
                 {
                     if (!g.GetComponent<Laser>().cuboPadre)
                     {
-                        g.GetComponent<Laser>()._reciboRaycast = false;
-                        g.GetComponent<Laser>()._activarRaycast = false;
+                        g.GetComponent<Laser>().reciboRaycast = false;
+                        g.GetComponent<Laser>().activarRaycast = false;
                         g.GetComponent<Laser>().DesactivarLineRender();
                     }
                 }
-                _cuboHijoGameObject = null;
+                cuboHijoGameObject = null;
             }
-            
+
+
+            }
         }
-    }
+    
     public void ActivarLineRenderer()
     {
-        _lineRenderer.enabled = true;
+        lineRenderer.enabled = true;
     }
     public void DesactivarLineRender()
     {
-        _lineRenderer.enabled = false;
- 
+        lineRenderer.enabled = false;
     }
-
 }
+
+
