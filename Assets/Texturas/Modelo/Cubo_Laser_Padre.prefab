@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8222912769445574354}
   - component: {fileID: 7236313279232097002}
   - component: {fileID: 7718358639163182147}
+  - component: {fileID: 1464567952}
   m_Layer: 0
   m_Name: Cubo_Laser_Padre
-  m_TagString: Untagged
+  m_TagString: Cubo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,23 +153,23 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.6994706, g: 0.759, b: 0, a: 1}
-      key1: {r: 1, g: 0, b: 0.7731252, a: 1}
-      key2: {r: 1, g: 0, b: 0.7731252, a: 0}
+      key0: {r: 0.07870178, g: 0.41799998, b: 0, a: 1}
+      key1: {r: 0.8886285, g: 1, b: 0, a: 1}
+      key2: {r: 0.45400003, g: 0, b: 0.21898837, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 6168
-      ctime1: 61102
-      ctime2: 61102
+      ctime0: 0
+      ctime1: 32768
+      ctime2: 65535
       ctime3: 0
       ctime4: 0
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 0
+      atime0: 578
       atime1: 65535
       atime2: 0
       atime3: 0
@@ -177,7 +178,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 2
+      m_NumColorKeys: 3
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
@@ -212,3 +213,16 @@ MonoBehaviour:
     type: 2}
   _materialWithoutEmision: {fileID: 2100000, guid: b6584dc79d0ac564eb1b70502b918c54,
     type: 2}
+--- !u!65 &1464567952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7647518524402926094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1016195, y: 1.0344855, z: 1.0610654}
+  m_Center: {x: -0.006646961, y: 0.42774206, z: 0.010871798}
