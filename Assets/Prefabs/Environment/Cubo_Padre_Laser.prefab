@@ -203,15 +203,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 9212562137717304724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 641c52626d81abe4ba501e7a78f8e609, type: 3}
+  m_Script: {fileID: 11500000, guid: ffa49ccd74474b14497aab9cdcf13656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   layerMask:
     serializedVersion: 2
-    m_Bits: 30519
+    m_Bits: 0
   direction: {x: 0, y: 0, z: 0}
-  startPoint: {x: 0.1, y: -1, z: -1}
-  cuboPadre: 1
+  startPoint: {x: 0, y: 0, z: 0}
+  cuboPadre: 0
   cuboHijo: 0
   activarRaycast: 0
   reciboRaycast: 0
@@ -244,3 +244,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPickeable: 1
+  isRoteable: 0
