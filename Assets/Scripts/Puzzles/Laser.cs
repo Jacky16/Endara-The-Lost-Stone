@@ -25,7 +25,6 @@ public class Laser : MonoBehaviour
     void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
-        GetComponent<MeshRenderer>().material = _materialWithoutEmision;
         direction = new Vector3(.1f, .4f,0);
         if (cuboPadre)
         {
@@ -33,6 +32,8 @@ public class Laser : MonoBehaviour
         }
         else if (cuboHijo)
         {
+            GetComponent<MeshRenderer>().material = _materialWithoutEmision;
+
             DesactivarLineRender();
         }       
     }
@@ -103,11 +104,15 @@ public class Laser : MonoBehaviour
                     _cuboHijoGameObject.GetComponent<MeshRenderer>().material = _materialWithEmision;
                     //Como recibe el Raycast, ponemos la variable a true
                     _cuboHijoGameObject.GetComponent<Laser>()._reciboRaycast = true;
+                    _cuboHijoGameObject.GetComponent<Laser>().ActivarLineRenderer();
 
                 }
                 else
                 {
                     _cuboHijoGameObject.GetComponent<MeshRenderer>().material = _materialWithoutEmision;
+                    _cuboHijoGameObject.GetComponent<Laser>()._reciboRaycast = false;
+                    _cuboHijoGameObject.GetComponent<Laser>().DesactivarLineRender();
+
 
                 }
             }
@@ -115,11 +120,10 @@ public class Laser : MonoBehaviour
 
             else if (hit.transform.tag != "Cubo")
             {
-                //Desactiva el Line Renderer y el raycast de todos los cubos cuando no colsiona el rayo excepto el ultimo
-                if (_cuboHijoGameObject != null)
-                    _cuboHijoGameObject.GetComponent<Laser>()._reciboRaycast = false;
-                _cuboHijoGameObject.GetComponent<Laser>()._activarRaycast = false;
-                _cuboHijoGameObject.GetComponent<Laser>().DesactivarLineRender();
+                ////Desactiva el Line Renderer y el raycast de todos los cubos cuando no colsiona el rayo excepto el ultimo
+                //if (_cuboHijoGameObject != null)
+                //    _cuboHijoGameObject.GetComponent<Laser>()._reciboRaycast = false;
+                //_cuboHijoGameObject.GetComponent<Laser>()._activarRaycast = false;
 
                 if (!cuboPadre)
                 {
