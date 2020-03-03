@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Data
+public class SaveData
 {
-    public float [] position;
-
-    public Data(PlayerMovement player)
+    public PlayerLifeManager playerData;
+    public SaveData()
     {
-        position = new float[3];
-        position[0] = player.transform.position.x;
-        position[1] = player.transform.position.y;
-        position[2] = player.transform.position.z;
+
     }
+}
+[SerializeField]
+public class PlayerData
+{
+    public int MyLife;
+    public PlayerData(int life)
+    {
+        this.MyLife = life;
+    }
+
 }

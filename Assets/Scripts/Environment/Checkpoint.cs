@@ -22,6 +22,6 @@ public class Checkpoint : MonoBehaviour
     }
     public void SaveData(PlayerMovement player)
     {
-        SaveSystem.SavePlayer(player);
+        //SaveSystem.SavePlayer(player);
     }
 }
