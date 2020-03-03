@@ -26,9 +26,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/Beta_GP_Screen.unity
     guid: 73eae50fdd975f044bcdedd5d9551115
+  - enabled: 1
+    path: Assets/Scenes/GameplayScreen.unity
+    guid: a98bb355aeafda449a53aa8d730815e6
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4cb856f444e5f38499f6d5e1b79c037b,
       type: 2}

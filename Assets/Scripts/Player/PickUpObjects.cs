@@ -9,17 +9,19 @@ public class PickUpObjects : MonoBehaviour
 {
     [HideInInspector]public GameObject objectToPickup;
     [HideInInspector]public GameObject PickedObject;
-    Transform interactionZone;
-    [SerializeField] GameObject canvasCatchObject;
-    [SerializeField] GameObject canvasThrowObject;
-    bool isCatched;
+    Transform _interactionZone;
+    //[SerializeField] GameObject canvasCatchObject;
+    //[SerializeField] GameObject canvasThrowObject;
+    bool _isCatched;
+    bool _isCanvasCatchObject;
+    bool _isCanvasThrowObject;
 
 
 
     private void Start()
     {
-        interactionZone = GameObject.FindGameObjectWithTag("TransformObjectPickUp").GetComponent<Transform>();
-        canvasCatchObject.SetActive(false);
+        _interactionZone = GameObject.FindGameObjectWithTag("TransformObjectPickUp").GetComponent<Transform>();
+        _isCanvasCatchObject = false;
 
     }
 
@@ -27,18 +29,17 @@ public class PickUpObjects : MonoBehaviour
     {
         if (objectToPickup != null)
         {
-            canvasCatchObject.SetActive(true);
-           
+            _isCanvasCatchObject = true;
         }
         else
         {
-            canvasCatchObject.SetActive(false);
-            canvasThrowObject.SetActive(false);
+            _isCanvasCatchObject = false;
+            _isCanvasThrowObject = false;
         }
 
         if (PickedObject != null)
         {
-            canvasCatchObject.SetActive(false);
+            _isCanvasCatchObject = false;
         }   
     }
     public void PillarElObjeto()
@@ -46,12 +47,12 @@ public class PickUpObjects : MonoBehaviour
         if (objectToPickup != null && objectToPickup.GetComponent<ObjetoPickeable>().isPickeable == true && PickedObject == null)
         {
             //Pillar el objeto 
-                isCatched = true;
-                canvasThrowObject.SetActive(true);
+                _isCatched = true;
+                _isCanvasThrowObject = true;
                 PickedObject = objectToPickup;
                 PickedObject.GetComponent<ObjetoPickeable>().isPickeable = false;
-                PickedObject.transform.SetParent(interactionZone);
-                PickedObject.transform.position = interactionZone.transform.position;
+                PickedObject.transform.SetParent(_interactionZone);
+                PickedObject.transform.position = _interactionZone.transform.position;
                 PickedObject.GetComponent<Rigidbody>().useGravity = false;
                 PickedObject.GetComponent<Rigidbody>().isKinematic = true;
                 PickedObject.GetComponent<BoxCollider>().isTrigger = true;
@@ -60,16 +61,15 @@ public class PickUpObjects : MonoBehaviour
         }else if(PickedObject != null)
         {
             //Soltar el objeto
-                isCatched = false;
-
-                PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
-                PickedObject.transform.SetParent(null);
-                canvasThrowObject.SetActive(false);
-                PickedObject.GetComponent<Rigidbody>().useGravity = true;
-                PickedObject.GetComponent<Rigidbody>().isKinematic = false;
-                PickedObject.GetComponent<BoxCollider>().isTrigger = false;
-                PickedObject.GetComponent<Rigidbody>().AddForce(Vector3.down * 4);
-                PickedObject = null;
+            _isCatched = false;
+            PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
+            PickedObject.transform.SetParent(null);
+            _isCanvasThrowObject = false;
+            PickedObject.GetComponent<Rigidbody>().useGravity = true;
+            PickedObject.GetComponent<Rigidbody>().isKinematic = false;
+            PickedObject.GetComponent<BoxCollider>().isTrigger = false;
+            PickedObject.GetComponent<Rigidbody>().AddForce(Vector3.down * 4);
+            PickedObject = null;
             
             
         }
@@ -77,10 +77,10 @@ public class PickUpObjects : MonoBehaviour
     }
     public void ThrowObject()
     {
-        if(isCatched && PickedObject != null)
+        if(_isCatched && PickedObject != null)
         {
             PickedObject.transform.SetParent(null);
-            canvasThrowObject.SetActive(false);
+            _isCanvasThrowObject = false;
             PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
             PickedObject.GetComponent<Rigidbody>().useGravity = true;
             PickedObject.GetComponent<Rigidbody>().isKinematic = false;
@@ -132,5 +132,13 @@ public class PickUpObjects : MonoBehaviour
         }
 
     }
-   
+   public bool IsCanvasCatchObject()
+   {
+        return _isCanvasCatchObject;
+   }
+
+    public bool IsCanvasThrowObject()
+    {
+        return _isCanvasThrowObject;
+    }
 }

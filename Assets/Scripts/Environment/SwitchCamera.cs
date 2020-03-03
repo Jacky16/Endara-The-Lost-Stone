@@ -8,12 +8,14 @@ public class SwitchCamera : MonoBehaviour
     private void Start()
     {
         cameraVirtual.Priority = 0;
+        cameraVirtual.enabled = false;
 
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
+            cameraVirtual.enabled = true;
             cameraVirtual.Priority = 11;
         }
     }
@@ -29,6 +31,7 @@ public class SwitchCamera : MonoBehaviour
         if (other.tag == "Player")
         {
             cameraVirtual.Priority = 0;
+            cameraVirtual.enabled = false;
         }
     }
 }
