@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         attackCollider.enabled = false;
         player = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
-        playerLifeManager = GameObject.Find("Player Life Manager").GetComponent<PlayerLifeManager>();
+        playerLifeManager = GetComponent<PlayerLifeManager>();
         godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
