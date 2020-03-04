@@ -7,7 +7,7 @@ using Cinemachine;
 public class CerraduraManager : MonoBehaviour
 {
     [SerializeField] GameObject gameObjectDoor;
-    [SerializeField] CinemachineVirtualCamera camera;
+    //[SerializeField] CinemachineVirtualCamera camera;
 
    
 
@@ -17,7 +17,7 @@ public class CerraduraManager : MonoBehaviour
    
     private void Start()
     {
-        camera.Priority = 0;
+        //camera.Priority = 0;
 
 
 
@@ -40,11 +40,16 @@ public class CerraduraManager : MonoBehaviour
         if(other.tag == "Caja" || other.gameObject.name == "Llave")
         {
             isKeyInside = true;
-            StartCoroutine(CameraSwitch(other));
-
+            //StartCoroutine(CameraSwitch(other));
         }
 
+        if (other.CompareTag("Solution"))
+        {
+            Destroy(gameObjectDoor);
+
+        }
     }
+    
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Caja" || other.gameObject.name == "Llave")
@@ -64,18 +69,18 @@ public class CerraduraManager : MonoBehaviour
 
         }
     }
-    IEnumerator CameraSwitch(Collider other)
-    {
-        yield return new WaitForSeconds(1f);
+    //IEnumerator CameraSwitch(Collider other)
+    //{
+    //    yield return new WaitForSeconds(1f);
 
-        camera.Priority = 10;
-        yield return new WaitForSeconds(0.5f);
-        gameObjectDoor.SetActive(false);
-        yield return new WaitForSeconds(1f);
+    //    camera.Priority = 10;
+    //    yield return new WaitForSeconds(0.5f);
+    //    gameObjectDoor.SetActive(false);
+    //    yield return new WaitForSeconds(1f);
 
-        camera.Priority = 0;
+    //    camera.Priority = 0;
 
-    }
+    //}
 
 
 
