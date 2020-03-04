@@ -8,9 +8,7 @@ public class ObjetoPickeable : MonoBehaviour
 {
     public bool isPickeable = true;
     public bool isRoteable = false;
-    private void Start()
-    {
-    }
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "PlayerInteraction")

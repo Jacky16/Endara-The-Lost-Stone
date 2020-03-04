@@ -202,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 30515
   direction: {x: 0, y: 0, z: 0}
   startPoint: {x: 0, y: 0, z: 0}
   cuboPadre: 1

@@ -115,6 +115,7 @@ public class Laser : MonoBehaviour
 
                 if (hit.transform.tag == "Cubo") // Choca con un cubo hijo
                 {
+                    print(hit.transform.gameObject.name);
 
                     //Obtener el cubo que tiene delante
                     _cuboHijoGameObject = hit.transform.gameObject as GameObject;

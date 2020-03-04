@@ -110,11 +110,12 @@ public class PickUpObjects : MonoBehaviour
 
     public void Rotate_R(float grades)
     {
-        if (objectToPickup.tag == "Cubo" && objectToPickup.GetComponent<ObjetoPickeable>().isRoteable)
+        if (objectToPickup.GetComponent<ObjetoPickeable>().isRoteable)
         {
             objectToPickup.transform.DOLocalRotate(new Vector3(0, grades, 0), 0.2f, RotateMode.LocalAxisAdd);
             
-        }else if(PickedObject.tag == "Cubo" && PickedObject.GetComponent<ObjetoPickeable>().isRoteable)
+        }
+        if(PickedObject.GetComponent<ObjetoPickeable>().isRoteable)
         {
             PickedObject.transform.DOLocalRotate(new Vector3(0, grades, 0), 0.2f, RotateMode.LocalAxisAdd);  
         }

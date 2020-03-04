@@ -6,7 +6,7 @@ using Cinemachine;
 public class  InputManager : MonoBehaviour
 {
     public PlayerMovement player;
-    [SerializeField]PickUpObjects pickUpsObjects;
+    public PickUpObjects pickUpsObjects;
     public static PlayerGamepadInputs playerInputs;
     [SerializeField] CinemachineFreeLook playerCameraVirtual;
     //Variables bools para los controles de movimiento
@@ -24,6 +24,7 @@ public class  InputManager : MonoBehaviour
     private void Awake()
     {
         playerInputs = new PlayerGamepadInputs();
+
         gamepad = InputSystem.GetDevice<Gamepad>();
         keyboard = InputSystem.GetDevice<Keyboard>();
     }
@@ -102,18 +103,25 @@ public class  InputManager : MonoBehaviour
         }
 
         //Rotacion del objero pickeado
-
-        //if (gamepad.rightShoulder.isPressed)
+        //if(gamepad != null)
         //{
-        //    pickUpsObjects.Rotate_R(5);
+        //    if (gamepad.rightShoulder.isPressed)
+        //    {
+        //        pickUpsObjects.Rotate_R(5);
 
+        //    }
+        //    if (gamepad.leftShoulder.isPressed)
+        //    {
+        //        pickUpsObjects.Rotate_L(5);
+
+        //    }
         //}
-        //if (gamepad.leftShoulder.isPressed)
-        //{
-        //    pickUpsObjects.Rotate_L(5);
 
-        //}
+        if (keyboard.rKey.isPressed)
+        {
+            pickUpsObjects.Rotate_R(5);
 
+        }
 
 
 
