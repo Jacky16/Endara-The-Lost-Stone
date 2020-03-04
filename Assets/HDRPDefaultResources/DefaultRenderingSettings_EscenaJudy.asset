@@ -360,7 +360,11 @@ MonoBehaviour:
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
+<<<<<<< Updated upstream
     m_Value: 12.73
+=======
+    m_Value: 15.46
+>>>>>>> Stashed changes
   compensation:
     m_OverrideState: 0
     m_Value: 0
