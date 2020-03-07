@@ -97,10 +97,6 @@ public class MainMenuManager : MonoBehaviour
     public void ExitStone()
     {
         StartCoroutine(ReturnPlayAnimation());
-
-
-
-
     }
     public void Exit()
     {
