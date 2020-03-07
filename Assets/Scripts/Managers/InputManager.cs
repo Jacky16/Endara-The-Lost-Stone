@@ -18,7 +18,7 @@ public class  InputManager : MonoBehaviour
     bool isMouseRightClickPressed;
     bool isButtonGampedadAimPressed;
     Vector2 vector2Axis;
-    public bool useGamepad;
+    public static bool useGamepad;
     Gamepad gamepad;
     Keyboard keyboard;
     private void Awake()
