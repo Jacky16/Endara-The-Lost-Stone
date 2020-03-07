@@ -25,6 +25,8 @@ public class Laser : MonoBehaviour
     Material _materialWithEmision;
     [SerializeField]
     Material _materialWithoutEmision;
+    [SerializeField]
+    List<GameObject> _listGameObjectGemaSolution = new List<GameObject>();
     void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
@@ -95,28 +97,36 @@ public class Laser : MonoBehaviour
                 _lineRenderer.SetPosition(1, direction);
                 if (hit.transform.gameObject.tag == "Solution")
                 {
-                    _gameObjectSolution = hit.transform.gameObject;
-                    _gameObjectSolution.GetComponent<Animator>().SetBool("Iluminate", true);
-                    if (!_gameObjectSolution.GetComponent<GemaPuzzle>().IsSolution())
+                    //_gameObjectSolution = hit.transform.gameObject;
+                    //_gameObjectSolution.GetComponent<Animator>().SetBool("Iluminate", true);
+                    //if (!_gameObjectSolution.GetComponent<GemaPuzzle>().IsSolution())
+                    //{
+
+                    //    _gameObjectSolution.GetComponent<GemaPuzzle>().Solution(true);
+
+                    //}
+                    if (!_listGameObjectGemaSolution.Contains(hit.collider.gameObject) || _listGameObjectGemaSolution.Count == 0)
                     {
-
-                        _gameObjectSolution.GetComponent<GemaPuzzle>().Solution(true);
-
+                        _listGameObjectGemaSolution.Add(hit.collider.gameObject);
                     }
-
-
+                    foreach (GameObject g in _listGameObjectGemaSolution)
+                    {
+                        g.GetComponent<Animator>().SetBool("Iluminate", true);
+                    }
+                    print(_listGameObjectGemaSolution.Count);
+                    direction.z = hit.distance + Vector3.Distance(transform.position, _listGameObjectGemaSolution[_listGameObjectGemaSolution.Count - 1].transform.position);
                 }
                 else
                 {
-                    if (_gameObjectSolution != null)
-                        _gameObjectSolution.GetComponent<Animator>().SetBool("Iluminate", false);
-                    _gameObjectSolution = null;
+                    foreach (GameObject g in _listGameObjectGemaSolution)
+                    {
+                        g.GetComponent<Animator>().SetBool("Iluminate", false);
+                    }
+                    _listGameObjectGemaSolution.Clear();
                 }
 
                 if (hit.transform.tag == "Cubo") // Choca con un cubo hijo
                 {
-                    print(hit.transform.gameObject.name);
-
                     //Obtener el cubo que tiene delante
                     _cuboHijoGameObject = hit.transform.gameObject as GameObject;
 
@@ -125,15 +135,19 @@ public class Laser : MonoBehaviour
                     _cuboHijoGameObject.GetComponent<MeshRenderer>().material = _materialWithEmision;
 
                 }
-
-                else if (hit.transform.tag != "Cubo")
+                else
                 {
-                    //Desactiva el Line Renderer y el raycast de todos los cubos cuando no colsiona el rayo excepto el ultimo
-                    if (_cuboHijoGameObject != null)
-                        _cuboHijoGameObject.GetComponent<Laser>()._reciboRaycast = false;
+                    _cuboHijoGameObject.GetComponent<Laser>()._reciboRaycast = false;
                     _cuboHijoGameObject.GetComponent<Laser>()._activarRaycast = false;
                     _cuboHijoGameObject.GetComponent<Laser>().DesactivarLineRender();
                     _cuboHijoGameObject.GetComponent<MeshRenderer>().material = _materialWithoutEmision;
+                }
+
+                if (hit.transform.tag != "Cubo")
+                {
+                    //Desactiva el Line Renderer y el raycast de todos los cubos cuando no colsiona el rayo excepto el ultimo
+                    if (_cuboHijoGameObject != null)
+                        
 
 
 
