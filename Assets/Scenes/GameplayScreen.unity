@@ -132,7 +132,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1092788685}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 275346343533224930, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -147,17 +147,17 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.459236
+      value: 150.65
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.704736
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.791231
+      value: 60.37
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -182,7 +182,7 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -216,6 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+<<<<<<< HEAD
 --- !u!4 &1849045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
@@ -670,6 +671,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1441539757}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 --- !u!1001 &14570193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -765,6 +768,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 14570193}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &17522799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -856,6 +860,67 @@ Transform:
   m_PrefabInstance: {fileID: 1835945821}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &18419708
+=======
+--- !u!1 &33244099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 33244100}
+  m_Layer: 0
+  m_Name: Roca_setas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &33244100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33244099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 155.8, y: -2.6612701, z: 109.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1087499121}
+  - {fileID: 523062286}
+  - {fileID: 683767412}
+  - {fileID: 1517046398}
+  - {fileID: 681334505}
+  - {fileID: 1407214985}
+  - {fileID: 1920499250}
+  - {fileID: 1424250973}
+  - {fileID: 806945206}
+  - {fileID: 2033177593}
+  - {fileID: 1580457043}
+  - {fileID: 683995787}
+  - {fileID: 1017622512}
+  - {fileID: 1438247576}
+  - {fileID: 676502766}
+  - {fileID: 458105208}
+  - {fileID: 647842979}
+  - {fileID: 1391465718}
+  - {fileID: 687301654}
+  - {fileID: 728320639}
+  - {fileID: 1018112925}
+  - {fileID: 1059426175}
+  - {fileID: 70379392}
+  - {fileID: 436606819}
+  - {fileID: 274575862}
+  - {fileID: 546543082}
+  - {fileID: 1649381931}
+  - {fileID: 2113333039}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &70379391
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1040,7 +1105,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 1160488111}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
     m_Modifications:
     - target: {fileID: 2083564593816683692, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
@@ -1050,17 +1119,29 @@ PrefabInstance:
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -6.534
+=======
+      value: 117.1
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -25.753
+=======
+      value: 0
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -2.397
+=======
+      value: 65.75
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
@@ -1085,7 +1166,11 @@ PrefabInstance:
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 72
+=======
+      value: 18
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
@@ -1105,7 +1190,11 @@ PrefabInstance:
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 0.6555422
+=======
+      value: 12.440003
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
@@ -1118,6 +1207,7 @@ PrefabInstance:
       value: 0.8600933
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: a1bca6bf46cbee544b413016db8df91b, type: 3}
 --- !u!4 &30645121 stripped
 Transform:
@@ -1126,6 +1216,10 @@ Transform:
   m_PrefabInstance: {fileID: 30645120}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &33244099
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1 &79034745
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1204,6 +1298,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 204842756}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!4 &41634797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -1211,10 +1306,14 @@ Transform:
   m_PrefabInstance: {fileID: 727744221}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &41952534
+=======
+--- !u!1001 &105413424
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 1160488111}
     m_Modifications:
     - target: {fileID: 2083564593816683692, guid: a1bca6bf46cbee544b413016db8df91b,
@@ -1319,80 +1418,245 @@ Transform:
   m_PrefabInstance: {fileID: 76662320}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &47740845
+=======
+    m_TransformParent: {fileID: 1304450894}
+    m_Modifications:
+    - target: {fileID: 275346343533224930, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aaa595161ced918469f42edf661f58ed, type: 2}
+    - target: {fileID: 2012805597502773054, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_Name
+      value: Piedra_judy (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.873
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.748
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.663
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.20156881
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.19490226
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.71829575
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.63673735
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -147.54199
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 177.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -82.293
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7846311
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.30437586
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.45877868
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!4 &105413425 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 105413424}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &134374508 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1138706548}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &138248739
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 2079993777}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 152.1355
+=======
+    - target: {fileID: 275346343533224930, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aaa595161ced918469f42edf661f58ed, type: 2}
+    - target: {fileID: 2012805597502773054, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_Name
+      value: Piedra_judy (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.1053276
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 0
+=======
+      value: 3.926744
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 42.584797
+=======
+      value: -2.632873
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
       value: -0.5254828
+=======
+      value: -0.101268455
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
       value: 0.47314683
+=======
+      value: 0.34855872
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
       value: 0.47314683
+=======
+      value: 0.929772
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: 0.5254828
+=======
+      value: 0.061445378
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 59
+=======
+      value: 28
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
+<<<<<<< HEAD
       value: -90.00001
+=======
+      value: -77.73701
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
+<<<<<<< HEAD
       value: 0
+=======
+      value: 300.951
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+<<<<<<< HEAD
       value: 0
+=======
+      value: -7.432
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 0.6858653
+=======
+      value: 1.2117395
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 0.68586534
+=======
+      value: 0.5295061
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 0.6858652
       objectReference: {fileID: 0}
     - target: {fileID: 3006906665215668911, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -1493,21 +1757,40 @@ Transform:
   m_PrefabInstance: {fileID: 713169704}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &51832860
+=======
+      value: 1.2117403
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1001 &163180635
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 1278312927}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
     m_Modifications:
     - target: {fileID: 5831424625800880697, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_Name
+<<<<<<< HEAD
       value: Piedra_06 (33)
+=======
+      value: Piedra_judy (95)
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 103.2
+=======
+      value: 149.39
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
@@ -1517,61 +1800,106 @@ PrefabInstance:
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 53.1
+=======
+      value: 64.42999
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
       value: 0.5232527
+=======
+      value: -0.09750659
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
       value: -0.47561187
+=======
+      value: 0.72244424
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
       value: -0.47561187
+=======
+      value: 0.68211085
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: -0.5232527
+=======
+      value: 0.057373017
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 32
+=======
+      value: 23
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
+<<<<<<< HEAD
       value: -90.00001
+=======
+      value: -85.388
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
+<<<<<<< HEAD
       value: 0
+=======
+      value: 218.56499
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+<<<<<<< HEAD
       value: 444.539
+=======
+      value: -51.15
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 24.339577
+=======
+      value: 12.440003
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 22.268509
+=======
+      value: 12.955531
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 19.146769
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1583,12 +1911,20 @@ Transform:
   m_PrefabInstance: {fileID: 51832860}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &52501053
+=======
+      value: 24.800291
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1001 &165568389
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2079993777}
+    m_TransformParent: {fileID: 1160488111}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1630,20 +1966,77 @@ PrefabInstance:
       value: 332
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 5831424625800880697, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_Name
+      value: Piedra_06 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.4107535
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.675643
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.050834097
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.03147921
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.025055554
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.45551682
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.8893175
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90.00001
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 126.865005
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1679,10 +2072,37 @@ Transform:
   m_PrefabInstance: {fileID: 1252628102}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &54396399
+=======
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8890915
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.6754737
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.350746
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38c2b4e7e9df10543b39609df396969a, type: 3}
+--- !u!4 &165568390 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+    type: 3}
+  m_PrefabInstance: {fileID: 165568389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &198368962
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 2079993777}
     m_Modifications:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -1691,10 +2111,31 @@ PrefabInstance:
       value: 150.21005
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    m_TransformParent: {fileID: 1160488111}
+    m_Modifications:
+    - target: {fileID: 275346343533224930, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aaa595161ced918469f42edf661f58ed, type: 2}
+    - target: {fileID: 2012805597502773054, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_Name
+      value: Piedra_judy (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.4614065
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.1779394
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1726,15 +2167,53 @@ PrefabInstance:
       value: 281
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.31027982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.000000084750354
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5538585
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.83261085
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
+      value: -85.388
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 12.504001
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1775,6 +2254,37 @@ Transform:
   m_PrefabInstance: {fileID: 924159580}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &56130830
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 101.340004
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1581784
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.99027854
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.9641993
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!4 &198368963 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 198368962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &225825901
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1784,84 +2294,149 @@ PrefabInstance:
     - target: {fileID: 2083564593816683692, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_Name
+<<<<<<< HEAD
       value: Piedra_08 (9)
+=======
+      value: Piedra_judy (61)
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -6.542
+=======
+      value: 1.1058699
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -25.925
+=======
+      value: 3.5457838
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -2.416
+=======
+      value: 0.24642599
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
       value: 0.014951455
+=======
+      value: -0.0339155
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
       value: 0.03735197
+=======
+      value: 0.031331092
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
       value: -0.83597976
+=======
+      value: -0.90875566
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: 0.5472835
+=======
+      value: -0.41476664
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 71
+=======
+      value: 17
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
+<<<<<<< HEAD
       value: 4.5210004
+=======
+      value: -88.811005
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
+<<<<<<< HEAD
       value: 0.91300005
+=======
+      value: -106.592
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+<<<<<<< HEAD
       value: -113.54201
+=======
+      value: 58.594
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 1.1392016
+=======
+      value: 1.4962562
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 0.5878647
+=======
+      value: 1.0381179
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 1.4946707
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1bca6bf46cbee544b413016db8df91b, type: 3}
 --- !u!4 &56130831 stripped
+=======
+      value: 3.4914355
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!4 &225825902 stripped
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 Transform:
   m_CorrespondingSourceObject: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
     type: 3}
+<<<<<<< HEAD
   m_PrefabInstance: {fileID: 56130830}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &60530210
@@ -2143,6 +2718,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
     type: 3}
   m_PrefabInstance: {fileID: 1537365498}
+=======
+  m_PrefabInstance: {fileID: 225825901}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &76313335 stripped
 Transform:
@@ -2225,6 +2803,7 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 0.1437892
       objectReference: {fileID: 0}
     - target: {fileID: 3006906665215668911, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -2331,6 +2910,95 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &78463627
+=======
+      value: 0.09779504
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!4 &245412504 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 245412503}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &269360919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 269360920}
+  - component: {fileID: 269360922}
+  - component: {fileID: 269360921}
+  m_Layer: 13
+  m_Name: Terrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &269360920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269360919}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -494.63815, y: 515.9769, z: -181.30931}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 443747305}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!154 &269360921
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269360919}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: 21e29b6b8bc8e6c4cbe999aa13b378c8, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &269360922
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269360919}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: 21e29b6b8bc8e6c4cbe999aa13b378c8, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 2100000, guid: 22ff8771d87ef27429e670136399094b, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ScaleInLightmap: 0.0256
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+--- !u!1001 &274575861
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2872,12 +3540,20 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 2079993777}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
     m_Modifications:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 119.15862
+=======
+      value: 141.13
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
@@ -2887,32 +3563,56 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 2.6554673
+=======
+      value: 68.53
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
       value: -0.18301274
+=======
+      value: 0.47274145
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
       value: 0.6830127
+=======
+      value: 0.49503928
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
       value: 0.6830127
+=======
+      value: 0.5012968
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: 0.18301274
+=======
+      value: -0.5292949
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 247
+=======
+      value: 19
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
@@ -2932,16 +3632,25 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 0.10551073
+=======
+      value: 12.440003
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 0.10551073
+=======
+      value: 12.955531
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 0.10551074
       objectReference: {fileID: 0}
     - target: {fileID: 3006906665215668911, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -2952,6 +3661,13 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &85533432
+=======
+      value: 24.800291
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1001 &346861915
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3034,6 +3750,7 @@ PrefabInstance:
       value: Seta_Grande_03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &86664340
 PrefabInstance:
@@ -3127,6 +3844,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &88864452
 PrefabInstance:
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!4 &346861916 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 346861915}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &408355682
+GameObject:
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -3753,8 +4481,53 @@ PrefabInstance:
       value: Seta_Grande_03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &105413424
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 2ea44e0e7865ca643a491dde89b6db19, type: 3}
+--- !u!4 &436606819 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2297386075455865020, guid: 2ea44e0e7865ca643a491dde89b6db19,
+    type: 3}
+  m_PrefabInstance: {fileID: 436606818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &443747304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 443747305}
+  m_Layer: 0
+  m_Name: Environment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &443747305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443747304}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 494.63815, y: -515.9769, z: 181.30931}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 269360920}
+  - {fileID: 408355685}
+  - {fileID: 1875991823}
+  - {fileID: 1882910448}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &447107209
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5080,47 +5853,83 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 2079993777}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
     m_Modifications:
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 161.96
+=======
+      value: 118.62
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 0
+=======
+      value: 11.66
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 13.35
+=======
+      value: 65.75
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
       value: -0
+=======
+      value: 0.031673506
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
       value: 0.71325046
+=======
+      value: 0.7346487
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
       value: -0
+=======
+      value: -0.10887611
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: 0.70090926
+=======
+      value: 0.6689051
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 21
+=======
+      value: 27
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
@@ -5140,7 +5949,11 @@ PrefabInstance:
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 4.8367076
+=======
+      value: 5.825109
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
@@ -5150,10 +5963,15 @@ PrefabInstance:
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 6.009535
+=======
+      value: 6.0665083
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7804684024491317923, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
+<<<<<<< HEAD
       propertyPath: m_Name
       value: Seta (21)
       objectReference: {fileID: 0}
@@ -5171,6 +5989,14 @@ Transform:
   m_PrefabInstance: {fileID: 158795261}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &159465118
+=======
+      propertyPath: m_LocalScale.z
+      value: 7.3974113
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1001 &546543081
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5253,6 +6079,7 @@ PrefabInstance:
       value: Seta_Grande_03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &162280552
 PrefabInstance:
@@ -5524,6 +6351,16 @@ Transform:
   m_PrefabInstance: {fileID: 926045052}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &165568389
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 2ea44e0e7865ca643a491dde89b6db19, type: 3}
+--- !u!4 &546543082 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2297386075455865020, guid: 2ea44e0e7865ca643a491dde89b6db19,
+    type: 3}
+  m_PrefabInstance: {fileID: 546543081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &578934575
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5533,47 +6370,83 @@ PrefabInstance:
     - target: {fileID: 5831424625800880697, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_Name
+<<<<<<< HEAD
       value: Piedra_06 (3)
+=======
+      value: Piedra_06 (8)
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -2.4107535
+=======
+      value: -2.880957
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 0.675643
+=======
+      value: 1.5721585
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 0.050834097
+=======
+      value: 0.32477728
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
       value: -0.03147921
+=======
+      value: -0.02439564
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
       value: -0.025055554
+=======
+      value: -0.03199342
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
       value: 0.45551682
+=======
+      value: 0.6591777
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: -0.8893175
+=======
+      value: -0.7509102
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 27
+=======
+      value: 32
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
@@ -5588,21 +6461,34 @@ PrefabInstance:
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+<<<<<<< HEAD
       value: 126.865005
+=======
+      value: 98.553
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 3.8890915
+=======
+      value: 0.7140652
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 3.6754737
+=======
+      value: 0.3465313
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
         type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 5.350746
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5612,6 +6498,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
     type: 3}
   m_PrefabInstance: {fileID: 165568389}
+=======
+      value: 0.3375556
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38c2b4e7e9df10543b39609df396969a, type: 3}
+--- !u!4 &578934576 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+    type: 3}
+  m_PrefabInstance: {fileID: 578934575}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &166044813
 PrefabInstance:
@@ -5703,6 +6600,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 928012409}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &168996584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5788,6 +6686,135 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &172290603
+=======
+--- !u!1 &609014518
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 609014519}
+  - component: {fileID: 609014522}
+  - component: {fileID: 609014521}
+  - component: {fileID: 609014520}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &609014519
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609014518}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1878052627}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &609014520
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609014518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: 0, y: 1, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 10
+  m_LookaheadIgnoreY: 0
+  m_HorizontalDamping: 0
+  m_VerticalDamping: 0
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
+--- !u!114 &609014521
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609014518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BindingMode: 4
+  m_FollowOffset: {x: 0, y: 5, z: -13}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_AngularDampingMode: 0
+  m_PitchDamping: 0
+  m_YawDamping: 0
+  m_RollDamping: 0
+  m_AngularDamping: 0
+  m_Heading:
+    m_Definition: 2
+    m_VelocityFilterStrength: 4
+    m_Bias: 0
+  m_RecenterToTargetHeading:
+    m_enabled: 0
+    m_WaitTime: 1
+    m_RecenteringTime: 2
+    m_LegacyHeadingDefinition: -1
+    m_LegacyVelocityFilterStrength: -1
+  m_XAxis:
+    Value: 0
+    m_SpeedMode: 0
+    m_MaxSpeed: 300
+    m_AccelTime: 0.1
+    m_DecelTime: 0.1
+    m_InputAxisName: 
+    m_InputAxisValue: 0
+    m_InvertInput: 1
+    m_MinValue: -180
+    m_MaxValue: 180
+    m_Wrap: 1
+    m_Recentering:
+      m_enabled: 0
+      m_WaitTime: 1
+      m_RecenteringTime: 2
+      m_LegacyHeadingDefinition: -1
+      m_LegacyVelocityFilterStrength: -1
+  m_LegacyRadius: 3.4028235e+38
+  m_LegacyHeightOffset: 3.4028235e+38
+  m_LegacyHeadingBias: 3.4028235e+38
+  m_HeadingIsSlave: 1
+--- !u!114 &609014522
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609014518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &610097133
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5990,6 +7017,7 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
       value: 0.043167837
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -6171,20 +7199,44 @@ PrefabInstance:
       value: 83
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+      value: 0.09317908
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.97418964
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
+      value: -157.009
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 173.961
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -167.844
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -6208,6 +7260,38 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &175365700
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.40469936
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.44270045
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.26031473
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!4 &628347012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 628347011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &647830464 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1018658868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &647842978
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -7184,6 +8268,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 874114913}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &215632583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7281,6 +8366,9 @@ Transform:
   m_PrefabInstance: {fileID: 1399610603}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &220671411
+=======
+--- !u!1001 &728320638
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -7375,7 +8463,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 1160488111}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
     m_Modifications:
     - target: {fileID: 275346343533224930, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -7390,17 +8482,29 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 1.83
+=======
+      value: 144.54
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 4.46
+=======
+      value: 0
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 0.32
+=======
+      value: 65.85
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -7425,6 +8529,7 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
@@ -7626,15 +8731,25 @@ PrefabInstance:
       value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
+      value: -85.388
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 327.79102
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -7669,6 +8784,31 @@ Transform:
   m_PrefabInstance: {fileID: 922443980}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &234652893
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -51.151
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.5016603
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.812537
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10.690721
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1001 &738946525
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8302,6 +9442,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1860026047}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!4 &253243911 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -8506,6 +9647,9 @@ Transform:
   m_PrefabInstance: {fileID: 559051782}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &260660455
+=======
+--- !u!1001 &845425360
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8550,6 +9694,7 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 405
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -8637,20 +9782,34 @@ PrefabInstance:
       value: 453
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90.00001
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 99.55401
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -8678,6 +9837,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
     type: 3}
   m_PrefabInstance: {fileID: 1375832660}
+=======
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.0103908
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.497069
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 17.991268
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38c2b4e7e9df10543b39609df396969a, type: 3}
+--- !u!4 &845425361 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+    type: 3}
+  m_PrefabInstance: {fileID: 845425360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &849553609 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 991215949}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &269360919
 GameObject:
@@ -8928,6 +10117,7 @@ PrefabInstance:
       value: Seta_Grande_03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &274575861
 PrefabInstance:
@@ -9025,6 +10215,16 @@ Transform:
   m_PrefabInstance: {fileID: 274575861}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &275717991
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!4 &877360698 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 877360697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &896623017
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9671,6 +10871,7 @@ PrefabInstance:
       value: Seta_Grande_03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &307029816
 PrefabInstance:
@@ -9763,6 +10964,16 @@ Transform:
   m_PrefabInstance: {fileID: 1099787570}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &312097577
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!4 &958908586 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 958908585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &984280837
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9947,6 +11158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+<<<<<<< HEAD
 --- !u!4 &316194853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
@@ -10038,6 +11250,9 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &320604595
+=======
+--- !u!1001 &1000986411
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10447,7 +11662,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 1160488111}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
     m_Modifications:
     - target: {fileID: 275346343533224930, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -10462,17 +11681,29 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -0.01
+=======
+      value: 117.1
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 5.77
+=======
+      value: 0
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 0.55
+=======
+      value: 65.75
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -10497,7 +11728,11 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 20
+=======
+      value: 25
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -10522,11 +11757,16 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 1.2688298
+=======
+      value: 12.955531
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 3.1780663
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10712,6 +11952,13 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &337529110
+=======
+      value: 14.450882
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1001 &1041362444
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11057,6 +12304,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.19439216
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3006906665215668911, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_Name
@@ -11071,6 +12319,11 @@ Transform:
   m_PrefabInstance: {fileID: 312097577}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &346251410
+=======
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1001 &1087499120
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11150,11 +12403,30 @@ PrefabInstance:
     - target: {fileID: 3006906665215668911, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_Name
+<<<<<<< HEAD
       value: Seta_Grande_03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &346861915
+=======
+      value: Seta_Grande_03_Emision
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006906665215668911, guid: 2ea44e0e7865ca643a491dde89b6db19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2ea44e0e7865ca643a491dde89b6db19, type: 3}
+--- !u!4 &1087499121 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2297386075455865020, guid: 2ea44e0e7865ca643a491dde89b6db19,
+    type: 3}
+  m_PrefabInstance: {fileID: 1087499120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1093131044
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11249,6 +12521,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 346861915}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &348018271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11334,6 +12607,9 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &348929569
+=======
+--- !u!1001 &1122266175
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11590,22 +12866,38 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 2079993777}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
     m_Modifications:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 163.37361
+=======
+      value: 117.1
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 0.6470394
+=======
+      value: 12.83
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 43.52998
+=======
+      value: 66.07
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
@@ -11630,7 +12922,11 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 144
+=======
+      value: 26
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
@@ -11650,16 +12946,25 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 0.18701427
+=======
+      value: 6.923229
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 0.18701427
+=======
+      value: 9.238079
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 0.18701428
       objectReference: {fileID: 0}
     - target: {fileID: 3006906665215668911, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -11670,6 +12975,13 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &356633380
+=======
+      value: 11.264778
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1001 &1145710095
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11836,8 +13148,110 @@ PrefabInstance:
       value: Seta_Grande_03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &358837344
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!4 &1153458943 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1153458942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1160488110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1160488111}
+  m_Layer: 0
+  m_Name: muros_piedras
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1160488111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160488110}
+  m_LocalRotation: {x: 0.012726607, y: 0.6786685, z: 0.7343339, w: -0.00094509823}
+  m_LocalPosition: {x: 48.27, y: -0.49, z: 189.18}
+  m_LocalScale: {x: 7.7732406, y: 6.5251884, z: 5.0360847}
+  m_Children:
+  - {fileID: 1487547555}
+  - {fileID: 1056460096}
+  - {fileID: 1242515819}
+  - {fileID: 670705036}
+  - {fileID: 1153458943}
+  - {fileID: 775736651}
+  - {fileID: 14570194}
+  - {fileID: 1221252921}
+  - {fileID: 874271147}
+  - {fileID: 1258721577}
+  - {fileID: 896623018}
+  - {fileID: 2123359716}
+  - {fileID: 755828680}
+  - {fileID: 535286544}
+  - {fileID: 2011042999}
+  - {fileID: 483536198}
+  - {fileID: 1792804925}
+  - {fileID: 225825902}
+  - {fileID: 1362935583}
+  - {fileID: 325113382}
+  - {fileID: 334020478}
+  - {fileID: 1353608243}
+  - {fileID: 940410528}
+  - {fileID: 1645396825}
+  - {fileID: 1853173130}
+  - {fileID: 845425361}
+  - {fileID: 1545882802}
+  - {fileID: 165568390}
+  - {fileID: 900798588}
+  - {fileID: 429942986}
+  - {fileID: 1278211220}
+  - {fileID: 1550316463}
+  - {fileID: 578934576}
+  - {fileID: 738946526}
+  - {fileID: 1994404392}
+  - {fileID: 346861916}
+  - {fileID: 1533208577}
+  - {fileID: 448573986}
+  - {fileID: 1784638622}
+  - {fileID: 198368963}
+  - {fileID: 940836129}
+  - {fileID: 1918810666}
+  - {fileID: 1481056823}
+  - {fileID: 490196791}
+  - {fileID: 1806277529}
+  - {fileID: 477367176}
+  - {fileID: 877360698}
+  - {fileID: 462115222}
+  - {fileID: 902763687}
+  - {fileID: 610097134}
+  - {fileID: 430744400}
+  - {fileID: 1539110487}
+  - {fileID: 747178094}
+  - {fileID: 316194853}
+  - {fileID: 750106523}
+  - {fileID: 1093131045}
+  - {fileID: 958908586}
+  - {fileID: 1145710096}
+  - {fileID: 1741324670}
+  - {fileID: 925184141}
+  - {fileID: 1731122758}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1163522692
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11882,7 +13296,11 @@ PrefabInstance:
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 527
+=======
+      value: 2
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
@@ -11947,6 +13365,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
+<<<<<<< HEAD
       propertyPath: m_LocalPosition.x
       value: 108.37469
       objectReference: {fileID: 0}
@@ -12159,10 +13578,17 @@ PrefabInstance:
       value: -90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
+=======
+      propertyPath: m_textInfo.spaceCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1325484014693787366, guid: 40cce497326501e4daadb6b842d0e4ec,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -12191,12 +13617,38 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &367609389
+=======
+    - target: {fileID: 1325484014693787366, guid: 40cce497326501e4daadb6b842d0e4ec,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325484014693787366, guid: 40cce497326501e4daadb6b842d0e4ec,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610280222229139311, guid: 40cce497326501e4daadb6b842d0e4ec,
+        type: 3}
+      propertyPath: m_Name
+      value: Palanca
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399289852182094309, guid: 40cce497326501e4daadb6b842d0e4ec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 40cce497326501e4daadb6b842d0e4ec, type: 3}
+--- !u!1001 &1177564245
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2079993777}
+    m_TransformParent: {fileID: 1304450894}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12243,15 +13695,78 @@ PrefabInstance:
       value: -90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 275346343533224930, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aaa595161ced918469f42edf661f58ed, type: 2}
+    - target: {fileID: 2012805597502773054, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_Name
+      value: Piedra_judy (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16890147
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.4285566
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5025538
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.16571733
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.19706109
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6983303
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.667862
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -79.29401
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 213.99799
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 1.4810001
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -12281,6 +13796,225 @@ Transform:
   m_PrefabInstance: {fileID: 978894998}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &370986068
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1 &1206256210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1206256213}
+  - component: {fileID: 1206256212}
+  - component: {fileID: 1206256211}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1206256211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206256210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 9
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
+  m_Intensity: 100000
+  m_EnableSpotReflector: 0
+  m_LuxAtDistance: 1
+  m_InnerSpotPercent: 0
+  m_LightDimmer: 1
+  m_VolumetricDimmer: 1
+  m_LightUnit: 2
+  m_FadeDistance: 10000
+  m_AffectDiffuse: 1
+  m_AffectSpecular: 1
+  m_NonLightmappedOnly: 0
+  m_ShapeWidth: 0.5
+  m_ShapeHeight: 0.5
+  m_AspectRatio: 1
+  m_ShapeRadius: 0
+  m_SoftnessScale: 1
+  m_UseCustomSpotLightShadowCone: 0
+  m_CustomSpotLightShadowCone: 30
+  m_MaxSmoothness: 0.99
+  m_ApplyRangeAttenuation: 1
+  m_DisplayAreaLightEmissiveMesh: 0
+  m_AreaLightCookie: {fileID: 0}
+  m_AreaLightShadowCone: 120
+  m_UseScreenSpaceShadows: 0
+  m_InteractsWithSky: 1
+  m_AngularDiameter: 0.5
+  m_FlareSize: 2
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
+  m_FlareFalloff: 4
+  m_SurfaceTexture: {fileID: 0}
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
+  m_Distance: 1.5e+11
+  m_UseRayTracedShadows: 0
+  m_NumRayTracingSamples: 4
+  m_FilterTracedShadow: 1
+  m_FilterSizeTraced: 16
+  m_SunLightConeAngle: 0.5
+  m_LightShadowRadius: 0.5
+  m_EvsmExponent: 15
+  m_EvsmLightLeakBias: 0
+  m_EvsmVarianceBias: 0.00001
+  m_EvsmBlurPasses: 0
+  m_LightlayersMask: 1
+  m_LinkShadowLayers: 1
+  m_ShadowNearPlane: 0.1
+  m_BlockerSampleCount: 24
+  m_FilterSampleCount: 16
+  m_MinFilterSize: 0.01
+  m_KernelSize: 5
+  m_LightAngle: 1
+  m_MaxDepthBias: 0.001
+  m_ShadowResolution:
+    m_Override: 512
+    m_UseOverride: 1
+    m_Level: 1
+  m_ShadowDimmer: 1
+  m_VolumetricShadowDimmer: 1
+  m_ShadowFadeDistance: 10000
+  m_UseContactShadow:
+    m_Override: 0
+    m_UseOverride: 1
+    m_Level: 0
+  m_RayTracedContactShadow: 0
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
+  m_PenumbraTint: 0
+  m_NormalBias: 0.75
+  m_SlopeBias: 0.5
+  m_ShadowUpdateMode: 0
+  m_BarnDoorAngle: 90
+  m_BarnDoorLength: 0.05
+  m_ShadowCascadeRatios:
+  - 0.05
+  - 0.2
+  - 0.3
+  m_ShadowCascadeBorders:
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  m_ShadowAlgorithm: 0
+  m_ShadowVariant: 0
+  m_ShadowPrecision: 0
+  useOldInspector: 0
+  useVolumetric: 1
+  featuresFoldout: 1
+  showAdditionalSettings: 0
+--- !u!108 &1206256212
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206256210}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 100000
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 2
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1206256213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206256210}
+  m_LocalRotation: {x: 0.542268, y: 0.08493971, z: -0.18267295, w: 0.81569684}
+  m_LocalPosition: {x: -155.22266, y: -15.472656, z: -85.20703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2060822033}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 66.303, y: -8.52, z: -30.817001}
+--- !u!1001 &1217925320
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -12742,6 +14476,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1883516735}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!4 &392577244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -12850,6 +14585,9 @@ Transform:
   m_PrefabInstance: {fileID: 394763416}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &399177532
+=======
+--- !u!1001 &1258721576
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -12889,6 +14627,7 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: -0.15304592
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -12981,15 +14720,30 @@ PrefabInstance:
       value: 410
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+      value: -0.95642763
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
+      value: -85.388
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 12.505001
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -13018,51 +14772,124 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &399845943
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -157.444
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.318003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3845292
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.9150658
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!4 &1258721577 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1258721576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1278211219
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 2079993777}
     m_Modifications:
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 103.544
+=======
+    m_TransformParent: {fileID: 1160488111}
+    m_Modifications:
+    - target: {fileID: 5831424625800880697, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_Name
+      value: Piedra_06 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.112485
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 0.684
+=======
+      value: 0.12807563
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 33.64
+=======
+      value: -0.012603306
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
       value: -0
+=======
+      value: -0.0009762822
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
       value: -0.98743016
+=======
+      value: -0.040221483
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
       value: -0
+=======
+      value: 0.9744129
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: 0.15805605
+=======
+      value: -0.22113547
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 530
+=======
+      value: 30
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
@@ -13077,12 +14904,20 @@ PrefabInstance:
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+<<<<<<< HEAD
       value: 0
+=======
+      value: 26.681002
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 0.9139629
+=======
+      value: 2.6526308
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
@@ -13092,10 +14927,15 @@ PrefabInstance:
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 0.9139629
+=======
+      value: 2.964145
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 7804684024491317923, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
+<<<<<<< HEAD
       propertyPath: m_Name
       value: Seta (75)
       objectReference: {fileID: 0}
@@ -13107,10 +14947,28 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226edc204681ff142986424d7771bd7c, type: 3}
 --- !u!4 &399845944 stripped
+=======
+      propertyPath: m_LocalScale.z
+      value: 3.9639316
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38c2b4e7e9df10543b39609df396969a, type: 3}
+--- !u!4 &1278211220 stripped
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 Transform:
   m_CorrespondingSourceObject: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
     type: 3}
+<<<<<<< HEAD
   m_PrefabInstance: {fileID: 399845943}
+=======
+  m_PrefabInstance: {fileID: 1278211219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1286456814 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 460086644}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &408355682
 GameObject:
@@ -13184,6 +15042,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -744.6382, y: 515.9769, z: -181.30931}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 443747305}
   m_RootOrder: 1
@@ -13368,6 +15227,59 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1bca6bf46cbee544b413016db8df91b, type: 3}
 --- !u!4 &409948949 stripped
+=======
+  m_Children:
+  - {fileID: 929807958}
+  - {fileID: 1390798861}
+  - {fileID: 1221113258}
+  - {fileID: 647830464}
+  - {fileID: 475764802}
+  - {fileID: 2092181441}
+  - {fileID: 1924061952}
+  - {fileID: 1754183410}
+  - {fileID: 1249840366}
+  - {fileID: 712906189}
+  - {fileID: 87269757}
+  - {fileID: 1286456814}
+  - {fileID: 279051310}
+  - {fileID: 1538425891}
+  - {fileID: 329740912}
+  - {fileID: 849553609}
+  - {fileID: 134374508}
+  - {fileID: 728580515}
+  - {fileID: 1633272557}
+  - {fileID: 1331779441}
+  - {fileID: 1688307717}
+  - {fileID: 1868316992}
+  - {fileID: 1592940109}
+  - {fileID: 1364459971}
+  - {fileID: 622608990}
+  - {fileID: 680493305}
+  - {fileID: 1704960702}
+  - {fileID: 2096556887}
+  - {fileID: 1528961064}
+  - {fileID: 240805029}
+  - {fileID: 1656978130}
+  - {fileID: 1828156874}
+  - {fileID: 1512978756}
+  - {fileID: 1867914239}
+  - {fileID: 505681299}
+  - {fileID: 1221404625}
+  - {fileID: 671182986}
+  - {fileID: 105413425}
+  - {fileID: 628347012}
+  - {fileID: 1989121802}
+  - {fileID: 245412504}
+  - {fileID: 984280838}
+  - {fileID: 591776924}
+  - {fileID: 2055748374}
+  - {fileID: 428666664}
+  - {fileID: 1638680860}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1331779441 stripped
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 Transform:
   m_CorrespondingSourceObject: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
     type: 3}
@@ -13635,6 +15547,7 @@ PrefabInstance:
       value: Seta_Grande_03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &417693140
 PrefabInstance:
@@ -13721,6 +15634,28 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &419860107
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!4 &1362935583 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1362935582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1364459971 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 763702915}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1390798861 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2098006989}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1391465717
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -14270,6 +16205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+<<<<<<< HEAD
 --- !u!4 &430744400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
@@ -14479,12 +16415,45 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226edc204681ff142986424d7771bd7c, type: 3}
 --- !u!4 &436937114 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
+=======
+--- !u!114 &1470861634 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 670990543, guid: 8bf80693c3025e440ba8e4aba27663be,
     type: 3}
+  m_PrefabInstance: {fileID: 2789255599259033259}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f598c6148496054fb9a8d0206ce0b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1470861635 stripped
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3716199528688093773, guid: 8bf80693c3025e440ba8e4aba27663be,
+    type: 3}
+  m_PrefabInstance: {fileID: 2789255599259033259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1470861640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 670990542, guid: 8bf80693c3025e440ba8e4aba27663be,
+    type: 3}
+<<<<<<< HEAD
   m_PrefabInstance: {fileID: 436937113}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &437332230
+=======
+  m_PrefabInstance: {fileID: 2789255599259033259}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c36d37b9ef814645a3e7388f10b432a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1481056822
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -14753,6 +16722,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 511559095}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &443747304
 GameObject:
   m_ObjectHideFlags: 0
@@ -14874,6 +16844,15 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &444602789
+=======
+--- !u!4 &1512978756 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1342858254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1517046397
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -15136,6 +17115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+<<<<<<< HEAD
 --- !u!1001 &447797316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15221,6 +17201,21 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &448573985
+=======
+--- !u!4 &1533208577 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1533208576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1538425891 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1836617157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1539110486
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -15293,6 +17288,7 @@ PrefabInstance:
       value: 215.146
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+<<<<<<< HEAD
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.730564
@@ -15490,6 +17486,31 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &456779674
+=======
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.48263696
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.40046397
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.26221055
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!4 &1539110487 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1539110486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1545882801
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -15569,7 +17590,11 @@ PrefabInstance:
     - target: {fileID: 3006906665215668911, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_Name
+<<<<<<< HEAD
       value: Seta_Grande_03
+=======
+      value: Piedra_06 (2)
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
@@ -15583,42 +17608,74 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 113.03205
+=======
+      value: -1.6582477
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 2.0902607
+=======
+      value: 1.1632738
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 59.93049
+=======
+      value: 0.2575879
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
       value: -0.5950522
+=======
+      value: -0.039638802
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
       value: 0.55291057
+=======
+      value: -0.0068908967
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
       value: 0.38073382
+=======
+      value: -0.026745325
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: 0.44186485
+=======
+      value: -0.99883235
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 90
+=======
+      value: 26
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
@@ -15633,21 +17690,34 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+<<<<<<< HEAD
       value: 0
+=======
+      value: 184.176
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 0.16823158
+=======
+      value: 5.061196
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 0.1682316
+=======
+      value: 4.155238
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 0.1682316
       objectReference: {fileID: 0}
     - target: {fileID: 3006906665215668911, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -15658,11 +17728,28 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &457954514
+=======
+      value: 13.420945
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38c2b4e7e9df10543b39609df396969a, type: 3}
+--- !u!4 &1545882802 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1545882801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1550316462
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 1304450894}
+=======
+    m_TransformParent: {fileID: 1160488111}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
     m_Modifications:
     - target: {fileID: 275346343533224930, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -15672,47 +17759,83 @@ PrefabInstance:
     - target: {fileID: 2012805597502773054, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_Name
+<<<<<<< HEAD
       value: Piedra_judy (24)
+=======
+      value: Piedra_06 (7)
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -2.629856
+=======
+      value: -2.927839
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 2.7202399
+=======
+      value: 1.7521999
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -3.907682
+=======
+      value: 0.1738508
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
       value: 0.045226023
+=======
+      value: -0.02439564
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
       value: 0.17462048
+=======
+      value: -0.03199342
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
       value: 0.9080502
+=======
+      value: 0.6591777
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: -0.37803084
+=======
+      value: -0.7509102
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 24
+=======
+      value: 31
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -15727,26 +17850,52 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+<<<<<<< HEAD
       value: 190.07999
+=======
+      value: 98.553
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 3
+=======
+      value: 1.4732711
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 3
+=======
+      value: 1.2422149
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
 --- !u!1001 &458105207
+=======
+      value: 1.908397
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38c2b4e7e9df10543b39609df396969a, type: 3}
+--- !u!4 &1550316463 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1550316462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1580457042
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -15841,6 +17990,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 458105207}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &458201804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15926,11 +18076,24 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &460086644
+=======
+--- !u!4 &1592940109 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2016832842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1621168868
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 1304450894}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
     m_Modifications:
     - target: {fileID: 275346343533224930, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -15945,17 +18108,29 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -1.0681453
+=======
+      value: 114.19
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 4.1051316
+=======
+      value: 0
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 0.6361022
+=======
+      value: 62.2
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -16000,7 +18175,11 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 1.9253699
+=======
+      value: 7.5016603
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -16014,7 +18193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+<<<<<<< HEAD
 --- !u!1001 &461496933
+=======
+--- !u!1001 &1621929139
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -16462,6 +18645,7 @@ PrefabInstance:
       value: Seta_Grande_03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &473726790
 PrefabInstance:
@@ -16649,6 +18833,160 @@ Transform:
   m_PrefabInstance: {fileID: 1841727218}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &476085673
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 2ea44e0e7865ca643a491dde89b6db19, type: 3}
+--- !u!4 &1649381931 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2297386075455865020, guid: 2ea44e0e7865ca643a491dde89b6db19,
+    type: 3}
+  m_PrefabInstance: {fileID: 1649381930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1656978130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2088355724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1688307717 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1063028702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1700465523
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700465524}
+  - component: {fileID: 1700465527}
+  - component: {fileID: 1700465526}
+  - component: {fileID: 1700465525}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1700465524
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700465523}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1447814491}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700465525
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700465523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: 0, y: 1, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 10
+  m_LookaheadIgnoreY: 0
+  m_HorizontalDamping: 0
+  m_VerticalDamping: 0
+  m_ScreenX: 0.5
+  m_ScreenY: 0.6
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
+--- !u!114 &1700465526
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700465523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BindingMode: 4
+  m_FollowOffset: {x: 0, y: 5, z: -13}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_AngularDampingMode: 0
+  m_PitchDamping: 0
+  m_YawDamping: 0
+  m_RollDamping: 0
+  m_AngularDamping: 0
+  m_Heading:
+    m_Definition: 2
+    m_VelocityFilterStrength: 4
+    m_Bias: 0
+  m_RecenterToTargetHeading:
+    m_enabled: 0
+    m_WaitTime: 1
+    m_RecenteringTime: 2
+    m_LegacyHeadingDefinition: -1
+    m_LegacyVelocityFilterStrength: -1
+  m_XAxis:
+    Value: 0
+    m_SpeedMode: 0
+    m_MaxSpeed: 300
+    m_AccelTime: 0.1
+    m_DecelTime: 0.1
+    m_InputAxisName: 
+    m_InputAxisValue: 0
+    m_InvertInput: 1
+    m_MinValue: -180
+    m_MaxValue: 180
+    m_Wrap: 1
+    m_Recentering:
+      m_enabled: 0
+      m_WaitTime: 1
+      m_RecenteringTime: 2
+      m_LegacyHeadingDefinition: -1
+      m_LegacyVelocityFilterStrength: -1
+  m_LegacyRadius: 3.4028235e+38
+  m_LegacyHeightOffset: 3.4028235e+38
+  m_LegacyHeadingBias: 3.4028235e+38
+  m_HeadingIsSlave: 1
+--- !u!114 &1700465527
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700465523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1704960702 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1217925320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1731122757
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -16921,8 +19259,66 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 226edc204681ff142986424d7771bd7c, type: 3}
 --- !u!4 &478434510 stripped
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: a1bca6bf46cbee544b413016db8df91b, type: 3}
+--- !u!4 &1741324670 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1741324669}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1743900565
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1743900567}
+  - component: {fileID: 1743900566}
+  m_Layer: 0
+  m_Name: StaticLightingSky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1743900566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743900565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441482e8936e35048a1dffac814e3ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Profile: {fileID: 0}
+  m_StaticLightingSkyUniqueID: 0
+  m_SkySettings: {fileID: 0}
+  m_SkySettingsFromProfile: {fileID: 0}
+--- !u!4 &1743900567
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743900565}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1754183410 stripped
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 Transform:
   m_CorrespondingSourceObject: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
     type: 3}
@@ -17017,22 +19413,38 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 2079993777}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
     m_Modifications:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 95.729904
+=======
+      value: 143.9
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 1.8051335
+=======
+      value: 6.15
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 23.454891
+=======
+      value: 66.76
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
@@ -17057,7 +19469,11 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 98
+=======
+      value: 28
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
@@ -17077,16 +19493,25 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 0.20310965
+=======
+      value: 12.115657
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 0.20310962
+=======
+      value: 7.1554
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 0.20310964
       objectReference: {fileID: 0}
     - target: {fileID: 3006906665215668911, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -17097,6 +19522,13 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &483536197
+=======
+      value: 9.5826435
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1001 &1784638621
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -17430,6 +19862,7 @@ PrefabInstance:
       value: Seta_Grande_03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &488346609
 PrefabInstance:
@@ -17516,26 +19949,58 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &490196790
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: b778a11abf0ba6f418652985fe1e595d, type: 3}
+--- !u!4 &1806277529 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 441179166532758147, guid: b778a11abf0ba6f418652985fe1e595d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1806277528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1828156874 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 73877723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1830750599
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 1160488111}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
     m_Modifications:
     - target: {fileID: 441179166532758147, guid: b778a11abf0ba6f418652985fe1e595d,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 4.209485
+=======
+      value: 110.81
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 441179166532758147, guid: b778a11abf0ba6f418652985fe1e595d,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -4.275172
+=======
+      value: 0
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 441179166532758147, guid: b778a11abf0ba6f418652985fe1e595d,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 0.3568875
+=======
+      value: 60.45
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 441179166532758147, guid: b778a11abf0ba6f418652985fe1e595d,
         type: 3}
@@ -17560,7 +20025,11 @@ PrefabInstance:
     - target: {fileID: 441179166532758147, guid: b778a11abf0ba6f418652985fe1e595d,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 43
+=======
+      value: 16
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 441179166532758147, guid: b778a11abf0ba6f418652985fe1e595d,
         type: 3}
@@ -17585,7 +20054,11 @@ PrefabInstance:
     - target: {fileID: 441179166532758147, guid: b778a11abf0ba6f418652985fe1e595d,
         type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 3.051425
+=======
+      value: 7.812537
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 441179166532758147, guid: b778a11abf0ba6f418652985fe1e595d,
         type: 3}
@@ -17598,6 +20071,7 @@ PrefabInstance:
       value: Piedra_04 (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: b778a11abf0ba6f418652985fe1e595d, type: 3}
 --- !u!4 &490196791 stripped
 Transform:
@@ -17606,6 +20080,10 @@ Transform:
   m_PrefabInstance: {fileID: 490196790}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &491715708
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1001 &1836617157
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -17660,6 +20138,7 @@ PrefabInstance:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
+<<<<<<< HEAD
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
@@ -17779,10 +20258,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+      value: 156.113
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 160.845
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -17806,6 +20291,26 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &505382031
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1001 &1841727218
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -18241,6 +20746,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1771896156}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &520122619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18415,11 +20921,15 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!4 &520223693 stripped
+=======
+--- !u!4 &1868316992 stripped
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 Transform:
   m_CorrespondingSourceObject: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
     type: 3}
   m_PrefabInstance: {fileID: 307029816}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &521519861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18505,11 +21015,227 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
 --- !u!1001 &522312797
+=======
+  m_GameObject: {fileID: 1875991820}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: d28297cbaf2431e4395678ef62b0a6af, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &1875991822
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875991820}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: d28297cbaf2431e4395678ef62b0a6af, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 2100000, guid: 22ff8771d87ef27429e670136399094b, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ScaleInLightmap: 0.1024
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+--- !u!4 &1875991823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875991820}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -494.63815, y: 515.9769, z: 68.69069}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 443747305}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1878052625
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1878052627}
+  - component: {fileID: 1878052626}
+  m_Layer: 0
+  m_Name: TopRig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1878052626
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878052625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  - Header
+  - Extensions
+  - m_Priority
+  - m_Transitions
+  - m_Follow
+  - m_StandbyUpdate
+  - m_Lens
+  m_LockStageInInspector: 00000000
+  m_StreamingVersion: 20170927
+  m_Priority: 10
+  m_StandbyUpdate: 2
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_Lens:
+    FieldOfView: 40
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    LensShift: {x: 0, y: 0}
+    Iso: 200
+    ShutterSpeed: 0.005
+    Aperture: 16
+    BladeCount: 5
+    Curvature: {x: 2, y: 11}
+    BarrelClipping: 0.25
+    Anamorphism: 0
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_ComponentOwner: {fileID: 609014519}
+--- !u!4 &1878052627
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878052625}
+  m_LocalRotation: {x: 0.14869599, y: 1.4765712e-14, z: -9.819737e-14, w: 0.988883}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 609014519}
+  m_Father: {fileID: 79034747}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1882910445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1882910448}
+  - component: {fileID: 1882910447}
+  - component: {fileID: 1882910446}
+  m_Layer: 0
+  m_Name: Terrain_(-250.0, 0.0, 250.0)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!154 &1882910446
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882910445}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: 4393186a20b394f429aace536115303f, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &1882910447
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882910445}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: 4393186a20b394f429aace536115303f, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 2100000, guid: 22ff8771d87ef27429e670136399094b, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ScaleInLightmap: 0.1024
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+--- !u!4 &1882910448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882910445}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -744.6382, y: 515.9769, z: 68.69069}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 443747305}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1902029928
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 2079993777}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
     m_Modifications:
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
@@ -18598,17 +21324,29 @@ PrefabInstance:
     - target: {fileID: 29718485106743528, guid: 0bd9136b8d943fe41ac0dddd97d93a9b,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -26.822205
+=======
+      value: 144.54
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 29718485106743528, guid: 0bd9136b8d943fe41ac0dddd97d93a9b,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 2.6612701
+=======
+      value: 8.45
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 29718485106743528, guid: 0bd9136b8d943fe41ac0dddd97d93a9b,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 8.432304
+=======
+      value: 68.2
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 29718485106743528, guid: 0bd9136b8d943fe41ac0dddd97d93a9b,
         type: 3}
@@ -18633,7 +21371,11 @@ PrefabInstance:
     - target: {fileID: 29718485106743528, guid: 0bd9136b8d943fe41ac0dddd97d93a9b,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 1
+=======
+      value: 24
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 29718485106743528, guid: 0bd9136b8d943fe41ac0dddd97d93a9b,
         type: 3}
@@ -18653,7 +21395,11 @@ PrefabInstance:
     - target: {fileID: 29718485106743528, guid: 0bd9136b8d943fe41ac0dddd97d93a9b,
         type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 10.301901
+=======
+      value: 7.5016603
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
       objectReference: {fileID: 0}
     - target: {fileID: 29718485106743528, guid: 0bd9136b8d943fe41ac0dddd97d93a9b,
         type: 3}
@@ -18663,6 +21409,7 @@ PrefabInstance:
     - target: {fileID: 29718485106743528, guid: 0bd9136b8d943fe41ac0dddd97d93a9b,
         type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 5.8937583
       objectReference: {fileID: 0}
     - target: {fileID: 3905409325209365243, guid: 0bd9136b8d943fe41ac0dddd97d93a9b,
@@ -18677,6 +21424,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 29718485106743528, guid: 0bd9136b8d943fe41ac0dddd97d93a9b,
     type: 3}
   m_PrefabInstance: {fileID: 523062285}
+=======
+      value: 5.9939666
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1 &1918301132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1918301134}
+  - component: {fileID: 1918301133}
+  m_Layer: 0
+  m_Name: Render Settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1918301133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &523837913 stripped
 Transform:
@@ -70359,6 +73134,7 @@ PrefabInstance:
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
+<<<<<<< HEAD
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
@@ -70457,10 +73233,16 @@ PrefabInstance:
       value: -90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
+=======
+      value: -79.29401
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 156.113
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2297386075455865020, guid: 85b9f2109cbf5ec4ebd52d7544ee1279,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -70495,6 +73277,31 @@ Transform:
   m_PrefabInstance: {fileID: 1944238887}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2039869814
+=======
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 30.717001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+--- !u!1001 &2033177592
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -70849,6 +73656,7 @@ Transform:
   - {fileID: 2091360621}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2071654768
 PrefabInstance:
@@ -71606,6 +74414,8 @@ Transform:
   - {fileID: 991866484}
   m_Father: {fileID: 0}
   m_RootOrder: 10
+=======
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2080706597
 PrefabInstance:
@@ -72082,6 +74892,7 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &2092181441 stripped
+<<<<<<< HEAD
 Transform:
   m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
     type: 3}
@@ -72542,99 +75353,120 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38c2b4e7e9df10543b39609df396969a, type: 3}
 --- !u!4 &2100342365 stripped
+=======
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7401164704313593898, guid: 38c2b4e7e9df10543b39609df396969a,
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
     type: 3}
-  m_PrefabInstance: {fileID: 2100342364}
+  m_PrefabInstance: {fileID: 613661861}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2100977120
+--- !u!4 &2096556887 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1621929139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2098006989
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2079993777}
+    m_TransformParent: {fileID: 1304450894}
     m_Modifications:
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
+    - target: {fileID: 275346343533224930, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 167.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 26.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9913652
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.13113028
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 195.06999
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.370167
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.370167
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490979109469841584, guid: 226edc204681ff142986424d7771bd7c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5.3403664
-      objectReference: {fileID: 0}
-    - target: {fileID: 7804684024491317923, guid: 226edc204681ff142986424d7771bd7c,
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aaa595161ced918469f42edf661f58ed, type: 2}
+    - target: {fileID: 2012805597502773054, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_Name
-      value: Seta (10)
+      value: Piedra_judy
       objectReference: {fileID: 0}
-    - target: {fileID: 7804684024491317923, guid: 226edc204681ff142986424d7771bd7c,
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
-      propertyPath: m_Layer
-      value: 13
+      propertyPath: m_LocalPosition.x
+      value: -2.6629453
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.778113
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3169985
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.13360448
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
+      value: 0.9913652
+=======
+      value: -0.4015308
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39559713
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
+      value: -0.13113028
+=======
+      value: 0.81512314
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -22.097
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+<<<<<<< HEAD
+      value: 195.06999
+=======
+      value: 90.00001
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.620101
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8.172016
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.893396
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 226edc204681ff142986424d7771bd7c, type: 3}
 --- !u!4 &2100977121 stripped
 Transform:
@@ -72660,6 +75492,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 444590667}
   m_PrefabAsset: {fileID: 0}
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 --- !u!1001 &2113333038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72760,7 +75595,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1092788685}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 275346343533224930, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -72775,17 +75610,17 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.339241
+      value: 147.53
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.704736
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 31.231234
+      value: 60.81
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -72810,7 +75645,7 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -72840,10 +75675,11 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 6.3919053
+      value: 6.391905
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+<<<<<<< HEAD
 --- !u!4 &2114167740 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
@@ -73030,12 +75866,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b9f2109cbf5ec4ebd52d7544ee1279, type: 3}
+=======
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 --- !u!1001 &2117990073
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1092788685}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 275346343533224930, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -73050,17 +75888,17 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.900757
+      value: 107.29
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.704736
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.871233
+      value: 60.45
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -73085,7 +75923,7 @@ PrefabInstance:
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
         type: 3}
@@ -73119,6 +75957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc734b71b9f391647a86547aaa83416f, type: 3}
+<<<<<<< HEAD
 --- !u!4 &2117990074 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3293738668627649837, guid: cc734b71b9f391647a86547aaa83416f,
@@ -73143,6 +75982,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1225688705}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 0ac8372b... Terreno_Judy_19
 --- !u!1001 &2123359715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73890,22 +76731,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1092788685}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4994800078015771884, guid: 1e0b4a992c94bf54e831bed1f81e04f0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.22924
+      value: 152.42
       objectReference: {fileID: 0}
     - target: {fileID: 4994800078015771884, guid: 1e0b4a992c94bf54e831bed1f81e04f0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.504736
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4994800078015771884, guid: 1e0b4a992c94bf54e831bed1f81e04f0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.878767
+      value: -1.3
       objectReference: {fileID: 0}
     - target: {fileID: 4994800078015771884, guid: 1e0b4a992c94bf54e831bed1f81e04f0,
         type: 3}
@@ -73930,7 +76771,7 @@ PrefabInstance:
     - target: {fileID: 4994800078015771884, guid: 1e0b4a992c94bf54e831bed1f81e04f0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4994800078015771884, guid: 1e0b4a992c94bf54e831bed1f81e04f0,
         type: 3}
@@ -73947,11 +76788,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.221
       objectReference: {fileID: 0}
-    - target: {fileID: 4994800078015771884, guid: 1e0b4a992c94bf54e831bed1f81e04f0,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2142.6675
-      objectReference: {fileID: 0}
     - target: {fileID: 8289510554480920319, guid: 1e0b4a992c94bf54e831bed1f81e04f0,
         type: 3}
       propertyPath: m_Name
@@ -73964,22 +76800,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1092788685}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5492571251086115297, guid: a3000243f066d064e9f5ef0b0a98fe29,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.959236
+      value: 180.15
       objectReference: {fileID: 0}
     - target: {fileID: 5492571251086115297, guid: a3000243f066d064e9f5ef0b0a98fe29,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.504736
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 5492571251086115297, guid: a3000243f066d064e9f5ef0b0a98fe29,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.9787674
+      value: 24.6
       objectReference: {fileID: 0}
     - target: {fileID: 5492571251086115297, guid: a3000243f066d064e9f5ef0b0a98fe29,
         type: 3}
@@ -74004,7 +76840,7 @@ PrefabInstance:
     - target: {fileID: 5492571251086115297, guid: a3000243f066d064e9f5ef0b0a98fe29,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5492571251086115297, guid: a3000243f066d064e9f5ef0b0a98fe29,
         type: 3}
@@ -74021,11 +76857,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 101.482
       objectReference: {fileID: 0}
-    - target: {fileID: 5492571251086115297, guid: a3000243f066d064e9f5ef0b0a98fe29,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3820.028
-      objectReference: {fileID: 0}
     - target: {fileID: 8818841554242515954, guid: a3000243f066d064e9f5ef0b0a98fe29,
         type: 3}
       propertyPath: m_Name
@@ -74038,22 +76869,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1092788685}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5531559683271068912, guid: 56482e6fed579bf468cd6953306b7676,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.389244
+      value: 168.58
       objectReference: {fileID: 0}
     - target: {fileID: 5531559683271068912, guid: 56482e6fed579bf468cd6953306b7676,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.394735
+      value: -1.69
       objectReference: {fileID: 0}
     - target: {fileID: 5531559683271068912, guid: 56482e6fed579bf468cd6953306b7676,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 31.441233
+      value: 61.02
       objectReference: {fileID: 0}
     - target: {fileID: 5531559683271068912, guid: 56482e6fed579bf468cd6953306b7676,
         type: 3}
@@ -74078,7 +76909,7 @@ PrefabInstance:
     - target: {fileID: 5531559683271068912, guid: 56482e6fed579bf468cd6953306b7676,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5531559683271068912, guid: 56482e6fed579bf468cd6953306b7676,
         type: 3}
@@ -74094,16 +76925,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 163.09001
-      objectReference: {fileID: 0}
-    - target: {fileID: 5531559683271068912, guid: 56482e6fed579bf468cd6953306b7676,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3820.028
-      objectReference: {fileID: 0}
-    - target: {fileID: 5531559683271068912, guid: 56482e6fed579bf468cd6953306b7676,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2142.6675
       objectReference: {fileID: 0}
     - target: {fileID: 8835875421341384419, guid: 56482e6fed579bf468cd6953306b7676,
         type: 3}
@@ -74227,7 +77048,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1092788685}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5375771321587109634, guid: 6c485cdcad3e6764b958d8f693f1855e,
         type: 3}
@@ -74237,17 +77058,17 @@ PrefabInstance:
     - target: {fileID: 8989688776682405137, guid: 6c485cdcad3e6764b958d8f693f1855e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.250755
+      value: 114.94
       objectReference: {fileID: 0}
     - target: {fileID: 8989688776682405137, guid: 6c485cdcad3e6764b958d8f693f1855e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.504736
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 8989688776682405137, guid: 6c485cdcad3e6764b958d8f693f1855e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.508768
+      value: -0.93
       objectReference: {fileID: 0}
     - target: {fileID: 8989688776682405137, guid: 6c485cdcad3e6764b958d8f693f1855e,
         type: 3}
@@ -74272,7 +77093,7 @@ PrefabInstance:
     - target: {fileID: 8989688776682405137, guid: 6c485cdcad3e6764b958d8f693f1855e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8989688776682405137, guid: 6c485cdcad3e6764b958d8f693f1855e,
         type: 3}
@@ -74289,70 +77110,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 12.606001
       objectReference: {fileID: 0}
-    - target: {fileID: 8989688776682405137, guid: 6c485cdcad3e6764b958d8f693f1855e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3820.028
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c485cdcad3e6764b958d8f693f1855e, type: 3}
---- !u!4 &5006512734889925180 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4994800078015771884, guid: 1e0b4a992c94bf54e831bed1f81e04f0,
-    type: 3}
-  m_PrefabInstance: {fileID: 12293620462546640}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5006512735179745084 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8989688776682405137, guid: 6c485cdcad3e6764b958d8f693f1855e,
-    type: 3}
-  m_PrefabInstance: {fileID: 4160057900169157165}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5006512735248900563 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5492571251086115297, guid: a3000243f066d064e9f5ef0b0a98fe29,
-    type: 3}
-  m_PrefabInstance: {fileID: 667443953023852594}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5006512736406035858 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3738568774172400451, guid: acbb092afb7f5de47b3c8f65e970e2d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8545761372650768081}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5006512736510134978 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5531559683271068912, guid: 56482e6fed579bf468cd6953306b7676,
-    type: 3}
-  m_PrefabInstance: {fileID: 702201965330384434}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5006512736782754744 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1726046143513786255, guid: 89ef4c87a06d1a44283b632812ab3144,
-    type: 3}
-  m_PrefabInstance: {fileID: 5948851708950336567}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5948851708950336567
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1092788685}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1726046143513786255, guid: 89ef4c87a06d1a44283b632812ab3144,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.910759
+      value: 97.28
       objectReference: {fileID: 0}
     - target: {fileID: 1726046143513786255, guid: 89ef4c87a06d1a44283b632812ab3144,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.504736
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 1726046143513786255, guid: 89ef4c87a06d1a44283b632812ab3144,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 31.891233
+      value: 61.47
       objectReference: {fileID: 0}
     - target: {fileID: 1726046143513786255, guid: 89ef4c87a06d1a44283b632812ab3144,
         type: 3}
@@ -74377,7 +77157,7 @@ PrefabInstance:
     - target: {fileID: 1726046143513786255, guid: 89ef4c87a06d1a44283b632812ab3144,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1726046143513786255, guid: 89ef4c87a06d1a44283b632812ab3144,
         type: 3}
@@ -74394,11 +77174,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -114.91501
       objectReference: {fileID: 0}
-    - target: {fileID: 1726046143513786255, guid: 89ef4c87a06d1a44283b632812ab3144,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2142.6675
-      objectReference: {fileID: 0}
     - target: {fileID: 2427295108673340828, guid: 89ef4c87a06d1a44283b632812ab3144,
         type: 3}
       propertyPath: m_Name
@@ -74411,7 +77186,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1092788685}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 412441822078380368, guid: acbb092afb7f5de47b3c8f65e970e2d4,
         type: 3}
@@ -74421,17 +77196,17 @@ PrefabInstance:
     - target: {fileID: 3738568774172400451, guid: acbb092afb7f5de47b3c8f65e970e2d4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.610756
+      value: 86.58
       objectReference: {fileID: 0}
     - target: {fileID: 3738568774172400451, guid: acbb092afb7f5de47b3c8f65e970e2d4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.504736
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 3738568774172400451, guid: acbb092afb7f5de47b3c8f65e970e2d4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.628767
+      value: 24.95
       objectReference: {fileID: 0}
     - target: {fileID: 3738568774172400451, guid: acbb092afb7f5de47b3c8f65e970e2d4,
         type: 3}
@@ -74456,7 +77231,7 @@ PrefabInstance:
     - target: {fileID: 3738568774172400451, guid: acbb092afb7f5de47b3c8f65e970e2d4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3738568774172400451, guid: acbb092afb7f5de47b3c8f65e970e2d4,
         type: 3}
