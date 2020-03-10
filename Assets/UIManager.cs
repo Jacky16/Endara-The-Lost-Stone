@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if (inputManager.useGamepad) //Use Gamepad
+        if (InputManager.useGamepad) //Use Gamepad
         {
             if (pickUpObjects.IsCanvasCatchObject())
             {
