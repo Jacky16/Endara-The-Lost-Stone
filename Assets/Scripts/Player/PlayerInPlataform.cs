@@ -4,80 +4,19 @@ using UnityEngine;
 
 public class PlayerInPlataform : MonoBehaviour
 {
-    CharacterController player;
-    private Vector3 groundPosition;
-    private Vector3 lastGroundPosition;
-    private string groundName;
-    private string lastGroundName;
-    Quaternion actualRot;
-    Quaternion lastRot;
-    private bool isInPlattform = false;
-    PlayerMovement playerMovement;
-
-    [SerializeField] LayerMask platformLayerMask;
-
-    private void Start()
+  
+    private void OnTriggerEnter(Collider other)
     {
-        playerMovement = GetComponent<PlayerMovement>();
-        player = GetComponent<CharacterController>();
-    }
-    void Update()
-    {
-        movementInPlataforms();
-    }
-    public void movementInPlataforms()
-    {
-        if (isInPlattform)
+        if (other.gameObject.CompareTag("Player"))
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.2f, platformLayerMask))
-            {
-                GameObject groundedIn = hit.collider.gameObject;
-                groundName = groundedIn.name;
-                groundPosition = groundedIn.transform.position;
-                if (groundPosition != lastGroundPosition && groundName == lastGroundName)
-                {
-                    this.transform.position += groundPosition - lastGroundPosition;
-                    print( "hola");
-                }
-                if (actualRot != lastRot && groundName == lastGroundName)
-                {
-                    var newRot = this.transform.rotation * (actualRot.eulerAngles - lastRot.eulerAngles);
-                    this.transform.RotateAround(groundedIn.transform.position, Vector3.up, newRot.y);
-                }
-
-
-                lastGroundName = groundName;
-                lastGroundPosition = groundPosition;
-            }
-            
+            other.transform.parent = transform;
         }
-        else if (!isInPlattform)
-        {
-            lastGroundName = null;
-            lastGroundPosition = Vector3.zero;
-
-
-        }
-
-    }
-    //private void OnDrawGizmos()
-    //{
-    //   // Debug.DrawLine(player.transform.position / 8, player.transform.position + 6);
-    //}
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Caja")
-        {
-            isInPlattform = true;
-        }
-
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Caja")
+        if (other.gameObject.CompareTag("Player"))
         {
-            isInPlattform = false;
+            other.transform.parent = null;
         }
     }
 
