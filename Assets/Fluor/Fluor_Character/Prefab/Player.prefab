@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 1915429611}
   - component: {fileID: 1915429612}
   m_Layer: 2
-  m_Name: GameObject
+  m_Name: Sombra_Decal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922053246}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04211235, y: 0.647, z: 0.862}
+  m_LocalPosition: {x: 0.04211235, y: 0.73, z: 0.862}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3716199528688093773}
@@ -561,7 +561,6 @@ MonoBehaviour:
   respawnPosition: {fileID: 0}
   isGod: 0
   isInitialPosition: 0
-  pro: {fileID: 0}
 --- !u!54 &6393065030313248181
 Rigidbody:
   m_ObjectHideFlags: 0

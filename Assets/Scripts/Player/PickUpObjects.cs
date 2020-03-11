@@ -10,8 +10,6 @@ public class PickUpObjects : MonoBehaviour
     [HideInInspector]public GameObject objectToPickup;
     [HideInInspector]public GameObject PickedObject;
     Transform _interactionZone;
-    //[SerializeField] GameObject canvasCatchObject;
-    //[SerializeField] GameObject canvasThrowObject;
     bool _isCatched;
     bool _isCanvasCatchObject;
     bool _isCanvasThrowObject;

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,22 +11,29 @@ public class UIManager : MonoBehaviour
     PickUpObjects pickUpObjects;
     [Header("PC")]
 
-    [Header("Canvas Catch/Rotate Object")]
-    [SerializeField]
-    GameObject canvasCatchObject;
-    [SerializeField]
-    GameObject canvasThrowObject;
+    //[Header("Canvas Catch/Rotate Object")]
+    //[SerializeField]
+    //GameObject canvasCatchObject;
+    //[SerializeField]
+    //GameObject canvasThrowObject;
 
     [Header("Xbox")]
+
     [SerializeField]
-    GameObject canvasCatchObjectXbox;
+
+    GameObject _canvasCatchObjectXbox;
     [SerializeField]
+
+    RectTransform _recTransformCatchObjectXbox;
+    [SerializeField]
+
     GameObject canvasThrowObjectXbox;
 
+    PlayerGamepadInputs playerInputs = new PlayerGamepadInputs();
     private void Start()
     {
-        canvasCatchObjectXbox.SetActive(false);
-        canvasThrowObjectXbox.SetActive(false);
+       _canvasCatchObjectXbox.SetActive(true);
+        canvasThrowObjectXbox.SetActive(true);
     }
     private void Update()
     {
@@ -32,11 +41,14 @@ public class UIManager : MonoBehaviour
         {
             if (pickUpObjects.IsCanvasCatchObject())
             {
-                canvasCatchObjectXbox.SetActive(true);
+                // _canvasCatchObjectXbox.SetActive(true);
+                _recTransformCatchObjectXbox.DOScale(new Vector3(1, 1, 1), 0.3f);
+
             }
             else
             {
-                canvasCatchObjectXbox.SetActive(false);
+                _recTransformCatchObjectXbox.DOScale(new Vector3(0, 0, 0), 0.3f);
+               
             }
         }
         else
@@ -44,6 +56,15 @@ public class UIManager : MonoBehaviour
 
         }
 
+    }
+    void DisableCanvasCatchObjectXbox()
+    {
+        if (playerInputs.Player_GamepadXbox.X.triggered)
+        {
+            Sequence secuencia = DOTween.Sequence();
+            //secuencia.Append(_recTransformCatchObjectXbox.GetComponent<Image>().color.;
+            secuencia.Append(_recTransformCatchObjectXbox.DOScale(new Vector3(0, 0, 0), 0.3f));
+        }
     }
 
 }
