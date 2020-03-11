@@ -21,16 +21,25 @@ public class UIInputManager : MonoBehaviour
     }
     void UIManager()
     {
+        print(InputManager.useGamepad);
         if (InputManager.useGamepad)
         {
             if (pickUpObjects.IsCanvasCatchObject())
             {
                 _canvasThrowObject_Xbox.SetActive(false);
-                _canvasCatchObject_Xbox.SetActive(true);
+               _canvasCatchObject_Xbox.SetActive(true);
+            }
+            else
+            {
+                _canvasCatchObject_Xbox.SetActive(false);
             }
             if (pickUpObjects.IsCanvasThrowObject())
             {
                 _canvasThrowObject_Xbox.SetActive(true);
+                _canvasCatchObject_Xbox.SetActive(false);
+            }
+            else
+            {
                 _canvasCatchObject_Xbox.SetActive(false);
             }
         }

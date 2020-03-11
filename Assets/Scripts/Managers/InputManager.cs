@@ -93,11 +93,11 @@ public class  InputManager : MonoBehaviour
 
         //Comprobacion de pulsacion del boton de cojer en el Gamepad(X) y con el teclado(F)
        
-        if (playerInputs.Player_Keyboard.CatchObject.triggered || playerInputs.Player_GamepadXbox.X.triggered)
+        if (playerInputs.Player_Keyboard.CatchObject.triggered || playerInputs.Player_GamepadXbox.X.triggered && pickUpsObjects.objectToPickup != null)
         {
             pickUpsObjects.PillarElObjeto();
         }
-        if (playerInputs.Player_Keyboard.TrowObject.triggered || playerInputs.Player_GamepadXbox.RT.triggered)
+        else if (playerInputs.Player_Keyboard.TrowObject.triggered || playerInputs.Player_GamepadXbox.RT.triggered && pickUpsObjects.PickedObject!= null)
         {
             pickUpsObjects.ThrowObject();
         }

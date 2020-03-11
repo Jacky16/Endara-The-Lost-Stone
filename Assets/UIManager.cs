@@ -6,8 +6,6 @@ public class UIManager : MonoBehaviour
 {
     [Header("Referencias Scripts")]
     [SerializeField]
-    InputManager inputManager;
-    [SerializeField]
     PickUpObjects pickUpObjects;
     [Header("PC")]
 
@@ -23,28 +21,14 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     GameObject canvasThrowObjectXbox;
 
+    private void Start()
+    {
+        canvasCatchObjectXbox.SetActive(false);
+        canvasThrowObjectXbox.SetActive(false);
+    }
     private void Update()
     {
-        if (InputManager.useGamepad) //Use Gamepad
-        {
-            if (pickUpObjects.IsCanvasCatchObject())
-            {
-                canvasCatchObject.SetActive(true);
-            }
-            else
-            {
-                canvasCatchObject.SetActive(false);
-            }
-            if (pickUpObjects.IsCanvasThrowObject())
-            {
-                canvasThrowObject.SetActive(true);
-            }
-            else
-            {
-                canvasThrowObject.SetActive(false);
-            }
-        }
-        else // Use Keyboard
+        if (InputManager.useGamepad)
         {
             if (pickUpObjects.IsCanvasCatchObject())
             {
@@ -54,15 +38,12 @@ public class UIManager : MonoBehaviour
             {
                 canvasCatchObjectXbox.SetActive(false);
             }
-            if (pickUpObjects.IsCanvasThrowObject())
-            {
-                canvasThrowObjectXbox.SetActive(true);
-            }
-            else
-            {
-                canvasThrowObjectXbox.SetActive(false);
-            }
         }
+        else
+        {
+
+        }
+
     }
 
 }

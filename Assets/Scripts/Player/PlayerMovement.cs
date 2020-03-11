@@ -42,17 +42,13 @@ public class PlayerMovement : MonoBehaviour
     public float pushPower = 2f;
     [SerializeField] Transform respawnPosition;
     float unitsGod;
- 
-    //Maquinas de estados
-    enum PlayerStates{idle,walking,jumping};
-    PlayerStates playerStates;
+
 
     //Variables booleanas
     public static bool canMove = true;
     public bool isGod;
     [SerializeField] bool isInitialPosition;
     private bool doubleJump = true;
-
 
     private void Start()
     {

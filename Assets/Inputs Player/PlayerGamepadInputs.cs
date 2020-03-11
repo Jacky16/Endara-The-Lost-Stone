@@ -295,7 +295,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""05b3e80d-feba-41de-a244-3f77325e81a6"",
                     ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": ""Press(behavior=2)"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""New control scheme"",
                     ""action"": ""X"",
