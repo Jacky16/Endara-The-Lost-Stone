@@ -11,11 +11,11 @@ public class Enemy_1 : Enemy
     private void Start()
     {
     }
-    public override void AttackPlayer()
+    public override void NearAttackPlayer()
     {
         if (!explosionRand)
         {
-            if (BetweenDistance < radiusAttack && isInFov)
+            if (BetweenDistance < nearRadiusAttack && isInFov)
             {
                 navMeshAgent.SetDestination(player.position);
                 Debug.Log("Estoy atacando al player");
@@ -24,7 +24,7 @@ public class Enemy_1 : Enemy
         }
         else
         {
-            if (BetweenDistance <= radiusAttack)
+            if (BetweenDistance <= nearRadiusAttack)
             {
                 Invoke("Explosion", 2);
                 navMeshAgent.speed = 0;
@@ -46,6 +46,11 @@ public class Enemy_1 : Enemy
     {
         return damageExplosion/3.0f;
     }
+    public override void FarAttackPlayer()
+    {
+
+    }
+
     public float Damage()
     {
         return attackDamage;

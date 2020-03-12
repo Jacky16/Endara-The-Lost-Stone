@@ -104,8 +104,6 @@ public class PlayerMovement : MonoBehaviour
     
     public void SetGravity()
     {
-        //Debug.Log("Fall velocity is: " + player.velocity.y);
-
         if (isGod)
         {
             ModeGod();
@@ -130,7 +128,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void ModeGod()
     {
-
         unitsGod = godManager.UnitsToJumpInModeGod();
         if (isGod)
         {
@@ -150,7 +147,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void JumpPlayer()
     {
-
         if (InputManager.playerInputs.Player_GamepadXbox.A.triggered || InputManager.playerInputs.Player_Keyboard.Jump.triggered)
         {
            
@@ -201,7 +197,6 @@ public class PlayerMovement : MonoBehaviour
             transform.position = initialPosition.position;
            
         }
-
     }
     public void Axis(float h, float v){
         horizontal = h;
@@ -211,7 +206,6 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.DOLocalRotate(new Vector3(0, 360, 0), .5f,RotateMode.LocalAxisAdd).OnComplete(() => attackCollider.enabled = false);
         attackCollider.enabled = true;
-
     }
     public void SetRespawn(Transform t)
     {

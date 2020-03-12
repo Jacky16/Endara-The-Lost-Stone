@@ -62,9 +62,18 @@ public class UIManager : MonoBehaviour
         if (playerInputs.Player_GamepadXbox.X.triggered)
         {
             Sequence secuencia = DOTween.Sequence();
-            //secuencia.Append(_recTransformCatchObjectXbox.GetComponent<Image>().color.;
-            secuencia.Append(_recTransformCatchObjectXbox.DOScale(new Vector3(0, 0, 0), 0.3f));
+
+            secuencia.Append(_recTransformCatchObjectXbox.DOScale(new Vector3(0, 0, 0), 0.3f)).PrependCallback(ChangeToGray).AppendCallback(ChangeToWhite);
         }
     }
+    void ChangeToGray()
+    {
+        _recTransformCatchObjectXbox.GetComponent<Image>().color = Color.gray;
+    }
+    void ChangeToWhite()
+    {
+        _recTransformCatchObjectXbox.GetComponent<Image>().color = Color.white;
+    }
+
 
 }

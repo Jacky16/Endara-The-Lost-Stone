@@ -454,7 +454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44683827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.418793, y: 13.19, z: 53.92487}
+  m_LocalPosition: {x: -38.418793, y: 13.19, z: 53.924873}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1509918352}
@@ -1817,8 +1817,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204765641}
-  m_LocalRotation: {x: 0.15556294, y: -0.59449726, z: 0.118574776, w: 0.7799444}
-  m_LocalPosition: {x: -38.418793, y: 13.19, z: 53.92487}
+  m_LocalRotation: {x: 0.15556291, y: -0.5944976, z: 0.11857484, w: 0.7799441}
+  m_LocalPosition: {x: -38.418793, y: 13.19, z: 53.924873}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3594,7 +3594,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 476576514}
-  m_LocalRotation: {x: 0.15556355, y: -0.5944971, z: 0.118573904, w: 0.77994454}
+  m_LocalRotation: {x: 0.15556356, y: -0.5944974, z: 0.11857396, w: 0.7799443}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11084,7 +11084,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200054971}
-  m_LocalRotation: {x: 0.12847726, y: -0.5982448, z: 0.0979294, w: 0.7848608}
+  m_LocalRotation: {x: 0.12847725, y: -0.5982451, z: 0.09792947, w: 0.7848607}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13548,7 +13548,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509918350}
-  m_LocalRotation: {x: 0.18272416, y: -0.5899904, z: 0.13927753, w: 0.7740317}
+  m_LocalRotation: {x: 0.18272415, y: -0.5899907, z: 0.13927762, w: 0.77403146}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -15898,6 +15898,10 @@ PrefabInstance:
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 204765644}
+    - target: {fileID: 670990543, guid: 8bf80693c3025e440ba8e4aba27663be, type: 3}
+      propertyPath: jumpForce
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 417091012288804958, guid: 8bf80693c3025e440ba8e4aba27663be,
         type: 3}
       propertyPath: m_Name

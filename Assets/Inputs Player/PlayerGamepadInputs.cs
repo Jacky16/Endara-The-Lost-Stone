@@ -285,7 +285,7 @@ public class @PlayerGamepadInputs : IInputActionCollection, IDisposable
                     ""id"": ""11a4b08e-b8e2-4a09-af2f-bb034fd2d266"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": ""NormalizeVector2"",
+                    ""processors"": """",
                     ""groups"": ""New control scheme"",
                     ""action"": ""RightJostyck"",
                     ""isComposite"": false,

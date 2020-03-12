@@ -8,7 +8,7 @@ public class Enemy3 : Enemy
     [SerializeField]GameObject rayoPrefab;
     float counter;
     [SerializeField] float timeToShoot;
-    public override void AttackPlayer()
+    public override void NearAttackPlayer()
     {
         navMeshAgent.speed = 0;
         Vector3 rotationDirection = (player.position - transform.position).normalized;
@@ -27,6 +27,10 @@ public class Enemy3 : Enemy
         }
 
        // StartCoroutine(CoroutineLanzarRayo());
+    }
+    public override void FarAttackPlayer()
+    {
+
     }
 
     public void Dead()

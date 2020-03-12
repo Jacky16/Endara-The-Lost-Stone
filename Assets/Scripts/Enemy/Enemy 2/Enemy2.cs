@@ -5,19 +5,31 @@ using UnityEngine.AI;
 
 public class Enemy2 : Enemy
 {
-    [SerializeField] GameObject rockPrefab;
+    [SerializeField] GameObject _rockPrefab;
     float counter;
-    [SerializeField] float timeToShoot;
-    public override void AttackPlayer()
+    [SerializeField] float _timeToShoot;
+    public override void NearAttackPlayer()
     {
+        anim.SetTrigger("nearAttack");
+    }
+    public override void FarAttackPlayer()
+    {
+        anim.SetTrigger("farAttack");
         navMeshAgent.speed = 0;
+        navMeshAgent.SetDestination(Vector3.zero);
         Vector3 rotationDirection = (player.position - transform.position).normalized;
         Quaternion rotationToPlayer = Quaternion.LookRotation(rotationDirection);
-        transform.rotation = Quaternion.Lerp(transform.rotation,rotationToPlayer, 1 * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotationToPlayer, 1.5f * Time.deltaTime);
         if (!isInFov)
         {
             EnemyStates = States.FollowPath;
         }
         //Instanciar rocas
     }
+
+    void InvokeRock()
+    {
+
+    }
+
 }
