@@ -1,6 +1,6 @@
-Layer Selection: Default
+Layer Selection: Terrain
 Brush Max Size: 20
-Brush Size: 1,72
+Brush Size: 1,15
 Fill Mode: True
 Fill Rate: 0,069
 
@@ -15,7 +15,7 @@ Random Rotation Y: True
 Random Rotation Z: False
 Random Scale Toggle: True
 Random Scale Min: 3
-Random Scale Max: 5
+Random Scale Max: 9
 Fixed Rotation Toggle: True
 Fixed Rotation X: -90
 Fixed Rotation Y: 0
