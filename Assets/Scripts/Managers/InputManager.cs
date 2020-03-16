@@ -7,7 +7,8 @@ public class  InputManager : MonoBehaviour
 {
     public PlayerMovement player;
     public PickUpObjects pickUpsObjects;
-    public static PlayerGamepadInputs playerInputs;
+    public static InputsPlayer playerInputs;
+    [SerializeField] PlayerInput playerInput;
     [SerializeField] CinemachineFreeLook playerCameraVirtual;
     //Variables bools para los controles de movimiento
     bool isJostickLeftPressed;
@@ -21,9 +22,12 @@ public class  InputManager : MonoBehaviour
     public static bool useGamepad;
     Gamepad gamepad;
     Keyboard keyboard;
+    public enum ControlsState { PS4,Xbox,KeyBoard};
+    public static ControlsState controlsState;
     private void Awake()
     {
-        playerInputs = new PlayerGamepadInputs();
+        //playerInputs = new InputsPlayer();
+        playerInput = GetComponent<PlayerInput>();
         gamepad = InputSystem.GetDevice<Gamepad>();
         keyboard = InputSystem.GetDevice<Keyboard>();
     }
@@ -48,6 +52,20 @@ public class  InputManager : MonoBehaviour
         }
         //Enviar info al player
         player.Axis(H(),V());
+
+        //switch (playerInput.currentControlScheme)
+        //{
+        //    case "KeyboardMouse":
+        //        print("KeyboardMouse");
+        //        break; 
+        //    case "Xbox":
+        //        print("Xbox");
+        //        break;
+        //    case "PS4":
+        //        print("PS4");
+        //        break;
+        //}
+
     }
     void MeleAttack()
     {
@@ -57,6 +75,11 @@ public class  InputManager : MonoBehaviour
             
         }
     }
+    //public void OnMovement()
+    //{
+    //    print("Me estoy Moviendo");
+    //}
+    
     void ReadValuesGamePad()
     {
         if (useGamepad)
@@ -181,5 +204,5 @@ public class  InputManager : MonoBehaviour
     public void OnDisable()
     {
         playerInputs.Disable();
-    }   
+    }
 }

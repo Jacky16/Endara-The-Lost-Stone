@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
 
     GameObject canvasThrowObjectXbox;
 
-    PlayerGamepadInputs playerInputs = new PlayerGamepadInputs();
+    InputsPlayer playerInputs = new InputsPlayer();
     private void Start()
     {
        _canvasCatchObjectXbox.SetActive(true);
