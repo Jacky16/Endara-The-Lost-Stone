@@ -398,11 +398,6 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""devicePath"": ""<Mouse>"",
                     ""isOptional"": false,
                     ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<VirtualMouse>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
                 }
             ]
         },

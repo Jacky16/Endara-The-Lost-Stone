@@ -9,7 +9,7 @@ public class  InputManager : MonoBehaviour
     [SerializeField] PickUpObjects _pickUpsObjects;
     [SerializeField] CinemachineFreeLook _freeLookCamera;
     public static InputsPlayer playerInputs;
-    PlayerInput playerInput;
+    public PlayerInput playerInput;
     //Variables bools para los controles de movimiento
     bool isJostickLeftPressed;
     bool isJostickRightPressed;
@@ -38,7 +38,21 @@ public class  InputManager : MonoBehaviour
         playerInputs.PlayerInputs.MovementCamera.canceled += ctx => LookCamera = Vector3.zero;
 
     }
-
+    private void Update()
+    {
+        switch (playerInput.currentControlScheme)
+        {
+            case "PS4":
+                print("PS4");
+                break;
+            case "Xbox":
+                print("Xbox");
+                break; 
+            case "KeyboardMouse":
+                print("KeyboardMouse");
+                break;
+        }
+    }
     public void JumpPlayer(InputAction.CallbackContext ctx)
     {
         if (ctx.started)
