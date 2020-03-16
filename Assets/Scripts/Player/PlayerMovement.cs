@@ -98,7 +98,10 @@ public class PlayerMovement : MonoBehaviour
 
 
         SetGravity();
-        //JumpPlayer();
+        if (InputManager.playerInputs.PlayerInputs.Jump.triggered)
+        {
+            JumpPlayer();
+        }
         player.Move(movePlayer  * (speed * Time.deltaTime));
     }
     

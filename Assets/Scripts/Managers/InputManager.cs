@@ -52,19 +52,13 @@ public class  InputManager : MonoBehaviour
                 print("KeyboardMouse");
                 break;
         }
-    }
-    public void JumpPlayer(InputAction.CallbackContext ctx)
-    {
-        if (ctx.started)
+        if (playerInputs.PlayerInputs.CatchObject.triggered) //Catch object
         {
-            _player.JumpPlayer();
+            _pickUpsObjects.PillarElObjeto();
         }
+       
     }
-    
-    public void CatchObject()
-    {
-        _pickUpsObjects.PillarElObjeto();
-    }
+ 
     //public void ThrowObject()
     //{
     //    _pickUpsObjects.ThrowObject();
