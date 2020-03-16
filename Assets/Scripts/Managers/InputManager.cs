@@ -5,11 +5,11 @@ using UnityEngine.InputSystem;
 using Cinemachine;
 public class  InputManager : MonoBehaviour
 {
-    public PlayerMovement player;
-    public PickUpObjects pickUpsObjects;
+    [SerializeField] PlayerMovement _player;
+    [SerializeField] PickUpObjects _pickUpsObjects;
+    [SerializeField] CinemachineFreeLook _freeLookCamera;
     public static InputsPlayer playerInputs;
-    [SerializeField] PlayerInput playerInput;
-    [SerializeField] CinemachineFreeLook playerCameraVirtual;
+    PlayerInput playerInput;
     //Variables bools para los controles de movimiento
     bool isJostickLeftPressed;
     bool isJostickRightPressed;
@@ -20,189 +20,98 @@ public class  InputManager : MonoBehaviour
     bool isButtonGampedadAimPressed;
     Vector2 vector2Axis;
     public static bool useGamepad;
-    Gamepad gamepad;
-    Keyboard keyboard;
+
+    private Vector2 LookCamera; // your LookDelta
+    public float deadZoneX = 0.2f;
+
+
+
     public enum ControlsState { PS4,Xbox,KeyBoard};
     public static ControlsState controlsState;
     private void Awake()
     {
-        //playerInputs = new InputsPlayer();
+        playerInputs = new InputsPlayer();
         playerInput = GetComponent<PlayerInput>();
-        gamepad = InputSystem.GetDevice<Gamepad>();
-        keyboard = InputSystem.GetDevice<Keyboard>();
-    }
-    private void Update() {
-        MeleAttack();
-        ReadValuesGamePad();
-        CheckButtonArePressed();
-        ChangeAxisCamera();
-        if (isJostickLeftPressed || isJostickRightPressed)
-        {
-            //Debug.Log("Estoy tocando el mando...");
-            useGamepad = true;
-
-        }
-        else if(Input.anyKey || Input.GetAxis("Mouse Y") > 0.01f || Input.GetAxis("Mouse X") > 0.01f)
-        {
-            useGamepad = false;
-        }
-        else
-        {
-            useGamepad = true;
-        }
-        //Enviar info al player
-        player.Axis(H(),V());
-
-        //switch (playerInput.currentControlScheme)
-        //{
-        //    case "KeyboardMouse":
-        //        print("KeyboardMouse");
-        //        break; 
-        //    case "Xbox":
-        //        print("Xbox");
-        //        break;
-        //    case "PS4":
-        //        print("PS4");
-        //        break;
-        //}
+       
+        playerInputs.PlayerInputs.MovementCamera.performed += ctx => LookCamera = ctx.ReadValue<Vector2>().normalized;
+        playerInputs.PlayerInputs.MovementCamera.performed += ctx => GetInput();
+        playerInputs.PlayerInputs.MovementCamera.canceled += ctx => LookCamera = Vector3.zero;
 
     }
-    void MeleAttack()
+
+    public void JumpPlayer(InputAction.CallbackContext ctx)
     {
-        if (playerInputs.Player_GamepadXbox.B.triggered || playerInputs.Player_Keyboard.Attack.triggered)
+        if (ctx.started)
         {
-            player.MeleAtack();
-            
+            _player.JumpPlayer();
         }
     }
-    //public void OnMovement()
-    //{
-    //    print("Me estoy Moviendo");
-    //}
     
-    void ReadValuesGamePad()
+    public void CatchObject()
     {
-        if (useGamepad)
-        {
-            vector2Axis = playerInputs.Player_GamepadXbox.LeftJostyck.ReadValue<Vector2>();
-        }
-        else
-        {
-            vector2Axis = playerInputs.Player_Keyboard.Movement.ReadValue<Vector2>();
-        }
+        _pickUpsObjects.PillarElObjeto();
     }
-    void CheckButtonArePressed()
+    //public void ThrowObject()
+    //{
+    //    _pickUpsObjects.ThrowObject();
+    //}
+
+    public void GetInputValueToCamera()
     {
-        //Comprobacion de pulsacion de los josticks IZQUIERDOS
-        playerInputs.Player_GamepadXbox.LeftJostyck.performed += x => isJostickLeftPressed = true;
-        playerInputs.Player_GamepadXbox.LeftJostyck.canceled += x => isJostickLeftPressed = false;
+        Vector2 axisCamera = playerInputs.PlayerInputs.MovementCamera.ReadValue<Vector2>();
+        print(axisCamera);
+        _freeLookCamera.m_XAxis.Value = axisCamera.x;
+        _freeLookCamera.m_YAxis.Value = axisCamera.y;
+    }
+    private void GetInput()
+    {
+        CinemachineCore.GetInputAxis = GetAxisCustom;
+    }
 
-        //Comprobacion de pulsacion de los josticks DERECHOS (para la camara)
-        playerInputs.Player_GamepadXbox.RightJostyck.performed += x => isJostickRightPressed = true;
-        playerInputs.Player_GamepadXbox.RightJostyck.canceled += x => isJostickRightPressed = false;
+    public float GetAxisCustom(string axisName)
+    {
+        // LookCamera.Normalize();
 
-        //Comprobar si se estan usando las teclas WASD
-        playerInputs.Player_Keyboard.Movement.performed += x => isWASDIsPressed = true;
-        playerInputs.Player_Keyboard.Movement.canceled += x => isWASDIsPressed = false;
-
-        //Comprobacion de pulsacion del boton de cojer en el Gamepad(X) y con el teclado(F)
-        if (playerInputs.Player_Keyboard.CatchObject.triggered || playerInputs.Player_GamepadXbox.X.triggered && pickUpsObjects.objectToPickup != null)
+        if (axisName == "Mouse X")
         {
-            pickUpsObjects.PillarElObjeto();
-        }
-        else if (playerInputs.Player_Keyboard.TrowObject.triggered || playerInputs.Player_GamepadXbox.RT.triggered && pickUpsObjects.PickedObject!= null)
-        {
-            pickUpsObjects.ThrowObject();
-        }
-        //Rotacion del objeto pickeado
-        if (gamepad != null)
-        {
-            if (gamepad.rightShoulder.isPressed)
+            if (LookCamera.x > deadZoneX || LookCamera.x < -deadZoneX) // To stabilise Cam and prevent it from rotating when LookCamera.x value is between deadZoneX and - deadZoneX
             {
-                pickUpsObjects.Rotate_R(5);
-            }
-            if (gamepad.leftShoulder.isPressed)
-            {
-                pickUpsObjects.Rotate_L(5);
+                return LookCamera.x;
             }
         }
-        if (keyboard.rKey.isPressed)
-        {
-            pickUpsObjects.Rotate_R(5);
-        }
-        //Comprobacion del boton de apuntar en el raton(Click Derecho)
-        playerInputs.Player_Keyboard.Aim.performed += x => RightClickMouseTrue();
-        playerInputs.Player_Keyboard.Aim.canceled += x => RightClickMouseFalse();
-    }
-    void ChangeAxisCamera()
-    {
-        if (PlayerMovement.canMove)
-        if (useGamepad && playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().magnitude > 0.2f)
-        {
-            playerCameraVirtual.m_XAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().x;
-            playerCameraVirtual.m_YAxis.m_InputAxisValue = playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>().y;
 
-            //Cambiar los nombres de los inputs a null
-            playerCameraVirtual.m_XAxis.m_InputAxisName = null;
-            playerCameraVirtual.m_YAxis.m_InputAxisName = null;
-            print(playerInputs.Player_GamepadXbox.RightJostyck.ReadValue<Vector2>());
-        }
-        else
+        else if (axisName == "Mouse Y")
         {
-            playerCameraVirtual.m_XAxis.m_InputAxisName = "Mouse X";
-            playerCameraVirtual.m_YAxis.m_InputAxisName = "Mouse Y";
-            playerCameraVirtual.m_XAxis.m_InputAxisValue = 0;
-        }   playerCameraVirtual.m_YAxis.m_InputAxisValue = 0;
+            return LookCamera.y;
+        }
+
+        return 0;
     }
-    void RightClickMouseTrue()
+
+    public void RotateObject_L(float r)
     {
-        isMouseRightClickPressed = true;
-    }
-    void RightClickMouseFalse()
+        _pickUpsObjects.Rotate_L(r);
+    } 
+    public void RotateObject_R(float r)
     {
-        isMouseRightClickPressed = false;
+        _pickUpsObjects.Rotate_R(r);   
     }
-    #region Metodos
-    //Recogue los valores para los inputs
-    public float H()
+
+    public Vector2 Vector2Movement()
     {
-        return vector2Axis.x;
+        Vector2 movement = playerInputs.PlayerInputs.Movement.ReadValue<Vector2>();
+        return movement;
     }
-    public float V(){
-        return vector2Axis.y;
-    }
-    public bool IsJostickLeftPressed()
-    {
-        return isJostickLeftPressed;
-    }
-    public bool IsJostickRightPressed()
-    {
-        return isJostickRightPressed;
-    }
-    public bool IsWASDIsPressed() 
-    {
-        return isWASDIsPressed;
-    }
-    public bool CanJump()
-    {
-        return canJump;
-    }
-    public bool IsRightClickMousePressed()
-    {
-        return isMouseRightClickPressed;
-    }
-    public bool IsAimButtonGamepadPressed()
-    {
-        return isButtonGampedadAimPressed;
-    }
-    #endregion
-    //Logica para el input System
-    public void OnEnable()
+    
+    private void OnEnable()
     {
         playerInputs.Enable();
     }
-    public void OnDisable()
+    private void OnDisable()
     {
         playerInputs.Disable();
     }
+
+
+
 }

@@ -28,10 +28,10 @@ public class CofreManager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (InputManager.playerInputs.Player_Keyboard.CatchObject.triggered || InputManager.playerInputs.Player_GamepadXbox.X.triggered && !isInCanvas)
-            {
-                anim.SetTrigger("Open");
-            }
+            //if (InputManager.playerInputs.Player_Keyboard.CatchObject.triggered || InputManager.playerInputs.Player_GamepadXbox.X.triggered && !isInCanvas)
+            //{
+            //    anim.SetTrigger("Open");
+            //}
             canvasCofre.SetActive(true);
         }
     }
