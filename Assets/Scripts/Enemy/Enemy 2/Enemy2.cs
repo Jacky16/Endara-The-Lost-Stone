@@ -26,7 +26,10 @@ public class Enemy2 : Enemy
         }
         //Instanciar rocas
     }
-
+    private void Update()
+    {
+        anim.SetBool("isInFov", isInFov);
+    }
     void InvokeRock()
     {
 

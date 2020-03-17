@@ -32,12 +32,13 @@ public abstract class Enemy : MonoBehaviour
     protected float BetweenDistance;
     //Maquina de estados
     protected enum States { Chase, NearAttack,FarAttack, FollowPath };
-    protected States EnemyStates;
+    [SerializeField]protected States EnemyStates;
     private void Start()
     {
-        _speed = Random.Range(2, 4);
+       // _speed = Random.Range(2, 4);
         anim = GetComponent<Animator>();
         _nextPosition = 0;
+        EnemyStates = States.FollowPath;
     }
 
     #region FovLogic
