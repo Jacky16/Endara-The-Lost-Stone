@@ -1199,7 +1199,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122496436}
-  m_LocalRotation: {x: 0.34624243, y: -0.00000004104223, z: 0.00000001514751, w: 0.9381451}
+  m_LocalRotation: {x: 0.34624243, y: -0.000000041040572, z: 0.000000015146897, w: 0.9381451}
   m_LocalPosition: {x: 137.7, y: 7.2, z: 28.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -9630,7 +9630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 9277117cbdcecc74ab1cfce255e9c4e9,
     type: 3}
-  m_NotificationBehavior: 1
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 963970458}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -9647,18 +9647,7 @@ MonoBehaviour:
     m_ActionId: 5f99b9c4-5446-404c-a98f-a55f8ba899b5
     m_ActionName: PlayerInputs/Movement[/DualShock4GamepadHID/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1131775122}
-        m_MethodName: JumpPlayer
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 19502128-2746-4414-91c7-579919f8f028
     m_ActionName: PlayerInputs/Jump[/DualShock4GamepadHID/buttonSouth,/Keyboard/space]
   - m_PersistentCalls:
@@ -9684,7 +9673,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1131775122}
         m_MethodName: RotateObject_L
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9692,7 +9681,7 @@ MonoBehaviour:
           m_FloatArgument: 5
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_ActionId: 425e9e4c-b750-468e-a849-b6cb95a67102
     m_ActionName: PlayerInputs/RotationObject_L[/DualShock4GamepadHID/leftShoulder]
   - m_PersistentCalls:
@@ -9719,7 +9708,7 @@ MonoBehaviour:
     m_ActionId: e33c4fb5-e5dd-4bc6-aa94-92eb03345af2
     m_ActionName: PlayerInputs/MovementCamera[/Mouse/delta,/DualShock4GamepadHID/rightStick]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: KeyboardMouse
+  m_DefaultControlScheme: Xbox
   m_DefaultActionMap: PlayerInputs
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 122496440}
@@ -11878,7 +11867,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381563033}
-  m_LocalRotation: {x: 0.32916608, y: -0.000000036048387, z: 0.00000010341127, w: 0.94427204}
+  m_LocalRotation: {x: 0.32916608, y: -0.00000003604838, z: 0.00000010341125, w: 0.9442721}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13619,7 +13608,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615374222}
-  m_LocalRotation: {x: 0.3632495, y: -0.0000001365313, z: 0.00000029688755, w: 0.93169194}
+  m_LocalRotation: {x: 0.36324948, y: -0.000000112026, z: 0.00000028733342, w: 0.93169194}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -16273,7 +16262,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913948596}
-  m_LocalRotation: {x: 0.3462424, y: -0.00000018798856, z: 0.00000043903495, w: 0.9381451}
+  m_LocalRotation: {x: 0.3462424, y: -0.00000018798633, z: 0.00000043903424, w: 0.9381451}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

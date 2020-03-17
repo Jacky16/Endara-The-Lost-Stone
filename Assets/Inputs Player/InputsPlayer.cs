@@ -54,9 +54,9 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""name"": ""RotationObject_L"",
                     ""type"": ""Button"",
                     ""id"": ""425e9e4c-b750-468e-a849-b6cb95a67102"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Hold""
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""RotationObject_R"",
@@ -72,7 +72,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""id"": ""52be8462-97e2-4051-bf40-4fee0f95a8c6"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Tap""
                 },
                 {
                     ""name"": ""MovementCamera"",
@@ -107,7 +107,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""2D Vector"",
+                    ""name"": ""WASD"",
                     ""id"": ""9f52b5fb-a21e-4134-a466-6a2233398cda"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",

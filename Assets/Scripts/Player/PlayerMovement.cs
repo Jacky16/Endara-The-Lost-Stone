@@ -98,10 +98,9 @@ public class PlayerMovement : MonoBehaviour
 
 
         SetGravity();
-        if (InputManager.playerInputs.PlayerInputs.Jump.triggered)
-        {
-            JumpPlayer();
-        }
+       
+        JumpPlayer();
+        
         player.Move(movePlayer  * (speed * Time.deltaTime));
     }
     
@@ -150,30 +149,34 @@ public class PlayerMovement : MonoBehaviour
     }
     public void JumpPlayer()
     {
-
-        if (!doubleJump)
+        if (InputManager.playerInputs.PlayerInputs.Jump.triggered)
         {
-            return;
 
+            if (!doubleJump)
+            {
+                return;
+
+            }
+
+            if (!player.isGrounded)
+            {
+                doubleJump = false;
+
+            }
+            Debug.Log("He saltado");
+            fallvelocity = jumpForce;
+            movePlayer.y = fallvelocity;
+            anim.SetTrigger("PlayerJump");
         }
-
-        if (!player.isGrounded)
-        {
-            doubleJump = false;
-
-        }
-        Debug.Log("He saltado");
-        fallvelocity = jumpForce;
-        movePlayer.y = fallvelocity;
-        anim.SetTrigger("PlayerJump");
-
 
         if (!doubleJump && player.isGrounded)
         {
             doubleJump = true;
         }
-   
+
     }
+
+
     void CamDirection()
     {
         camForward = mainCam.transform.forward;

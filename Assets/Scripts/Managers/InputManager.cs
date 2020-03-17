@@ -47,22 +47,30 @@ public class  InputManager : MonoBehaviour
                 break;
             case "Xbox":
                 print("Xbox");
-                break; 
+                break;
             case "KeyboardMouse":
                 print("KeyboardMouse");
                 break;
         }
+
         if (playerInputs.PlayerInputs.CatchObject.triggered) //Catch object
         {
             _pickUpsObjects.PillarElObjeto();
         }
-       
+        //Rotate Object L
+        if (playerInputs.PlayerInputs.RotationObject_L.triggered)
+        {
+            _pickUpsObjects.Rotate_L(15);
+        }
+        //Rotate Object R
+        if (playerInputs.PlayerInputs.RotationObject_R.triggered)
+        {
+            _pickUpsObjects.Rotate_R(15);
+        }
+
+        playerInputs.PlayerInputs.Attack.performed += ctx => _player.MeleAtack();
+
     }
- 
-    //public void ThrowObject()
-    //{
-    //    _pickUpsObjects.ThrowObject();
-    //}
 
     public void GetInputValueToCamera()
     {
@@ -94,15 +102,6 @@ public class  InputManager : MonoBehaviour
         }
 
         return 0;
-    }
-
-    public void RotateObject_L(float r)
-    {
-        _pickUpsObjects.Rotate_L(r);
-    } 
-    public void RotateObject_R(float r)
-    {
-        _pickUpsObjects.Rotate_R(r);   
     }
 
     public Vector2 Vector2Movement()
