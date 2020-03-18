@@ -14,6 +14,7 @@ TagManager:
   - Enemy1
   - Cola
   - Muerte
+  - Enemy2
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,10 @@ using UnityEngine.AI;
 
 public class Enemy2 : Enemy
 {
+    [Header("Propiedades Roca")]
     [SerializeField] GameObject _rockPrefab;
+    GameObject _currentRockPrefab;
+    [SerializeField] Transform _transformRockPrefab;
     float counter;
     [SerializeField] float _timeToShoot;
     public override void NearAttackPlayer()
@@ -24,15 +27,36 @@ public class Enemy2 : Enemy
         {
             EnemyStates = States.FollowPath;
         }
-        //Instanciar rocas
+       
     }
-    private void Update()
+
+   
+    void ThrowRock()
     {
-        anim.SetBool("isInFov", isInFov);
+        _currentRockPrefab.transform.SetParent(null);
+        Speed speed = _currentRockPrefab.GetComponent<Speed>();
+        Vector3 dir = player.position - transform.position;
+        speed.ShootRock(dir.normalized, true);
     }
     void InvokeRock()
     {
+       _currentRockPrefab = Instantiate(_rockPrefab, _transformRockPrefab.position, Quaternion.identity,transform) as GameObject;
+       
+    }
+    public void CheckRock()
+    {
+        if (_currentRockPrefab)
+        {
+            Rigidbody rb = _currentRockPrefab.GetComponent<Rigidbody>();
+            Vector3 velocityRock = rb.velocity;
+            if (velocityRock == Vector3.zero)
+            {
+                Destroy(_currentRockPrefab);
 
+            }
+        }
+       
+        
     }
 
 }

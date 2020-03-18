@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Speed : MonoBehaviour
 {
@@ -8,37 +9,60 @@ public class Speed : MonoBehaviour
     Rigidbody rb;
     public GameObject impactPrefab;
     public List<GameObject> trails;
-    private void Start()
+    Animator anim;
+    Vector3 directionToPlayer;
+    bool canGo;
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
     private void FixedUpdate()
     {
-        rb.velocity = transform.forward * (speed * Time.deltaTime);
+        if(canGo)
+        rb.velocity = directionToPlayer * (speed * Time.deltaTime);
+        transform.DOLocalRotate(new Vector3(100, 0, 0),3,RotateMode.LocalAxisAdd).SetLoops(-1);
     }
     private void OnCollisionEnter(Collision collision)
     {
-        speed = 0;
-        ContactPoint contactPoint = collision.contacts[0];
-        Quaternion rot = Quaternion.FromToRotation(Vector3.up, contactPoint.normal);
-        Vector3 pos = contactPoint.point;
-        if(impactPrefab != null) {
-            GameObject impact = Instantiate(impactPrefab, pos, rot) as GameObject;
-            Destroy(impact, 5);
-        }
-        if (trails.Count > 0)
+        if (!collision.collider.CompareTag("Player") || !collision.collider.CompareTag("Enemy2"))
         {
-            foreach(GameObject g in trails)
+            speed = 0;
+            ContactPoint contactPoint = collision.contacts[0];
+            Quaternion rot = Quaternion.FromToRotation(Vector3.up, contactPoint.normal);
+            Vector3 pos = contactPoint.point;
+            if (impactPrefab != null && !collision.gameObject == this)
             {
-                g.transform.SetParent(null);
-                ParticleSystem p = g.GetComponent<ParticleSystem>();
-                if(p!= null)
+                GameObject impact = Instantiate(impactPrefab, pos, rot) as GameObject;
+                print(collision.gameObject.name);
+                Destroy(impact, 5);
+            }
+            if (trails.Count > 0)
+            {
+                foreach (GameObject g in trails)
                 {
-                    p.Stop();
-                    Destroy(p.gameObject, p.main.duration + p.startLifetime);
+                    g.transform.SetParent(null);
+                    ParticleSystem p = g.GetComponent<ParticleSystem>();
+                    if (p != null)
+                    {
+                        p.Stop();
+                        Destroy(p.gameObject, p.main.duration + p.startLifetime);
+                    }
                 }
             }
+            Destroy(gameObject);
+
         }
-        Destroy(gameObject);
+
+    }
+    public void ShootRock(Vector3 dir, bool b)
+    {
+        directionToPlayer = dir;
+        canGo = b;
+    }
+   
+    private void OnEnable()
+    {
+        anim.SetTrigger("Spawn");
     }
 }

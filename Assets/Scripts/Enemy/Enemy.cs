@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public abstract class Enemy : MonoBehaviour
 {
+    [Header("Ajustes de daño y vida")]
     [SerializeField] protected float life = 100;
     [SerializeField] protected float attackDamage;
     
@@ -21,15 +22,22 @@ public abstract class Enemy : MonoBehaviour
     [Header("Componentes")]
     [SerializeField]protected NavMeshAgent navMeshAgent;
     [SerializeField] protected Animator anim;
+
     [Header("Path Enemy")]
     [SerializeField] Transform[] pathEnemy;
+
     //Variables booleanas
     protected bool isInFov = false;
     protected bool canPath = true;
+    protected bool isInFarAttack = false;
+    protected bool isInNearAttack = false;
+
     //Variables int
     int _nextPosition = 0;
+
     //variables float
     protected float BetweenDistance;
+
     //Maquina de estados
     protected enum States { Chase, NearAttack,FarAttack, FollowPath };
     [SerializeField]protected States EnemyStates;
@@ -38,9 +46,9 @@ public abstract class Enemy : MonoBehaviour
        // _speed = Random.Range(2, 4);
         anim = GetComponent<Animator>();
         _nextPosition = 0;
-        EnemyStates = States.FollowPath;
+       
     }
-
+    
     #region FovLogic
     public void InFOV(Transform checkingObject, Transform target, float maxAngle, float maxRadius)
     {
@@ -63,12 +71,14 @@ public abstract class Enemy : MonoBehaviour
                         {
                             Debug.Log("IsInFov");
                             isInFov = true;
+                            anim.SetBool("isInFov", true);
                         }
                     }
                 }
                 else
                 {
                     isInFov = false;
+                    anim.SetBool("isInFov", false);
                 }
             }
         }
@@ -79,17 +89,24 @@ public abstract class Enemy : MonoBehaviour
     }
     private void Update()
     {
-        CommonUpdate();
+        LogicEnemy();
+        
     }
     #endregion
-    void CommonUpdate()
+    void LogicEnemy()
     {
+        anim.SetBool("isInNearAttack", isInNearAttack);
+        anim.SetBool("isInFarAttack", isInFarAttack);
         anim.SetFloat("speed", navMeshAgent.speed);
+
+        //print("FarAttack: " + isInFarAttack);
+        //print("NearAttack: " + isInNearAttack);
+
         //Distancia entre el enemigo y el player
         BetweenDistance = Vector3.Distance(transform.position, player.position);
-
+        //print(EnemyStates);
         //Persecucion: si es mayor que el radio de ataque y si la distancia al player es menor que el radio y maximo y en el campo de vision
-        if (BetweenDistance > nearRadiusAttack && BetweenDistance < _maxRadius && isInFov && isFollowPath)
+        if (BetweenDistance > nearRadiusAttack && BetweenDistance < _maxRadius && isInFov)
         {
             EnemyStates = States.Chase;
         }
@@ -97,10 +114,19 @@ public abstract class Enemy : MonoBehaviour
         if (BetweenDistance <= nearRadiusAttack && isInFov)
         {
             EnemyStates = States.NearAttack;
+            isInFarAttack = false;
+            isInNearAttack = true;
         }
         else if(BetweenDistance <= farRadiusAttack && isInFov)
         {
             EnemyStates = States.FarAttack;
+            isInFarAttack = true;
+            isInNearAttack = false;
+        }
+        else
+        {
+            isInFarAttack = false;
+            isInNearAttack = false;
         }
         //Path: sigue la ruta si la distancia es mayor que el radio maximo
         if (BetweenDistance > _maxRadius)
@@ -110,8 +136,6 @@ public abstract class Enemy : MonoBehaviour
         }
         StateMachine();
     }
-
-
     public void StateMachine()
     {
         //print("Enemy_2: " + EnemyStates + " Distance from player: " + Vector3.Distance(transform.position, player.position));
