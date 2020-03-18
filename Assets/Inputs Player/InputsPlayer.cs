@@ -56,7 +56,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""id"": ""425e9e4c-b750-468e-a849-b6cb95a67102"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(behavior=2)""
                 },
                 {
                     ""name"": ""RotationObject_R"",
@@ -409,11 +409,6 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""devicePath"": ""<XInputController>"",
                     ""isOptional"": false,
                     ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<XboxOneGampadiOS>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
                 }
             ]
         },
@@ -423,11 +418,6 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
             ""devices"": [
                 {
                     ""devicePath"": ""<DualShockGamepad>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<DualShock4GampadiOS>"",
                     ""isOptional"": false,
                     ""isOR"": false
                 }

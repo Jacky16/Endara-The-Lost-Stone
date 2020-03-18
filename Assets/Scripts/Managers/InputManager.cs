@@ -7,32 +7,26 @@ public class  InputManager : MonoBehaviour
 {
     [SerializeField] PlayerMovement _player;
     [SerializeField] PickUpObjects _pickUpsObjects;
+    [Header("Camara Player")]
     [SerializeField] CinemachineFreeLook _freeLookCamera;
+
     public static InputsPlayer playerInputs;
     public PlayerInput playerInput;
-    //Variables bools para los controles de movimiento
-    bool isJostickLeftPressed;
-    bool isJostickRightPressed;
-    bool isWASDIsPressed;
-    //Variables bool para los controles de interaccion
-    bool canJump;
-    bool isMouseRightClickPressed;
-    bool isButtonGampedadAimPressed;
-    Vector2 vector2Axis;
-    public static bool useGamepad;
 
     private Vector2 LookCamera; // your LookDelta
     public float deadZoneX = 0.2f;
-
-
-
+    public static bool useGamepad;
     public enum ControlsState { PS4,Xbox,KeyBoard};
     public static ControlsState controlsState;
+    bool isRotating_L = false;
+    bool isRotating_R = false;
+
     private void Awake()
     {
         playerInputs = new InputsPlayer();
         playerInput = GetComponent<PlayerInput>();
        
+        //Control de la camara
         playerInputs.PlayerInputs.MovementCamera.performed += ctx => LookCamera = ctx.ReadValue<Vector2>().normalized;
         playerInputs.PlayerInputs.MovementCamera.performed += ctx => GetInput();
         playerInputs.PlayerInputs.MovementCamera.canceled += ctx => LookCamera = Vector3.zero;
@@ -40,36 +34,64 @@ public class  InputManager : MonoBehaviour
     }
     private void Update()
     {
+        #region Comprobacion: Rotacion de objetos
+        
+        if (isRotating_L)
+        {
+            _pickUpsObjects.Rotate_L(5);
+        } 
+        if (isRotating_R)
+        {
+            _pickUpsObjects.Rotate_R(5);
+        }
+        #endregion
+    }
+    public void Rotate_L(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            isRotating_L = true;
+        }
+        else
+        {
+            isRotating_L = false;
+        }   
+    }
+    public void Rotate_R(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            isRotating_R = true;
+        }
+        else
+        {
+            isRotating_R = false;
+        }
+    }
+    public void Attack(InputAction.CallbackContext ctx)
+    {
+        if (ctx.started)
+        {
+            _player.MeleAtack();
+        }
+    }
+    public void SwitchInputs()
+    {
         switch (playerInput.currentControlScheme)
         {
             case "PS4":
+                controlsState = ControlsState.PS4;
                 print("PS4");
                 break;
             case "Xbox":
+                controlsState = ControlsState.Xbox;
                 print("Xbox");
                 break;
             case "KeyboardMouse":
                 print("KeyboardMouse");
+                controlsState = ControlsState.KeyBoard;
                 break;
         }
-
-        if (playerInputs.PlayerInputs.CatchObject.triggered) //Catch object
-        {
-            _pickUpsObjects.PillarElObjeto();
-        }
-        //Rotate Object L
-        if (playerInputs.PlayerInputs.RotationObject_L.triggered)
-        {
-            _pickUpsObjects.Rotate_L(15);
-        }
-        //Rotate Object R
-        if (playerInputs.PlayerInputs.RotationObject_R.triggered)
-        {
-            _pickUpsObjects.Rotate_R(15);
-        }
-
-        playerInputs.PlayerInputs.Attack.performed += ctx => _player.MeleAtack();
-
     }
 
     public void GetInputValueToCamera()
@@ -118,7 +140,5 @@ public class  InputManager : MonoBehaviour
     {
         playerInputs.Disable();
     }
-
-
 
 }
