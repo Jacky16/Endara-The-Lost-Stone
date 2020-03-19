@@ -43,10 +43,8 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField]protected States EnemyStates;
     private void Start()
     {
-       // _speed = Random.Range(2, 4);
         anim = GetComponent<Animator>();
-        _nextPosition = 0;
-       
+        _nextPosition = 0;     
     }
     
     #region FovLogic

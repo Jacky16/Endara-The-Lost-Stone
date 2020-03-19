@@ -4853,7 +4853,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!64 &6659413567996081176
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4882,6 +4882,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1000
   impactPrefab: {fileID: 4993847026791123400, guid: 9149f1fea0917d544ac633df34dd6826,
+    type: 3}
+  impactPlayer: {fileID: 2244003217017112924, guid: dd62de8a58403ca4592df4b806061dae,
     type: 3}
   trails: []
 --- !u!95 &9108312245243836493

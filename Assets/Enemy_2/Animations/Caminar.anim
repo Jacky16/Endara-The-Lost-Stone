@@ -3040,6 +3040,25 @@ AnimationClip:
     path: GRP_GEOMETRY_Enemy_1/Cuerpo/pSphere1
     classID: 25
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.9
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._EmissiveExposureWeight
+    path: GRP_GEOMETRY_Enemy_1/Cristales/Gema
+    classID: 137
+    script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 30
   m_WrapMode: 0
@@ -3691,6 +3710,13 @@ AnimationClip:
       script: {fileID: 0}
       typeID: 25
       customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2519210763
+      attribute: 2305669842
+      script: {fileID: 0}
+      typeID: 137
+      customType: 22
       isPPtrCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
@@ -15501,6 +15527,25 @@ AnimationClip:
     attribute: m_LocalRotation.w
     path: GRP_JOINTs/J_Gema
     classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.9
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._EmissiveExposureWeight
+    path: GRP_GEOMETRY_Enemy_1/Cristales/Gema
+    classID: 137
     script: {fileID: 0}
   m_EulerEditorCurves:
   - curve:

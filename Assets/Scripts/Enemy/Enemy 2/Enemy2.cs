@@ -7,8 +7,9 @@ public class Enemy2 : Enemy
 {
     [Header("Propiedades Roca")]
     [SerializeField] GameObject _rockPrefab;
-    GameObject _currentRockPrefab;
+    GameObject _rockThrowed;
     [SerializeField] Transform _transformRockPrefab;
+    [SerializeField] Vector3 offsetRock = new Vector3(0, 0.09f, 0);
     float counter;
     [SerializeField] float _timeToShoot;
     public override void NearAttackPlayer()
@@ -33,25 +34,29 @@ public class Enemy2 : Enemy
    
     void ThrowRock()
     {
-        _currentRockPrefab.transform.SetParent(null);
-        Speed speed = _currentRockPrefab.GetComponent<Speed>();
+        RockEnemy2 rockEnemy2 = _rockThrowed.GetComponent<RockEnemy2>();
+        Rigidbody rb = _rockThrowed.GetComponent<Rigidbody>();
+
+        _rockThrowed.transform.SetParent(null);
+        rb.useGravity = true;
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
         Vector3 dir = player.position - transform.position;
-        speed.ShootRock(dir.normalized, true);
+        rockEnemy2.ShootRock(dir.normalized + offsetRock, true);
     }
     void InvokeRock()
     {
-       _currentRockPrefab = Instantiate(_rockPrefab, _transformRockPrefab.position, Quaternion.identity,transform) as GameObject;
+       _rockThrowed = Instantiate(_rockPrefab, _transformRockPrefab.position, Quaternion.identity,transform) as GameObject;
        
     }
     public void CheckRock()
     {
-        if (_currentRockPrefab)
+        if (_rockThrowed)
         {
-            Rigidbody rb = _currentRockPrefab.GetComponent<Rigidbody>();
+            Rigidbody rb = _rockThrowed.GetComponent<Rigidbody>();
             Vector3 velocityRock = rb.velocity;
             if (velocityRock == Vector3.zero)
             {
-                Destroy(_currentRockPrefab);
+                Destroy(_rockThrowed);
 
             }
         }
