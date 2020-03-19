@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Animations/Rock_Enem.meta
+guid: de06feda412244e4aa7a16eaf65413a9
+=======
 guid: 469819a206b68c844b47f4bbeb23a15d
+>>>>>>> ModificandoInputSystem:Assets/Samples/Input System.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

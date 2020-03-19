@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]InputManager inputManager;
     CharacterController player;
     Animator anim;
-    public Camera mainCam;
+    [SerializeField] Camera mainCam;
     PlayerLifeManager playerLifeManager;
     GodManager godManager;
     public Transform initialPosition;
@@ -79,8 +79,8 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Movimiento(){
         anim.SetBool("isGrounded", player.isGrounded);
-        Axis(inputManager.H(),inputManager.V());
-        playerInput = new Vector3(horizontal, 0, vertical);
+        
+        playerInput = new Vector3(inputManager.Vector2Movement().x, 0, inputManager.Vector2Movement().y);
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
 
         anim.SetFloat("PlayerWalkVelocity", playerInput.magnitude * speed);
@@ -90,15 +90,17 @@ public class PlayerMovement : MonoBehaviour
         Vector3 currentRotation = rotationDirection;
         movePlayer = playerInput.x * camRight + playerInput.z * camForward;
 
-        if (movePlayer != Vector3.zero || Input.anyKey)
+        if (movePlayer != Vector3.zero )
         {
         }
         //transform.localRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentRotation), 1);
         transform.LookAt(transform.position + movePlayer);
 
 
-        SetGravity(); 
+        SetGravity();
+       
         JumpPlayer();
+        
         player.Move(movePlayer  * (speed * Time.deltaTime));
     }
     
@@ -145,11 +147,11 @@ public class PlayerMovement : MonoBehaviour
             playerLifeManager.enabled = false;
         }
     }
-    void JumpPlayer()
+    public void JumpPlayer()
     {
-        if (InputManager.playerInputs.Player_GamepadXbox.A.triggered || InputManager.playerInputs.Player_Keyboard.Jump.triggered)
+        if (InputManager.playerInputs.PlayerInputs.Jump.triggered)
         {
-           
+
             if (!doubleJump)
             {
                 return;
@@ -166,13 +168,15 @@ public class PlayerMovement : MonoBehaviour
             movePlayer.y = fallvelocity;
             anim.SetTrigger("PlayerJump");
         }
-      
+
         if (!doubleJump && player.isGrounded)
         {
             doubleJump = true;
         }
-        
+
     }
+
+
     void CamDirection()
     {
         camForward = mainCam.transform.forward;
@@ -198,9 +202,9 @@ public class PlayerMovement : MonoBehaviour
            
         }
     }
-    public void Axis(float h, float v){
-        horizontal = h;
-        vertical = v;
+    public void Axis(float h,float v){
+        playerInput.x = h;
+        playerInput.z = v;
     }
     public void MeleAtack()
     {

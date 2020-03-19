@@ -26,11 +26,14 @@ public class Palanca : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
-        if (InputManager.playerInputs.Player_Keyboard.CatchObject.triggered || InputManager.playerInputs.Player_GamepadXbox.X.triggered)
         {
-            anim.SetTrigger("Palanca");
-               
+            //if (InputManager.playerInputs.Player_Keyboard.CatchObject.triggered || InputManager.playerInputs.Player_GamepadXbox.X.triggered)
+            //{
+            //    anim.SetTrigger("Palanca");
+
+            //}
         }
+
     }
     private void OnTriggerExit(Collider other)
     {

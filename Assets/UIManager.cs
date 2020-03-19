@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
 
     GameObject canvasThrowObjectXbox;
 
-    PlayerGamepadInputs playerInputs = new PlayerGamepadInputs();
+    InputsPlayer playerInputs = new InputsPlayer();
     private void Start()
     {
        _canvasCatchObjectXbox.SetActive(true);
@@ -59,12 +59,12 @@ public class UIManager : MonoBehaviour
     }
     void DisableCanvasCatchObjectXbox()
     {
-        if (playerInputs.Player_GamepadXbox.X.triggered)
-        {
-            Sequence secuencia = DOTween.Sequence();
+        //if (playerInputs.Player_GamepadXbox.X.triggered)
+        //{
+        //    Sequence secuencia = DOTween.Sequence();
 
-            secuencia.Append(_recTransformCatchObjectXbox.DOScale(new Vector3(0, 0, 0), 0.3f)).PrependCallback(ChangeToGray).AppendCallback(ChangeToWhite);
-        }
+        //    secuencia.Append(_recTransformCatchObjectXbox.DOScale(new Vector3(0, 0, 0), 0.3f)).PrependCallback(ChangeToGray).AppendCallback(ChangeToWhite);
+        //}
     }
     void ChangeToGray()
     {
