@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Texturas/Seta_Grande.meta
 guid: b3475674864cb1f45911a8410bce7970
-=======
-guid: cc9fc4eee1f429c4c879e6ed15952b45
->>>>>>> ModificandoInputSystem:Assets/Samples/Input System/1.0.0-preview.6/Custom Binding Composite.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
