@@ -44,7 +44,7 @@ public class  InputManager : MonoBehaviour
         {
             _pickUpsObjects.Rotate_R(5);
         }
-        #endregion
+        
     }
     public void Rotate_L(InputAction.CallbackContext ctx)
     {
@@ -68,6 +68,8 @@ public class  InputManager : MonoBehaviour
             isRotating_R = false;
         }
     }
+    #endregion
+
     public void Attack(InputAction.CallbackContext ctx)
     {
         if (ctx.started)

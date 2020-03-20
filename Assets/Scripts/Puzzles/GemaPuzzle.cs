@@ -5,28 +5,34 @@ using DG.Tweening;
 using Cinemachine;
 public class GemaPuzzle : MonoBehaviour
 {
-    [SerializeField] GameObject gameObjectSolution;
-    [SerializeField] CinemachineVirtualCamera camera;
+    //[SerializeField] GameObject gameObjectSolution;
+    //[SerializeField] CinemachineVirtualCamera camera;
+    Animator anim;
     bool isSolution;
-    
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     public void Solution(bool b)
     {
         isSolution = b;
-        if (isSolution)
-        {
-            StartCoroutine(CameraSwitch());
-        }
+        anim.SetBool("Iluminate", IsSolution());
+        //if (isSolution)
+        //{
+        //    StartCoroutine(CameraSwitch());
+        //}
     }
-    IEnumerator CameraSwitch()
-    {
-        camera.Priority = 10;
-        yield return new WaitForSeconds(1f);
-        gameObjectSolution.transform.DOMoveY(-10, 1);
+    //IEnumerator CameraSwitch()
+    //{
+    //    camera.Priority = 10;
+    //    yield return new WaitForSeconds(1f);
+    //    gameObjectSolution.transform.DOMoveY(-10, 1);
 
-        yield return new WaitForSeconds(1f);
-        camera.Priority = 0;
+    //    yield return new WaitForSeconds(1f);
+    //    camera.Priority = 0;
 
-    }
+    //}
     public bool IsSolution()
     {
         return isSolution;
