@@ -5,42 +5,37 @@ using UnityEngine.InputSystem;
 using Cinemachine;
 public class  InputManager : MonoBehaviour
 {
+    [Header("Componentes Player")]
     [SerializeField] PlayerMovement _player;
     [SerializeField] PickUpObjects _pickUpsObjects;
+
     [Header("Camara Player")]
     [SerializeField] CinemachineFreeLook _freeLookCamera;
 
+    [Header("Componentes para los inputs")]
     public static InputsPlayer playerInputs;
     public PlayerInput playerInput;
-
-    private Vector2 LookCamera; // your LookDelta
-    public float deadZoneX = 0.2f;
-    public static bool useGamepad;
+    Vector2 _inputsValueCamera;
     public enum ControlsState { PS4,Xbox,KeyBoard};
     public static ControlsState controlsState;
-    bool isRotating_L = false;
-    bool isRotating_R = false;
 
+    bool _isRotating_L = false;
+    bool _isRotating_R = false;
+    public float deadZoneX;
     private void Awake()
     {
         playerInputs = new InputsPlayer();
         playerInput = GetComponent<PlayerInput>();
-       
-        //Control de la camara
-        playerInputs.PlayerInputs.MovementCamera.performed += ctx => LookCamera = ctx.ReadValue<Vector2>().normalized;
-        playerInputs.PlayerInputs.MovementCamera.performed += ctx => GetInput();
-        playerInputs.PlayerInputs.MovementCamera.canceled += ctx => LookCamera = Vector3.zero;
-
     }
     private void Update()
     {
         #region Comprobacion: Rotacion de objetos
-        
-        if (isRotating_L)
+
+        if (_isRotating_L)
         {
             _pickUpsObjects.Rotate_L(5);
         } 
-        if (isRotating_R)
+        if (_isRotating_R)
         {
             _pickUpsObjects.Rotate_R(5);
         }
@@ -50,22 +45,22 @@ public class  InputManager : MonoBehaviour
     {
         if (ctx.performed)
         {
-            isRotating_L = true;
+            _isRotating_L = true;
         }
         else
         {
-            isRotating_L = false;
+            _isRotating_L = false;
         }   
     }
     public void Rotate_R(InputAction.CallbackContext ctx)
     {
         if (ctx.performed)
         {
-            isRotating_R = true;
+            _isRotating_R = true;
         }
         else
         {
-            isRotating_R = false;
+            _isRotating_R = false;
         }
     }
     #endregion
@@ -75,6 +70,13 @@ public class  InputManager : MonoBehaviour
         if (ctx.started)
         {
             _player.MeleAtack();
+        }
+    }
+    public void CatchObject(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            _pickUpsObjects.PillarElObjeto();
         }
     }
     public void SwitchInputs()
@@ -95,45 +97,23 @@ public class  InputManager : MonoBehaviour
                 break;
         }
     }
-
-    public void GetInputValueToCamera()
+    public void GetAxisCustom()
     {
-        Vector2 axisCamera = playerInputs.PlayerInputs.MovementCamera.ReadValue<Vector2>();
-        print(axisCamera);
-        _freeLookCamera.m_XAxis.Value = axisCamera.x;
-        _freeLookCamera.m_YAxis.Value = axisCamera.y;
-    }
-    private void GetInput()
-    {
-        CinemachineCore.GetInputAxis = GetAxisCustom;
-    }
+        _inputsValueCamera = playerInputs.PlayerInputs.MovementCamera.ReadValue<Vector2>();
+        //El valor de x se pone a zero para evitar que se mueva solo
+        playerInputs.PlayerInputs.MovementCamera.canceled += ctx => _freeLookCamera.m_XAxis.m_InputAxisValue = 0;
 
-    public float GetAxisCustom(string axisName)
-    {
-        // LookCamera.Normalize();
-
-        if (axisName == "Mouse X")
+        if (_inputsValueCamera.x > deadZoneX || _inputsValueCamera.x < -deadZoneX)
         {
-            if (LookCamera.x > deadZoneX || LookCamera.x < -deadZoneX) // To stabilise Cam and prevent it from rotating when LookCamera.x value is between deadZoneX and - deadZoneX
-            {
-                return LookCamera.x;
-            }
+            _freeLookCamera.m_XAxis.m_InputAxisValue = _inputsValueCamera.x;
         }
-
-        else if (axisName == "Mouse Y")
-        {
-            return LookCamera.y;
-        }
-
-        return 0;
+        _freeLookCamera.m_YAxis.m_InputAxisValue = _inputsValueCamera.y; 
     }
-
     public Vector2 Vector2Movement()
     {
         Vector2 movement = playerInputs.PlayerInputs.Movement.ReadValue<Vector2>();
         return movement;
-    }
-    
+    }   
     private void OnEnable()
     {
         playerInputs.Enable();
@@ -142,5 +122,4 @@ public class  InputManager : MonoBehaviour
     {
         playerInputs.Disable();
     }
-
 }

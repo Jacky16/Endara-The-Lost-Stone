@@ -13,28 +13,10 @@ public class Enemy_1 : Enemy
     }
     public override void NearAttackPlayer()
     {
-        if (!explosionRand)
-        {
-            if (BetweenDistance < nearRadiusAttack && isInFov)
-            {
-                navMeshAgent.SetDestination(player.position);
-                Debug.Log("Estoy atacando al player");
-            }
+        anim.SetTrigger("Explosion");
 
-        }
-        else
-        {
-            if (BetweenDistance <= nearRadiusAttack)
-            {
-                Invoke("Explosion", 2);
-                navMeshAgent.speed = 0;
-                anim.SetTrigger("Explosion");
-                print("He explotado");
 
-            }
-        }
     }
-
     public void Explosion()
     {
         GameObject g = Instantiate(explosionPrefab, transform.position, Quaternion.identity) as GameObject;

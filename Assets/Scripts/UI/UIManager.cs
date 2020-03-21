@@ -37,24 +37,24 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        if (InputManager.useGamepad)
-        {
-            if (pickUpObjects.IsCanvasCatchObject())
-            {
-                // _canvasCatchObjectXbox.SetActive(true);
-                _recTransformCatchObjectXbox.DOScale(new Vector3(1, 1, 1), 0.3f);
+        //if (InputManager.useGamepad)
+        //{
+        //    if (pickUpObjects.IsCanvasCatchObject())
+        //    {
+        //        // _canvasCatchObjectXbox.SetActive(true);
+        //        _recTransformCatchObjectXbox.DOScale(new Vector3(1, 1, 1), 0.3f);
 
-            }
-            else
-            {
-                _recTransformCatchObjectXbox.DOScale(new Vector3(0, 0, 0), 0.3f);
+        //    }
+        //    else
+        //    {
+        //        _recTransformCatchObjectXbox.DOScale(new Vector3(0, 0, 0), 0.3f);
                
-            }
-        }
-        else
-        {
+        //    }
+        //}
+        //else
+        //{
 
-        }
+        //}
 
     }
     void DisableCanvasCatchObjectXbox()

@@ -65,8 +65,8 @@
                     "name": "MovementCamera",
                     "type": "Value",
                     "id": "e33c4fb5-e5dd-4bc6-aa94-92eb03345af2",
-                    "expectedControlType": "",
-                    "processors": "NormalizeVector2,StickDeadzone(min=0.1,max=0.5)",
+                    "expectedControlType": "Vector2",
+                    "processors": "NormalizeVector2,StickDeadzone",
                     "interactions": ""
                 }
             ],

@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f94ce90e5208345a03bb68f2e705d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabBoxDestroyed: {fileID: 4450371041822799334, guid: fcbb71027c14e8c47961204497859faa,
+  prefabBoxDestroyed: {fileID: 4450371041822799334, guid: f6ba081b3295cfe419575f1220f11df6,
     type: 3}
 --- !u!54 &1805513379
 Rigidbody:
