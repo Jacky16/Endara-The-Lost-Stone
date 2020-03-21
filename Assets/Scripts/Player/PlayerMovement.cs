@@ -117,7 +117,6 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             anim.SetBool("isGrounded", player.isGrounded);
-
             if (player.isGrounded)
             {
                 fallvelocity = -gravity * Time.deltaTime;
@@ -129,7 +128,6 @@ public class PlayerMovement : MonoBehaviour
                 movePlayer.y = fallvelocity;
                 anim.SetFloat("PlayerVerticalVelocity", player.velocity.y);
             }
-
         }
     }
     void ModeGod()
