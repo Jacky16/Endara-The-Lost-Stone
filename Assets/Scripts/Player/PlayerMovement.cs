@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         playerLifeManager = GetComponent<PlayerLifeManager>();
         //godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
+
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
@@ -92,18 +93,21 @@ public class PlayerMovement : MonoBehaviour
 
         if (movePlayer != Vector3.zero )
         {
+            transform.LookAt(transform.position + movePlayer);
+
         }
         //transform.localRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentRotation), 1);
-        transform.LookAt(transform.position + movePlayer);
-
-
-        SetGravity();
-       
+        SetGravity();    
         JumpPlayer();
-        
-        player.Move(movePlayer  * (speed * Time.deltaTime));
-    }
-    
+        if (PickUpObjects.IsCatchedObject())
+        {
+            player.Move(movePlayer * (speed / PickUpObjects.MassObjectPicked() * Time.deltaTime));
+        }
+        else
+        {
+            player.Move(movePlayer * (speed * Time.deltaTime));
+        }
+    } 
     public void SetGravity()
     {
         if (isGod)
@@ -164,9 +168,20 @@ public class PlayerMovement : MonoBehaviour
 
             }
             Debug.Log("He saltado");
-            fallvelocity = jumpForce;
+            if (PickUpObjects.IsCatchedObject())
+            {
+                float myJumpForce = jumpForce / PickUpObjects.MassObjectPicked();
+                fallvelocity = myJumpForce;
+                print(myJumpForce);
+            }
+            if(!PickUpObjects.IsCatchedObject())
+            {
+                fallvelocity = jumpForce;
+                print(jumpForce);
+            }
             movePlayer.y = fallvelocity;
             anim.SetTrigger("PlayerJump");
+
         }
 
         if (!doubleJump && player.isGrounded)

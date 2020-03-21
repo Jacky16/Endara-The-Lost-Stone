@@ -6,35 +6,32 @@ public class PickUpObjects : MonoBehaviour
     public GameObject objectToPickup;
     public GameObject PickedObject;
     Transform _interactionZone;
-    bool _isCatched;
-    bool _isCanvasCatchObject;
-    bool _isCanvasThrowObject;
-
-
+    static bool _isCatched;
+    static bool _isCatchObject;
+    static bool _canThrowObject;
+    static float massPickedObject;
 
     private void Start()
     {
         _interactionZone = GameObject.FindGameObjectWithTag("TransformObjectPickUp").GetComponent<Transform>();
-        _isCanvasCatchObject = false;
-
+        _isCatchObject = false;
     }
-
     void Update()
     {
-        if (objectToPickup != null)
-        {
-            _isCanvasCatchObject = true;
-        }
-        else
-        {
-            _isCanvasCatchObject = false;
-            _isCanvasThrowObject = false;
-        }
+        //if (objectToPickup != null)
+        //{
+        //    _isCatchObject = true;
+        //}
+        //else
+        //{
+        //    _isCatchObject = false;
+        //    _canThrowObject = false;
+        //}
 
-        if (PickedObject != null)
-        {
-            _isCanvasCatchObject = false;
-        }
+        //if (PickedObject != null)
+        //{
+        //    _isCatchObject = false;
+        //}
         if (Input.GetMouseButtonDown(0))
         {
             ThrowObject();
@@ -46,7 +43,7 @@ public class PickUpObjects : MonoBehaviour
         {
             //Pillar el objeto 
             _isCatched = true;
-            _isCanvasThrowObject = true;
+            _canThrowObject = true;
             PickedObject = objectToPickup;
             PickedObject.GetComponent<ObjetoPickeable>().isPickeable = false;
             PickedObject.transform.SetParent(_interactionZone);
@@ -54,7 +51,7 @@ public class PickUpObjects : MonoBehaviour
             PickedObject.GetComponent<Rigidbody>().useGravity = false;
             PickedObject.GetComponent<Rigidbody>().isKinematic = true;
             PickedObject.GetComponent<BoxCollider>().isTrigger = true;
-
+            massPickedObject = PickedObject.GetComponent<Rigidbody>().mass;
 
         }
         else if (PickedObject != null)
@@ -63,16 +60,14 @@ public class PickUpObjects : MonoBehaviour
             _isCatched = false;
             PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
             PickedObject.transform.SetParent(null);
-            _isCanvasThrowObject = false;
+            _canThrowObject = false;
             PickedObject.GetComponent<Rigidbody>().useGravity = true;
             PickedObject.GetComponent<Rigidbody>().isKinematic = false;
             PickedObject.GetComponent<BoxCollider>().isTrigger = false;
             PickedObject.GetComponent<Rigidbody>().AddForce(Vector3.down * 4);
             PickedObject = null;
 
-
         }
-
     }
     public void ThrowObject()
     {
@@ -84,22 +79,15 @@ public class PickUpObjects : MonoBehaviour
                 PickedObject.GetComponent<BoxCollider>().isTrigger = true;
                 PickedObject.GetComponent<Rigidbody>().isKinematic = false;
                 PickedObject.transform.SetParent(null);
-                _isCanvasThrowObject = false;
+                _canThrowObject = false;
                 PickedObject.GetComponent<Rigidbody>().useGravity = true;
                 PickedObject.GetComponent<Rigidbody>().AddForce(this.transform.forward + Camera.main.transform.forward * 50);
                 PickedObject.GetComponent<BoxCollider>().isTrigger = false;
                 PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
                 PickedObject = null;
-            }
-            
-
+            }         
         }
-
-
     }
-
-
-
     public bool CanThrow()
     {
         if (PickedObject.GetComponent<ObjetoPickeable>().isPickeable == true)
@@ -144,13 +132,17 @@ public class PickUpObjects : MonoBehaviour
         
 
     }
-    public bool IsCanvasCatchObject()
+    public static bool IsCatchedObject()
     {
-        return _isCanvasCatchObject;
+        return _isCatched;
     }
 
-    public bool IsCanvasThrowObject()
+    public static bool IsCanvasThrowObject()
     {
-        return _isCanvasThrowObject;
+        return _canThrowObject;
+    }
+    public static float MassObjectPicked()
+    {
+        return massPickedObject;
     }
 }

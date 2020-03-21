@@ -6,16 +6,16 @@ using UnityEngine.AI;
 public class Enemy_1 : Enemy
 {
     [SerializeField] GameObject explosionPrefab;
-    [SerializeField]bool explosionRand;
+
     [SerializeField]float damageExplosion = 14;
-    private void Start()
-    {
-    }
+    
     public override void NearAttackPlayer()
     {
+    }
+    public override void FarAttackPlayer()
+    {
         anim.SetTrigger("Explosion");
-
-
+        Invoke("Explosion", 2);
     }
     public void Explosion()
     {
@@ -28,10 +28,7 @@ public class Enemy_1 : Enemy
     {
         return damageExplosion/3.0f;
     }
-    public override void FarAttackPlayer()
-    {
-
-    }
+    
 
     public float Damage()
     {
@@ -42,6 +39,8 @@ public class Enemy_1 : Enemy
         life -= lifeToRest;
         if(life <= 0)
         {
+            GameObject g = Instantiate(explosionPrefab, transform.position, Quaternion.identity) as GameObject;
+            g.GetComponent<ExplosionEnemy1>().enabled = false;
             Destroy(this.gameObject);
         }
         print(life);
@@ -50,21 +49,19 @@ public class Enemy_1 : Enemy
     {
         if (other.CompareTag("Cola"))
         {
-
-            RestLife(other.GetComponent<DamegeAttack>().DamagePlayer());
-            
+            RestLife(other.GetComponent<DamegeAttack>().DamagePlayer());   
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            anim.SetTrigger("Attack");
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.tag == "Player")
+    //    {
+    //        anim.SetTrigger("Attack");
 
-            StartCoroutine(RestLifePlayer(other));
+    //        StartCoroutine(RestLifePlayer(other));
 
-        }
-    }
+    //    }
+    //}
     IEnumerator RestLifePlayer(Collider other)
     {
         yield return new WaitForSeconds(0.25f);

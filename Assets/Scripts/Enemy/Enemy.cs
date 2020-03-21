@@ -49,7 +49,6 @@ public abstract class Enemy : MonoBehaviour
     #endregion
     private void Start()
     {
-        anim = GetComponent<Animator>();
         _nextPosition = 0;     
     }
     
@@ -117,7 +116,7 @@ public abstract class Enemy : MonoBehaviour
     {
         //Distancia entre el enemigo y el player
         BetweenDistance = Vector3.Distance(transform.position, player.position);
-        //print(EnemyStates);
+
         //Persecucion: si es mayor que el radio de ataque y si la distancia al player es menor que el radio y maximo y en el campo de vision
         if (BetweenDistance > nearRadiusAttack && BetweenDistance < _maxRadius && isInFov)
         {
@@ -216,13 +215,11 @@ public abstract class Enemy : MonoBehaviour
                 {
                     _nextPosition = 0;
                 }
-            }
-           
+            }       
         }   
     }
     public abstract void NearAttackPlayer();
-    public abstract void FarAttackPlayer();
-   
+    public abstract void FarAttackPlayer(); 
     public void Dead()
     {
         //Dead

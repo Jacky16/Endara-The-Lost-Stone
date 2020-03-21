@@ -20,6 +20,4 @@ public class ExplosionEnemy1 : MonoBehaviour
     {
         damageExplosion = damage;
     }
-    
-
 }

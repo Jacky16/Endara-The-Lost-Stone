@@ -310,12 +310,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 2
-    functionName: Explosion
-    data: 
-    objectReferenceParameter: {fileID: 563093110944898616, guid: 65711cb76fc503745b8a1fabb1ad28aa,
-      type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

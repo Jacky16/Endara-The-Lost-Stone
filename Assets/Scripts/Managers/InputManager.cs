@@ -67,7 +67,7 @@ public class  InputManager : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext ctx)
     {
-        if (ctx.started)
+        if (ctx.started && !_pickUpsObjects.objectToPickup)
         {
             _player.MeleAtack();
         }
