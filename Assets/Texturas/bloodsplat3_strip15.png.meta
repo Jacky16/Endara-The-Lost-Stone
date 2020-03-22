@@ -1,0 +1,668 @@
+fileFormatVersion: 2
+guid: fdd7c33e84757ab4595c19f3cdd39439
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7810664408763715458
+    second: bloodsplat3_strip15_0
+  - first:
+      213: -8012892932195640844
+    second: bloodsplat3_strip15_1
+  - first:
+      213: 6318229939522399310
+    second: bloodsplat3_strip15_2
+  - first:
+      213: 3193084743295230088
+    second: bloodsplat3_strip15_3
+  - first:
+      213: 3667965228805059877
+    second: bloodsplat3_strip15_4
+  - first:
+      213: -1640008129710210814
+    second: bloodsplat3_strip15_5
+  - first:
+      213: 6695413894570578336
+    second: bloodsplat3_strip15_6
+  - first:
+      213: 8862853642056672174
+    second: bloodsplat3_strip15_7
+  - first:
+      213: 2496683578559130109
+    second: bloodsplat3_strip15_8
+  - first:
+      213: -6324141457057955911
+    second: bloodsplat3_strip15_9
+  - first:
+      213: 5374810508804060680
+    second: bloodsplat3_strip15_10
+  - first:
+      213: -6721634993758731880
+    second: bloodsplat3_strip15_11
+  - first:
+      213: 9012634457757964081
+    second: bloodsplat3_strip15_12
+  - first:
+      213: -3072271346103250798
+    second: bloodsplat3_strip15_13
+  - first:
+      213: -8368198659109904185
+    second: bloodsplat3_strip15_14
+  - first:
+      213: 2637210249932065750
+    second: bloodsplat3_strip15_15
+  - first:
+      213: 2583982267178640566
+    second: bloodsplat3_strip15_16
+  - first:
+      213: 8540431483809069851
+    second: bloodsplat3_strip15_17
+  - first:
+      213: 3710153713651386655
+    second: bloodsplat3_strip15_18
+  - first:
+      213: -2981611553563889024
+    second: bloodsplat3_strip15_19
+  - first:
+      213: -7687396595960708703
+    second: bloodsplat3_strip15_20
+  - first:
+      213: -7818988954950354079
+    second: bloodsplat3_strip15_21
+  - first:
+      213: 1130573042686891180
+    second: bloodsplat3_strip15_22
+  - first:
+      213: -3497046493748124176
+    second: bloodsplat3_strip15_23
+  - first:
+      213: 2003967905911140282
+    second: bloodsplat3_strip15_24
+  - first:
+      213: -1532971854362460809
+    second: bloodsplat3_strip15_25
+  - first:
+      213: 2119776303707174277
+    second: bloodsplat3_strip15_26
+  - first:
+      213: -7317219232062558593
+    second: bloodsplat3_strip15_27
+  - first:
+      213: 5217660306139654386
+    second: bloodsplat3_strip15_28
+  - first:
+      213: -8732886106965859745
+    second: bloodsplat3_strip15_29
+  - first:
+      213: -907915111932402402
+    second: bloodsplat3_strip15_30
+  - first:
+      213: -4387858184043378556
+    second: bloodsplat3_strip15_31
+  - first:
+      213: 3224309787257961930
+    second: bloodsplat3_strip15_32
+  - first:
+      213: 7984167243859078853
+    second: bloodsplat3_strip15_33
+  - first:
+      213: -9219400492313115463
+    second: bloodsplat3_strip15_34
+  - first:
+      213: -8507462646117999712
+    second: bloodsplat3_strip15_35
+  - first:
+      213: -8437821721830360751
+    second: bloodsplat3_strip15_36
+  - first:
+      213: 7630148527464338098
+    second: bloodsplat3_strip15_37
+  - first:
+      213: -2218876564180929702
+    second: bloodsplat3_strip15_38
+  - first:
+      213: 1887435722326411806
+    second: bloodsplat3_strip15_39
+  - first:
+      213: 749872354712695036
+    second: bloodsplat3_strip15_40
+  - first:
+      213: -7030368326470515550
+    second: bloodsplat3_strip15_41
+  - first:
+      213: -9072945022585849651
+    second: bloodsplat3_strip15_42
+  - first:
+      213: 781643523978023632
+    second: bloodsplat3_strip15_43
+  - first:
+      213: -5858400694865418279
+    second: bloodsplat3_strip15_44
+  - first:
+      213: 7117402701364764315
+    second: bloodsplat3_strip15_45
+  - first:
+      213: 2622168594271402329
+    second: bloodsplat3_strip15_46
+  - first:
+      213: -1817690935458025165
+    second: bloodsplat3_strip15_47
+  - first:
+      213: 6689747296132376594
+    second: bloodsplat3_strip15_48
+  - first:
+      213: 6977723660476357006
+    second: bloodsplat3_strip15_49
+  - first:
+      213: 6781484429350235042
+    second: bloodsplat3_strip15_50
+  - first:
+      213: 4010189907452838260
+    second: bloodsplat3_strip15_51
+  - first:
+      213: -1766922466558363805
+    second: bloodsplat3_strip15_52
+  - first:
+      213: 6946951452732978340
+    second: bloodsplat3_strip15_53
+  - first:
+      213: -5769997991435972686
+    second: bloodsplat3_strip15_54
+  - first:
+      213: 2654542688196955460
+    second: bloodsplat3_strip15_55
+  - first:
+      213: -5840698959346626583
+    second: bloodsplat3_strip15_56
+  - first:
+      213: 764231627386530339
+    second: bloodsplat3_strip15_57
+  - first:
+      213: -5814899521310943308
+    second: bloodsplat3_strip15_58
+  - first:
+      213: -8205301007008674659
+    second: bloodsplat3_strip15_59
+  - first:
+      213: -2913705591273373937
+    second: bloodsplat3_strip15_60
+  - first:
+      213: 819654498346370044
+    second: bloodsplat3_strip15_61
+  - first:
+      213: -3126689431907667157
+    second: bloodsplat3_strip15_62
+  - first:
+      213: 722597461360590457
+    second: bloodsplat3_strip15_63
+  - first:
+      213: -8020435497085075800
+    second: bloodsplat3_strip15_64
+  - first:
+      213: 6976138370100299098
+    second: bloodsplat3_strip15_65
+  - first:
+      213: -2726794863724713572
+    second: bloodsplat3_strip15_66
+  - first:
+      213: 2154494619216832065
+    second: bloodsplat3_strip15_67
+  - first:
+      213: -6130306848929150192
+    second: bloodsplat3_strip15_68
+  - first:
+      213: 222531516977062412
+    second: bloodsplat3_strip15_69
+  - first:
+      213: 5529548164376593422
+    second: bloodsplat3_strip15_70
+  - first:
+      213: -542840142954402188
+    second: bloodsplat3_strip15_71
+  - first:
+      213: -2440298130055081093
+    second: bloodsplat3_strip15_72
+  - first:
+      213: -7386069353663032932
+    second: bloodsplat3_strip15_73
+  - first:
+      213: 3345158318578341259
+    second: bloodsplat3_strip15_74
+  - first:
+      213: 5655860784818630466
+    second: bloodsplat3_strip15_75
+  - first:
+      213: 2549940999901081603
+    second: bloodsplat3_strip15_76
+  - first:
+      213: -1621665583489964417
+    second: bloodsplat3_strip15_77
+  - first:
+      213: 7358443773482840377
+    second: bloodsplat3_strip15_78
+  - first:
+      213: 3938445701079029089
+    second: bloodsplat3_strip15_79
+  - first:
+      213: -8108290407827462358
+    second: bloodsplat3_strip15_80
+  - first:
+      213: -1834770645478479609
+    second: bloodsplat3_strip15_81
+  - first:
+      213: -5652933362731909938
+    second: bloodsplat3_strip15_82
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_0
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 3
+        width: 111
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e703ad75a12fa9390800000000000000
+      internalID: -7810664408763715458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_1
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 78
+        width: 146
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f99d31155c7cc090800000000000000
+      internalID: -8012892932195640844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_2
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 78
+        width: 222
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c687297acdea750800000000000000
+      internalID: 6318229939522399310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_3
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 154
+        width: 262
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880e4d508ad105c20800000000000000
+      internalID: 3193084743295230088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_4
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 143
+        width: 321
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525f86f11fa37e230800000000000000
+      internalID: 3667965228805059877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_5
+      rect:
+        serializedVersion: 2
+        x: 2442
+        y: 143
+        width: 356
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201cedf8b458d39e0800000000000000
+      internalID: -1640008129710210814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_6
+      rect:
+        serializedVersion: 2
+        x: 2909
+        y: 154
+        width: 390
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1181a9673eaec50800000000000000
+      internalID: 6695413894570578336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_7
+      rect:
+        serializedVersion: 2
+        x: 3369
+        y: 113
+        width: 426
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3a0171e6e2ffa70800000000000000
+      internalID: 8862853642056672174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_8
+      rect:
+        serializedVersion: 2
+        x: 3882
+        y: 96
+        width: 414
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df961989c7006a220800000000000000
+      internalID: 2496683578559130109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_9
+      rect:
+        serializedVersion: 2
+        x: 4348
+        y: 20
+        width: 449
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf3dbef9d22c38a0800000000000000
+      internalID: -6324141457057955911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_10
+      rect:
+        serializedVersion: 2
+        x: 4815
+        y: 3
+        width: 472
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8067d484ea9279a40800000000000000
+      internalID: 5374810508804060680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_11
+      rect:
+        serializedVersion: 2
+        x: 5313
+        y: 0
+        width: 514
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8910d2ff594f7b2a0800000000000000
+      internalID: -6721634993758731880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_12
+      rect:
+        serializedVersion: 2
+        x: 5874
+        y: 0
+        width: 348
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137db11d94f431d70800000000000000
+      internalID: 9012634457757964081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_13
+      rect:
+        serializedVersion: 2
+        x: 6313
+        y: 0
+        width: 224
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29097e10d791d55d0800000000000000
+      internalID: -3072271346103250798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodsplat3_strip15_14
+      rect:
+        serializedVersion: 2
+        x: 6921
+        y: 0
+        width: 138
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0aad9f7af2edb80800000000000000
+      internalID: -8368198659109904185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
