@@ -57,18 +57,15 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         playerLifeManager = GetComponent<PlayerLifeManager>();
         //godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
-
+        initialPosition = transform;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
-        if (isInitialPosition)
+        if (isInitialPosition != null)
         {
             transform.position = initialPosition.position;
         }
-        else
-        {
-            return;
-        }
+       
     }
     void Update()
     {

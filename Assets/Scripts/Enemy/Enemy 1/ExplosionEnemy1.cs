@@ -8,7 +8,7 @@ public class ExplosionEnemy1 : MonoBehaviour
    
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" || other.gameObject.name == "Player")
+        if (other.tag == "Player")
         {
             other.GetComponent<PlayerLifeManager>().RestarLife(damageExplosion); 
             
