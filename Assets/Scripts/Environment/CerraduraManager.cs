@@ -8,40 +8,18 @@ public class CerraduraManager : MonoBehaviour
 {
     [SerializeField] GameObject gameObjectDoor;
     [SerializeField] CinemachineVirtualCamera _camera;
-
-   
-
     [SerializeField] bool isKeyInside = false;
-    bool tweenComplete;
-
-   
     private void Start()
     {
         _camera.Priority = 0;
-
-
-
     }
-    private void Update()
-    {
-        if (!isKeyInside)
-        {
-            gameObjectDoor.SetActive(true);
-        }
-       
-    }
+  
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Caja" || other.gameObject.name == "Llave")
         {
             isKeyInside = true;
             StartCoroutine(CameraSwitch(other));
-        }
-
-        if (other.CompareTag("Solution"))
-        {
-            Destroy(gameObjectDoor);
-
         }
     }
     

@@ -6,9 +6,10 @@ using Cinemachine;
 public class Palanca : MonoBehaviour
 {
     [SerializeField] GameObject canvasPalanca;
-    [SerializeField] GameObject activateSomething;
+    [SerializeField] GameObject [] _activateBridge;
     [SerializeField] CinemachineVirtualCamera camera;
     Animator anim;
+    bool _isInPalanca;
     private void Start()
     {
         //inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
@@ -19,27 +20,25 @@ public class Palanca : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            canvasPalanca.SetActive(true);
-        }
-        
+            _isInPalanca = true;
+        }      
     }
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            //if (InputManager.playerInputs.Player_Keyboard.CatchObject.triggered || InputManager.playerInputs.Player_GamepadXbox.X.triggered)
-            //{
-            //    anim.SetTrigger("Palanca");
+            if (InputManager.playerInputs.PlayerInputs.CatchObject.triggered)
+            {
+                anim.SetTrigger("Palanca");
 
-            //}
+            }
         }
-
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            canvasPalanca.SetActive(false);
+            _isInPalanca = false;
         }
     }
     void ActivateBridge()
@@ -49,15 +48,18 @@ public class Palanca : MonoBehaviour
     IEnumerator SwitchCamera()
     {
         camera.Priority = 10;
+        _isInPalanca = false;
         yield return new WaitForSeconds(1);
-        SpawnBaldosas[] activateBaldosas = activateSomething.GetComponentsInChildren<SpawnBaldosas>();
-        foreach (SpawnBaldosas s in activateBaldosas)
+        foreach (GameObject s in _activateBridge)
         {
-            s.IsSpawingBool(true);
+            s.GetComponent<SpawnBaldosas>().IsSpawingBool(true);
         }
         yield return new WaitForSeconds(4);
         camera.Priority = 0;
+    }
 
-
+    public bool PlayerInPalanca()
+    {
+        return _isInPalanca;
     }
 }
