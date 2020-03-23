@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2297386075455865020}
   - component: {fileID: 7114265509670353546}
   - component: {fileID: 3568675694504117875}
-  - component: {fileID: 4124686345929614779}
   m_Layer: 0
   m_Name: Seta_Grande_03
   m_TagString: Untagged
@@ -28,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3006906665215668911}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 129.007, y: -142.676, z: -62.372}
-  m_LocalScale: {x: 2.4176164, y: 2.4176164, z: 2.6421068}
+  m_LocalScale: {x: 1.1664971, y: 1.1664972, z: 1.1664972}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,17 +79,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4124686345929614779
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3006906665215668911}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 9007699234963977037, guid: ec8fd3702cd31aa4aaffac41fe63b4ab, type: 3}

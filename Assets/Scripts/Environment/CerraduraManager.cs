@@ -7,7 +7,7 @@ using Cinemachine;
 public class CerraduraManager : MonoBehaviour
 {
     [SerializeField] GameObject gameObjectDoor;
-    //[SerializeField] CinemachineVirtualCamera camera;
+    [SerializeField] CinemachineVirtualCamera _camera;
 
    
 
@@ -17,30 +17,25 @@ public class CerraduraManager : MonoBehaviour
    
     private void Start()
     {
-        //camera.Priority = 0;
+        _camera.Priority = 0;
 
 
 
     }
     private void Update()
     {
-        if (isKeyInside)
+        if (!isKeyInside)
         {
-
-        }
-        else
-        {
-
             gameObjectDoor.SetActive(true);
-
         }
+       
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Caja" || other.gameObject.name == "Llave")
         {
             isKeyInside = true;
-            //StartCoroutine(CameraSwitch(other));
+            StartCoroutine(CameraSwitch(other));
         }
 
         if (other.CompareTag("Solution"))
@@ -54,7 +49,6 @@ public class CerraduraManager : MonoBehaviour
     {
         if (other.tag == "Caja" || other.gameObject.name == "Llave")
         {
-            other.GetComponent<ObjetoPickeable>().enabled = false;
 
 
         }
@@ -69,18 +63,19 @@ public class CerraduraManager : MonoBehaviour
 
         }
     }
-    //IEnumerator CameraSwitch(Collider other)
-    //{
-    //    yield return new WaitForSeconds(1f);
+    IEnumerator CameraSwitch(Collider other)
+    {
+        other.GetComponent<ObjetoPickeable>().isPickeable = false;
+        yield return new WaitForSeconds(1f);
+        _camera.Priority = 10;
+        PlayerMovement.canMove = false;
+        yield return new WaitForSeconds(2f);
+        gameObjectDoor.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        PlayerMovement.canMove = true;
+        _camera.Priority = 0;
 
-    //    camera.Priority = 10;
-    //    yield return new WaitForSeconds(0.5f);
-    //    gameObjectDoor.SetActive(false);
-    //    yield return new WaitForSeconds(1f);
-
-    //    camera.Priority = 0;
-
-    //}
+    }
 
 
 

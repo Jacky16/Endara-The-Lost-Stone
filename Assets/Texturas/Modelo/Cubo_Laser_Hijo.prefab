@@ -212,6 +212,7 @@ MonoBehaviour:
   cuboHijo: 1
   _activarRaycast: 0
   _reciboRaycast: 0
+  _listGameObjectsGemaPuzzle: []
   _materialWithEmision: {fileID: 2100000, guid: 168013d5013009842a5fb75de911029a,
     type: 2}
   _materialWithoutEmision: {fileID: 2100000, guid: b6584dc79d0ac564eb1b70502b918c54,
@@ -277,4 +278,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPickeable: 1
-  isRoteable: 0
+  isRoteable: 1

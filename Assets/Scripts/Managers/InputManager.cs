@@ -33,11 +33,11 @@ public class  InputManager : MonoBehaviour
 
         if (_isRotating_L)
         {
-            _pickUpsObjects.Rotate_L(5);
+            _pickUpsObjects.Rotate_L(2.5f);
         } 
         if (_isRotating_R)
         {
-            _pickUpsObjects.Rotate_R(5);
+            _pickUpsObjects.Rotate_R(2.5f);
         }
         
     }
