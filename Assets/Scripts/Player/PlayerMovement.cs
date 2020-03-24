@@ -57,14 +57,10 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         playerLifeManager = GetComponent<PlayerLifeManager>();
         //godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
-        initialPosition = transform;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
-        if (isInitialPosition != null)
-        {
-            transform.position = initialPosition.position;
-        }
+        
        
     }
     void Update()
@@ -90,9 +86,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (movePlayer != Vector3.zero )
         {
-            transform.LookAt(transform.position + movePlayer);
 
         }
+        transform.LookAt(transform.position + movePlayer);
         //transform.localRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentRotation), 1);
         SetGravity();    
         JumpPlayer();
@@ -104,7 +100,6 @@ public class PlayerMovement : MonoBehaviour
         {
             player.Move(movePlayer * speed * Time.deltaTime);
         }
-        print(player.velocity);
     } 
     public void SetGravity()
     {
@@ -209,8 +204,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            transform.position = initialPosition.position;
-           
+            transform.position = initialPosition.position;   
         }
     }
     public void Axis(float h,float v){

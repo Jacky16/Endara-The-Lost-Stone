@@ -9,27 +9,31 @@ public class PlayerLifeManager : MonoBehaviour
 {
     [SerializeField] 
     float _maxLifePlayer = 100;
-    public float currentLifePlayer;
+    [SerializeField]
+    float _currentLifePlayer;
     private PlayerMovement _player;
-    [SerializeField] Image [] _imagesLife;
-    [SerializeField] float numHeards;
+
+    [SerializeField] 
+    Image [] _imagesLife;
+    [SerializeField] 
+    float numHeards;
 
 
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        currentLifePlayer = _maxLifePlayer;
+        _currentLifePlayer = _maxLifePlayer;
         numHeards = _imagesLife.Length;
     }
 
     public void RestarLife(float life)
     {
-        currentLifePlayer -= life;
+        _currentLifePlayer -= life;
 
-        Debug.Log("Vida del player: " + currentLifePlayer);
+        Debug.Log("Vida del player: " + _currentLifePlayer);
         LifeSpritesManager();
 
-        if (currentLifePlayer <= 0)
+        if (_currentLifePlayer <= 0)
         {
             _player.PlayerDead();
         }
@@ -37,7 +41,7 @@ public class PlayerLifeManager : MonoBehaviour
 
     public float LifePlayer()
     {
-        return currentLifePlayer;
+        return _currentLifePlayer;
     }
     void LifeSpritesManager()
     {

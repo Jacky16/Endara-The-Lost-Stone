@@ -15,7 +15,7 @@ public class Enemy_1 : Enemy
     public override void FarAttackPlayer()
     {
         anim.SetTrigger("Explosion");
-        Invoke("Explosion", 2);
+        Invoke("Explosion", 1.10f);
     }
     public void Explosion()
     {

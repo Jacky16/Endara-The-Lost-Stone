@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class ExplosionEnemy1 : MonoBehaviour
 {
@@ -19,5 +20,10 @@ public class ExplosionEnemy1 : MonoBehaviour
     public void GetDamage(float damage)
     {
         damageExplosion = damage;
+    }
+    private void OnEnable()
+    {
+        GetComponent<CinemachineImpulseSource>().GenerateImpulse(Camera.main.transform.forward);
+
     }
 }

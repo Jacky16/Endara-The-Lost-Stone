@@ -158,7 +158,7 @@ public class UIManager : MonoBehaviour
     }
     void AnimationMoveDownDropButton()
     {
-        _rectTransformDropButton.DOAnchorPosY(-130, timeAnimations);
+        _rectTransformDropButton.DOAnchorPosY(-140, timeAnimations);
     }
     public void ChangeUI()
     {
