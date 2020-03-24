@@ -9,8 +9,8 @@ public class UIManager : MonoBehaviour
     [Header("Referencias a scripts")]
     [SerializeField]
     Palanca _palanca;
-    
 
+    //RectTransform buttons------------------------------
     [Header("RectTransform Buttons")]
     [SerializeField]
     RectTransform _rectTransformButtonCatchObject;
@@ -18,13 +18,17 @@ public class UIManager : MonoBehaviour
     RectTransform[] _rectTransformsButtonsRotate;
     [SerializeField]
     RectTransform _rectTransformDropButton;
+    [SerializeField]
+    RectTransform _rectTransformButtonUseObject;
+    //Images components------------------------------
+
     //Image Catcht Object 
     [Header("Image Catcht Object")]
     [SerializeField]
     Image _imageCatchObject;
 
     //Image Rotate Object
-    [Header("Image Rotate Object")]
+    [Header("Image Rotate Objects")]
     [SerializeField]
     Image _imageRotateObject_L;
     [SerializeField]
@@ -38,16 +42,16 @@ public class UIManager : MonoBehaviour
     //Image Palanca Use
     [Header("Image Palanca Use")]
     [SerializeField]
-    Image _imageInteractionButton;
+    Image _imageUseButton;
 
+    //Sprites------------------------------
 
-
-    //Keyboard/Mouse
+    //Keyboard/Mouse--------------
     [Header("Sprites Keyboard")]
     [SerializeField]
     Sprite _spriteCatchObject_Keyboard;
 
-    //Xbox
+    //Xbox--------------
     [Header("Sprites Xbox")]
     [SerializeField]
     Sprite _spriteCatchObject_Xbox;
@@ -58,7 +62,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     Sprite _spriteInteractionButton_Xbox;
 
-    //PS4
+    //PS4--------------
     [Header("Sprites PS4")]
     [SerializeField]
     Sprite _spriteCatchObject_PS4;
@@ -79,27 +83,30 @@ public class UIManager : MonoBehaviour
         
         if (PickUpObjects.CanCatchObject() && PickUpObjects.IsRotableObject()) // SI se puede pillar el objeto y rotarlo
         {
-            AnimationScaleActiveButtonInteraction();
+            AnimationScaleActiveButtonCatch();
 
             AnimationMoveUpButtonsRotate();
         }
         if(!PickUpObjects.CanCatchObject() && PickUpObjects.IsRotableObject()) //NO se puede pillar el objeto pero SI rotarlo
         {
-            AnimationScaleDisableButtonInteraction();
+            AnimationScaleDisableButtonCatch();
 
             AnimationMoveUpButtonsRotate();
         }
         if(PickUpObjects.CanCatchObject() && !PickUpObjects.IsRotableObject()) //SI se puede pillar el objeto pero NO rotarlo
         {
-            AnimationScaleActiveButtonInteraction();
+            AnimationScaleActiveButtonCatch();
 
             AnimationMoveDownButtonsRotate();
         }
-        if (!PickUpObjects.CanCatchObject() && !PickUpObjects.IsRotableObject())
+        if (!PickUpObjects.CanCatchObject() && !PickUpObjects.IsRotableObject() && !_palanca.PlayerInPalanca())
         {
-            AnimationScaleDisableButtonInteraction();
+            AnimationScaleDisableButtonCatch();
 
             AnimationMoveDownButtonsRotate();
+
+            AnimationScaleDisableButtonUse();
+
         }
         //Cuando el objeto esta pillado
         if (PickUpObjects.IsCatchedObject())
@@ -108,7 +115,7 @@ public class UIManager : MonoBehaviour
             _sequence.Append(_rectTransformButtonCatchObject.DOScale(new Vector2(0, 0), timeAnimations));
             _sequence.Append(_rectTransformDropButton.DOAnchorPosY(0, timeAnimations));
             AnimationMoveDownButtonsRotate();
-            AnimationScaleDisableButtonInteraction();
+            AnimationScaleDisableButtonCatch();
             //AnimationMoveUpDropButton();
         }
         else
@@ -116,18 +123,16 @@ public class UIManager : MonoBehaviour
             AnimationMoveDownDropButton();
         }
 
-        //Interaccion con la palanca del 1r puzzle
+        ////Interaccion con la palanca del 1r puzzle
 
         if (_palanca.PlayerInPalanca())
         {
-            AnimationScaleActiveButtonInteraction();
+            AnimationScaleActiveButtonUse();
         }
-        else
-        {
-            AnimationScaleDisableButtonInteraction();
-        }
+        
 
     }
+    //Animaciones botones de rotar
     void AnimationMoveUpButtonsRotate()
     {
         foreach (RectTransform r in _rectTransformsButtonsRotate)
@@ -143,15 +148,27 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    void AnimationScaleActiveButtonInteraction()
+    //Animaciones botones de pillar el objeto
+    void AnimationScaleActiveButtonCatch()
     {
         _rectTransformButtonCatchObject.DOScale(new Vector2(1,1), timeAnimations);
     }
-    void AnimationScaleDisableButtonInteraction()
+    void AnimationScaleDisableButtonCatch()
     {
         _rectTransformButtonCatchObject.DOScale(new Vector2(0, 0), timeAnimations);
     }
 
+    //Animaciones Desactivar botones de usar
+    void AnimationScaleDisableButtonUse()
+    {
+        _rectTransformButtonUseObject.DOScale(new Vector2(0, 0), timeAnimations);
+    }
+    void AnimationScaleActiveButtonUse()
+    {
+        _rectTransformButtonUseObject.DOScale(new Vector2(1,1), timeAnimations);
+    }
+
+    //Animaciones de dropear el objeto
     void AnimationMoveUpDropButton()
     {
         _rectTransformDropButton.DOAnchorPosY(0, timeAnimations);
@@ -188,6 +205,8 @@ public class UIManager : MonoBehaviour
         _imageRotateObject_R.sprite = _spriteRotate_R_Xbox;
         //Drop Buttons
         _imageDrop.sprite = _spriteInteractionButton_Xbox;
+        //Use button
+        _imageUseButton.sprite = _spriteCatchObject_Xbox;
 
     }
     void UIPS4()
@@ -198,6 +217,8 @@ public class UIManager : MonoBehaviour
         _imageRotateObject_R.sprite = _spriteRotate_R_PS4;
         //Drop buttons
         _imageDrop.sprite = _spriteInteractionButton_PS4;
+        //Use button
+        _imageUseButton.sprite = _spriteCatchObject_PS4;
     }
 
 

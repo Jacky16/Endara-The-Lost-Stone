@@ -5,16 +5,14 @@ using Cinemachine;
 
 public class Palanca : MonoBehaviour
 {
-    [SerializeField] GameObject canvasPalanca;
     [SerializeField] GameObject [] _activateBridge;
     [SerializeField] CinemachineVirtualCamera camera;
+    [SerializeField]
     Animator anim;
     bool _isInPalanca;
     private void Start()
     {
-        //inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         anim = GetComponent<Animator>();
-        canvasPalanca.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -30,7 +28,6 @@ public class Palanca : MonoBehaviour
             if (InputManager.playerInputs.PlayerInputs.CatchObject.triggered)
             {
                 anim.SetTrigger("Palanca");
-
             }
         }
     }
@@ -57,7 +54,6 @@ public class Palanca : MonoBehaviour
         yield return new WaitForSeconds(4);
         camera.Priority = 0;
     }
-
     public bool PlayerInPalanca()
     {
         return _isInPalanca;

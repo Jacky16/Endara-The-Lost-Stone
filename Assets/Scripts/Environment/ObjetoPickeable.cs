@@ -14,7 +14,7 @@ public class ObjetoPickeable : MonoBehaviour
         if (other.tag == "PlayerInteraction")
         {
             other.GetComponentInParent<PickUpObjects>().objectToPickup = this.gameObject;
-            other.GetComponentInParent<PickUpObjects>().SetCanCatch(isPickeable);
+            other.GetComponentInParent<PickUpObjects>().SetCanCatch(isPickeable && true);
             other.GetComponentInParent<PickUpObjects>().SetCanRotate(isRoteable && true);
 
         }
