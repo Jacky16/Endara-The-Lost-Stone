@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
     path: Assets/Scenes/LogoScreen.unity
     guid: 783dabb6f188ce7468a012ad49069119
   - enabled: 0
@@ -24,15 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/VictoryScreen.unity
     guid: 165b813d0d3184e5891b919f3dddc468
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
     path: Assets/Scenes/GameplayScreen.unity
     guid: a98bb355aeafda449a53aa8d730815e6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Puzzles(Prototipos)/Boss/Laberinto Prototipo/Laberinto_Prototipo.unity
     guid: 6285c863e9c8efb45b7737ce8e80f9a0
   m_configObjects:

@@ -102,8 +102,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            player.Move(movePlayer * (speed * Time.deltaTime));
+            player.Move(movePlayer * speed * Time.deltaTime);
         }
+        print(player.velocity);
     } 
     public void SetGravity()
     {
