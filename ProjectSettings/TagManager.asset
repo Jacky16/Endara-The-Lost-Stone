@@ -15,6 +15,7 @@ TagManager:
   - Muerte
   - Enemy2
   - CajaDestruible
+  - Coin
   layers:
   - Default
   - TransparentFX

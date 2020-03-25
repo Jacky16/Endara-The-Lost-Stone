@@ -9,10 +9,12 @@ using DG.Tweening;
 [RequireComponent(typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]InputManager inputManager;
+    
     CharacterController player;
     Animator anim;
     [SerializeField] Camera mainCam;
+    [SerializeField]
+    CoinManager _coinManager;
     PlayerLifeManager playerLifeManager;
     GodManager godManager;
     public Transform initialPosition;
@@ -26,18 +28,20 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 movePlayer;
     private Vector3 camForward;
     private Vector3 camRight;
-   
- 
-  
     [Header("Gravedad")]
     [SerializeField] float gravity;
     [SerializeField] float jumpForce;
-    
     float fallvelocity;
     
     [Header("Fuerza de empuje")]
     public float pushPower = 2f;
-    [SerializeField] Transform respawnPosition;
+
+    [Header("Respawn Position")]
+    [SerializeField] 
+    Transform respawnPosition;
+    [Header("Particle Coin")]
+    [SerializeField]
+    GameObject _prefabParticleCoin;
     float unitsGod;
 
 
@@ -213,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (playerIn2D)
         {
-            //Si estas enuna zona 2.5D y te mueres, las plataformas con gravedad, vuelven a su posicion original
+            //Si estas en  una zona 2.5D y te mueres, las plataformas con gravedad, vuelven a su posicion original
             PlayerInPlataform[] plataformsWithGravity = GameObject.Find("Zona 2.5D").GetComponentsInChildren<PlayerInPlataform>();
 
             foreach(PlayerInPlataform p in plataformsWithGravity)
@@ -280,6 +284,12 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("Muerte"))
         {
             PlayerDead();
+        }
+        if (other.CompareTag("Coin"))
+        {
+            Instantiate(_prefabParticleCoin, other.transform.position, Quaternion.identity);
+            _coinManager.SumCoins();
+            Destroy(other.gameObject);
         }
         
     }
