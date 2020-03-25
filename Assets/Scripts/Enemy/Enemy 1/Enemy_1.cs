@@ -49,7 +49,7 @@ public class Enemy_1 : Enemy
     {
         if (other.CompareTag("Cola"))
         {
-            RestLife(other.GetComponent<DamegeAttack>().DamagePlayer());   
+            Explosion();
         }
     }
     //private void OnTriggerStay(Collider other)
