@@ -26,10 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 movePlayer;
     private Vector3 camForward;
     private Vector3 camRight;
-    private float horizontal;
-    private float vertical;
-    private int maxJumps = 2;
-    private int currentJump = 0;
+   
  
   
     [Header("Gravedad")]
@@ -49,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isGod;
     [SerializeField] bool isInitialPosition;
     private bool doubleJump = true;
+    private bool playerIn2D;
 
     private void Start()
     {
@@ -72,9 +70,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     public void Movimiento(){
+        
         anim.SetBool("isGrounded", player.isGrounded);
         
-        playerInput = new Vector3(inputManager.Vector2Movement().x, 0, inputManager.Vector2Movement().y);
+        playerInput = new Vector3(InputManager.Vector2Movement().x, 0, InputManager.Vector2Movement().y);
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
 
         anim.SetFloat("PlayerWalkVelocity", playerInput.magnitude * speed);
@@ -92,6 +91,10 @@ public class PlayerMovement : MonoBehaviour
         //transform.localRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentRotation), 1);
         SetGravity();    
         JumpPlayer();
+        if (playerIn2D)
+        {
+            movePlayer.z = 0;
+        }
         if (PickUpObjects.IsCatchedObject())
         {
             player.Move(movePlayer * (speed / PickUpObjects.MassObjectPicked() * Time.deltaTime));
@@ -142,6 +145,10 @@ public class PlayerMovement : MonoBehaviour
             playerLifeManager.enabled = false;
         }
     }
+    public void SetPlayer2D(bool b)
+    {
+        playerIn2D = b;
+    }
     public void JumpPlayer()
     {
         if (InputManager.playerInputs.PlayerInputs.Jump.triggered)
@@ -181,8 +188,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-
-
     void CamDirection()
     {
         camForward = mainCam.transform.forward;
@@ -206,10 +211,16 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = initialPosition.position;   
         }
-    }
-    public void Axis(float h,float v){
-        playerInput.x = h;
-        playerInput.z = v;
+        if (playerIn2D)
+        {
+            //Si estas enuna zona 2.5D y te mueres, las plataformas con gravedad, vuelven a su posicion original
+            PlayerInPlataform[] plataformsWithGravity = GameObject.Find("Zona 2.5D").GetComponentsInChildren<PlayerInPlataform>();
+
+            foreach(PlayerInPlataform p in plataformsWithGravity)
+            {
+                p.ReturnOriginal();
+            }
+        }
     }
     public void MeleAtack()
     {
@@ -272,6 +283,5 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
-    
 
 }

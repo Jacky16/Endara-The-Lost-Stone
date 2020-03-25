@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Final
   - InteractionZone
   - PlayerInteraction
   - TransformObjectPickUp
@@ -15,6 +14,7 @@ TagManager:
   - Cola
   - Muerte
   - Enemy2
+  - CajaDestruible
   layers:
   - Default
   - TransparentFX

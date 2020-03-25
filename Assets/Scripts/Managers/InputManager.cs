@@ -16,6 +16,7 @@ public class  InputManager : MonoBehaviour
     public static InputsPlayer playerInputs;
     public PlayerInput playerInput;
     Vector2 _inputsValueCamera;
+    public static Vector2 movement;
     public enum ControlsState { PS4,Xbox,KeyBoard};
     public static ControlsState controlsState;
 
@@ -29,6 +30,8 @@ public class  InputManager : MonoBehaviour
     }
     private void Update()
     {
+        movement = playerInputs.PlayerInputs.Movement.ReadValue<Vector2>();
+        playerInputs.PlayerInputs.MovementCamera.canceled += ctx => _freeLookCamera.m_XAxis.m_InputAxisValue = 0;
         #region Comprobacion: Rotacion de objetos
 
         if (_isRotating_L)
@@ -101,7 +104,6 @@ public class  InputManager : MonoBehaviour
     {
         _inputsValueCamera = playerInputs.PlayerInputs.MovementCamera.ReadValue<Vector2>();
         //El valor de x se pone a zero para evitar que se mueva solo
-        playerInputs.PlayerInputs.MovementCamera.canceled += ctx => _freeLookCamera.m_XAxis.m_InputAxisValue = 0;
 
         if (_inputsValueCamera.x > deadZoneX || _inputsValueCamera.x < -deadZoneX)
         {
@@ -109,10 +111,9 @@ public class  InputManager : MonoBehaviour
         }
         _freeLookCamera.m_YAxis.m_InputAxisValue = _inputsValueCamera.y; 
     }
-    public Vector2 Vector2Movement()
+    public static Vector2 Vector2Movement()
     {
-        Vector2 movement = playerInputs.PlayerInputs.Movement.ReadValue<Vector2>();
-        return movement;
+       return movement;
     }   
     private void OnEnable()
     {

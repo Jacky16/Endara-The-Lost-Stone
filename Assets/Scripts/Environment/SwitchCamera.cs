@@ -29,6 +29,7 @@ public class SwitchCamera : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            other.GetComponent<PlayerMovement>().SetPlayer2D(false);
             StartCoroutine(SwitchToDisableCamera(other));
 
         }
@@ -36,6 +37,8 @@ public class SwitchCamera : MonoBehaviour
 
     IEnumerator SwitchToEnableCamera(Collider other)
     {
+        yield return new WaitForSeconds(0.3f);
+        other.GetComponent<PlayerMovement>().SetPlayer2D(true);
         cameraVirtual.enabled = true;
         cameraVirtual.Priority = 11;
         yield return new WaitForSeconds(1);

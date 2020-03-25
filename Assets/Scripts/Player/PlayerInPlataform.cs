@@ -6,9 +6,11 @@ public class PlayerInPlataform : MonoBehaviour
 {
     [SerializeField] bool useGravity;
     Rigidbody rb;
+    Vector3 originalPosition;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        originalPosition = transform.position;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -33,10 +35,15 @@ public class PlayerInPlataform : MonoBehaviour
     }
     void ActiveGravity()
     {
-      
-        rb.useGravity = true;
-        
-       
+        rb.useGravity = true; 
+    }
+    public void ReturnOriginal()
+    {
+        if (useGravity)
+        {
+            rb.useGravity = false;
+            transform.position = originalPosition;
+        }
     }
 
 }

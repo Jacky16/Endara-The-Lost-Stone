@@ -5,7 +5,7 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     LineRenderer _lineRenderer;
-    [SerializeField] 
+    [SerializeField]
     LayerMask _layerMask;
     public Vector3 direction;
     public Vector3 startPoint;
@@ -14,12 +14,12 @@ public class Laser : MonoBehaviour
     public bool cuboHijo;
     [Header("Bools para combrobar si recibe el Raycast")]
 
-    [SerializeField] 
+    [SerializeField]
     bool _activarRaycast;
-    [SerializeField] 
+    [SerializeField]
     bool _reciboRaycast;
     GameObject _cuboHijoGameObject;
-    [SerializeField]List<GameObject> _listGameObjectsGemaPuzzle = new List<GameObject>();
+    [SerializeField] List<GameObject> _listGameObjectsGemaPuzzle = new List<GameObject>();
     [Header("Materiales")]
     [SerializeField]
     Material _materialWithEmision;
@@ -87,8 +87,8 @@ public class Laser : MonoBehaviour
         if (_activarRaycast)
         {
             Ray ray = new Ray();
-            RaycastHit [] hits;
-            hits = Physics.RaycastAll(transform.position, transform.TransformDirection(Vector3.forward),lineLenght, _layerMask);
+            RaycastHit[] hits;
+            hits = Physics.RaycastAll(transform.position, transform.TransformDirection(Vector3.forward), lineLenght, _layerMask);
             print(hits.Length);
             //Asigno la longitud del LineRenderer
             direction.z = lineLenght;
@@ -97,7 +97,7 @@ public class Laser : MonoBehaviour
             {
                 if (!hits[i].collider.CompareTag("Solution"))
                 {
-                    if(lenghtUntilSolid > hits[i].distance)
+                    if (lenghtUntilSolid > hits[i].distance)
                     {
                         lenghtUntilSolid = hits[i].distance;
                     }
@@ -150,10 +150,10 @@ public class Laser : MonoBehaviour
 
             }
 
-                
+
 
             _lineRenderer.SetPosition(0, startPoint);
-           
+
         }
     }
     public void Raycast()
@@ -161,18 +161,18 @@ public class Laser : MonoBehaviour
         if (_activarRaycast)
         {
             Ray ray = new Ray();
-            RaycastHit hits;
+            RaycastHit hit;
             _lineRenderer.SetPosition(0, startPoint);
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hits, Mathf.Infinity, _layerMask))
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, _layerMask))
             {
                 //Calcular la distancia entre el punto mas lejano que esta tocando el Raycast
-                direction.z = hits.distance;
+                direction.z = hit.distance;
                 //Asignar la posicion del Raycast al Linerenderer
                 _lineRenderer.SetPosition(1, direction);
 
-                if (hits.transform.gameObject.tag == "Solution")
+                if (hit.transform.gameObject.tag == "Solution")
                 {
-                    _listGameObjectsGemaPuzzle.Add(hits.transform.gameObject);
+                    _listGameObjectsGemaPuzzle.Add(hit.transform.gameObject);
 
                     foreach (GameObject g in _listGameObjectsGemaPuzzle) //Para activar todas las gemas
                     {
@@ -186,7 +186,7 @@ public class Laser : MonoBehaviour
                 }
                 else
                 {
-                    if (hits.transform.gameObject.tag != "Solution")
+                    if (hit.transform.gameObject.tag != "Solution")
                     {
                         if (_listGameObjectsGemaPuzzle.Count > 1)
                         {
@@ -201,10 +201,10 @@ public class Laser : MonoBehaviour
                 }
 
 
-                if (hits.transform.tag == "Cubo") // Choca con un cubo hijo
+                if (hit.transform.tag == "Cubo") // Choca con un cubo hijo
                 {
                     //Obtener el cubo que tiene delante
-                    _cuboHijoGameObject = hits.transform.gameObject as GameObject;
+                    _cuboHijoGameObject = hit.transform.gameObject as GameObject;
 
                     //Como recibe el Raycast, ponemos la variable a true
                     _cuboHijoGameObject.GetComponent<Laser>()._reciboRaycast = true;
@@ -212,23 +212,21 @@ public class Laser : MonoBehaviour
 
                 }
                 else
-                {
-                    _cuboHijoGameObject.GetComponent<Laser>()._reciboRaycast = false;
-                    _cuboHijoGameObject.GetComponent<Laser>()._activarRaycast = false;
-                    _cuboHijoGameObject.GetComponent<Laser>().DesactivarLineRender();
-                    _cuboHijoGameObject.GetComponent<MeshRenderer>().material = _materialWithoutEmision;
+                {   
+                    
                 }
 
-                if (hits.transform.tag != "Cubo")
+                if (hit.transform.tag != "Cubo" && hit.collider.gameObject != this.gameObject)
                 {
                     //Desactiva el Line Renderer y el raycast de todos los cubos cuando no colsiona el rayo excepto el ultimo
-                    if (_cuboHijoGameObject != null)
-
-
-
-
-
-                        if (!cuboPadre)
+                    
+                        _cuboHijoGameObject.GetComponent<Laser>()._reciboRaycast = false;
+                        _cuboHijoGameObject.GetComponent<Laser>()._activarRaycast = false;
+                        _cuboHijoGameObject.GetComponent<Laser>().DesactivarLineRender();
+                        _cuboHijoGameObject.GetComponent<MeshRenderer>().material = _materialWithoutEmision;
+                        
+                    
+                    if (!cuboPadre)
                         {
                             DesactivarLineRender();
                         }
@@ -247,8 +245,6 @@ public class Laser : MonoBehaviour
                     }
                     _cuboHijoGameObject = null;
                 }
-
-
             }
         }
     }
