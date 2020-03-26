@@ -20,8 +20,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform initialPosition;
     [SerializeField] CapsuleCollider attackCollider;
     [Header("Velocidad")]
-    public float speed = 6.5F;
-  
+    public float speedMax;
+    public float acceleration = 20f;
+    private float currentSpeed = 0f;
     [Header("Controles")]
     //[Range(0,1000)][SerializeField] float speedAceleration;
     private Vector3 playerInput;
@@ -74,39 +75,55 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     public void Movimiento(){
-        
-        anim.SetBool("isGrounded", player.isGrounded);
+        Vector3 movePlayerXZ = Vector3.zero;
+
         
         playerInput = new Vector3(InputManager.Vector2Movement().x, 0, InputManager.Vector2Movement().y);
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
-
-        anim.SetFloat("PlayerWalkVelocity", playerInput.magnitude * speed);
 
         CamDirection();
         Vector3 rotationDirection = playerInput.x * camRight + playerInput.z * camForward;
         Vector3 currentRotation = rotationDirection;
         movePlayer = playerInput.x * camRight + playerInput.z * camForward;
 
-        if (movePlayer != Vector3.zero )
-        {
-
-        }
-        transform.LookAt(transform.position + movePlayer);
         //transform.localRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentRotation), 1);
+        //transform.LookAt(transform.position + movePlayer);
+        float shortestAngle = Vector3.SignedAngle(transform.forward, movePlayer, Vector3.up);
+        transform.Rotate(Vector3.up * shortestAngle / 1.5f);
         SetGravity();    
         JumpPlayer();
-        if (playerIn2D)
+        if (movePlayer.magnitude > 0.1f)
         {
-            movePlayer.z = 0;
-        }
-        if (PickUpObjects.IsCatchedObject())
-        {
-            player.Move(movePlayer * (speed / PickUpObjects.MassObjectPicked() * Time.deltaTime));
+            currentSpeed += acceleration * Time.deltaTime;
+            currentSpeed = Mathf.Clamp(currentSpeed, 0f, speedMax);
         }
         else
         {
-            player.Move(movePlayer * speed * Time.deltaTime);
+            currentSpeed -= acceleration * Time.deltaTime;
+            currentSpeed = Mathf.Clamp(currentSpeed, 0f, speedMax);
         }
+
+        if (PickUpObjects.IsCatchedObject())
+        {
+           movePlayerXZ = (movePlayer * (currentSpeed / PickUpObjects.MassObjectPicked() * Time.deltaTime));
+        }
+        else
+        {
+            movePlayerXZ = (movePlayer * currentSpeed *  Time.deltaTime);
+        }
+        if (playerIn2D)
+        {
+            movePlayerXZ.z = 0;
+        }
+        movePlayer.x = movePlayerXZ.x;
+        movePlayer.z = movePlayerXZ.z;
+        player.Move(movePlayerXZ);
+       
+
+        
+        movePlayerXZ.y = 0;
+        anim.SetBool("isGrounded", player.isGrounded);
+        anim.SetFloat("PlayerWalkVelocity", playerInput.magnitude * currentSpeed);
     } 
     public void SetGravity()
     {
@@ -219,7 +236,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //Si estas en  una zona 2.5D y te mueres, las plataformas con gravedad, vuelven a su posicion original
             PlayerInPlataform[] plataformsWithGravity = GameObject.Find("Zona 2.5D").GetComponentsInChildren<PlayerInPlataform>();
-
+            print(plataformsWithGravity.Length);
             foreach(PlayerInPlataform p in plataformsWithGravity)
             {
                 p.ReturnOriginal();
@@ -292,6 +309,15 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
         }
         
+    }
+    private void OnParticleCollision(GameObject other)
+    {
+        if (other.CompareTag("Coin"))
+        {
+            Instantiate(_prefabParticleCoin, other.transform.position, Quaternion.identity);
+            _coinManager.SumCoins();
+            Destroy(other.gameObject);
+        }
     }
 
 }

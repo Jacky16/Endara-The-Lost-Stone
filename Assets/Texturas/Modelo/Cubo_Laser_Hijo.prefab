@@ -276,5 +276,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa165618d5087e45b3856d1d26af34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPickeable: 1
+  isPickeable: 0
   isRoteable: 1

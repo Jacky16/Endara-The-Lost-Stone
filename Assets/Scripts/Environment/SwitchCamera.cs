@@ -37,7 +37,7 @@ public class SwitchCamera : MonoBehaviour
 
     IEnumerator SwitchToEnableCamera(Collider other)
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
         other.GetComponent<PlayerMovement>().SetPlayer2D(true);
         cameraVirtual.enabled = true;
         cameraVirtual.Priority = 11;

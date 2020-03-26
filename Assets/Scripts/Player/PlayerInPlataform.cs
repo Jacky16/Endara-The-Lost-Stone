@@ -39,11 +39,10 @@ public class PlayerInPlataform : MonoBehaviour
     }
     public void ReturnOriginal()
     {
-        if (useGravity)
-        {
-            rb.useGravity = false;
-            transform.position = originalPosition;
-        }
+        rb.useGravity = false;
+
+        transform.position = originalPosition;
+        
     }
 
 }

@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     [Header("Referencias a scripts")]
     [SerializeField]
     Palanca _palanca;
+    bool _playerInCofre;
 
     //RectTransform buttons------------------------------
     [Header("RectTransform Buttons")]
@@ -87,7 +88,6 @@ public class UIManager : MonoBehaviour
     }
     void LogicButtonsUI()
     {
-
         if (PickUpObjects.CanCatchObject() && PickUpObjects.IsRotableObject()) // SI se puede pillar el objeto y rotarlo
         {
             AnimationScaleActiveButtonCatch();
@@ -113,7 +113,6 @@ public class UIManager : MonoBehaviour
             AnimationMoveDownButtonsRotate();
 
             AnimationScaleDisableButtonUse();
-
         }
         //Cuando el objeto esta pillado
         if (PickUpObjects.IsCatchedObject())
@@ -129,16 +128,13 @@ public class UIManager : MonoBehaviour
         {
             AnimationMoveDownDropButton();
         }
-
         ////Interaccion con la palanca del 1r puzzle
-
         if (_palanca.PlayerInPalanca())
         {
             AnimationScaleActiveButtonUse();
         }
-
-
     }
+    
     #region Animations
     //Animaciones botones de rotar
     void AnimationMoveUpButtonsRotate()
