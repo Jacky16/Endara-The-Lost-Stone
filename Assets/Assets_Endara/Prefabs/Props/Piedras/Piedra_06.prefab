@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7401164704313593898}
   - component: {fileID: 2012333512430610972}
   - component: {fileID: 5247177083620267749}
-  - component: {fileID: 6138847707071778899}
+  - component: {fileID: 5163413262337199785}
   m_Layer: 0
   m_Name: Piedra_06
   m_TagString: Untagged
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6138847707071778899
-BoxCollider:
+--- !u!64 &5163413262337199785
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,6 +90,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.22747044, y: 0.33653098, z: 0.2974855}
-  m_Center: {x: -0.007043501, y: -0.022605777, z: 0.14874236}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1306137370974666096, guid: a202c8a21bc844947bad65bed43612a5, type: 3}

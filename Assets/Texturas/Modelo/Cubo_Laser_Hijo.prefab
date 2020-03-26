@@ -208,15 +208,14 @@ MonoBehaviour:
     m_Bits: 30519
   direction: {x: 0, y: 0.4, z: 0}
   startPoint: {x: 0, y: 0.4, z: 0}
-  cuboPadre: 0
-  cuboHijo: 1
+  estados: 1
   _activarRaycast: 0
   _reciboRaycast: 0
-  _listGameObjectsGemaPuzzle: []
   _materialWithEmision: {fileID: 2100000, guid: 168013d5013009842a5fb75de911029a,
     type: 2}
   _materialWithoutEmision: {fileID: 2100000, guid: b6584dc79d0ac564eb1b70502b918c54,
     type: 2}
+  _laser: {fileID: 0}
 --- !u!65 &4244633145112987833
 BoxCollider:
   m_ObjectHideFlags: 0
