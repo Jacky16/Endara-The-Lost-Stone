@@ -9,6 +9,7 @@ public class CerraduraManager : MonoBehaviour
     [SerializeField] GameObject gameObjectDoor;
     [SerializeField] CinemachineVirtualCamera _camera;
     [SerializeField] bool isKeyInside = false;
+    [SerializeField] ParticleSystem particleSystem;
     private void Start()
     {
         _camera.Priority = 0;
@@ -49,6 +50,7 @@ public class CerraduraManager : MonoBehaviour
         PlayerMovement.canMove = false;
         yield return new WaitForSeconds(2f);
         gameObjectDoor.SetActive(false);
+        particleSystem.Play();
         yield return new WaitForSeconds(1f);
         PlayerMovement.canMove = true;
         _camera.Priority = 0;

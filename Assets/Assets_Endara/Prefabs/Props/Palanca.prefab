@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4399289852182094309
 RectTransform:
   m_ObjectHideFlags: 0
@@ -286,7 +286,7 @@ Transform:
   m_GameObject: {fileID: 3610280222229139311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 117.014275, y: -133.68694, z: -69.15169}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1907044568769299074}
   - {fileID: 7375488157472788245}
@@ -318,8 +318,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.37844914, y: 0.5003332, z: 0.2960449}
-  m_Center: {x: 0.039129075, y: 0.24983343, z: 0.3828506}
+  m_Size: {x: 0.7679101, y: 0.38019803, z: 0.71391404}
+  m_Center: {x: 0.024335314, y: 0.189768, z: 0.5917863}
 --- !u!114 &8463629324261162691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,7 +332,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bc02d575c1467408e75e79f2dcf7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasPalanca: {fileID: 2073853418717759219}
+  _activateBridge:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  camera: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!95 &6932935748613335931
 Animator:
   serializedVersion: 3
@@ -484,13 +492,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1325484014693787366}
-    characterCount: 17
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 4
-    wordCount: 4
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Laser : MonoBehaviour
 {
@@ -110,7 +111,7 @@ public class Laser : MonoBehaviour
                         if (lenghtUntilSolid > hits[i].distance)
                         {
                             GemaPuzzle gemaPuzzle = hits[i].collider.gameObject.GetComponent<GemaPuzzle>();
-                            gemaPuzzle.Solution(true);
+                            gemaPuzzle.SolutionInGema(true);
                         }
                     }
                     else
@@ -302,8 +303,9 @@ public class Laser : MonoBehaviour
         _gemaPuzzle = g;
         GemaPuzzle gemaPuzzle = _gemaPuzzle.GetComponent<GemaPuzzle>();
         Animator anim = _gemaPuzzle.GetComponent<Animator>();
-
-        gemaPuzzle.Solution(true);
+        MeshRenderer meshRenderer = _gemaPuzzle.GetComponent<MeshRenderer>();
+        meshRenderer.material.SetFloat("Alpha", 2);
+        gemaPuzzle.SolutionInGema(true);
         anim.SetBool("Iluminate", true);
     }
     void SolutionFalse()
@@ -311,7 +313,7 @@ public class Laser : MonoBehaviour
         GemaPuzzle gemaPuzzle = _gemaPuzzle.GetComponent<GemaPuzzle>();
         Animator anim = _gemaPuzzle.GetComponent<Animator>();
 
-        gemaPuzzle.Solution(false);
+        gemaPuzzle.SolutionInGema(false);
         anim.SetBool("Iluminate", false);
     }
     public void EnableRay()

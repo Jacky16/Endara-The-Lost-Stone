@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     RectTransform[] _rectTransformsButtonsRotate;
     [SerializeField]
+    RectTransform _rectTransformsButtonsRotate_Keyboard;
+    [SerializeField]
     RectTransform _rectTransformDropButton;
     [SerializeField]
     RectTransform _rectTransformButtonUseObject;
@@ -33,7 +35,8 @@ public class UIManager : MonoBehaviour
     Image _imageRotateObject_L;
     [SerializeField]
     Image _imageRotateObject_R;
-
+    [SerializeField]
+    Image _imageRotate_R_Keyboard;
     //Image Drop Object
     [Header("Image Drop Object")]
     [SerializeField]
@@ -50,6 +53,10 @@ public class UIManager : MonoBehaviour
     [Header("Sprites Keyboard")]
     [SerializeField]
     Sprite _spriteCatchObject_Keyboard;
+    [SerializeField]
+    Sprite _spriteRotate_Keyboard;
+    [SerializeField]
+    Sprite _spriteInteractionButton_Keyboard;
 
     //Xbox--------------
     [Header("Sprites Xbox")]
@@ -73,27 +80,27 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     Sprite _spriteInteractionButton_PS4;
     [SerializeField]float timeAnimations = 0.3f;
-    private void Start()
-    {
-        //_canvasCatchObject.SetActive(false);
-        //_canvasRotateObject.SetActive(false);
-    }
+   
     private void Update()
     {
-        
+        LogicButtonsUI();
+    }
+    void LogicButtonsUI()
+    {
+
         if (PickUpObjects.CanCatchObject() && PickUpObjects.IsRotableObject()) // SI se puede pillar el objeto y rotarlo
         {
             AnimationScaleActiveButtonCatch();
 
             AnimationMoveUpButtonsRotate();
         }
-        if(!PickUpObjects.CanCatchObject() && PickUpObjects.IsRotableObject()) //NO se puede pillar el objeto pero SI rotarlo
+        if (!PickUpObjects.CanCatchObject() && PickUpObjects.IsRotableObject()) //NO se puede pillar el objeto pero SI rotarlo
         {
             AnimationScaleDisableButtonCatch();
 
             AnimationMoveUpButtonsRotate();
         }
-        if(PickUpObjects.CanCatchObject() && !PickUpObjects.IsRotableObject()) //SI se puede pillar el objeto pero NO rotarlo
+        if (PickUpObjects.CanCatchObject() && !PickUpObjects.IsRotableObject()) //SI se puede pillar el objeto pero NO rotarlo
         {
             AnimationScaleActiveButtonCatch();
 
@@ -129,22 +136,59 @@ public class UIManager : MonoBehaviour
         {
             AnimationScaleActiveButtonUse();
         }
-        
+
 
     }
+    #region Animations
     //Animaciones botones de rotar
     void AnimationMoveUpButtonsRotate()
     {
-        foreach (RectTransform r in _rectTransformsButtonsRotate)
+        switch (InputManager.controlsState)
         {
-            r.DOAnchorPosY(0, timeAnimations);
+            case InputManager.ControlsState.KeyBoard:
+                _rectTransformsButtonsRotate_Keyboard.DOAnchorPosY(0, timeAnimations);
+                foreach (RectTransform r in _rectTransformsButtonsRotate)
+                {
+                    r.DOAnchorPosY(-125, timeAnimations);
+                } //Desaparece la UI de gamepad, por si cambias al Teclado y no se solapen
+                break;
+            case InputManager.ControlsState.Xbox:
+                foreach (RectTransform r in _rectTransformsButtonsRotate)
+                {
+                    r.DOAnchorPosY(0, timeAnimations);
+                }
+                _rectTransformsButtonsRotate_Keyboard.DOAnchorPosY(-125, timeAnimations); //Desaparece la UI del Keyboard, por si cambias al Gamepad
+                break;
+            case InputManager.ControlsState.PS4:
+                foreach (RectTransform r in _rectTransformsButtonsRotate)
+                {
+                    r.DOAnchorPosY(0, timeAnimations);
+                }
+                _rectTransformsButtonsRotate_Keyboard.DOAnchorPosY(-125, timeAnimations); //Desaparece la UI del Keyboard, por si cambias al Gamepad
+                break;
         }
     }
     void AnimationMoveDownButtonsRotate()
     {
-        foreach (RectTransform r in _rectTransformsButtonsRotate)
+        switch (InputManager.controlsState)
         {
-            r.DOAnchorPosY(-125, timeAnimations);
+            case InputManager.ControlsState.KeyBoard:
+                _rectTransformsButtonsRotate_Keyboard.DOAnchorPosY(-125, timeAnimations);
+                break;
+            case InputManager.ControlsState.Xbox:
+                foreach (RectTransform r in _rectTransformsButtonsRotate)
+                {
+                    r.DOAnchorPosY(-125, timeAnimations);
+                }
+                _rectTransformsButtonsRotate_Keyboard.DOAnchorPosY(-125, timeAnimations);//Desaparece la UI del Keyboard, por si cambias al Gamepad
+                break;
+            case InputManager.ControlsState.PS4:
+                foreach (RectTransform r in _rectTransformsButtonsRotate)
+                {
+                    r.DOAnchorPosY(-125, timeAnimations);
+                }
+                _rectTransformsButtonsRotate_Keyboard.DOAnchorPosY(-125, timeAnimations); //Desaparece la UI del Keyboard, por si cambias al Gamepad
+                break;
         }
     }
 
@@ -177,6 +221,7 @@ public class UIManager : MonoBehaviour
     {
         _rectTransformDropButton.DOAnchorPosY(-140, timeAnimations);
     }
+    #endregion
     public void ChangeUI()
     {
         switch (InputManager.controlsState)
@@ -195,7 +240,12 @@ public class UIManager : MonoBehaviour
     void UIKeyboard()
     {
         _imageCatchObject.sprite = _spriteCatchObject_Keyboard;
-
+        //Rotate Buttons
+        _imageRotateObject_R.sprite = _spriteRotate_Keyboard;
+        //Drop Buttons
+        _imageDrop.sprite = _spriteInteractionButton_Keyboard;
+        //Use button
+        _imageUseButton.sprite = _spriteCatchObject_Keyboard;
     }
     void UIXbox() 
     {
@@ -220,6 +270,4 @@ public class UIManager : MonoBehaviour
         //Use button
         _imageUseButton.sprite = _spriteCatchObject_PS4;
     }
-
-
 }
