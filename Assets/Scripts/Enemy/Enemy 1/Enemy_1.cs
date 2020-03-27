@@ -20,9 +20,9 @@ public class Enemy_1 : Enemy
     public void Explosion()
     {
         GameObject g = Instantiate(explosionPrefab, transform.position, Quaternion.identity) as GameObject;
-        g.GetComponent<ExplosionEnemy1>().GetDamage(DamageExplosion());
+        //g.GetComponent<ExplosionEnemy1>().GetDamage(DamageExplosion());
         Debug.Log("He explotado");
-        Destroy(this.gameObject, 0.1f);
+        Destroy(this.gameObject, .01f);
     }
     public float DamageExplosion()
     {
@@ -40,8 +40,8 @@ public class Enemy_1 : Enemy
         if(life <= 0)
         {
             GameObject g = Instantiate(explosionPrefab, transform.position, Quaternion.identity) as GameObject;
-            g.GetComponent<ExplosionEnemy1>().enabled = false;
-            Destroy(this.gameObject);
+            //g.GetComponent<ExplosionEnemy1>().enabled = false;
+            Destroy(this.gameObject,1);
         }
         print(life);
     }

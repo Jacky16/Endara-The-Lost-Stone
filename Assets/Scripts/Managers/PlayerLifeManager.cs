@@ -37,6 +37,7 @@ public class PlayerLifeManager : MonoBehaviour
         {
             _player.PlayerDead();
         }
+        
     }
 
     public float LifePlayer()
@@ -46,7 +47,6 @@ public class PlayerLifeManager : MonoBehaviour
     void LifeSpritesManager()
     {
         float lifePorcentaje = (LifePlayer() * numHeards) / 100;
-        print(lifePorcentaje);
         for (int i = 0; i < _imagesLife.Length; i++)
         {
             if (i < lifePorcentaje)  // Mantiene los sprites activos si i es mas pequeño que la vida (en porcentaje)
@@ -59,6 +59,5 @@ public class PlayerLifeManager : MonoBehaviour
             }
         }
     }
-
 
 }

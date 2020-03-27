@@ -308,7 +308,6 @@ public class PlayerMovement : MonoBehaviour
             _coinManager.SumCoins();
             Destroy(other.gameObject);
         }
-        
     }
     private void OnParticleCollision(GameObject other)
     {

@@ -146,7 +146,7 @@ public class UIManager : MonoBehaviour
         }
 
         //Interaccion con la palanca del 1r puzzle
-        if (_palanca.PlayerInPalanca()) //ToDo: cambiar la variable bool
+        if (_playerInPalanca) //ToDo: cambiar la variable bool
         {
             AnimationScaleActiveButtonUse();
         }
@@ -163,10 +163,6 @@ public class UIManager : MonoBehaviour
         {
             AnimationScaleDisableButtonOpen();
         }
-
-
-       
-
     }
     
     #region Animations

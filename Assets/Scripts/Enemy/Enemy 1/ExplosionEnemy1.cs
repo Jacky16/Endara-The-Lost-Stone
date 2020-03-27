@@ -6,24 +6,18 @@ using Cinemachine;
 public class ExplosionEnemy1 : MonoBehaviour
 {
     [SerializeField]float damageExplosion = 0;
-   
+    public float radiusExplosion;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<PlayerLifeManager>().RestarLife(damageExplosion); 
-            
-            Debug.Log(damageExplosion);
-            Destroy(this.gameObject, 2f);
+            float count = 0;
+            count = +Time.deltaTime;
+            print(count);
+            other.SendMessage("RestarLife", 10);
         }
+       
+        return;
     }
-    public void GetDamage(float damage)
-    {
-        damageExplosion = damage;
-    }
-    private void OnEnable()
-    {
-        GetComponent<CinemachineImpulseSource>().GenerateImpulse(Camera.main.transform.forward);
-
-    }
+    
 }
