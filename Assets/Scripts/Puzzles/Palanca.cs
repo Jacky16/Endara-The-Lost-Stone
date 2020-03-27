@@ -5,20 +5,27 @@ using Cinemachine;
 
 public class Palanca : MonoBehaviour
 {
-    [SerializeField] GameObject [] _activateBridge;
-    [SerializeField] CinemachineVirtualCamera camera;
+    [SerializeField]
+    GameObject [] _activateBridge;
+
+    [SerializeField]
+    CinemachineVirtualCamera camera;
+
     [SerializeField]
     Animator anim;
     bool _isInPalanca;
-    private void Start()
+    
+    UIManager uIManager;
+    private void Awake()
     {
         anim = GetComponent<Animator>();
     }
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            _isInPalanca = true;
+            UIManager.SetPlayerPalanca(true);
         }      
     }
     private void OnTriggerStay(Collider other)
@@ -35,7 +42,7 @@ public class Palanca : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _isInPalanca = false;
+            UIManager.SetPlayerPalanca(false);
         }
     }
     void ActivateBridge()

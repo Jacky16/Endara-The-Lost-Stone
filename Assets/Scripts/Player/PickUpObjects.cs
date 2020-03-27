@@ -132,7 +132,7 @@ public class PickUpObjects : MonoBehaviour
     }
     public void Rotate_L(float grades)
     {
-        if (objectToPickup)
+        if (objectToPickup || PickedObject)
         {
             if (objectToPickup.tag == "Cubo" && objectToPickup.GetComponent<ObjetoPickeable>().isRoteable)
             {

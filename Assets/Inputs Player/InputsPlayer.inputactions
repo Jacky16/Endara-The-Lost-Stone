@@ -271,8 +271,19 @@
                 },
                 {
                     "name": "",
+                    "id": "f2959a42-b0f4-4fa7-8601-4bfd118cd57e",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "RotationObject_L",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a2ce479e-ef7c-4bff-b873-0d32b29f6efb",
-                    "path": "<Keyboard>/r",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",

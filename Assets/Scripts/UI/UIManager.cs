@@ -9,20 +9,26 @@ public class UIManager : MonoBehaviour
     [Header("Referencias a scripts")]
     [SerializeField]
     Palanca _palanca;
-    bool _playerInCofre;
+    static bool _playerInCofre;
+    static bool _playerInPalanca;
 
     //RectTransform buttons------------------------------
-    [Header("RectTransform Buttons")]
+
+    [Header("RectTransform Catch Object")]
     [SerializeField]
     RectTransform _rectTransformButtonCatchObject;
+    [Header("RectTransforms Rotate Objects")]
     [SerializeField]
     RectTransform[] _rectTransformsButtonsRotate;
-    [SerializeField]
-    RectTransform _rectTransformsButtonsRotate_Keyboard;
+    [Header("RectTransform Drop Object")]
     [SerializeField]
     RectTransform _rectTransformDropButton;
+    [Header("RectTransform Use Object")]
     [SerializeField]
     RectTransform _rectTransformButtonUseObject;
+    [Header("RectTransform Open Object")]
+    [SerializeField]
+    RectTransform _rectTransformButtonOpenObject;
     //Images components------------------------------
 
     //Image Catcht Object 
@@ -36,8 +42,7 @@ public class UIManager : MonoBehaviour
     Image _imageRotateObject_L;
     [SerializeField]
     Image _imageRotateObject_R;
-    [SerializeField]
-    Image _imageRotate_R_Keyboard;
+
     //Image Drop Object
     [Header("Image Drop Object")]
     [SerializeField]
@@ -47,6 +52,12 @@ public class UIManager : MonoBehaviour
     [Header("Image Palanca Use")]
     [SerializeField]
     Image _imageUseButton;
+    //Image Open
+    [Header("Image Open")]
+    [SerializeField]
+    Image _imageOpen;
+
+    //Image
 
     //Sprites------------------------------
 
@@ -55,7 +66,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     Sprite _spriteCatchObject_Keyboard;
     [SerializeField]
-    Sprite _spriteRotate_Keyboard;
+    Sprite _spriteRotate_Keyboard_L;
+    [SerializeField]
+    Sprite _spriteRotate_Keyboard_R;
     [SerializeField]
     Sprite _spriteInteractionButton_Keyboard;
 
@@ -106,14 +119,17 @@ public class UIManager : MonoBehaviour
 
             AnimationMoveDownButtonsRotate();
         }
-        if (!PickUpObjects.CanCatchObject() && !PickUpObjects.IsRotableObject() && !_palanca.PlayerInPalanca())
+
+        //Desactiv
+        if (!PickUpObjects.CanCatchObject() && !PickUpObjects.IsRotableObject())
         {
             AnimationScaleDisableButtonCatch();
 
             AnimationMoveDownButtonsRotate();
 
-            AnimationScaleDisableButtonUse();
+
         }
+
         //Cuando el objeto esta pillado
         if (PickUpObjects.IsCatchedObject())
         {
@@ -128,63 +144,45 @@ public class UIManager : MonoBehaviour
         {
             AnimationMoveDownDropButton();
         }
-        ////Interaccion con la palanca del 1r puzzle
-        if (_palanca.PlayerInPalanca())
+
+        //Interaccion con la palanca del 1r puzzle
+        if (_palanca.PlayerInPalanca()) //ToDo: cambiar la variable bool
         {
             AnimationScaleActiveButtonUse();
         }
+        else
+        {
+            AnimationScaleDisableButtonUse();
+        }
+        //Interaccion con los cofres
+        if (_playerInCofre)
+        {
+            AnimationScaleActiveButtonOpen();
+        }
+        else
+        {
+            AnimationScaleDisableButtonOpen();
+        }
+
+
+       
+
     }
     
     #region Animations
     //Animaciones botones de rotar
     void AnimationMoveUpButtonsRotate()
     {
-        switch (InputManager.controlsState)
+        foreach (RectTransform r in _rectTransformsButtonsRotate)
         {
-            case InputManager.ControlsState.KeyBoard:
-                _rectTransformsButtonsRotate_Keyboard.DOAnchorPosY(0, timeAnimations);
-                foreach (RectTransform r in _rectTransformsButtonsRotate)
-                {
-                    r.DOAnchorPosY(-125, timeAnimations);
-                } //Desaparece la UI de gamepad, por si cambias al Teclado y no se solapen
-                break;
-            case InputManager.ControlsState.Xbox:
-                foreach (RectTransform r in _rectTransformsButtonsRotate)
-                {
-                    r.DOAnchorPosY(0, timeAnimations);
-                }
-                _rectTransformsButtonsRotate_Keyboard.DOAnchorPosY(-125, timeAnimations); //Desaparece la UI del Keyboard, por si cambias al Gamepad
-                break;
-            case InputManager.ControlsState.PS4:
-                foreach (RectTransform r in _rectTransformsButtonsRotate)
-                {
-                    r.DOAnchorPosY(0, timeAnimations);
-                }
-                _rectTransformsButtonsRotate_Keyboard.DOAnchorPosY(-125, timeAnimations); //Desaparece la UI del Keyboard, por si cambias al Gamepad
-                break;
+            r.DOAnchorPosY(0, timeAnimations);
         }
     }
     void AnimationMoveDownButtonsRotate()
     {
-        switch (InputManager.controlsState)
+        foreach (RectTransform r in _rectTransformsButtonsRotate)
         {
-            case InputManager.ControlsState.KeyBoard:
-                _rectTransformsButtonsRotate_Keyboard.DOAnchorPosY(-125, timeAnimations);
-                break;
-            case InputManager.ControlsState.Xbox:
-                foreach (RectTransform r in _rectTransformsButtonsRotate)
-                {
-                    r.DOAnchorPosY(-125, timeAnimations);
-                }
-                _rectTransformsButtonsRotate_Keyboard.DOAnchorPosY(-125, timeAnimations);//Desaparece la UI del Keyboard, por si cambias al Gamepad
-                break;
-            case InputManager.ControlsState.PS4:
-                foreach (RectTransform r in _rectTransformsButtonsRotate)
-                {
-                    r.DOAnchorPosY(-125, timeAnimations);
-                }
-                _rectTransformsButtonsRotate_Keyboard.DOAnchorPosY(-125, timeAnimations); //Desaparece la UI del Keyboard, por si cambias al Gamepad
-                break;
+            r.DOAnchorPosY(-125, timeAnimations);
         }
     }
 
@@ -217,6 +215,15 @@ public class UIManager : MonoBehaviour
     {
         _rectTransformDropButton.DOAnchorPosY(-140, timeAnimations);
     }
+    //Animaciones de Abrir el objeto
+    void AnimationScaleActiveButtonOpen()
+    {
+        _rectTransformButtonOpenObject.DOScale(new Vector2(1, 1), timeAnimations);
+    }
+    void AnimationScaleDisableButtonOpen()
+    {
+        _rectTransformButtonOpenObject.DOScale(new Vector2(0, 0), timeAnimations);
+    }
     #endregion
     public void ChangeUI()
     {
@@ -237,7 +244,9 @@ public class UIManager : MonoBehaviour
     {
         _imageCatchObject.sprite = _spriteCatchObject_Keyboard;
         //Rotate Buttons
-        _imageRotateObject_R.sprite = _spriteRotate_Keyboard;
+        _imageRotateObject_L.sprite = _spriteRotate_Keyboard_L;
+        _imageRotateObject_R.sprite = _spriteRotate_Keyboard_R;
+       
         //Drop Buttons
         _imageDrop.sprite = _spriteInteractionButton_Keyboard;
         //Use button
@@ -265,5 +274,13 @@ public class UIManager : MonoBehaviour
         _imageDrop.sprite = _spriteInteractionButton_PS4;
         //Use button
         _imageUseButton.sprite = _spriteCatchObject_PS4;
+    }
+    public static void SetPlayerPalanca(bool b)
+    {
+        _playerInPalanca = b;
+    }
+    public static void SetPlayerCofre(bool b)
+    {
+        _playerInCofre = b;
     }
 }
