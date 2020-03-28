@@ -15,8 +15,7 @@ public class ExplosionEnemy1 : MonoBehaviour
             count = +Time.deltaTime;
             print(count);
             other.SendMessage("RestarLife", 10);
-        }
-       
+        }      
         return;
     }
     

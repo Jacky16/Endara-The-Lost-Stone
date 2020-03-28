@@ -28,6 +28,10 @@ public class Laser : MonoBehaviour
     Material _currentMaterial;
     [SerializeField]Laser _laser;
     GameObject _gemaPuzzle;
+    [SerializeField]
+    GameObject particleSystem;
+    Vector3 distanceParticle;
+
     private void Awake()
     {
         _currentMaterial = GetComponent<MeshRenderer>().material;
@@ -256,7 +260,9 @@ public class Laser : MonoBehaviour
             _lineRenderer.SetPosition(0, startPoint);
             //Asignar la posicion del Raycast al Linerenderer
             direction.z = hit.distance;
-
+            //Asignar la posicion del Raycast a la particula
+            distanceParticle.z = hit.distance;
+            particleSystem.transform.localPosition = distanceParticle;
             //Si tiene el tag "Cubo", tiene el componente Laser y no es el mismo cubo
             if (hit.collider.gameObject.CompareTag("Cubo") && hit.collider.gameObject.GetComponent<Laser>() && hit.collider.gameObject != gameObject)
             {
@@ -321,13 +327,14 @@ public class Laser : MonoBehaviour
         _activarRaycast = true;
         _lineRenderer.enabled = true;
         _currentMaterial = _materialWithEmision;
+        particleSystem.SetActive(true);
     }
     public void DisableRay()
     {
         _activarRaycast = false;
         _lineRenderer.enabled = false;
+        particleSystem.SetActive(false);
         _currentMaterial = _materialWithoutEmision;
-
     }
 
 }
