@@ -22,7 +22,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""name"": ""Movement"",
                     ""type"": ""Value"",
                     ""id"": ""5f99b9c4-5446-404c-a98f-a55f8ba899b5"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": """",
                     ""processors"": ""NormalizeVector2"",
                     ""interactions"": """"
                 },

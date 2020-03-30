@@ -239,6 +239,7 @@ public class PlayerMovement : MonoBehaviour
             print(plataformsWithGravity.Length);
             foreach(PlayerInPlataform p in plataformsWithGravity)
             {
+                if(p.useGravity)
                 p.ReturnOriginal();
             }
         }
@@ -300,6 +301,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (other.CompareTag("Muerte"))
         {
+            GetComponent<PlayerLifeManager>().RestarLife(10);
             PlayerDead();
         }
         if (other.CompareTag("Coin"))

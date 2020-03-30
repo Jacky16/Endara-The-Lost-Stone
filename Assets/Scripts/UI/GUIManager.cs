@@ -5,27 +5,12 @@ using UnityEngine.EventSystems;
 
 public class GUIManager : MonoBehaviour
 {
-    public EventSystem Es;
-    public GameObject selectThisFirst;
-
-    //private void Update()
-    //{
-    //    if(Es.currentSelectedGameObject != storeSelected)
-    //    {
-    //        if(Es.currentSelectedGameObject == null)
-    //        {
-    //            Es.SetSelectedGameObject(storeSelected);
-    //        }
-    //        else
-    //        {
-    //            storeSelected = Es.currentSelectedGameObject;
-    //        }
-    //    }
-    //}
-
+    public EventSystem eventSystem;
+    public GameObject firstSelected;
     private void OnEnable()
     {
-        Es.SetSelectedGameObject(selectThisFirst);
+        eventSystem.SetSelectedGameObject(firstSelected);
     }
+    
 
 }

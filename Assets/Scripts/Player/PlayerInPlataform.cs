@@ -4,7 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 public class PlayerInPlataform : MonoBehaviour
 {
-    [SerializeField] bool useGravity;
+    public bool useGravity;
     Rigidbody rb;
     Vector3 originalPosition;
     private void Start()
