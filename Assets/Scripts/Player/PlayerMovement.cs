@@ -242,7 +242,6 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = initialPosition.position;
         }
-        playerLifeManager.RestarLife();
         return;
     }
     public void MeleAtack()
@@ -261,7 +260,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animDead.SetTrigger("StartDead");
             yield return new WaitForSeconds(1f);
-            transform.position = initialPosition.position;
+            RespawnToWaypoint();
             yield return new WaitForSeconds(1f);
             animDead.SetTrigger("EndDead");
             playerLifeManager.SetLifeToMax();
