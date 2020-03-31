@@ -18,7 +18,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float nearRadiusAttack;
     [SerializeField] protected float farRadiusAttack;
     [SerializeField] bool isFollowPath;
-
+    [SerializeField] LayerMask layerMask;
     //Componentes
     [Header("Componentes")]
     [SerializeField]protected NavMeshAgent navMeshAgent;
@@ -55,7 +55,7 @@ public abstract class Enemy : MonoBehaviour
     #region FovLogic
     public void InFOV(Transform checkingObject, Transform target, float maxAngle, float maxRadius)
     {
-        Collider[] colliders = Physics.OverlapSphere(checkingObject.position, maxRadius);
+        Collider[] colliders = Physics.OverlapSphere(checkingObject.position, maxRadius,layerMask);
         foreach (Collider c in colliders)
         {
             if (c.transform == player)

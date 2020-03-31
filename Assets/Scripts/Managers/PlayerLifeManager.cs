@@ -29,11 +29,9 @@ public class PlayerLifeManager : MonoBehaviour
     public void RestarLife(float life)
     {
         _currentLifePlayer -= life;
-
         Debug.Log("Vida del player: " + _currentLifePlayer);
         LifeSpritesManager();
-
-        if (_currentLifePlayer <= 0)
+       if(_currentLifePlayer <= 0)
         {
             _player.PlayerDead();
         }
@@ -43,6 +41,12 @@ public class PlayerLifeManager : MonoBehaviour
     public float LifePlayer()
     {
         return _currentLifePlayer;
+    }
+    public void SetLifeToMax()
+    {
+        _currentLifePlayer = 100;
+        LifeSpritesManager();
+        print(_currentLifePlayer);
     }
     void LifeSpritesManager()
     {

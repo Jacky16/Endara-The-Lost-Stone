@@ -9,10 +9,16 @@ using DG.Tweening;
 [RequireComponent(typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
-    
+
+    [Header("Animator Components")]
     CharacterController player;
     Animator anim;
-    [SerializeField] Camera mainCam;
+    [SerializeField]
+    Animator animDead;
+    
+
+    [SerializeField] 
+    Camera mainCam;
     [SerializeField]
     CoinManager _coinManager;
     PlayerLifeManager playerLifeManager;
@@ -33,13 +39,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float gravity;
     [SerializeField] float jumpForce;
     float fallvelocity;
-    
+
     [Header("Fuerza de empuje")]
     public float pushPower = 2f;
 
     [Header("Respawn Position")]
-    [SerializeField] 
-    Transform respawnPosition;
+    [SerializeField]
+    Transform respawnCheckpoint;
     [Header("Particle Coin")]
     [SerializeField]
     GameObject _prefabParticleCoin;
@@ -63,8 +69,8 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
-        
-       
+
+
     }
     void Update()
     {
@@ -74,24 +80,20 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
-    public void Movimiento(){
+    public void Movimiento()
+    {
         Vector3 movePlayerXZ = Vector3.zero;
-
-        
         playerInput = new Vector3(InputManager.Vector2Movement().x, 0, InputManager.Vector2Movement().y);
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
 
         CamDirection();
-        Vector3 rotationDirection = playerInput.x * camRight + playerInput.z * camForward;
-        Vector3 currentRotation = rotationDirection;
         movePlayer = playerInput.x * camRight + playerInput.z * camForward;
 
-        //transform.localRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentRotation), 1);
-        //transform.LookAt(transform.position + movePlayer);
         float shortestAngle = Vector3.SignedAngle(transform.forward, movePlayer, Vector3.up);
         transform.Rotate(Vector3.up * shortestAngle / 1.5f);
-        SetGravity();    
+        SetGravity();
         JumpPlayer();
+        //Aceleracion
         if (movePlayer.magnitude > 0.1f)
         {
             currentSpeed += acceleration * Time.deltaTime;
@@ -105,26 +107,29 @@ public class PlayerMovement : MonoBehaviour
 
         if (PickUpObjects.IsCatchedObject())
         {
-           movePlayerXZ = (movePlayer * (currentSpeed / PickUpObjects.MassObjectPicked() * Time.deltaTime));
+            movePlayerXZ = (movePlayer * (currentSpeed / PickUpObjects.MassObjectPicked() * Time.deltaTime));
         }
         else
         {
-            movePlayerXZ = (movePlayer * currentSpeed *  Time.deltaTime);
+            movePlayerXZ = (movePlayer * currentSpeed * Time.deltaTime);
         }
+
+        //Si estas en 2.5D, el eje Z se desactiva
         if (playerIn2D)
         {
             movePlayerXZ.z = 0;
         }
+
+        //Asignar el movimiento
         movePlayer.x = movePlayerXZ.x;
         movePlayer.z = movePlayerXZ.z;
         player.Move(movePlayerXZ);
-       
-
-        
         movePlayerXZ.y = 0;
+
+        //Pasar informacion al animator
         anim.SetBool("isGrounded", player.isGrounded);
         anim.SetFloat("PlayerWalkVelocity", playerInput.magnitude * currentSpeed);
-    } 
+    }
     public void SetGravity()
     {
         if (isGod)
@@ -162,7 +167,7 @@ public class PlayerMovement : MonoBehaviour
                 movePlayer.y -= unitsGod;
 
             }
-            
+
             playerLifeManager.enabled = false;
         }
     }
@@ -193,7 +198,7 @@ public class PlayerMovement : MonoBehaviour
                 fallvelocity = myJumpForce;
                 print(myJumpForce);
             }
-            if(!PickUpObjects.IsCatchedObject())
+            if (!PickUpObjects.IsCatchedObject())
             {
                 fallvelocity = jumpForce;
                 print(jumpForce);
@@ -222,41 +227,48 @@ public class PlayerMovement : MonoBehaviour
     }
     public void PlayerDead()
     {
-        //Destroy(this.gameObject);
-        Cursor.visible = true;
-        if (respawnPosition != null)
+        if(playerLifeManager.LifePlayer() <= 0)
         {
-            transform.position = respawnPosition.position;
+            StartCoroutine(DeadCanvasAnimation());
+        }
+    }
+    public void RespawnToWaypoint()
+    {
+        if (respawnCheckpoint != null)
+        {
+            transform.position = respawnCheckpoint.position;
         }
         else
         {
-            transform.position = initialPosition.position;   
+            transform.position = initialPosition.position;
         }
-        if (playerIn2D)
-        {
-            //Si estas en  una zona 2.5D y te mueres, las plataformas con gravedad, vuelven a su posicion original
-            PlayerInPlataform[] plataformsWithGravity = GameObject.Find("Zona 2.5D").GetComponentsInChildren<PlayerInPlataform>();
-            print(plataformsWithGravity.Length);
-            foreach(PlayerInPlataform p in plataformsWithGravity)
-            {
-                if(p.useGravity)
-                p.ReturnOriginal();
-            }
-        }
+        playerLifeManager.RestarLife(10);
+        return;
     }
     public void MeleAtack()
     {
-        transform.DOLocalRotate(new Vector3(0, 360, 0), .5f,RotateMode.LocalAxisAdd).OnComplete(() => attackCollider.enabled = false);
+        transform.DOLocalRotate(new Vector3(0, 360, 0), .5f, RotateMode.LocalAxisAdd).OnComplete(() => attackCollider.enabled = false);
         attackCollider.enabled = true;
     }
     public void SetRespawn(Transform t)
     {
-        respawnPosition = t;
+        respawnCheckpoint = t;
     }
-    public void RestarVida(int cantidadARestar)
+    
+    IEnumerator DeadCanvasAnimation() // Cuando te quedas sin vida
     {
-        playerLifeManager.RestarLife(cantidadARestar);
+        if (playerLifeManager.LifePlayer() <= 0)
+        {
+            animDead.SetTrigger("StartDead");
+            yield return new WaitForSeconds(1f);
+            transform.position = initialPosition.position;
+            yield return new WaitForSeconds(1f);
+            animDead.SetTrigger("EndDead");
+            playerLifeManager.SetLifeToMax();
+        }
+        
     }
+    
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         ////Salto entre plataformas
@@ -269,10 +281,10 @@ public class PlayerMovement : MonoBehaviour
         //    verticalVelocity = jumpForce;
         //    movePlayer = hit.normal * 1.5f;
         //    }
-            
+
         //}
         float valueMass;
-        if(hit.collider.gameObject.name != "Baldosa")
+        if (hit.collider.gameObject.name != "Baldosa")
         {
             Rigidbody rb = hit.collider.attachedRigidbody;
             if (rb == null || rb.isKinematic)
@@ -290,20 +302,16 @@ public class PlayerMovement : MonoBehaviour
 
             rb.velocity = (pushDir * pushPower) / valueMass;
         }
-    
-        
+
+
     }
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Final")
+        if (other.tag == "Final")
         {
             SceneManager.LoadScene("VictoryScreen");
         }
-        if (other.CompareTag("Muerte"))
-        {
-            GetComponent<PlayerLifeManager>().RestarLife(10);
-            PlayerDead();
-        }
+        
         if (other.CompareTag("Coin"))
         {
             Instantiate(_prefabParticleCoin, other.transform.position, Quaternion.identity);

@@ -12,10 +12,12 @@ public class MainMenuManager : MonoBehaviour
     GameObject _canvasMainMenu;
     [SerializeField]
     GameObject _canvasSettings;
+    [SerializeField]
+    Animator anim;
 
     public void Play()
     {
-        SceneManager.LoadScene("GameplayScreen");
+        StartCoroutine(LoadSceneCoroutine("GameplayScreen_Bosque"));
     }
     public void ActiveSettings()
     {
@@ -25,5 +27,14 @@ public class MainMenuManager : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+    IEnumerator LoadSceneCoroutine(string scene)
+    {
+        anim.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(scene);
+
+
+
     }
 }

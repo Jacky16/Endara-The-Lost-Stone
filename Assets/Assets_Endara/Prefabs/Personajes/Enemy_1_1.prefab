@@ -5833,6 +5833,9 @@ MonoBehaviour:
   nearRadiusAttack: 0
   farRadiusAttack: 9.75
   isFollowPath: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 2048
   navMeshAgent: {fileID: 2117314531663760382}
   anim: {fileID: 2117314531874618757}
   pathEnemy:
@@ -5847,7 +5850,6 @@ MonoBehaviour:
   enemyType: 0
   explosionPrefab: {fileID: 3920864053412402681, guid: 920985270a41ebf48869e7480471c256,
     type: 3}
-  explosionRand: 1
   damageExplosion: 14
 --- !u!195 &2117314531663760382
 NavMeshAgent:
