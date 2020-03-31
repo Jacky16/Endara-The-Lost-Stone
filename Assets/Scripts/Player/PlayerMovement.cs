@@ -227,7 +227,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void PlayerDead()
     {
-        if(playerLifeManager.LifePlayer() <= 0)
+        if(playerLifeManager.AttempsPlayer() <= 0)
         {
             StartCoroutine(DeadCanvasAnimation());
         }
@@ -242,7 +242,7 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = initialPosition.position;
         }
-        playerLifeManager.RestarLife(10);
+        playerLifeManager.RestarLife();
         return;
     }
     public void MeleAtack()
@@ -257,7 +257,7 @@ public class PlayerMovement : MonoBehaviour
     
     IEnumerator DeadCanvasAnimation() // Cuando te quedas sin vida
     {
-        if (playerLifeManager.LifePlayer() <= 0)
+        if (playerLifeManager.AttempsPlayer() <= 0)
         {
             animDead.SetTrigger("StartDead");
             yield return new WaitForSeconds(1f);

@@ -11,7 +11,7 @@ public class ExplosionEnemy1 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.SendMessage("RestarLife", damageExplosion / 2);
+            other.SendMessage("RestarLife");
 
 
         }

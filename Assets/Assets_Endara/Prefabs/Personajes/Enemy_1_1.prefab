@@ -5835,7 +5835,7 @@ MonoBehaviour:
   isFollowPath: 0
   layerMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 2049
   navMeshAgent: {fileID: 2117314531663760382}
   anim: {fileID: 2117314531874618757}
   pathEnemy:
