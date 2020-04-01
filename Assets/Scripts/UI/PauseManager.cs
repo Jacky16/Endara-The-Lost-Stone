@@ -8,7 +8,9 @@ public class PauseManager : MonoBehaviour
 {
     [SerializeField] GameObject canvasPause;
     [SerializeField] GameObject canvasSettings;
-    [SerializeField] KeyCode pauseKeyCode;
+    [SerializeField] GameObject[] _canvasInsideSettings;
+    bool activePause = false;
+
     void Start()
     {
         canvasPause.SetActive(false);
@@ -22,19 +24,39 @@ public class PauseManager : MonoBehaviour
     // Update is called once per frame
     public void Pause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)){
-            canvasPause.SetActive(true);
-            Time.timeScale = 0.01f;
+
+        if (InputManager.playerInputs.PlayerInputs.Pause.triggered && !activePause)
+        {
+            activePause = !activePause;
+            canvasPause.SetActive(activePause);
+            Time.timeScale = 0f;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            PlayerMovement.canMove = false;
+        }
+        else if (InputManager.playerInputs.PlayerInputs.Pause.triggered && activePause)
+        {
+            activePause = !activePause;
+            canvasPause.SetActive(activePause);
+            Time.timeScale = 1f;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            PlayerMovement.canMove = true;
+            foreach (GameObject g in _canvasInsideSettings)
+            {
+                g.SetActive(false);
+            }
         }
     }
     public void Resume()
     {
+        activePause = !activePause;
         canvasPause.SetActive(false);
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        PlayerMovement.canMove = true;
+
     }
     public void Settings()
     {

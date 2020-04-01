@@ -45,7 +45,7 @@ public class PlayerLifeManager : MonoBehaviour
     }
     public void SetLifeToMax()
     {
-        _currentAttemps = 100;
+        _currentAttemps = _maxAttemps;
         LifeSpritesManager();
         print(_currentAttemps);
     }
