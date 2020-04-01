@@ -12,16 +12,7 @@ public class SettingsManager : MonoBehaviour
     public GameObject canvasSettingsAudio;
     public GameObject canvasSettingsVideo;
     public GameObject canvasSettings;
-
-    private void Start()
-    {
-        print(canvasBeforeCanvasSettings.name);
-    }
-    void Update()
-    {
-        
-    }
-
+  
     //Metodos Ajustes
     public void Audio()
     {

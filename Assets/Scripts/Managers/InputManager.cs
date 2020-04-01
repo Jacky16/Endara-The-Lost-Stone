@@ -111,6 +111,7 @@ public class InputManager : MonoBehaviour
         }
         _freeLookCamera.m_YAxis.m_InputAxisValue = _inputsValueCamera.y;
     }
+    
     public static Vector2 Vector2Movement()
     {
         return movement;

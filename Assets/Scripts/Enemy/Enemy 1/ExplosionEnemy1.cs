@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Events;
 
 public class ExplosionEnemy1 : MonoBehaviour
 {
     [SerializeField]float damageExplosion = 5;
     public float radiusExplosion;
+    public CinemachineImpulseSource cinemachineImpulseSource;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             other.SendMessage("RestarLife");
-
-
+            cinemachineImpulseSource.GenerateImpulse();
+            cinemachineImpulseSource.CancelInvoke();
         }
         return;
     }

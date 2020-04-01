@@ -1,15 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.Rendering.HighDefinition;
+using UnityEngine.Rendering;
 public class VideoSettings : MonoBehaviour
 {
     //DropDown variables
     [Header("DropDown Ajustes")]
     public TMPro.TMP_Dropdown resolutionDropdown;
     public TMPro.TMP_Dropdown qualitySettingsDropdown;
+    //Resolution
     Resolution[] resolutions;
- 
+
+    [Header("Sliders")]
+    [SerializeField]
+    Slider _sliderContrast;
+    [SerializeField]
+    Slider _sliderBrightness;
+    //Volume
+    ColorAdjustments colorAdjustments;
+    MotionBlur motionBlur;
+    [SerializeField]
+    Volume _volume;
+    //Vsync
+    bool isVsync = false;
+    private void Start()
+    {
+        ColorAdjustments colorAd;
+        if (_volume.profile.TryGet<ColorAdjustments>(out colorAd))
+        {
+            colorAdjustments = colorAd;
+        }
+        MotionBlur motionB;
+        if (_volume.profile.TryGet<MotionBlur>(out motionB))
+        {
+            motionBlur = motionB;
+        }
+    }
     private void OnEnable()
     {
         ResolutionStart();
@@ -48,5 +76,29 @@ public class VideoSettings : MonoBehaviour
         resolutionDropdown.AddOptions(resolutionsList);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+    }
+    public void SetContrast()
+    {
+        colorAdjustments.contrast.value = _sliderContrast.value;
+    }
+    public void SetBrightness()
+    {
+        colorAdjustments.postExposure.value = _sliderBrightness.value;
+    }
+    public void setVsync()
+    {
+        isVsync =! isVsync;
+        if (isVsync)
+        {
+            QualitySettings.vSyncCount = 1;
+        }
+        else
+        {
+            QualitySettings.vSyncCount = 0;
+        }
+    }
+    public void ActiveMotionBloor(bool b)
+    {
+        motionBlur.active = b;
     }
 }
