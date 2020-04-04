@@ -32,7 +32,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""id"": ""19502128-2746-4414-91c7-579919f8f028"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(pressPoint=0.001)""
                 },
                 {
                     ""name"": ""ThrowObject"",

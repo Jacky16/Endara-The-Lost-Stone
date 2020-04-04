@@ -17,8 +17,8 @@ public class PlayerInPlataform : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.transform.parent = transform;
-            if(useGravity)
-            Invoke("ActiveGravity", .5f);
+            
+            //Invoke("ActiveGravity", .5f);
             //if (!useGravity)
             //{
             //    Sequence forceSequence = DOTween.Sequence();
