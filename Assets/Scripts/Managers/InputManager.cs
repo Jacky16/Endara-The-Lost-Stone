@@ -10,8 +10,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] PickUpObjects _pickUpsObjects;
 
     [Header("Camara Player")]
-    [SerializeField] CinemachineFreeLook _freeLookCamera;
-
+    public  CinemachineFreeLook _freeLookCamera;
     [Header("Componentes para los inputs")]
     public static InputsPlayer playerInputs;
     public PlayerInput playerInput;
@@ -27,6 +26,9 @@ public class InputManager : MonoBehaviour
     {
         playerInputs = new InputsPlayer();
         playerInput = GetComponent<PlayerInput>();
+    }
+    private void Start()
+    {
     }
     private void Update()
     {

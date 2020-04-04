@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Cinemachine;
 
 public class Enterchallenge : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Enterchallenge : MonoBehaviour
     bool canEnter = true;
     [SerializeField]
     TextMeshProUGUI textMeshPro;
+   
 
     [SerializeField]
     Animator anim;
@@ -24,18 +26,7 @@ public class Enterchallenge : MonoBehaviour
         if (other.CompareTag("Player"))
         {
            StartCoroutine(MovePlayerToChallenge(other));
-            switch (challenge)
-            {
-                case Challenge.First:
-                    textMeshPro.text = "First Challenge";
-                    break;
-                case Challenge.Second:
-                    textMeshPro.text = "Second Challenge";
-                    break;
-                case Challenge.Third:
-                    textMeshPro.text = "Third Challenge";
-                    break;
-            }
+            
             
         }
     }
@@ -45,9 +36,21 @@ public class Enterchallenge : MonoBehaviour
     }
     IEnumerator MovePlayerToChallenge(Collider other)
     {
-        
+        switch (challenge)
+        {
+            case Challenge.First:
+                textMeshPro.text = "First Challenge";
+                break;
+            case Challenge.Second:
+                textMeshPro.text = "Second Challenge";
+                break;
+            case Challenge.Third:
+                textMeshPro.text = "Third Challenge";
+                break;
+        }
         anim.SetTrigger("Start");
         yield return new WaitForSeconds(1.3f);
+      
         other.transform.position = _positionInChallenge.position;
         other.transform.localRotation = _positionInChallenge.localRotation;
         yield return new WaitForSeconds(1.5f);

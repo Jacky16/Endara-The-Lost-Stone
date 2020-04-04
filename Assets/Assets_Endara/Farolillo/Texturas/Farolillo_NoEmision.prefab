@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 5917183840581120924}
   - component: {fileID: 78985281545497017}
   - component: {fileID: 4953196684124583859}
+  - component: {fileID: 8008702553481636638}
   m_Layer: 0
   m_Name: Tronco_LOW_GOOD
   m_TagString: Untagged
@@ -191,6 +192,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8008702553481636638
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105611875500084079}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.87870336, y: 1.0320934, z: 5.3296337}
+  m_Center: {x: 0.09463711, y: -0.05686709, z: 2.6648169}
 --- !u!1 &5311815002288728574
 GameObject:
   m_ObjectHideFlags: 0
