@@ -24,18 +24,18 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 10.45
+    m_Value: 11.06
   multiplier:
     m_OverrideState: 0
     m_Value: 1
     min: 0
   upperHemisphereLuxValue:
     m_OverrideState: 0
-    m_Value: 0.54938704
+    m_Value: 0.5493869
     min: 0
   upperHemisphereLuxColor:
     m_OverrideState: 0
-    m_Value: {x: 0.5, y: 0.47860053, z: 0.42822036}
+    m_Value: {x: 0.5, y: 0.47860053, z: 0.4282201}
   desiredLuxValue:
     m_OverrideState: 0
     m_Value: 20000
@@ -235,7 +235,7 @@ MonoBehaviour:
     showEyeDropper: 1
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 578
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
