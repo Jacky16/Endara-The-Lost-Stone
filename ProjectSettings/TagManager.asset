@@ -12,10 +12,10 @@ TagManager:
   - Solution
   - Enemy1
   - Cola
-  - Muerte
   - Enemy2
   - CajaDestruible
   - Coin
+  - Muerte_Vacio
   layers:
   - Default
   - TransparentFX

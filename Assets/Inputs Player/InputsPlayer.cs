@@ -22,7 +22,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""name"": ""Movement"",
                     ""type"": ""Value"",
                     ""id"": ""5f99b9c4-5446-404c-a98f-a55f8ba899b5"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": ""NormalizeVector2"",
                     ""interactions"": """"
                 },
@@ -79,6 +79,14 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""e33c4fb5-e5dd-4bc6-aa94-92eb03345af2"",
                     ""expectedControlType"": ""Vector2"",
+                    ""processors"": ""NormalizeVector2,StickDeadzone"",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""625a9260-2378-4450-a9f2-adcd6c1f8051"",
+                    ""expectedControlType"": """",
                     ""processors"": ""NormalizeVector2,StickDeadzone"",
                     ""interactions"": """"
                 }
@@ -391,6 +399,50 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""action"": ""MovementCamera"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b323e1c-0afb-4203-ab01-82a11b3372d0"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardMouse"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b7bb15c5-b88c-4fec-b922-baa45c178fd9"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardMouse"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""79046fd5-9bec-486e-a527-27afa66ef494"",
+                    ""path"": ""<XInputController>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""864a1579-66af-487f-a439-eae0a976b137"",
+                    ""path"": ""<DualShockGamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PS4"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -446,6 +498,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
         m_PlayerInputs_RotationObject_R = m_PlayerInputs.FindAction("RotationObject_R", throwIfNotFound: true);
         m_PlayerInputs_Attack = m_PlayerInputs.FindAction("Attack", throwIfNotFound: true);
         m_PlayerInputs_MovementCamera = m_PlayerInputs.FindAction("MovementCamera", throwIfNotFound: true);
+        m_PlayerInputs_Pause = m_PlayerInputs.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -503,6 +556,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerInputs_RotationObject_R;
     private readonly InputAction m_PlayerInputs_Attack;
     private readonly InputAction m_PlayerInputs_MovementCamera;
+    private readonly InputAction m_PlayerInputs_Pause;
     public struct PlayerInputsActions
     {
         private @InputsPlayer m_Wrapper;
@@ -515,6 +569,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
         public InputAction @RotationObject_R => m_Wrapper.m_PlayerInputs_RotationObject_R;
         public InputAction @Attack => m_Wrapper.m_PlayerInputs_Attack;
         public InputAction @MovementCamera => m_Wrapper.m_PlayerInputs_MovementCamera;
+        public InputAction @Pause => m_Wrapper.m_PlayerInputs_Pause;
         public InputActionMap Get() { return m_Wrapper.m_PlayerInputs; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -548,6 +603,9 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                 @MovementCamera.started -= m_Wrapper.m_PlayerInputsActionsCallbackInterface.OnMovementCamera;
                 @MovementCamera.performed -= m_Wrapper.m_PlayerInputsActionsCallbackInterface.OnMovementCamera;
                 @MovementCamera.canceled -= m_Wrapper.m_PlayerInputsActionsCallbackInterface.OnMovementCamera;
+                @Pause.started -= m_Wrapper.m_PlayerInputsActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_PlayerInputsActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_PlayerInputsActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_PlayerInputsActionsCallbackInterface = instance;
             if (instance != null)
@@ -576,6 +634,9 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                 @MovementCamera.started += instance.OnMovementCamera;
                 @MovementCamera.performed += instance.OnMovementCamera;
                 @MovementCamera.canceled += instance.OnMovementCamera;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -617,5 +678,6 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
         void OnRotationObject_R(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnMovementCamera(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

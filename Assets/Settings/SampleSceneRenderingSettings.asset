@@ -14,37 +14,85 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   m_AdvancedMode: 0
+  quality:
+    m_OverrideState: 0
+    m_Value: 1
+  rayTracing:
+    m_OverrideState: 0
+    m_Value: 0
   intensity:
     m_OverrideState: 1
     m_Value: 0.5
     min: 0
     max: 4
-  thicknessModifier:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 1
-    max: 10
   directLightingStrength:
     m_OverrideState: 0
     m_Value: 0
     min: 0
     max: 1
-  noiseFilterTolerance:
+  radius:
+    m_OverrideState: 0
+    m_Value: 2
+    min: 0.25
+    max: 5
+  temporalAccumulation:
+    m_OverrideState: 0
+    m_Value: 1
+  ghostingReduction:
+    m_OverrideState: 0
+    m_Value: 0.5
+    min: 0
+    max: 1
+  blurSharpness:
+    m_OverrideState: 0
+    m_Value: 0.1
+    min: 0
+    max: 1
+  layerMask:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Bits: 4294967295
+  rayLength:
+    m_OverrideState: 0
+    m_Value: 0.5
+    min: 0
+    max: 50
+  sampleCount:
+    m_OverrideState: 0
+    m_Value: 4
+    min: 1
+    max: 64
+  denoise:
     m_OverrideState: 0
     m_Value: 0
-    min: -8
-    max: 0
-  blurTolerance:
+  denoiserRadius:
     m_OverrideState: 0
-    m_Value: -4.6
-    min: -8
+    m_Value: 0.5
+    min: 0.001
     max: 1
-  upsampleTolerance:
+  m_StepCount:
     m_OverrideState: 0
-    m_Value: -12
-    min: -12
-    max: -1
---- !u!114 &-3352347674914365972
+    m_Value: 6
+    min: 2
+    max: 32
+  m_FullResolution:
+    m_OverrideState: 0
+    m_Value: 0
+  m_MaximumRadiusInPixels:
+    m_OverrideState: 0
+    m_Value: 40
+    min: 16
+    max: 256
+  m_BilateralUpsample:
+    m_OverrideState: 0
+    m_Value: 1
+  m_DirectionCount:
+    m_OverrideState: 0
+    m_Value: 2
+    min: 1
+    max: 6
+--- !u!114 &-3829353488832812148
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,11 +101,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29b00527f85bb3346a4d2cb710971587, type: 3}
-  m_Name: VolumetricFog
+  m_Script: {fileID: 11500000, guid: 953beb541740ddc499d005ee80c9ff29, type: 3}
+  m_Name: Fog
   m_EditorClassIdentifier: 
   active: 1
   m_AdvancedMode: 0
+  enabled:
+    m_OverrideState: 1
+    m_Value: 1
   colorMode:
     m_OverrideState: 0
     m_Value: 1
@@ -67,11 +118,6 @@ MonoBehaviour:
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
-  density:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 1
   maxFogDistance:
     m_OverrideState: 0
     m_Value: 5000
@@ -89,6 +135,12 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1000
     min: 0
+  baseHeight:
+    m_OverrideState: 0
+    m_Value: 0
+  maximumHeight:
+    m_OverrideState: 0
+    m_Value: 50
   albedo:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -96,18 +148,15 @@ MonoBehaviour:
     showAlpha: 1
     showEyeDropper: 1
   meanFreePath:
-    m_OverrideState: 1
-    m_Value: 150
+    m_OverrideState: 0
+    m_Value: 400
     min: 1
-  baseHeight:
+  enableVolumetricFog:
+    m_OverrideState: 1
+    m_Value: 1
+  anisotropy:
     m_OverrideState: 0
     m_Value: 0
-  meanHeight:
-    m_OverrideState: 0
-    m_Value: 10
-  anisotropy:
-    m_OverrideState: 1
-    m_Value: 0.65
     min: -1
     max: 1
   globalLightProbeDimmer:
@@ -115,9 +164,18 @@ MonoBehaviour:
     m_Value: 1
     min: 0
     max: 1
-  enableDistantFog:
-    m_OverrideState: 1
-    m_Value: 1
+  depthExtent:
+    m_OverrideState: 0
+    m_Value: 64
+    min: 0.1
+  sliceDistributionUniformity:
+    m_OverrideState: 0
+    m_Value: 0.75
+    min: 0
+    max: 1
+  filter:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,9 +191,8 @@ MonoBehaviour:
   components:
   - {fileID: 114527594671542966}
   - {fileID: 114339849572665496}
-  - {fileID: 5758136461106579282}
   - {fileID: -6286156873003259159}
-  - {fileID: -3352347674914365972}
+  - {fileID: -3829353488832812148}
 --- !u!114 &114339849572665496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,9 +209,9 @@ MonoBehaviour:
   m_AdvancedMode: 0
   skyType:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   skyAmbientMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   fogType:
     m_OverrideState: 1
@@ -177,6 +234,11 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 150
     min: 0
+  directionalTransmissionMultiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 1
   cascadeShadowSplitCount:
     m_OverrideState: 1
     m_Value: 4

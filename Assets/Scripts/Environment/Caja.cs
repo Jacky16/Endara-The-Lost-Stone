@@ -23,7 +23,7 @@ public class Caja : MonoBehaviour
         Destroy(go, 2);
         foreach (Rigidbody r in rb)
         {
-            r.AddExplosionForce(300, transform.position, 30);
+            r.AddExplosionForce(100, transform.position, 20);
         }
         Destroy(this.gameObject);
     }

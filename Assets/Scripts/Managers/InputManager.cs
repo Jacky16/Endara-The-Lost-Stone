@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
-public class  InputManager : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
     [Header("Componentes Player")]
     [SerializeField] PlayerMovement _player;
@@ -17,7 +17,7 @@ public class  InputManager : MonoBehaviour
     public PlayerInput playerInput;
     Vector2 _inputsValueCamera;
     public static Vector2 movement;
-    public enum ControlsState { PS4,Xbox,KeyBoard};
+    public enum ControlsState { PS4, Xbox, KeyBoard };
     public static ControlsState controlsState;
 
     bool _isRotating_L = false;
@@ -37,12 +37,12 @@ public class  InputManager : MonoBehaviour
         if (_isRotating_L)
         {
             _pickUpsObjects.Rotate_L(2.5f);
-        } 
+        }
         if (_isRotating_R)
         {
             _pickUpsObjects.Rotate_R(2.5f);
         }
-        
+
     }
     public void Rotate_L(InputAction.CallbackContext ctx)
     {
@@ -53,7 +53,7 @@ public class  InputManager : MonoBehaviour
         else
         {
             _isRotating_L = false;
-        }   
+        }
     }
     public void Rotate_R(InputAction.CallbackContext ctx)
     {
@@ -109,12 +109,13 @@ public class  InputManager : MonoBehaviour
         {
             _freeLookCamera.m_XAxis.m_InputAxisValue = _inputsValueCamera.x;
         }
-        _freeLookCamera.m_YAxis.m_InputAxisValue = _inputsValueCamera.y; 
+        _freeLookCamera.m_YAxis.m_InputAxisValue = _inputsValueCamera.y;
     }
+    
     public static Vector2 Vector2Movement()
     {
-       return movement;
-    }   
+        return movement;
+    }
     private void OnEnable()
     {
         playerInputs.Enable();

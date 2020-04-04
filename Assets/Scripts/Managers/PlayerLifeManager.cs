@@ -8,9 +8,9 @@ using DG.Tweening;
 public class PlayerLifeManager : MonoBehaviour
 {
     [SerializeField] 
-    float _maxLifePlayer = 100;
+    float _maxAttemps = 3;
     [SerializeField]
-    float _currentLifePlayer;
+    float _currentAttemps;
     private PlayerMovement _player;
 
     [SerializeField] 
@@ -18,35 +18,40 @@ public class PlayerLifeManager : MonoBehaviour
     [SerializeField] 
     float numHeards;
 
-
+    private void Awake()
+    {
+        _player = GetComponent<PlayerMovement>();
+    }
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        _currentLifePlayer = _maxLifePlayer;
+        _currentAttemps = _maxAttemps;
         numHeards = _imagesLife.Length;
+        LifeSpritesManager();
     }
 
-    public void RestarLife(float life)
+    public void RestarLife()
     {
-        _currentLifePlayer -= life;
-
-        Debug.Log("Vida del player: " + _currentLifePlayer);
+        _currentAttemps --;
+        Debug.Log("Vida del player: " + _currentAttemps);
         LifeSpritesManager();
-
-        if (_currentLifePlayer <= 0)
+        if(_currentAttemps <= 0)
         {
             _player.PlayerDead();
         }
-        
     }
-
-    public float LifePlayer()
+    public float AttempsPlayer()
     {
-        return _currentLifePlayer;
+        return _currentAttemps;
+    }
+    public void SetLifeToMax()
+    {
+        _currentAttemps = _maxAttemps;
+        LifeSpritesManager();
+        print(_currentAttemps);
     }
     void LifeSpritesManager()
     {
-        float lifePorcentaje = (LifePlayer() * numHeards) / 100;
+        float lifePorcentaje = (AttempsPlayer() * numHeards) / _maxAttemps;
         for (int i = 0; i < _imagesLife.Length; i++)
         {
             if (i < lifePorcentaje)  // Mantiene los sprites activos si i es mas pequeño que la vida (en porcentaje)
