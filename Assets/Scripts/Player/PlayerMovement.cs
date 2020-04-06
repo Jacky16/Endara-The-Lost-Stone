@@ -56,7 +56,9 @@ public class PlayerMovement : MonoBehaviour
     public static bool canMove = true;
     public bool isGod;
     [SerializeField] bool isInitialPosition;
-    private bool doubleJump = true;
+    public bool doubleJump = true;
+    [SerializeField]
+    bool isInMovingPlattform;
     private bool playerIn2D;
 
     private void Start()
@@ -179,14 +181,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (InputManager.playerInputs.PlayerInputs.Jump.triggered)
         {
-
             if (!doubleJump)
             {
                 return;
-
             }
 
-            if (!player.isGrounded)
+            if (!player.isGrounded && !isInMovingPlattform)
             {
                 doubleJump = false;
 
@@ -208,7 +208,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (!doubleJump && player.isGrounded)
+        if (!doubleJump &&(player.isGrounded || isInMovingPlattform))
         {
             doubleJump = true;
         }
@@ -252,6 +252,11 @@ public class PlayerMovement : MonoBehaviour
     public void SetRespawn(Transform t)
     {
         respawnCheckpoint = t;
+    }
+    public void SetMovingPlattform(bool b)
+    {
+        isInMovingPlattform = b;
+        print(isInMovingPlattform);
     }
     
     IEnumerator DeadCanvasAnimation() // Cuando te quedas sin vida

@@ -183,12 +183,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: isGrounded
     m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: PlayerJump
-    m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: PlayerWalkVelocity
-    m_EventTreshold: 0.1
+    m_ConditionEvent: PlayerVerticalVelocity
+    m_EventTreshold: 0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6409501074165875348}
   m_Solo: 0

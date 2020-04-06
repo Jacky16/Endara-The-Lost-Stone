@@ -26,13 +26,22 @@ public class PlayerInPlataform : MonoBehaviour
             //}
         }
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<PlayerMovement>().SetMovingPlattform(true);
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             other.transform.parent = null;
+            other.GetComponent<PlayerMovement>().SetMovingPlattform(false);
         }
     }
+    
     void ActiveGravity()
     {
         rb.useGravity = true; 
