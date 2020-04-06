@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GameplayScreen_Bosque.unity
     guid: a98bb355aeafda449a53aa8d730815e6
   - enabled: 0
-    path: Assets/Puzzles(Prototipos)/Boss/Laberinto Prototipo/Laberinto_Prototipo.unity
+    path: Assets/Puzzles(Prototipos)/Boss/Laberinto/Laberinto_Prototipo.unity
     guid: 6285c863e9c8efb45b7737ce8e80f9a0
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4cb856f444e5f38499f6d5e1b79c037b,
