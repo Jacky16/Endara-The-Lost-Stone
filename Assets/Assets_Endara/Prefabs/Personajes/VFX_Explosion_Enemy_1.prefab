@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2171391006463133140}
   - component: {fileID: 3523873418973223180}
   - component: {fileID: 5142312837646487389}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Smoke CIrcle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 3920864053144054309}
   - component: {fileID: 3920864053144054307}
   - component: {fileID: 3920864053144054306}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gema
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9638,7 +9638,7 @@ GameObject:
   - component: {fileID: 5319533204799256556}
   - component: {fileID: 6213643440970739083}
   - component: {fileID: 3407788209853580780}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: VFX_Explosion_Enemy_1
   m_TagString: Enemy1
   m_Icon: {fileID: 0}

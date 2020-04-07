@@ -238,15 +238,17 @@ public class UIManager : MonoBehaviour
     }
     void UIKeyboard()
     {
+        //Catch Object
         _imageCatchObject.sprite = _spriteCatchObject_Keyboard;
         //Rotate Buttons
         _imageRotateObject_L.sprite = _spriteRotate_Keyboard_L;
         _imageRotateObject_R.sprite = _spriteRotate_Keyboard_R;
-       
         //Drop Buttons
         _imageDrop.sprite = _spriteInteractionButton_Keyboard;
         //Use button
         _imageUseButton.sprite = _spriteCatchObject_Keyboard;
+        //Open
+        _imageOpen.sprite = _spriteCatchObject_Keyboard;
     }
     void UIXbox() 
     {
@@ -258,7 +260,8 @@ public class UIManager : MonoBehaviour
         _imageDrop.sprite = _spriteInteractionButton_Xbox;
         //Use button
         _imageUseButton.sprite = _spriteCatchObject_Xbox;
-
+        //Open
+        _imageOpen.sprite = _spriteCatchObject_Xbox;
     }
     void UIPS4()
     {
@@ -270,6 +273,8 @@ public class UIManager : MonoBehaviour
         _imageDrop.sprite = _spriteInteractionButton_PS4;
         //Use button
         _imageUseButton.sprite = _spriteCatchObject_PS4;
+        //Open
+        _imageOpen.sprite = _spriteCatchObject_PS4;
     }
     public static void SetPlayerPalanca(bool b)
     {

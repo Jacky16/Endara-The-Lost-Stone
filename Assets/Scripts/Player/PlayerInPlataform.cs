@@ -17,13 +17,6 @@ public class PlayerInPlataform : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.transform.parent = transform;
-            
-            //Invoke("ActiveGravity", .5f);
-            //if (!useGravity)
-            //{
-            //    Sequence forceSequence = DOTween.Sequence();
-            //    forceSequence.Append(transform.DOLocalMoveY(transform.position.y -0.1f, .3f)).SetEase(Ease.InBack).Append(transform.DOLocalMoveY(transform.position.y + 0.1f, .3f)).SetEase(Ease.OutBack);
-            //}
         }
     }
     private void OnTriggerStay(Collider other)
@@ -41,7 +34,21 @@ public class PlayerInPlataform : MonoBehaviour
             other.GetComponent<PlayerMovement>().SetMovingPlattform(false);
         }
     }
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.transform.parent = transform;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.transform.parent = transform;
+        }
+    }
+
     void ActiveGravity()
     {
         rb.useGravity = true; 
@@ -50,8 +57,7 @@ public class PlayerInPlataform : MonoBehaviour
     {
         rb.useGravity = false;
 
-        transform.position = originalPosition;
-        
+        transform.position = originalPosition;  
     }
 
 }

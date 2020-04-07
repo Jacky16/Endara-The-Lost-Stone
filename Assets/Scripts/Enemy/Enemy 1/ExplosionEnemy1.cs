@@ -11,13 +11,11 @@ public class ExplosionEnemy1 : MonoBehaviour
     public CinemachineImpulseSource cinemachineImpulseSource;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if(other.gameObject.name == "Detection Enemy")
         {
-            other.SendMessage("RestarLife");
-            cinemachineImpulseSource.GenerateImpulse();
-            cinemachineImpulseSource.CancelInvoke();
+            other.gameObject.GetComponentInParent<PlayerLifeManager>().RestarLife();
+
         }
-        return;
     }
     
 }
