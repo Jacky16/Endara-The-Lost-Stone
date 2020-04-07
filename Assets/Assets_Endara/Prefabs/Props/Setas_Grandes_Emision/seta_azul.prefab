@@ -10,7 +10,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5678225619809771937, guid: a2631bbd85fb9c540bd8da8f86ef25f7, type: 3}
@@ -24,13 +24,18 @@ PrefabInstance:
     - target: {fileID: 5559346593407489465, guid: 49bca21eb70e85648ab5d3aaa2542ef0,
         type: 3}
       propertyPath: m_Name
-      value: Seta_Grande_02 (4)
+      value: seta_azul
       objectReference: {fileID: 0}
     - target: {fileID: 6132233947742396773, guid: 49bca21eb70e85648ab5d3aaa2542ef0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f688246dbbd2fb7469096d4d4c326d92, type: 2}
+    - target: {fileID: 6132233947742396773, guid: 49bca21eb70e85648ab5d3aaa2542ef0,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8898441737677186986, guid: 49bca21eb70e85648ab5d3aaa2542ef0,
         type: 3}
       propertyPath: m_LocalPosition.x

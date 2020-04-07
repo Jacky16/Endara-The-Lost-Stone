@@ -70,7 +70,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
+  m_ReceiveGI: 2
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -93,7 +93,7 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: 83823d2de0cca4641873e9f87e975a7c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 96068468801819519, guid: 02779f3533b153641abe624a8ad79c6d, type: 3}
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86706d285b98eab49a4aa8b56053a466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useGravity: 0
 --- !u!54 &185445340
 Rigidbody:
   m_ObjectHideFlags: 0

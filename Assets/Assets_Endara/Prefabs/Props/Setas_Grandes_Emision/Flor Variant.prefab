@@ -65,12 +65,17 @@ PrefabInstance:
     - target: {fileID: 6266896306538560533, guid: 179efeb1c6944f04ca3ce2346de46699,
         type: 3}
       propertyPath: m_Name
-      value: Flor
+      value: Flor Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6266896306538560539, guid: 179efeb1c6944f04ca3ce2346de46699,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b8884b18ddf868243aff74b2e282d891, type: 2}
+    - target: {fileID: 6266896306538560539, guid: 179efeb1c6944f04ca3ce2346de46699,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 179efeb1c6944f04ca3ce2346de46699, type: 3}
