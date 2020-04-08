@@ -8,15 +8,20 @@ public class Enterchallenge : MonoBehaviour
 {
     [SerializeField]
     enum Challenge { First,Second,Third};
+
     [SerializeField]
     Challenge challenge;
+
     [SerializeField]
     Transform _positionInChallenge;
+
     [SerializeField]
     bool canEnter = true;
+
     [SerializeField]
     TextMeshProUGUI textMeshPro;
-   
+    [SerializeField]
+    TimeManager _timeManager;
 
     [SerializeField]
     Animator anim;
@@ -59,7 +64,9 @@ public class Enterchallenge : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         anim.SetTrigger("End");
         PlayerMovement.canMove = true;
-        
+        yield return new WaitForSeconds(1);
+        //Activar la cuenta atras
+        _timeManager.SetCanSubstractTime(true);
 
     }
     

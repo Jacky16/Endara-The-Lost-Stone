@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class PuzzleEstatuaManager : MonoBehaviour
 {
-    [SerializeField]
+    //Variables bool para saber si las estatuas estan en su sitio
     bool isSolutionFirst;
     bool isSolutionSecond;
     bool isSolutionThird;
 
     [SerializeField]
-    bool isPuzzleSolution;
-    [SerializeField]
     Enterchallenge enterchallenge;
     [SerializeField]
     BossManager bossManager;
+    [SerializeField]
+    TimeManager _timeManager;
     public void SetSolutionFirst(bool b) // Estatua 1
     {
         isSolutionFirst = b;
@@ -34,9 +34,12 @@ public class PuzzleEstatuaManager : MonoBehaviour
     {
         if(isSolutionFirst && isSolutionSecond && isSolutionThird)
         {
-            isPuzzleSolution = true;
+            //El player no puedo entrar otra vez a este reto si lo ha superado
             enterchallenge.CanEnter(false);
+            //Restar una vida al boss
             bossManager.RestAttempBoss();
+            //Parar la cuenta atras
+            _timeManager.SetCanSubstractTime(false);
             return;
         }
     }

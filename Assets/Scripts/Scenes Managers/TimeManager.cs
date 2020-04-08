@@ -6,22 +6,51 @@ using DG.Tweening;
 public class TimeManager : MonoBehaviour
 {
     float currentTime;
+
     [SerializeField] 
     float _startTime;
     PlayerMovement _playerMovement;
+
+    [Header("GameObjects textos canvas")]
+
     [SerializeField] 
-    TextMeshProUGUI _timerText;
+    GameObject _gameObjectTimer;
+
     [SerializeField]
     GameObject _gameObjecttimeSubstracted;
+
+    public bool _canSubstractTime;
+
+    //Variables Rectransform
+    RectTransform _rectTransformTimeSubstracted;
+    RectTransform _rectTransformTime;
+    //Variables Texto
+    TextMeshProUGUI _timerText;
+    TextMeshProUGUI _textTimeSubstracted;
+    private void Awake()
+    {
+        _timerText = _gameObjectTimer.GetComponent<TextMeshProUGUI>();
+        _rectTransformTime = _gameObjectTimer.GetComponent<RectTransform>();
+
+        _rectTransformTimeSubstracted = _gameObjecttimeSubstracted.GetComponent<RectTransform>();
+        _textTimeSubstracted = _gameObjecttimeSubstracted.GetComponent<TextMeshProUGUI>();
+
+        _playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+    }
     void Start()
     {
-        _playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         currentTime = _startTime;
+        _timerText.text = currentTime.ToString("0");
+        SetCanSubstractTime(false);
     }
 
     void Update()
     {
-        CountDown();
+        if (_canSubstractTime)
+        {
+            CountDown();
+        }
+        
     }
     public void CountDown()
     {
@@ -38,10 +67,6 @@ public class TimeManager : MonoBehaviour
     }
     public void SubstractTime(float timeToSubstract)
     {
-        //Obtener los componentes
-        RectTransform _rectTransformTimeSubstracted = _gameObjecttimeSubstracted.GetComponent<RectTransform>();
-        TextMeshProUGUI _textTimeSubstracted = _gameObjecttimeSubstracted.GetComponent<TextMeshProUGUI>();
-
         //Aginar el texto al TextTimeSubstracted
         _textTimeSubstracted.text = "-" + timeToSubstract.ToString("0");
         currentTime -= timeToSubstract;
@@ -66,9 +91,20 @@ public class TimeManager : MonoBehaviour
         textSequence.Join(_rectTransformTimeSubstracted.DOScale(Vector2.zero, 2));//Escala a 0
        
     }
-    void ResetTextTimeSubstracted()
+    public void SetCanSubstractTime(bool b)
     {
+        _canSubstractTime = b;
+        if (_canSubstractTime)
+        {
+            _rectTransformTime.DOAnchorPosY(-70, 1);
+        }
+        else
+        {
+            _rectTransformTime.DOAnchorPosY(70, 1);
 
+        }
+
+        _canSubstractTime = b;
     }
 
 }
