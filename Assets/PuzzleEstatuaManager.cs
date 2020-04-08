@@ -13,27 +13,31 @@ public class PuzzleEstatuaManager : MonoBehaviour
     bool isPuzzleSolution;
     [SerializeField]
     Enterchallenge enterchallenge;
-    public void SetSolutionFirst(bool b)
+    [SerializeField]
+    BossManager bossManager;
+    public void SetSolutionFirst(bool b) // Estatua 1
     {
         isSolutionFirst = b;
         CheckSolution();
     }
-    public void SetSolutionSecond(bool b)
+    public void SetSolutionSecond(bool b)//Estatua 2
     {
         isSolutionSecond = b;
         CheckSolution();
     }
-    public void SetSolutionThird(bool b)
+    public void SetSolutionThird(bool b)//Estatua 3
     {
         isSolutionThird = b;
         CheckSolution();
     }
-    void CheckSolution()
+    void CheckSolution()//Si esta resuelto
     {
         if(isSolutionFirst && isSolutionSecond && isSolutionThird)
         {
             isPuzzleSolution = true;
             enterchallenge.CanEnter(false);
+            bossManager.RestAttempBoss();
+            return;
         }
     }
 }

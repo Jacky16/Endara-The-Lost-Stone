@@ -79,18 +79,20 @@ public class PlayerMovement : MonoBehaviour
         if (canMove)
         {
             Movimiento();
-
         }
     }
     public void Movimiento()
     {
         Vector3 movePlayerXZ = Vector3.zero;
+        //Obtener los inputs del Input Manager
         playerInput = new Vector3(InputManager.Vector2Movement().x, 0, InputManager.Vector2Movement().y);
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
 
+        //Calcular la direccion del player respecto a la camara
         CamDirection();
         movePlayer = playerInput.x * camRight + playerInput.z * camForward;
 
+        //Calcular el angulo del jostyck de moviemiento y asignarlo a la rotacion del player
         float shortestAngle = Vector3.SignedAngle(transform.forward, movePlayer, Vector3.up);
         transform.Rotate(Vector3.up * shortestAngle / 1.5f);
         SetGravity();
@@ -122,9 +124,11 @@ public class PlayerMovement : MonoBehaviour
             movePlayerXZ.z = 0;
         }
 
-        //Asignar el movimiento
+        //Asignar el movimiento al vector
         movePlayer.x = movePlayerXZ.x;
         movePlayer.z = movePlayerXZ.z;
+
+        //Asignar movimiento al Character Controller
         player.Move(movePlayerXZ);
         movePlayerXZ.y = 0;
 
@@ -177,7 +181,7 @@ public class PlayerMovement : MonoBehaviour
     {
         playerIn2D = b;
     }
-    public void JumpPlayer()
+    void JumpPlayer()
     {
         if (InputManager.playerInputs.PlayerInputs.Jump.triggered)
         {

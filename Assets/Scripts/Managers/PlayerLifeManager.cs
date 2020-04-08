@@ -29,7 +29,7 @@ public class PlayerLifeManager : MonoBehaviour
         LifeSpritesManager();
     }
 
-    public void RestarLife()
+    public void SubstractLife()
     {
         _currentAttemps --;
         Debug.Log("Vida del player: " + _currentAttemps);

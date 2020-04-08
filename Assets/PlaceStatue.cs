@@ -1,34 +1,60 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlaceStatue : MonoBehaviour
 {
-    public PuzzleEstatuaManager puzzleEstatuaManager;
-    public enum Orden { Primera,Segunda,Tercera};
-    public Orden orden;
-    private void OnTriggerStay(Collider other)
+    [SerializeField]
+    PuzzleEstatuaManager _puzzleEstatuaManager;
+    [SerializeField]
+    TimeManager timeManager;
+    public enum SortStatue { Primera, Segunda, Tercera };
+    public SortStatue sortStatue;
+
+private void OnTriggerEnter(Collider other)
     {
-        if(Orden.Primera == Orden.Primera)
+        if (other.gameObject.name.Contains("State"))
         {
-            if(other.gameObject.name == "State1")
+            State state;
+            if (other.TryGetComponent<State>(out state))
             {
-                puzzleEstatuaManager.SetSolutionFirst(true);
+                switch (sortStatue)
+                {
+                    case SortStatue.Primera:
+                        if(other.gameObject.name == "State1")
+                        {
+                            other.transform.SetParent(transform);
+                            other.transform.DOLocalMove(new Vector3(0, 0, 0), 1).OnComplete(() => _puzzleEstatuaManager.SetSolutionFirst(true));
+                        }
+                       
+                       
+                        break;
+                    case SortStatue.Segunda:
+                        if (other.gameObject.name == "State2")
+                        {
+                            other.transform.SetParent(transform);
+                            other.transform.DOLocalMove(new Vector3(0, 0, 0), 1).OnComplete(() => _puzzleEstatuaManager.SetSolutionSecond(true));
+                        }
+                       
+                        break;
+                    case SortStatue.Tercera:
+                        if (other.gameObject.name == "State3")
+                        {
+                            other.transform.SetParent(transform);
+                            other.transform.DOLocalMove(new Vector3(0, 0, 0), 1).OnComplete(() => _puzzleEstatuaManager.SetSolutionThird(true));
+                        }
+                       
+                        break;
+                }
             }
         }
-        if(Orden.Segunda == Orden.Segunda)
+        if(other.gameObject.name == "State")
         {
-            if(other.gameObject.name == "State2")
-            {
-                puzzleEstatuaManager.SetSolutionSecond(true);
-            }
+            timeManager.SubstractTime(200);
         }
-        if(Orden.Tercera == Orden.Tercera)
-        {
-            if(other.gameObject.name == "State3")
-            {
-                puzzleEstatuaManager.SetSolutionThird(true);
-            }
-        }
+        //other.transform.SetParent(transform);
+        //other.transform.DOLocalMove(new Vector3(0, 0, 0), 1).OnComplete(() => puzzleEstatuaManager.SetSolutionFirst(true));
     }
+   
 }

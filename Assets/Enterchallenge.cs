@@ -23,11 +23,9 @@ public class Enterchallenge : MonoBehaviour
    
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && canEnter)
         {
-           StartCoroutine(MovePlayerToChallenge(other));
-            
-            
+           StartCoroutine(MovePlayerToChallenge(other)); 
         }
     }
     public void CanEnter(bool b)
@@ -48,23 +46,21 @@ public class Enterchallenge : MonoBehaviour
                 textMeshPro.text = "Third Challenge";
                 break;
         }
+        PlayerMovement.canMove = false;
         anim.SetTrigger("Start");
         yield return new WaitForSeconds(1.3f);
-      
+
+        //Mover al player a su respectivo reto
         other.transform.position = _positionInChallenge.position;
         other.transform.localRotation = _positionInChallenge.localRotation;
+
+        //Asignar donde reaparecerá una vez conseguido el reto
+        other.GetComponent<PlayerMovement>().SetRespawn(transform);
         yield return new WaitForSeconds(1.5f);
         anim.SetTrigger("End");
+        PlayerMovement.canMove = true;
         
 
     }
-    //public void CheckSolution()
-    //{
-    //    switch (challenge)
-    //    {
-    //        case Challenge.First:
-
-    //            break;
-    //    }
-    //}
+    
 }

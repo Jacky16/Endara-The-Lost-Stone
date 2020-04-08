@@ -13,7 +13,7 @@ public class ExplosionEnemy1 : MonoBehaviour
     {
         if(other.gameObject.name == "Detection Enemy")
         {
-            other.gameObject.GetComponentInParent<PlayerLifeManager>().RestarLife();
+            other.gameObject.GetComponentInParent<PlayerLifeManager>().SubstractLife();
 
         }
     }

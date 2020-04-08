@@ -56,7 +56,7 @@ public class Enemy_1 : Enemy
     IEnumerator RestLifePlayer(Collider other)
     {
         yield return new WaitForSeconds(0.25f);
-        other.GetComponent<PlayerLifeManager>().RestarLife(); // Se divide entre 10 ya que se ejecuta cada segundo y dividirlo el damaga es una forma de que no quite tanto
+        other.GetComponent<PlayerLifeManager>().SubstractLife(); // Se divide entre 10 ya que se ejecuta cada segundo y dividirlo el damaga es una forma de que no quite tanto
         navMeshAgent.speed = 0;
     }
 }
