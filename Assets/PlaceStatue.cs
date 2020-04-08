@@ -16,13 +16,13 @@ private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name.Contains("State"))
         {
-            State state;
-            if (other.TryGetComponent<State>(out state))
+            Statue statue;
+            if (other.TryGetComponent<Statue>(out statue))
             {
                 switch (sortStatue)
                 {
                     case SortStatue.Primera:
-                        if(other.gameObject.name == "State1")
+                        if(other.gameObject.name == "Statue1")
                         {
                             other.transform.SetParent(transform);
                             other.transform.DOLocalMove(new Vector3(0, 0, 0), 1).OnComplete(() => _puzzleEstatuaManager.SetSolutionFirst(true));
@@ -31,7 +31,7 @@ private void OnTriggerEnter(Collider other)
                        
                         break;
                     case SortStatue.Segunda:
-                        if (other.gameObject.name == "State2")
+                        if (other.gameObject.name == "Statue2")
                         {
                             other.transform.SetParent(transform);
                             other.transform.DOLocalMove(new Vector3(0, 0, 0), 1).OnComplete(() => _puzzleEstatuaManager.SetSolutionSecond(true));
@@ -39,7 +39,7 @@ private void OnTriggerEnter(Collider other)
                        
                         break;
                     case SortStatue.Tercera:
-                        if (other.gameObject.name == "State3")
+                        if (other.gameObject.name == "Statue3")
                         {
                             other.transform.SetParent(transform);
                             other.transform.DOLocalMove(new Vector3(0, 0, 0), 1).OnComplete(() => _puzzleEstatuaManager.SetSolutionThird(true));
@@ -49,12 +49,10 @@ private void OnTriggerEnter(Collider other)
                 }
             }
         }
-        if(other.gameObject.name == "State")
+        if(other.gameObject.name == "Statue")
         {
             timeManager.SubstractTime(200);
         }
-        //other.transform.SetParent(transform);
-        //other.transform.DOLocalMove(new Vector3(0, 0, 0), 1).OnComplete(() => puzzleEstatuaManager.SetSolutionFirst(true));
     }
    
 }
