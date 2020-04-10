@@ -80,6 +80,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Movimiento();
         }
+        else
+        {
+            anim.SetFloat("PlayerWalkVelocity", 0);
+        }
     }
     public void Movimiento()
     {

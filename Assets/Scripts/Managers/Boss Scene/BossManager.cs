@@ -21,23 +21,28 @@ public class BossManager : MonoBehaviour
         _virtualCamera.Priority = 0;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
-    public void RestAttempBoss()
+    public void RestAttempBoss(Transform pos)
     {
-        StartCoroutine(RestAttempBossCoroutine());
+        StartCoroutine(RestAttempBossCoroutine(pos));
         if(_attemptLifeBoss <= 0) // Cuando este abajo de todo el boss se podra pegarle para que reciba impactos del player
         {
             canHitMe = true;
         }
     }
-    IEnumerator RestAttempBossCoroutine() // Animacion camara cuando le quitas vida al Boss
+    IEnumerator RestAttempBossCoroutine(Transform posDoorChallange) // Animacion camara cuando le quitas vida al Boss y mover al player a la zona del boss
     {
         _virtualCamera.Priority = 10;
+
         yield return new WaitForSeconds(1);
+
         transform.DOMoveY(transform.position.y - 3, 1);
         _attemptLifeBoss--;
+        //Asigno la posicion de la puerta del reto en el que estaba
+        player.SetRespawn(posDoorChallange);
         player.RespawnToWaypoint();
-        yield return new WaitForSeconds(2f);
-        _virtualCamera.Priority = 0;
 
+        yield return new WaitForSeconds(2f);
+
+        _virtualCamera.Priority = 0;
     }
 }

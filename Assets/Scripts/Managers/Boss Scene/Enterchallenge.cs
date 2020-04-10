@@ -15,17 +15,20 @@ public class Enterchallenge : MonoBehaviour
     [SerializeField]
     Transform _positionInChallenge;
 
-    [SerializeField]
     bool canEnter = true;
 
     [SerializeField]
     TextMeshProUGUI textMeshPro;
+
     [SerializeField]
     TimeManager _timeManager;
 
     [SerializeField]
     Animator anim;
-   
+
+    [Header("Manager Challenges")]
+    [SerializeField]
+    ZonaSaltosManager zonaSaltosManager; //Third Challenge
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && canEnter)
@@ -49,25 +52,30 @@ public class Enterchallenge : MonoBehaviour
                 break;
             case Challenge.Third:
                 textMeshPro.text = "Third Challenge";
+                zonaSaltosManager.Invoke("ActivateGravityPlattforms", 4);
                 break;
         }
         PlayerMovement.canMove = false;
         anim.SetTrigger("Start");
+
         yield return new WaitForSeconds(1.3f);
 
         //Mover al player a su respectivo reto
         other.transform.position = _positionInChallenge.position;
         other.transform.localRotation = _positionInChallenge.localRotation;
-
+       
         //Asignar donde reaparecerá una vez conseguido el reto
-        other.GetComponent<PlayerMovement>().SetRespawn(transform);
+        other.GetComponent<PlayerMovement>().SetRespawn(_positionInChallenge);
+
         yield return new WaitForSeconds(1.5f);
+
         anim.SetTrigger("End");
         PlayerMovement.canMove = true;
+
         yield return new WaitForSeconds(1);
+
         //Activar la cuenta atras
         _timeManager.SetCanSubstractTime(true);
 
-    }
-    
+    }  
 }

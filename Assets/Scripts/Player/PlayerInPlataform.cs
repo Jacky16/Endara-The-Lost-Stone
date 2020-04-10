@@ -4,14 +4,8 @@ using UnityEngine;
 using DG.Tweening;
 public class PlayerInPlataform : MonoBehaviour
 {
-    public bool useGravity;
-    Rigidbody rb;
-    Vector3 originalPosition;
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-        originalPosition = transform.position;
-    }
+
+ 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -48,17 +42,5 @@ public class PlayerInPlataform : MonoBehaviour
             collision.gameObject.transform.parent = transform;
         }
     }
-
-    void ActiveGravity()
-    {
-        rb.useGravity = true; 
-    }
-    public void ReturnOriginal()
-    {
-        rb.useGravity = false;
-
-        transform.position = originalPosition;  
-    }
-
 }
 

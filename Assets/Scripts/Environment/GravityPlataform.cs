@@ -6,9 +6,26 @@ public class GravityPlataform : MonoBehaviour
 {
     [SerializeField]
     float speed;
-  
+    bool _isGravity;
+    Vector3 originalPosition;
+    private void Start()
+    {
+        originalPosition = transform.position;
+    }
+
     private void Update()
     {
-        this.transform.Translate(Vector3.down * speed * Time.deltaTime);
+        if (_isGravity)
+        {
+            this.transform.Translate(Vector3.down * speed * Time.deltaTime);
+        }
+    }
+    public void SetGravity(bool b)
+    {
+        _isGravity = b;
+    }
+    public void SetOriginalPosition()
+    {
+        transform.position = originalPosition;
     }
 }
