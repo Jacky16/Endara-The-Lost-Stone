@@ -26,6 +26,7 @@ private void OnTriggerEnter(Collider other)
                         {
                             other.transform.SetParent(transform);
                             other.transform.DOLocalMove(new Vector3(0, 0, 0), 1).OnComplete(() => _puzzleEstatuaManager.SetSolutionFirst(true));
+                            other.GetComponent<Rigidbody>().isKinematic = true;
                         }
                         break;
                     case SortStatue.Segunda:
@@ -33,6 +34,7 @@ private void OnTriggerEnter(Collider other)
                         {
                             other.transform.SetParent(transform);
                             other.transform.DOLocalMove(new Vector3(0, 0, 0), 1).OnComplete(() => _puzzleEstatuaManager.SetSolutionSecond(true));
+                            other.GetComponent<Rigidbody>().isKinematic = true;
                         }  
                         break;
                     case SortStatue.Tercera:
@@ -40,6 +42,7 @@ private void OnTriggerEnter(Collider other)
                         {
                             other.transform.SetParent(transform);
                             other.transform.DOLocalMove(new Vector3(0, 0, 0), 1).OnComplete(() => _puzzleEstatuaManager.SetSolutionThird(true));
+                            other.GetComponent<Rigidbody>().isKinematic = true;
                         }       
                         break;
                 }

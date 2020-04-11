@@ -11,6 +11,9 @@ public class KeyPlattformChallenge : MonoBehaviour
 
     [SerializeField]
     GameObject _gameObjectExit;
+
+    [SerializeField]
+    ZonaSaltosManager _zonaSaltosManager;
     private void Start()
     {
         _gameObjectExit.SetActive(false);
@@ -22,12 +25,18 @@ public class KeyPlattformChallenge : MonoBehaviour
     IEnumerator ActiveDoor()
     {
         _virtualCamera.Priority = 10;
+        _zonaSaltosManager.DisableGravityPlattforms();
+
         yield return new WaitForSeconds(2);
+
         _gameObjectExit.SetActive(true);
         PlayerMovement.canMove = false;
+
         yield return new WaitForSeconds(2);
+
         _virtualCamera.Priority = 0;
         PlayerMovement.canMove = true;
-        Destroy(gameObject);
+        _zonaSaltosManager.ActivateGravityPlattforms();
+        gameObject.SetActive(false);
     }
 }

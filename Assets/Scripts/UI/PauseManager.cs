@@ -63,7 +63,7 @@ public class PauseManager : MonoBehaviour
         canvasSettings.SetActive(true);
         canvasPause.SetActive(false);
     }
-    public void ExitToMainMenuFromOtherSceen()
+    public void ExitToMainMenu()
     {
         SceneManager.LoadScene("MainMenuScreen");
     }
