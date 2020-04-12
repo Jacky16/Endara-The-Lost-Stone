@@ -22,7 +22,7 @@ public class Enemy_1 : Enemy
         GameObject g = Instantiate(explosionPrefab, transform.position, Quaternion.identity) as GameObject;
         //g.GetComponent<ExplosionEnemy1>().GetDamage(DamageExplosion());
         Debug.Log("He explotado");
-        Destroy(this.gameObject, .001f);
+        Destroy(this.gameObject, .01f);
     }
     public float DamageExplosion()
     {

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 240547493562194944}
   - component: {fileID: 9083089835831174710}
   - component: {fileID: 3256409842401041103}
-  m_Layer: 15
+  m_Layer: 13
   m_Name: Piedras_Grandes_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}

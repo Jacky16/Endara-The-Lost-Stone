@@ -17,5 +17,9 @@ public class ExplosionEnemy1 : MonoBehaviour
 
         }
     }
-    
+    private void OnEnable()
+    {
+        Destroy(gameObject, 1f);
+    }
+
 }

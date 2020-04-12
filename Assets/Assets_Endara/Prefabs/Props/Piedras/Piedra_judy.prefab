@@ -17,6 +17,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra_judy
       objectReference: {fileID: 0}
+    - target: {fileID: 2083564593816683692, guid: a1bca6bf46cbee544b413016db8df91b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 3076265505037792959, guid: a1bca6bf46cbee544b413016db8df91b,
         type: 3}
       propertyPath: m_LocalPosition.x

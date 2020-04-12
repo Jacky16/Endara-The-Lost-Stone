@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 49370607948900058}
   - component: {fileID: 6022420069486189091}
   - component: {fileID: 1041950273504591729}
+  - component: {fileID: 6250821021259940726}
   m_Layer: 0
   m_Name: Mini_Gema
   m_TagString: Coin
@@ -93,3 +94,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3594774, y: 0.3594775, z: 0.55178493}
   m_Center: {x: -0.0013171062, y: 0.0002417267, z: 0.13375965}
+--- !u!95 &6250821021259940726
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5453640524516454143}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ceecf5c8128eaa4a923ce973b85b018, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
