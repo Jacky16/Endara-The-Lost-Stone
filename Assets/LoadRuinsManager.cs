@@ -1,18 +1,29 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoadRuinsManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    Animator animFade;
 
-    // Update is called once per frame
-    void Update()
+    LevelLoader _levelLoader;
+    private void Awake()
     {
-        
+        _levelLoader = GetComponent<LevelLoader>();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            StartCoroutine(TransitionRuinsScene());
+        }
+    }
+    IEnumerator TransitionRuinsScene()
+    {
+        animFade.SetTrigger("DeadCaida_Start");
+        yield return new WaitForSeconds(1);
+        _levelLoader.LoadScene();
+
     }
 }

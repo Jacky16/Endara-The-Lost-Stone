@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     public bool doubleJump = true;
     [SerializeField]
     bool isInMovingPlattform;
-    private bool playerIn2D;
+    public bool playerIn2D;
 
     private void Start()
     {
@@ -99,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
         //Calcular el angulo del jostyck de moviemiento y asignarlo a la rotacion del player
         float shortestAngle = Vector3.SignedAngle(transform.forward, movePlayer, Vector3.up);
         transform.Rotate(Vector3.up * shortestAngle / 1.5f);
+
         SetGravity();
         JumpPlayer();
         //Aceleracion

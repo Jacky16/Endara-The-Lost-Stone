@@ -16,6 +16,10 @@ public class MuerteCaidaManager : MonoBehaviour
     }
     IEnumerator DeadFallAnimationCanvas() //Cuando te caes al vacio
     {
+        if (player.playerIn2D)
+        {
+            player.SetPlayer2D(false);
+        }
         animDeadCaida.SetTrigger("DeadCaida_Start");
         yield return new WaitForSeconds(1);
         player.RespawnToWaypoint();
