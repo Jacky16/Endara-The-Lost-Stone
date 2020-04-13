@@ -1,23 +1,23 @@
-Layer Selection: Default
+Layer Selection: Terrain
 Brush Max Size: 20
 Brush Size: 1,15
 Fill Mode: True
-Fill Rate: 0,069
+Fill Rate: 0,01
 
-Game Object: Assets/Assets_Endara/Prefabs/Props/Setas_Grandes_Emision/Flor Variant.prefab
+Game Object: Assets/Assets_Endara/Hierba/Grass_Mesh.prefab
 Layer: Default
 Toggle: True
 Slider: 1
-Lock Orientation Toggle: False
+Lock Orientation Toggle: True
 Random Rotation Toggle: True
 Random Rotation X: False
 Random Rotation Y: True
 Random Rotation Z: False
 Random Scale Toggle: True
-Random Scale Min: 3
-Random Scale Max: 9
+Random Scale Min: 0,5
+Random Scale Max: 1,5
 Fixed Rotation Toggle: True
-Fixed Rotation X: -90
+Fixed Rotation X: 90
 Fixed Rotation Y: 0
 Fixed Rotation Z: 0
 Depth: 0
