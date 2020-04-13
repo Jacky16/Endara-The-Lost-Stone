@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-public class SwitchCamera : MonoBehaviour
+public class Camera2D : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera cameraVirtual;
     private void Start()
