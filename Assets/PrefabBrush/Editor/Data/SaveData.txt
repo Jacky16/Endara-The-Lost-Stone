@@ -1,4 +1,4 @@
-Layer Selection: Terrain
+Layer Selection: Default
 Brush Max Size: 20
 Brush Size: 1,15
 Fill Mode: True

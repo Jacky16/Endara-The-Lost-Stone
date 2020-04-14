@@ -115,7 +115,10 @@ public class Laser : MonoBehaviour
                 _laser = hit.collider.gameObject.GetComponent<Laser>();
                 _laser.EnableRay();
                 _laser._reciboRaycast = true;
-                
+                SnapRotation(transform.localRotation.eulerAngles);
+
+
+
             }
             else if(!hit.collider.gameObject.CompareTag("Cubo") && !hit.collider.gameObject.GetComponent<Laser>())
             {
@@ -142,8 +145,7 @@ public class Laser : MonoBehaviour
                 }
                 
                 return;
-            }
-            
+            }           
         }
     }
     void SolutionTrue( GameObject g)
@@ -205,4 +207,8 @@ public class Laser : MonoBehaviour
         _currentMaterial = _materialWithoutEmision;
     }
 
+    void SnapRotation(Vector3 cubeToLook)
+    {
+        transform.DOLocalRotate(cubeToLook, 5).SetEase(Ease.InExpo);
+    }
 }

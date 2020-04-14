@@ -8,6 +8,8 @@ public class Checkpoint : MonoBehaviour
     Transform respawnTransform;
     Animator anim;
     AudioSource _audioSource;
+    [SerializeField]
+    ParticleSystem[] _particleSystems;
     private void Awake()
     {
         anim = GetComponentInParent<Animator>();
@@ -22,10 +24,20 @@ public class Checkpoint : MonoBehaviour
             player.SetRespawn(respawnTransform);
             SaveData(player);
             _audioSource.Play();
+            Playparticles();
+
         }
+
     }
     public void SaveData(PlayerMovement player)
     {
         //SaveSystem.SavePlayer(player);
+    }
+    void Playparticles()
+    {
+        foreach(ParticleSystem ps in _particleSystems)
+        {
+            ps.Play();
+        }
     }
 }

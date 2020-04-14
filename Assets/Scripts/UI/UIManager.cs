@@ -98,6 +98,7 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         LogicButtonsUI();
+        ChangeUI();
     }
     void LogicButtonsUI()
     {
@@ -223,6 +224,7 @@ public class UIManager : MonoBehaviour
     #endregion
     public void ChangeUI()
     {
+        print(InputManager.controlsState);
         switch (InputManager.controlsState)
         {
             case InputManager.ControlsState.KeyBoard:
