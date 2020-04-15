@@ -9,35 +9,44 @@ using DG.Tweening;
 [RequireComponent(typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
-
-    [Header("Animator Components")]
-    CharacterController player;
+    //Componentes
+    [Header("Components")]
     Animator anim;
+
+    CharacterController player;
+
     [SerializeField]
     Animator animDead;
-    
-
+   
     [SerializeField] 
     Camera mainCam;
+
     [SerializeField]
     CoinManager _coinManager;
+
     PlayerLifeManager playerLifeManager;
     GodManager godManager;
     public Transform initialPosition;
-    [SerializeField] CapsuleCollider attackCollider;
+
+    [SerializeField] 
+    CapsuleCollider attackCollider;
+
     [Header("Velocidad")]
     public float speedMax;
     public float acceleration = 20f;
     private float currentSpeed = 0f;
     [Header("Controles")]
-    //[Range(0,1000)][SerializeField] float speedAceleration;
     private Vector3 playerInput;
     private Vector3 movePlayer;
     private Vector3 camForward;
     private Vector3 camRight;
     [Header("Gravedad")]
-    [SerializeField] float gravity;
-    [SerializeField] float jumpForce;
+    [SerializeField] 
+    float gravity;
+
+    [SerializeField] 
+    float jumpForce;
+
     float fallvelocity;
 
     [Header("Fuerza de empuje")]
@@ -46,33 +55,40 @@ public class PlayerMovement : MonoBehaviour
     [Header("Respawn Position")]
     [SerializeField]
     Transform respawnCheckpoint;
+
     [Header("Particle Coin")]
     [SerializeField]
     GameObject _prefabParticleCoin;
-    float unitsGod;
 
+    float unitsGod;
 
     //Variables booleanas
     public static bool canMove = true;
     public bool isGod;
-    [SerializeField] bool isInitialPosition;
+    [SerializeField]
+    bool isInitialPosition;
+
     public bool doubleJump = true;
+
     [SerializeField]
     bool isInMovingPlattform;
+
     public bool playerIn2D;
 
-    private void Start()
+    private void Awake()
     {
-        attackCollider.enabled = false;
         player = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         playerLifeManager = GetComponent<PlayerLifeManager>();
+    }
+    private void Start()
+    {
+        attackCollider.enabled = false;
+      
         //godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
         //Cursor.visible = false;
         //Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
-
-
     }
     void Update()
     {
@@ -281,7 +297,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
-    
+
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         ////Salto entre plataformas
@@ -296,9 +312,10 @@ public class PlayerMovement : MonoBehaviour
         //    }
 
         //}
-        float valueMass;
-        if (hit.collider.gameObject.name != "Baldosa")
+        bool isMoving = false;
+        if (hit.collider.CompareTag("Cubo"))
         {
+            float valueMass;
             Rigidbody rb = hit.collider.attachedRigidbody;
             if (rb == null || rb.isKinematic)
             {
@@ -315,9 +332,11 @@ public class PlayerMovement : MonoBehaviour
 
             rb.velocity = (pushDir * pushPower) / valueMass;
         }
-
-
+      
     }
+
+
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Final")

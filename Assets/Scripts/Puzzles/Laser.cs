@@ -44,10 +44,18 @@ public class Laser : MonoBehaviour
     GameObject particleSystem;
     Vector3 distanceParticle;
 
+    //Audio
+    AudioSource _audioSource;
+    bool isPlayedSound = false;
+
     private void Awake()
     {
         _currentMaterial = GetComponent<MeshRenderer>().material;
         _lineRenderer = GetComponent<LineRenderer>();
+        if(estados == States.Hijo)
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
     }
     void Start()
     {
@@ -116,9 +124,8 @@ public class Laser : MonoBehaviour
                 _laser.EnableRay();
                 _laser._reciboRaycast = true;
                 SnapRotation(transform.localRotation.eulerAngles);
-
-
-
+                _laser.PlayLaserSound();
+                    
             }
             else if(!hit.collider.gameObject.CompareTag("Cubo") && !hit.collider.gameObject.GetComponent<Laser>())
             {
@@ -127,9 +134,10 @@ public class Laser : MonoBehaviour
                     _laser.DisableRay();
                     _laser._reciboRaycast = false;
                     _laser = null;
+                    isPlayedSound = false;
                     return;
                 }
-               
+
             }
 
             if (hit.transform.gameObject.tag == "Solution")
@@ -210,5 +218,14 @@ public class Laser : MonoBehaviour
     void SnapRotation(Vector3 cubeToLook)
     {
         transform.DOLocalRotate(cubeToLook, 5).SetEase(Ease.InExpo);
+    }
+    public void PlayLaserSound()
+    {
+        if (!isPlayedSound)
+        {
+            _audioSource.Play();
+            isPlayedSound = true;
+        }
+
     }
 }

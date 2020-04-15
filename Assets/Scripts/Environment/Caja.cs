@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Caja : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class Caja : MonoBehaviour
         GameObject go = Instantiate(prefabBoxDestroyed, transform.position, transform.rotation) as GameObject;
         Rigidbody[] rb = go.GetComponentsInChildren<Rigidbody>();
         _audioSource.PlayOneShot(AudioClipRandom());
+        _audioSource.DOFade(0, AudioClipRandom().length);
         Destroy(go, 2);
         foreach (Rigidbody r in rb)
         {

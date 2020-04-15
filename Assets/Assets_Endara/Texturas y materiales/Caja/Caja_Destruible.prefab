@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7007247460882887623}
   - component: {fileID: 2117521058810211179}
   - component: {fileID: 8051690737267068321}
-  - component: {fileID: 8137730692343696444}
   - component: {fileID: 6904817465359967834}
   m_Layer: 14
   m_Name: Hoja004
@@ -81,20 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8137730692343696444
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566435734073314931}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4469988226836944582, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!54 &6904817465359967834
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -105,12 +90,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &663126979060886183
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +189,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: -2492755199244077833, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!54 &5811439380731374111
 Rigidbody:
@@ -216,12 +201,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &2117772259848185123
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +300,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: -1495075411478671310, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!54 &2436628300794857456
 Rigidbody:
@@ -327,12 +312,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &3111380183771347172
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +411,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: 4155650699408174917, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!54 &668388361795784904
 Rigidbody:
@@ -438,12 +423,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &3304919912932837483
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +440,6 @@ GameObject:
   - component: {fileID: 2032115094133971915}
   - component: {fileID: 192005381820346578}
   - component: {fileID: 6646301021963035285}
-  - component: {fileID: 2675246747173298028}
   - component: {fileID: 7711371400861524893}
   m_Layer: 14
   m_Name: Rama_02
@@ -525,20 +509,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2675246747173298028
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304919912932837483}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7281378390422605477, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!54 &7711371400861524893
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -549,12 +519,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &3922419367016099388
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +536,6 @@ GameObject:
   - component: {fileID: 4032809634556644435}
   - component: {fileID: 8499316347386756883}
   - component: {fileID: 2543118968095933983}
-  - component: {fileID: 1467278135299215052}
   - component: {fileID: 1001333972285444282}
   m_Layer: 14
   m_Name: Hoja
@@ -636,20 +605,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1467278135299215052
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3922419367016099388}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -220825397589730395, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!54 &1001333972285444282
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -660,12 +615,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &4450371041822799334
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +673,6 @@ GameObject:
   - component: {fileID: 6144203586922257652}
   - component: {fileID: 6330791981064031742}
   - component: {fileID: 2850173494552832631}
-  - component: {fileID: 6795140001737408962}
   - component: {fileID: 3355589393303450196}
   m_Layer: 14
   m_Name: Hoja003
@@ -788,20 +742,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6795140001737408962
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4923645731575735715}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1510583921005829332, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!54 &3355589393303450196
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -812,12 +752,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &5906433703491375818
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +769,6 @@ GameObject:
   - component: {fileID: 1543708993981097518}
   - component: {fileID: 3185851275952145995}
   - component: {fileID: 4702162584782418875}
-  - component: {fileID: 3835194037140943789}
   - component: {fileID: 1344311466482334150}
   m_Layer: 14
   m_Name: Hoja001
@@ -899,20 +838,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3835194037140943789
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5906433703491375818}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4425638897545649107, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!54 &1344311466482334150
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -923,12 +848,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &7614503163130256623
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,7 +865,6 @@ GameObject:
   - component: {fileID: 2615232441543628923}
   - component: {fileID: 6107940795822790279}
   - component: {fileID: 1583156565179996835}
-  - component: {fileID: 8092449598269865921}
   - component: {fileID: 6765719567322779739}
   m_Layer: 14
   m_Name: Rama_01
@@ -1010,20 +934,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8092449598269865921
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7614503163130256623}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 9157843624375662489, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!54 &6765719567322779739
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1034,12 +944,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &8966312599771575920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +961,6 @@ GameObject:
   - component: {fileID: 6923704274096099583}
   - component: {fileID: 5000496345721669395}
   - component: {fileID: 5119871710467843287}
-  - component: {fileID: 5576002283580036212}
   - component: {fileID: 8836767280322407293}
   m_Layer: 14
   m_Name: Hoja005
@@ -1121,20 +1030,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5576002283580036212
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8966312599771575920}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1617974343243350872, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!54 &8836767280322407293
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1145,12 +1040,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &9133452553713813661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,7 +1057,6 @@ GameObject:
   - component: {fileID: 6415501067988790005}
   - component: {fileID: 3312710970704116560}
   - component: {fileID: 4924419433242314958}
-  - component: {fileID: 8946995577487621920}
   - component: {fileID: 4505939220378121734}
   m_Layer: 14
   m_Name: Hoja002
@@ -1232,20 +1126,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8946995577487621920
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9133452553713813661}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6349670867848466883, guid: a1e5d880c08485d46ae6a70ac560039f, type: 3}
 --- !u!54 &4505939220378121734
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1256,9 +1136,9 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3

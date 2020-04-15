@@ -16,16 +16,12 @@ public class PauseManager : MonoBehaviour
         canvasPause.SetActive(false);
         canvasSettings.SetActive(false);
     }
-    private void Update()
-    {
-        Pause();
-    }
+    
 
-    // Update is called once per frame
     public void Pause()
     {
-
-        if (InputManager.playerInputs.PlayerInputs.Pause.triggered && !activePause)
+        print(activePause);
+        if (!activePause)
         {
             activePause = !activePause;
             canvasPause.SetActive(activePause);
@@ -34,7 +30,7 @@ public class PauseManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             PlayerMovement.canMove = false;
         }
-        else if (InputManager.playerInputs.PlayerInputs.Pause.triggered && activePause)
+        else if (activePause)
         {
             activePause = !activePause;
             canvasPause.SetActive(activePause);

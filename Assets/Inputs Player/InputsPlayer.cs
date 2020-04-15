@@ -87,7 +87,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""type"": ""Button"",
                     ""id"": ""625a9260-2378-4450-a9f2-adcd6c1f8051"",
                     ""expectedControlType"": """",
-                    ""processors"": ""NormalizeVector2,StickDeadzone"",
+                    ""processors"": """",
                     ""interactions"": """"
                 }
             ],
@@ -404,17 +404,6 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""8b323e1c-0afb-4203-ab01-82a11b3372d0"",
                     ""path"": ""<Keyboard>/p"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b7bb15c5-b88c-4fec-b922-baa45c178fd9"",
-                    ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",

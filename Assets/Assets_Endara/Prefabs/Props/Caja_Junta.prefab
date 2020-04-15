@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabBoxDestroyed: {fileID: 4450371041822799334, guid: a01fba319626fb94ba4b9c04ce1cf47e,
     type: 3}
-  _explosionForce: 1
+  _explosionForce: 0
   _audiosDestroyBox:
   - {fileID: 8300000, guid: 156a5930c76ca74428c417d6a436167c, type: 3}
   - {fileID: 8300000, guid: a9d4cf5ecb3fec847be69d25749ade70, type: 3}
@@ -108,7 +108,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1ce683724018bf948be6c3d4170ce613, type: 3}
   - {fileID: 8300000, guid: 6bae4df6f5a9f6a4bb105126e267ff59, type: 3}
   - {fileID: 8300000, guid: 2b15691bc7726984eb5684c474a21104, type: 3}
-  _explosionRadius: 10
+  _explosionRadius: 0
 --- !u!65 &9068888628926247807
 BoxCollider:
   m_ObjectHideFlags: 0
