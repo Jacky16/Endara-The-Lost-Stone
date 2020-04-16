@@ -334,9 +334,6 @@ public class PlayerMovement : MonoBehaviour
         }
       
     }
-
-
-    
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Final")
@@ -350,6 +347,7 @@ public class PlayerMovement : MonoBehaviour
             _coinManager.SumCoins();
             Destroy(other.gameObject);
         }
+        
     }
     private void OnParticleCollision(GameObject other)
     {

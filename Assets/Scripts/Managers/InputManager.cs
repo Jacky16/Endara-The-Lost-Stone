@@ -32,6 +32,7 @@ public class InputManager : MonoBehaviour
     }
     private void Update()
     {
+        print(controlsState);
         movement = playerInputs.PlayerInputs.Movement.ReadValue<Vector2>();
         playerInputs.PlayerInputs.MovementCamera.canceled += ctx => _freeLookCamera.m_XAxis.m_InputAxisValue = 0;
         #region Comprobacion: Rotacion de objetos
@@ -86,6 +87,7 @@ public class InputManager : MonoBehaviour
     }
     public void SwitchInputs()
     {
+        print(playerInput.currentControlScheme);
         switch (playerInput.currentControlScheme)
         {
             case "PS4":
