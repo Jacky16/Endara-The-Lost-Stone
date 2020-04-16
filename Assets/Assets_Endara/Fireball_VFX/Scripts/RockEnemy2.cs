@@ -20,9 +20,12 @@ public class RockEnemy2 : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(canGo)
-        rb.velocity = directionToPlayer * (speed * Time.deltaTime);
-        transform.DOLocalRotate(new Vector3(100, 0, 0),3,RotateMode.LocalAxisAdd).SetLoops(-1);
+        if (canGo)
+        {
+            rb.velocity = directionToPlayer * (speed * Time.deltaTime);
+            transform.DOLocalRotate(new Vector3(100, 0, 0), 3, RotateMode.LocalAxisAdd).SetLoops(-1);
+        }
+        
     }
     private void OnCollisionEnter(Collision collision)
     {

@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class DamegeAttack : MonoBehaviour
 {
-    [SerializeField]float damagePlayer;
+    [SerializeField]
+    PlayerLifeManager _playerLifeManager;
 
-    public float DamagePlayer()
+    private void OnTriggerEnter(Collider other)
     {
-        return damagePlayer;
+        if (other.gameObject.name == "Detection Enemy")
+        {
+            _playerLifeManager.SubstractLife();
+        }
     }
 }

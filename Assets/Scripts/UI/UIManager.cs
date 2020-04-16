@@ -7,8 +7,8 @@ using DG.Tweening;
 public class UIManager : MonoBehaviour
 {
     [Header("Referencias a scripts")]
-    [SerializeField]
-    Palanca _palanca;
+    //[SerializeField]
+    //Palanca _palanca;
     static bool _playerInCofre;
     static bool _playerInPalanca;
 

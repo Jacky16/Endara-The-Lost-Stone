@@ -1,10 +1,10 @@
-Layer Selection: Terrain
+Layer Selection: Default
 Brush Max Size: 20
 Brush Size: 1,15
 Fill Mode: True
 Fill Rate: 0,01
 
-Game Object: None
+Game Object: Assets/Assets_Endara/Hierba/Grass_Mesh.prefab
 Layer: Default
 Toggle: True
 Slider: 1
