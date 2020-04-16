@@ -6,7 +6,7 @@ public class GemaPuzzle : MonoBehaviour
 {
     [Header("Camaras")]
     [SerializeField]
-    CinemachineVirtualCamera camera;
+    CinemachineVirtualCamera _cameraEsfera;
 
     [SerializeField]
     CinemachineVirtualCamera _cameraGema;
@@ -58,11 +58,19 @@ public class GemaPuzzle : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        camera.Priority = 10;
+        _cameraEsfera.Priority = 10;
 
         yield return new WaitForSeconds(1.5f);
 
         gameObjectSolution.transform.DOShakePosition(.5f,1f).SetEase(Ease.Linear).OnComplete(() => Explode());
+        
+        _cameraEsfera.Priority = 10;
+
+        yield return new WaitForSeconds(2);
+
+        _cameraGema.Priority = 0;
+        _cameraEsfera.Priority = 0;
+        _cameraPlayer.Priority = 1;
     }
     void Particles()
     {
@@ -74,9 +82,7 @@ public class GemaPuzzle : MonoBehaviour
     }
     void Explode()
     {
-        _cameraGema.Priority = 0;
-        camera.Priority = 0;
-        _cameraPlayer.Priority = 1;
+        
         _audioSource.PlayOneShot(_audioClipCupula);
         gameObjectSolution.SetActive(false);
         particleSystem.Play();

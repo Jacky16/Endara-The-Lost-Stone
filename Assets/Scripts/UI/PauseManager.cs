@@ -20,7 +20,7 @@ public class PauseManager : MonoBehaviour
 
     public void Pause()
     {
-        print(activePause);
+        
         if (!activePause)
         {
             activePause = !activePause;

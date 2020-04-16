@@ -14,11 +14,12 @@ public class Palanca : MonoBehaviour
     [SerializeField]
     Animator anim;
     bool _isInPalanca;
-    
-    UIManager uIManager;
+
+    AudioSource _audioSource;
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
     }
    
     private void OnTriggerEnter(Collider other)
@@ -45,7 +46,7 @@ public class Palanca : MonoBehaviour
             UIManager.SetPlayerPalanca(false);
         }
     }
-    void ActivateBridge()
+    void ActivateBridge() // Se ejecuta en la animacion
     {
         StartCoroutine(SwitchCamera());
     }
@@ -60,6 +61,10 @@ public class Palanca : MonoBehaviour
         }
         yield return new WaitForSeconds(4);
         camera.Priority = 0;
+    }
+    public void PlaySound()
+    {
+        _audioSource.Play();
     }
     public bool PlayerInPalanca()
     {
