@@ -12,15 +12,14 @@ GameObject:
   - component: {fileID: 2586240920842324460}
   - component: {fileID: 2586240920842324461}
   - component: {fileID: 2586240920842324462}
-  - component: {fileID: 2586240920842324463}
   - component: {fileID: 2586240920842324456}
-  - component: {fileID: 2586240920842324451}
-  m_Layer: 0
+  - component: {fileID: 5630840709308353632}
+  m_Layer: 13
   m_Name: Plataformas_Arenosas_04 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2586240920842324457
 Transform:
@@ -99,19 +98,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2586240920842324463
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2586240920842324458}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.896842, y: 4.388867, z: 2.3245707}
-  m_Center: {x: 0.5014339, y: -0.26812744, z: -1.1622853}
 --- !u!114 &2586240920842324456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,23 +110,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86706d285b98eab49a4aa8b56053a466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGravity: 0
---- !u!95 &2586240920842324451
-Animator:
-  serializedVersion: 3
+--- !u!64 &5630840709308353632
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2586240920842324458}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 31cdee4d6112b0049850c22ccd78c75e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6879669139460608212, guid: 808726345a8528945920e1557dc17a9b, type: 3}

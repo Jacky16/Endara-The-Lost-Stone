@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3382283857340063308}
   - component: {fileID: 6028999939764642938}
   - component: {fileID: 42721437799028867}
+  - component: {fileID: 7675905778237394528}
   m_Layer: 0
   m_Name: Plataformas_Rotas_01
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7675905778237394528
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777533064027319391}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.081451, y: 1.6439855, z: 2.152858}
+  m_Center: {x: 0.00000006427158, y: -0.007492422, z: -1.0764291}

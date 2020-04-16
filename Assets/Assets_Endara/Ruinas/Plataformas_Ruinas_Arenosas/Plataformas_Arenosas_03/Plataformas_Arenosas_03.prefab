@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4204252531456594078}
   - component: {fileID: 5117082971682040488}
   - component: {fileID: 1458900964668151377}
+  - component: {fileID: 5808366962383613427}
   m_Layer: 0
   m_Name: Plataformas_Arenosas_03
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5808366962383613427
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865773864277713549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4445926446297873507, guid: a3b5417b1bb748944b09fd59f4c9a1fb, type: 3}

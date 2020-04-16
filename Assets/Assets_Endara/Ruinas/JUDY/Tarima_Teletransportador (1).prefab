@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6233593351390606572}
   - component: {fileID: 3159603477325319898}
   - component: {fileID: 8711549323086361123}
+  - component: {fileID: 4248271447559072911}
   m_Layer: 0
   m_Name: Tarima_Teletransportador (1)
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4248271447559072911
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6978738808423007999}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1656640274520233132, guid: 6b10ab31cd002ef4f827636cc3b33d43, type: 3}

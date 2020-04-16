@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3151296719983499623}
   - component: {fileID: 6021904518432439457}
   - component: {fileID: 2902662062762840912}
-  - component: {fileID: 2902662062762840915}
   - component: {fileID: 2902662062762840911}
+  - component: {fileID: 2473468891736128228}
   m_Layer: 0
   m_Name: Plataformas_Arenosas_04
   m_TagString: Untagged
@@ -98,19 +98,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2902662062762840915
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8777997581553904383}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.896842, y: 4.388867, z: 2.3245707}
-  m_Center: {x: 0.5014339, y: -0.26812744, z: -1.1622853}
 --- !u!114 &2902662062762840911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,4 +110,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86706d285b98eab49a4aa8b56053a466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGravity: 0
+--- !u!64 &2473468891736128228
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8777997581553904383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6879669139460608212, guid: 808726345a8528945920e1557dc17a9b, type: 3}

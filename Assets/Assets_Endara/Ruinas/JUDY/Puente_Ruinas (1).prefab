@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 6993070879197265897}
   - component: {fileID: 6777390944419210400}
   - component: {fileID: 3954292130706207338}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box073
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6993070879197265897
 Transform:
@@ -90,12 +90,12 @@ GameObject:
   - component: {fileID: 1866269766528366492}
   - component: {fileID: 2230483469698566851}
   - component: {fileID: 3867037457515196589}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1866269766528366492
 Transform:
@@ -169,12 +169,12 @@ GameObject:
   - component: {fileID: 6446930094156542338}
   - component: {fileID: 2950184672402860399}
   - component: {fileID: 3948521450110546894}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box076
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6446930094156542338
 Transform:
@@ -248,12 +248,12 @@ GameObject:
   - component: {fileID: 6902137449191906689}
   - component: {fileID: 4687145556242751054}
   - component: {fileID: 7278454750040888436}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box195
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6902137449191906689
 Transform:
@@ -327,12 +327,12 @@ GameObject:
   - component: {fileID: 7149799507521313526}
   - component: {fileID: 4481530391437483456}
   - component: {fileID: 2137645580187261768}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box042
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7149799507521313526
 Transform:
@@ -406,12 +406,12 @@ GameObject:
   - component: {fileID: 1197881427203244434}
   - component: {fileID: 682507732963150954}
   - component: {fileID: 308225382839932474}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1197881427203244434
 Transform:
@@ -485,12 +485,12 @@ GameObject:
   - component: {fileID: 943025702800154585}
   - component: {fileID: 1408973131215484412}
   - component: {fileID: 3820613535556133384}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &943025702800154585
 Transform:
@@ -564,12 +564,12 @@ GameObject:
   - component: {fileID: 1032439127132318948}
   - component: {fileID: 5733951402096484498}
   - component: {fileID: 33500207358238591}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box202
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1032439127132318948
 Transform:
@@ -643,12 +643,12 @@ GameObject:
   - component: {fileID: 705177794045349350}
   - component: {fileID: 2007018696800202364}
   - component: {fileID: 7400455263825334038}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box211
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &705177794045349350
 Transform:
@@ -722,12 +722,12 @@ GameObject:
   - component: {fileID: 5610330392158312794}
   - component: {fileID: 6799583769761762117}
   - component: {fileID: 4449669055712969501}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box145
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5610330392158312794
 Transform:
@@ -801,12 +801,12 @@ GameObject:
   - component: {fileID: 4506142004152758213}
   - component: {fileID: 7423935697344814254}
   - component: {fileID: 2746082327046872139}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box178
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4506142004152758213
 Transform:
@@ -880,12 +880,12 @@ GameObject:
   - component: {fileID: 8657740439275229170}
   - component: {fileID: 5547725843319167436}
   - component: {fileID: 1125834266023356257}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box126
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8657740439275229170
 Transform:
@@ -959,12 +959,12 @@ GameObject:
   - component: {fileID: 3694329397326670678}
   - component: {fileID: 285692794620855037}
   - component: {fileID: 3926529728233548745}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box160
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3694329397326670678
 Transform:
@@ -1038,12 +1038,12 @@ GameObject:
   - component: {fileID: 6327054145967871861}
   - component: {fileID: 8597390122329813946}
   - component: {fileID: 8357292295998249023}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box182
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6327054145967871861
 Transform:
@@ -1117,12 +1117,12 @@ GameObject:
   - component: {fileID: 950480913629178710}
   - component: {fileID: 4686262103899366520}
   - component: {fileID: 4245553230320890266}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &950480913629178710
 Transform:
@@ -1196,12 +1196,12 @@ GameObject:
   - component: {fileID: 6509672207495588278}
   - component: {fileID: 8030852317446482262}
   - component: {fileID: 2006770522199213536}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box110
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6509672207495588278
 Transform:
@@ -1275,12 +1275,12 @@ GameObject:
   - component: {fileID: 6269693945667568433}
   - component: {fileID: 573480543562866176}
   - component: {fileID: 3364762106881320569}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6269693945667568433
 Transform:
@@ -1354,12 +1354,12 @@ GameObject:
   - component: {fileID: 3283256681075429468}
   - component: {fileID: 2397932149177956999}
   - component: {fileID: 2696681687121650883}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pilar003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3283256681075429468
 Transform:
@@ -1433,12 +1433,12 @@ GameObject:
   - component: {fileID: 1833898527911518023}
   - component: {fileID: 5472370311711480366}
   - component: {fileID: 2174004757282694680}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box117
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1833898527911518023
 Transform:
@@ -1512,12 +1512,13 @@ GameObject:
   - component: {fileID: 2133229681068372501}
   - component: {fileID: 7438552086667215515}
   - component: {fileID: 1666341242212854550}
-  m_Layer: 0
+  - component: {fileID: 4731596147913280376}
+  m_Layer: 13
   m_Name: Piedras_Puente_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2133229681068372501
 Transform:
@@ -1580,6 +1581,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4731596147913280376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950777699202172401}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6226735, y: 1.0450939, z: 0.7711336}
+  m_Center: {x: -3.424519e-15, y: -0.00000007634646, z: 0.38556665}
 --- !u!1 &968354733931893887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,12 +1605,12 @@ GameObject:
   - component: {fileID: 6759073916381170209}
   - component: {fileID: 2984280232850548561}
   - component: {fileID: 5926932877706264404}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6759073916381170209
 Transform:
@@ -1670,12 +1684,12 @@ GameObject:
   - component: {fileID: 4838809229165225343}
   - component: {fileID: 6849306071915593786}
   - component: {fileID: 3133900143102532819}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box209
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4838809229165225343
 Transform:
@@ -1749,12 +1763,12 @@ GameObject:
   - component: {fileID: 8635259917886830445}
   - component: {fileID: 1524978564941014001}
   - component: {fileID: 7514037562952008163}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box116
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8635259917886830445
 Transform:
@@ -1828,12 +1842,12 @@ GameObject:
   - component: {fileID: 6978306908028232399}
   - component: {fileID: 2953427481934386327}
   - component: {fileID: 5025421292492487755}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6978306908028232399
 Transform:
@@ -1907,12 +1921,12 @@ GameObject:
   - component: {fileID: 6393906494681216825}
   - component: {fileID: 8829547819797667394}
   - component: {fileID: 7435356623904141572}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box179
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6393906494681216825
 Transform:
@@ -1986,12 +2000,12 @@ GameObject:
   - component: {fileID: 2364155722392197706}
   - component: {fileID: 4724099596145801796}
   - component: {fileID: 3126666352717376445}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box147
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2364155722392197706
 Transform:
@@ -2065,12 +2079,12 @@ GameObject:
   - component: {fileID: 7711555964550133720}
   - component: {fileID: 9011665611044869708}
   - component: {fileID: 2421786494550332851}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box172
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7711555964550133720
 Transform:
@@ -2144,12 +2158,12 @@ GameObject:
   - component: {fileID: 2262581020059228939}
   - component: {fileID: 4275730777392550363}
   - component: {fileID: 6242479415626295644}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2262581020059228939
 Transform:
@@ -2223,12 +2237,12 @@ GameObject:
   - component: {fileID: 3358331851527576375}
   - component: {fileID: 1692709526516799054}
   - component: {fileID: 6156300006645983372}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3358331851527576375
 Transform:
@@ -2302,12 +2316,12 @@ GameObject:
   - component: {fileID: 2907337900794108460}
   - component: {fileID: 6129939908684669416}
   - component: {fileID: 5129579851802994484}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box048
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2907337900794108460
 Transform:
@@ -2381,12 +2395,13 @@ GameObject:
   - component: {fileID: 9130164605836400295}
   - component: {fileID: 1296175753064973647}
   - component: {fileID: 1026530515160042180}
-  m_Layer: 0
+  - component: {fileID: 6807143147524511526}
+  m_Layer: 13
   m_Name: Piedras_Puente
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9130164605836400295
 Transform:
@@ -2449,6 +2464,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6807143147524511526
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863960589157515030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.206149, y: 1.1009614, z: 0.68995064}
+  m_Center: {x: 0.0000038146973, y: -0.5504766, z: 0.34497532}
 --- !u!1 &1900972304197473527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,12 +2488,12 @@ GameObject:
   - component: {fileID: 5324319637214095295}
   - component: {fileID: 1523615432266449701}
   - component: {fileID: 324470219406262155}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box167
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5324319637214095295
 Transform:
@@ -2539,12 +2567,12 @@ GameObject:
   - component: {fileID: 8525092522698233691}
   - component: {fileID: 7947425232730165133}
   - component: {fileID: 3359757183961129935}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box074
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8525092522698233691
 Transform:
@@ -2618,12 +2646,12 @@ GameObject:
   - component: {fileID: 7280769194187805982}
   - component: {fileID: 3184117398379886453}
   - component: {fileID: 4772163268062760030}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7280769194187805982
 Transform:
@@ -2697,12 +2725,12 @@ GameObject:
   - component: {fileID: 3182359262505648793}
   - component: {fileID: 1372257415239334724}
   - component: {fileID: 5419975359806086661}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3182359262505648793
 Transform:
@@ -2776,12 +2804,12 @@ GameObject:
   - component: {fileID: 3669742749127343259}
   - component: {fileID: 7654534961507153326}
   - component: {fileID: 1000759402990274282}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box201
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3669742749127343259
 Transform:
@@ -2855,12 +2883,12 @@ GameObject:
   - component: {fileID: 7887781685780113464}
   - component: {fileID: 691527601825662211}
   - component: {fileID: 7699811004654781501}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box157
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7887781685780113464
 Transform:
@@ -2934,12 +2962,12 @@ GameObject:
   - component: {fileID: 1593065532240896577}
   - component: {fileID: 3970704100043005135}
   - component: {fileID: 6405756776321540442}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box041
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1593065532240896577
 Transform:
@@ -3013,12 +3041,12 @@ GameObject:
   - component: {fileID: 4860234257905614950}
   - component: {fileID: 4694788350330606875}
   - component: {fileID: 304156676248869786}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box075
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4860234257905614950
 Transform:
@@ -3092,12 +3120,12 @@ GameObject:
   - component: {fileID: 4980578499772929540}
   - component: {fileID: 6795220666731282961}
   - component: {fileID: 8004104817528136057}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box120
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4980578499772929540
 Transform:
@@ -3171,12 +3199,13 @@ GameObject:
   - component: {fileID: 8828115334108814578}
   - component: {fileID: 2215666294569787370}
   - component: {fileID: 1010831631705158026}
-  m_Layer: 0
+  - component: {fileID: 5429798317784865803}
+  m_Layer: 13
   m_Name: Piedras_Puente_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8828115334108814578
 Transform:
@@ -3239,6 +3268,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5429798317784865803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2535449722226299248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6226735, y: 1.0450939, z: 0.6898946}
+  m_Center: {x: -0.0000038146973, y: 0.000003746394, z: 0.3449474}
 --- !u!1 &2548320627798974967
 GameObject:
   m_ObjectHideFlags: 0
@@ -3250,12 +3292,12 @@ GameObject:
   - component: {fileID: 4143643283721092193}
   - component: {fileID: 5340418233076342338}
   - component: {fileID: 6701518923171905559}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box034
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4143643283721092193
 Transform:
@@ -3329,12 +3371,12 @@ GameObject:
   - component: {fileID: 5778974938925429060}
   - component: {fileID: 5212114927008148982}
   - component: {fileID: 3307724584203874041}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box081
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5778974938925429060
 Transform:
@@ -3408,12 +3450,12 @@ GameObject:
   - component: {fileID: 3365705765396916876}
   - component: {fileID: 6205655882399471291}
   - component: {fileID: 3637303560725776731}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box208
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3365705765396916876
 Transform:
@@ -3487,12 +3529,12 @@ GameObject:
   - component: {fileID: 6683329945179769286}
   - component: {fileID: 266957115285711346}
   - component: {fileID: 5010747150524221276}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box039
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6683329945179769286
 Transform:
@@ -3566,12 +3608,12 @@ GameObject:
   - component: {fileID: 208630081215124169}
   - component: {fileID: 6981907723389203788}
   - component: {fileID: 1640479018964773744}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box197
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &208630081215124169
 Transform:
@@ -3645,12 +3687,12 @@ GameObject:
   - component: {fileID: 3125708447417184177}
   - component: {fileID: 1724286788896587585}
   - component: {fileID: 3923365844446280451}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box192
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3125708447417184177
 Transform:
@@ -3724,12 +3766,12 @@ GameObject:
   - component: {fileID: 5137937031475267877}
   - component: {fileID: 7395748456064508644}
   - component: {fileID: 3323681753139102102}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box078
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5137937031475267877
 Transform:
@@ -3803,12 +3845,12 @@ GameObject:
   - component: {fileID: 1756599504547030792}
   - component: {fileID: 7133964986311069667}
   - component: {fileID: 4223160045404711712}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1756599504547030792
 Transform:
@@ -3882,12 +3924,12 @@ GameObject:
   - component: {fileID: 6527127170306640200}
   - component: {fileID: 7098875812157050874}
   - component: {fileID: 9021657331426063631}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6527127170306640200
 Transform:
@@ -3961,12 +4003,12 @@ GameObject:
   - component: {fileID: 1969996261419505259}
   - component: {fileID: 7115120141459738506}
   - component: {fileID: 5688440644789171186}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box087
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1969996261419505259
 Transform:
@@ -4040,12 +4082,12 @@ GameObject:
   - component: {fileID: 4657552755882105912}
   - component: {fileID: 657139791025063119}
   - component: {fileID: 3344602554819572972}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box085
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4657552755882105912
 Transform:
@@ -4119,12 +4161,12 @@ GameObject:
   - component: {fileID: 2126730486972173342}
   - component: {fileID: 8799253010814491991}
   - component: {fileID: 9204024802976323309}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box045
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2126730486972173342
 Transform:
@@ -4198,12 +4240,12 @@ GameObject:
   - component: {fileID: 2057217039011909060}
   - component: {fileID: 220200559718667516}
   - component: {fileID: 5701675493850401500}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box150
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2057217039011909060
 Transform:
@@ -4277,12 +4319,12 @@ GameObject:
   - component: {fileID: 5680298420798444779}
   - component: {fileID: 7239132757595056321}
   - component: {fileID: 6667531694315347910}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5680298420798444779
 Transform:
@@ -4356,12 +4398,12 @@ GameObject:
   - component: {fileID: 3454130123848942254}
   - component: {fileID: 8128790844433898072}
   - component: {fileID: 1472657486895595118}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box212
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3454130123848942254
 Transform:
@@ -4435,12 +4477,12 @@ GameObject:
   - component: {fileID: 2916096392219694245}
   - component: {fileID: 5045813911860142047}
   - component: {fileID: 805006936449667723}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box170
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2916096392219694245
 Transform:
@@ -4514,12 +4556,12 @@ GameObject:
   - component: {fileID: 1391894388994826956}
   - component: {fileID: 7667624506054821843}
   - component: {fileID: 5081723049986179222}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box166
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1391894388994826956
 Transform:
@@ -4593,12 +4635,12 @@ GameObject:
   - component: {fileID: 7342498603190560965}
   - component: {fileID: 2634307275742584128}
   - component: {fileID: 7053786312495789087}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7342498603190560965
 Transform:
@@ -4672,12 +4714,12 @@ GameObject:
   - component: {fileID: 4187831688823773965}
   - component: {fileID: 101072373021867307}
   - component: {fileID: 2849284538686382536}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4187831688823773965
 Transform:
@@ -4751,12 +4793,12 @@ GameObject:
   - component: {fileID: 7426809577417391948}
   - component: {fileID: 5697291299045238219}
   - component: {fileID: 4322918664739551448}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7426809577417391948
 Transform:
@@ -4830,12 +4872,12 @@ GameObject:
   - component: {fileID: 4278494024322979911}
   - component: {fileID: 7156660814771057663}
   - component: {fileID: 8818442661879713363}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box112
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4278494024322979911
 Transform:
@@ -4909,12 +4951,12 @@ GameObject:
   - component: {fileID: 362282296826478619}
   - component: {fileID: 6126976046807110480}
   - component: {fileID: 8939486822709422682}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &362282296826478619
 Transform:
@@ -4988,12 +5030,12 @@ GameObject:
   - component: {fileID: 2152442611770663596}
   - component: {fileID: 4737582758604298665}
   - component: {fileID: 7271895966047355278}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box090
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2152442611770663596
 Transform:
@@ -5067,12 +5109,12 @@ GameObject:
   - component: {fileID: 198489167713117690}
   - component: {fileID: 9043407466564466003}
   - component: {fileID: 8027396086606769792}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box181
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &198489167713117690
 Transform:
@@ -5146,12 +5188,12 @@ GameObject:
   - component: {fileID: 7113522365330238281}
   - component: {fileID: 2699772107956145857}
   - component: {fileID: 4645130482139380578}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7113522365330238281
 Transform:
@@ -5225,12 +5267,12 @@ GameObject:
   - component: {fileID: 6499114938186236764}
   - component: {fileID: 3780281648630472486}
   - component: {fileID: 3211975957825580161}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box130
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6499114938186236764
 Transform:
@@ -5304,12 +5346,12 @@ GameObject:
   - component: {fileID: 4550142412206421754}
   - component: {fileID: 7810002375534548366}
   - component: {fileID: 8794729611176792469}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box037
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4550142412206421754
 Transform:
@@ -5383,12 +5425,12 @@ GameObject:
   - component: {fileID: 6311169219905381025}
   - component: {fileID: 7664251792475706951}
   - component: {fileID: 5122133330913493057}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box129
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6311169219905381025
 Transform:
@@ -5462,12 +5504,12 @@ GameObject:
   - component: {fileID: 4611629875294293798}
   - component: {fileID: 1074617058015009470}
   - component: {fileID: 808431075430658618}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box044
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4611629875294293798
 Transform:
@@ -5541,12 +5583,12 @@ GameObject:
   - component: {fileID: 4484492366381075008}
   - component: {fileID: 8820542244700609816}
   - component: {fileID: 5467738814879059167}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box043
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4484492366381075008
 Transform:
@@ -5620,12 +5662,12 @@ GameObject:
   - component: {fileID: 2790318253089216753}
   - component: {fileID: 7504472500384516921}
   - component: {fileID: 7545756836469151445}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box079
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2790318253089216753
 Transform:
@@ -5699,12 +5741,12 @@ GameObject:
   - component: {fileID: 7568329999522198941}
   - component: {fileID: 2644197825093307221}
   - component: {fileID: 4730096610403364751}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7568329999522198941
 Transform:
@@ -5778,12 +5820,12 @@ GameObject:
   - component: {fileID: 3884610035669715517}
   - component: {fileID: 6519548263969199634}
   - component: {fileID: 469405917004279579}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3884610035669715517
 Transform:
@@ -5857,12 +5899,12 @@ GameObject:
   - component: {fileID: 8112642627477109956}
   - component: {fileID: 2261467306689504324}
   - component: {fileID: 3273392457050737634}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box207
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8112642627477109956
 Transform:
@@ -5936,12 +5978,12 @@ GameObject:
   - component: {fileID: 8642874903317447884}
   - component: {fileID: 935048169871290928}
   - component: {fileID: 1849162159743140269}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box155
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8642874903317447884
 Transform:
@@ -6015,12 +6057,12 @@ GameObject:
   - component: {fileID: 8543002895011037750}
   - component: {fileID: 7255343915339649406}
   - component: {fileID: 1286714110666174826}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8543002895011037750
 Transform:
@@ -6094,12 +6136,12 @@ GameObject:
   - component: {fileID: 7636547513299667234}
   - component: {fileID: 2646059592286803540}
   - component: {fileID: 4081900587347315819}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pilar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7636547513299667234
 Transform:
@@ -6173,12 +6215,12 @@ GameObject:
   - component: {fileID: 7873412323296529760}
   - component: {fileID: 2395305747977083997}
   - component: {fileID: 6469253741838673670}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box086
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7873412323296529760
 Transform:
@@ -6252,12 +6294,13 @@ GameObject:
   - component: {fileID: 8469941214569643012}
   - component: {fileID: 4018421015670049906}
   - component: {fileID: 5403530522330502091}
-  m_Layer: 0
+  - component: {fileID: 1557515527893218154}
+  m_Layer: 13
   m_Name: Piedras_Puente001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8469941214569643012
 Transform:
@@ -6320,6 +6363,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1557515527893218154
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4883862201983949657}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2061498, y: 1.1009616, z: 0.6899509}
+  m_Center: {x: -0.0000038064945, y: -0.55047715, z: 0.34497544}
 --- !u!1 &4904345394517941135
 GameObject:
   m_ObjectHideFlags: 0
@@ -6331,12 +6387,12 @@ GameObject:
   - component: {fileID: 6431011455546760457}
   - component: {fileID: 6271043815864828861}
   - component: {fileID: 1838747532648258336}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box169
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6431011455546760457
 Transform:
@@ -6410,12 +6466,12 @@ GameObject:
   - component: {fileID: 5313514323678962682}
   - component: {fileID: 3950717582863031898}
   - component: {fileID: 7611105503263556150}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box148
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5313514323678962682
 Transform:
@@ -6489,12 +6545,12 @@ GameObject:
   - component: {fileID: 4305608635532002391}
   - component: {fileID: 1041688538500683610}
   - component: {fileID: 3423197271980836004}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box176
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4305608635532002391
 Transform:
@@ -6568,12 +6624,12 @@ GameObject:
   - component: {fileID: 1725036006191546527}
   - component: {fileID: 4428403047007626131}
   - component: {fileID: 7263364410515092815}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1725036006191546527
 Transform:
@@ -6647,12 +6703,12 @@ GameObject:
   - component: {fileID: 5398153758933085586}
   - component: {fileID: 5677120851300480692}
   - component: {fileID: 4685027980658912883}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box038
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5398153758933085586
 Transform:
@@ -6726,12 +6782,12 @@ GameObject:
   - component: {fileID: 5902629819783672950}
   - component: {fileID: 552001260762729561}
   - component: {fileID: 2158044491407261890}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5902629819783672950
 Transform:
@@ -6805,12 +6861,12 @@ GameObject:
   - component: {fileID: 1933366450597516398}
   - component: {fileID: 4650412412282507112}
   - component: {fileID: 8778462845183868863}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box052
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1933366450597516398
 Transform:
@@ -6884,12 +6940,12 @@ GameObject:
   - component: {fileID: 6716684961060199722}
   - component: {fileID: 7545430244743181312}
   - component: {fileID: 2601226943780692202}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box114
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6716684961060199722
 Transform:
@@ -6963,12 +7019,12 @@ GameObject:
   - component: {fileID: 3674709518626119103}
   - component: {fileID: 1542402740541981489}
   - component: {fileID: 8201178267293090261}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box153
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3674709518626119103
 Transform:
@@ -7042,12 +7098,12 @@ GameObject:
   - component: {fileID: 8770648035653915007}
   - component: {fileID: 8920558556119436983}
   - component: {fileID: 555403417372033611}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8770648035653915007
 Transform:
@@ -7121,12 +7177,12 @@ GameObject:
   - component: {fileID: 840225484271396239}
   - component: {fileID: 3276076761043084107}
   - component: {fileID: 3015866063914771097}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box123
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &840225484271396239
 Transform:
@@ -7200,12 +7256,12 @@ GameObject:
   - component: {fileID: 3002425590376569440}
   - component: {fileID: 2535432445238863951}
   - component: {fileID: 3818746970424116751}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box205
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3002425590376569440
 Transform:
@@ -7279,12 +7335,12 @@ GameObject:
   - component: {fileID: 2472374762197553700}
   - component: {fileID: 1633385566248147986}
   - component: {fileID: 1493055611420738005}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pilar002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2472374762197553700
 Transform:
@@ -7358,12 +7414,12 @@ GameObject:
   - component: {fileID: 6759846906066397245}
   - component: {fileID: 8086698774819135006}
   - component: {fileID: 3391778181645480650}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6759846906066397245
 Transform:
@@ -7437,12 +7493,12 @@ GameObject:
   - component: {fileID: 7979810266117747927}
   - component: {fileID: 768855211730453994}
   - component: {fileID: 7393395898839021233}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pilar001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7979810266117747927
 Transform:
@@ -7516,12 +7572,12 @@ GameObject:
   - component: {fileID: 9011921653666712687}
   - component: {fileID: 6303137141155845738}
   - component: {fileID: 5997788067153402940}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box080
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9011921653666712687
 Transform:
@@ -7595,12 +7651,12 @@ GameObject:
   - component: {fileID: 8615338716265217597}
   - component: {fileID: 8083005367654732430}
   - component: {fileID: 4148399248525169298}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box180
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8615338716265217597
 Transform:
@@ -7674,12 +7730,12 @@ GameObject:
   - component: {fileID: 4538747069942233221}
   - component: {fileID: 1494798565870914455}
   - component: {fileID: 7769847686314041672}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box174
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4538747069942233221
 Transform:
@@ -7753,12 +7809,13 @@ GameObject:
   - component: {fileID: 2106209504001156163}
   - component: {fileID: 6078398308501446241}
   - component: {fileID: 4317152842823370433}
-  m_Layer: 0
+  - component: {fileID: 1903628278341867924}
+  m_Layer: 13
   m_Name: Piedras_Puente_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2106209504001156163
 Transform:
@@ -7821,6 +7878,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1903628278341867924
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681763869461776372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.622673, y: 1.0450938, z: 0.7711333}
+  m_Center: {x: 0.0000038146973, y: 3.424519e-16, z: 0.38556665}
 --- !u!1 &5744263388886340106
 GameObject:
   m_ObjectHideFlags: 0
@@ -7832,12 +7902,12 @@ GameObject:
   - component: {fileID: 8419098298465610075}
   - component: {fileID: 1958924496205091761}
   - component: {fileID: 1948878700635484210}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box089
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8419098298465610075
 Transform:
@@ -7911,12 +7981,12 @@ GameObject:
   - component: {fileID: 8175340296799900098}
   - component: {fileID: 2548084761938629776}
   - component: {fileID: 3156583174434558067}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box158
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8175340296799900098
 Transform:
@@ -7990,12 +8060,12 @@ GameObject:
   - component: {fileID: 8708037269894059222}
   - component: {fileID: 4404452802488614342}
   - component: {fileID: 5440190710458786839}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box206
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8708037269894059222
 Transform:
@@ -8069,12 +8139,12 @@ GameObject:
   - component: {fileID: 1114219748303325140}
   - component: {fileID: 5058598952829619774}
   - component: {fileID: 4558233047433050604}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box177
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1114219748303325140
 Transform:
@@ -8148,12 +8218,12 @@ GameObject:
   - component: {fileID: 647757682619809509}
   - component: {fileID: 141420952297505955}
   - component: {fileID: 6380857888437485394}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box115
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &647757682619809509
 Transform:
@@ -8227,12 +8297,12 @@ GameObject:
   - component: {fileID: 1572122746135284388}
   - component: {fileID: 2851508686961715897}
   - component: {fileID: 849850418747540480}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box127
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1572122746135284388
 Transform:
@@ -8306,12 +8376,12 @@ GameObject:
   - component: {fileID: 4550971377229032507}
   - component: {fileID: 3800014219951742662}
   - component: {fileID: 4964970705431350368}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4550971377229032507
 Transform:
@@ -8385,12 +8455,12 @@ GameObject:
   - component: {fileID: 4429297339804661197}
   - component: {fileID: 4974336985968902476}
   - component: {fileID: 2916606381842254730}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box189
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4429297339804661197
 Transform:
@@ -8464,12 +8534,12 @@ GameObject:
   - component: {fileID: 8219311806819871611}
   - component: {fileID: 5672079192151175887}
   - component: {fileID: 8577432118500442441}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8219311806819871611
 Transform:
@@ -8543,12 +8613,12 @@ GameObject:
   - component: {fileID: 3091837988448453700}
   - component: {fileID: 1447035192103700840}
   - component: {fileID: 59189980750244788}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box049
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3091837988448453700
 Transform:
@@ -8622,12 +8692,12 @@ GameObject:
   - component: {fileID: 3929485451648011399}
   - component: {fileID: 1679644207855503473}
   - component: {fileID: 7886982185144338977}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box047
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3929485451648011399
 Transform:
@@ -8701,12 +8771,12 @@ GameObject:
   - component: {fileID: 3480549961282103792}
   - component: {fileID: 3970681709474682153}
   - component: {fileID: 2171300176562818358}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box111
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3480549961282103792
 Transform:
@@ -8780,12 +8850,12 @@ GameObject:
   - component: {fileID: 8852877063844439665}
   - component: {fileID: 3898768102826266610}
   - component: {fileID: 852222640335705759}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8852877063844439665
 Transform:
@@ -8859,12 +8929,12 @@ GameObject:
   - component: {fileID: 3687633979826976292}
   - component: {fileID: 1308798370179048558}
   - component: {fileID: 2946846884817463003}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box152
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3687633979826976292
 Transform:
@@ -8938,12 +9008,13 @@ GameObject:
   - component: {fileID: 4680880670720308607}
   - component: {fileID: 1904577216494017094}
   - component: {fileID: 8500150126876614984}
-  m_Layer: 0
+  - component: {fileID: 2113964240390915802}
+  m_Layer: 13
   m_Name: Piedras_Puente_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4680880670720308607
 Transform:
@@ -9006,6 +9077,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2113964240390915802
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6575092636226928417}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.622673, y: 1.0450938, z: 0.6898943}
+  m_Center: {x: 0, y: 3.0637454e-16, z: 0.34494692}
 --- !u!1 &6577485376855426632
 GameObject:
   m_ObjectHideFlags: 0
@@ -9017,12 +9101,12 @@ GameObject:
   - component: {fileID: 5053319900683274244}
   - component: {fileID: 8096933885364874470}
   - component: {fileID: 4150099479002879184}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5053319900683274244
 Transform:
@@ -9096,12 +9180,12 @@ GameObject:
   - component: {fileID: 1782112946413806181}
   - component: {fileID: 2885437806735142541}
   - component: {fileID: 5506520442142028412}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box203
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1782112946413806181
 Transform:
@@ -9175,12 +9259,12 @@ GameObject:
   - component: {fileID: 1819332296998895147}
   - component: {fileID: 4249645679055952916}
   - component: {fileID: 5195566616790809250}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box175
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1819332296998895147
 Transform:
@@ -9254,12 +9338,12 @@ GameObject:
   - component: {fileID: 4849395810360468593}
   - component: {fileID: 8511827202406938679}
   - component: {fileID: 7200507497707318770}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box036
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4849395810360468593
 Transform:
@@ -9333,12 +9417,12 @@ GameObject:
   - component: {fileID: 6803141064936225411}
   - component: {fileID: 8862726701243302462}
   - component: {fileID: 5335215424783487483}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box151
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6803141064936225411
 Transform:
@@ -9412,12 +9496,12 @@ GameObject:
   - component: {fileID: 9020205375632014146}
   - component: {fileID: 2718437123207935590}
   - component: {fileID: 8683516623825020443}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box124
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9020205375632014146
 Transform:
@@ -9491,12 +9575,12 @@ GameObject:
   - component: {fileID: 153465739189634673}
   - component: {fileID: 1137232181161397259}
   - component: {fileID: 7925230995156530515}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box163
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &153465739189634673
 Transform:
@@ -9570,12 +9654,13 @@ GameObject:
   - component: {fileID: 5658322816223202738}
   - component: {fileID: 7224721439753607349}
   - component: {fileID: 3696001993327729326}
-  m_Layer: 0
+  - component: {fileID: 9097359487553835918}
+  m_Layer: 13
   m_Name: Piedras_Puente_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5658322816223202738
 Transform:
@@ -9638,6 +9723,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &9097359487553835918
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6913848327769117213}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6226735, y: 1.0450939, z: 0.7711336}
+  m_Center: {x: -3.424519e-15, y: 0.0000037383509, z: 0.3855669}
 --- !u!1 &6929163123388097912
 GameObject:
   m_ObjectHideFlags: 0
@@ -9649,12 +9747,12 @@ GameObject:
   - component: {fileID: 1468094384933290988}
   - component: {fileID: 6440319194829480270}
   - component: {fileID: 4726436077943455574}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box164
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1468094384933290988
 Transform:
@@ -9728,12 +9826,12 @@ GameObject:
   - component: {fileID: 454648720477598209}
   - component: {fileID: 6048862110905897084}
   - component: {fileID: 6641081424370713134}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box198
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &454648720477598209
 Transform:
@@ -9807,12 +9905,12 @@ GameObject:
   - component: {fileID: 3335630043310140549}
   - component: {fileID: 2102239332794851929}
   - component: {fileID: 82118139216676863}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box159
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3335630043310140549
 Transform:
@@ -9886,12 +9984,12 @@ GameObject:
   - component: {fileID: 5990790436518409490}
   - component: {fileID: 3059994633640341554}
   - component: {fileID: 6393012673647237177}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box113
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5990790436518409490
 Transform:
@@ -9965,12 +10063,12 @@ GameObject:
   - component: {fileID: 2525698007008220931}
   - component: {fileID: 7998421815051272681}
   - component: {fileID: 6472580336740796121}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2525698007008220931
 Transform:
@@ -10044,12 +10142,12 @@ GameObject:
   - component: {fileID: 1494384010988014616}
   - component: {fileID: 5385814741319174960}
   - component: {fileID: 2149074489472578354}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box143
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1494384010988014616
 Transform:
@@ -10123,12 +10221,12 @@ GameObject:
   - component: {fileID: 7360991438397106937}
   - component: {fileID: 3163058175784918439}
   - component: {fileID: 6927921891578893786}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box088
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7360991438397106937
 Transform:
@@ -10202,12 +10300,12 @@ GameObject:
   - component: {fileID: 2633164961721406672}
   - component: {fileID: 3032799924345272506}
   - component: {fileID: 5333605733492281448}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2633164961721406672
 Transform:
@@ -10281,12 +10379,12 @@ GameObject:
   - component: {fileID: 8966524597117352279}
   - component: {fileID: 3887736023386208998}
   - component: {fileID: 4013226629477091492}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box190
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8966524597117352279
 Transform:
@@ -10360,12 +10458,12 @@ GameObject:
   - component: {fileID: 9188224387904077646}
   - component: {fileID: 8484864527490934629}
   - component: {fileID: 297323383023761488}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box046
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9188224387904077646
 Transform:
@@ -10439,12 +10537,12 @@ GameObject:
   - component: {fileID: 6078637424614817477}
   - component: {fileID: 3405820998137628676}
   - component: {fileID: 1156671846986625082}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box161
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6078637424614817477
 Transform:
@@ -10518,12 +10616,12 @@ GameObject:
   - component: {fileID: 57705322714629943}
   - component: {fileID: 7825419088938373977}
   - component: {fileID: 7308973740318512497}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &57705322714629943
 Transform:
@@ -10597,12 +10695,12 @@ GameObject:
   - component: {fileID: 5130169291857236019}
   - component: {fileID: 6100215352113655969}
   - component: {fileID: 5953930155726620222}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box082
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5130169291857236019
 Transform:
@@ -10676,12 +10774,12 @@ GameObject:
   - component: {fileID: 5669730767106488688}
   - component: {fileID: 8044050063300406922}
   - component: {fileID: 5307434664565602717}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box050
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5669730767106488688
 Transform:
@@ -10755,12 +10853,12 @@ GameObject:
   - component: {fileID: 1402176824550900312}
   - component: {fileID: 858431865070935651}
   - component: {fileID: 1208572964176187488}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1402176824550900312
 Transform:
@@ -10834,12 +10932,12 @@ GameObject:
   - component: {fileID: 6481635568186113078}
   - component: {fileID: 7724236829172457529}
   - component: {fileID: 1155752956528451403}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box188
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6481635568186113078
 Transform:
@@ -10913,12 +11011,12 @@ GameObject:
   - component: {fileID: 6199354151514404191}
   - component: {fileID: 4060669140900820228}
   - component: {fileID: 2208748591868968517}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box053
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6199354151514404191
 Transform:
@@ -10992,12 +11090,12 @@ GameObject:
   - component: {fileID: 6800905605414552236}
   - component: {fileID: 7344015265547838623}
   - component: {fileID: 7687100123418922824}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6800905605414552236
 Transform:
@@ -11071,12 +11169,12 @@ GameObject:
   - component: {fileID: 8886584081592079919}
   - component: {fileID: 8723297964503662671}
   - component: {fileID: 117165414015689112}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box154
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8886584081592079919
 Transform:
@@ -11150,12 +11248,13 @@ GameObject:
   - component: {fileID: 2171535810888634137}
   - component: {fileID: 7748785449286442448}
   - component: {fileID: 2172874166353937610}
-  m_Layer: 0
+  - component: {fileID: 4522277378032422465}
+  m_Layer: 13
   m_Name: Piedras_Puente_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2171535810888634137
 Transform:
@@ -11218,6 +11317,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4522277378032422465
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609089450845735197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.622673, y: 1.0450938, z: 0.7711333}
+  m_Center: {x: 0.0000038146973, y: 3.424519e-16, z: 0.3855669}
 --- !u!1 &7645293392370902854
 GameObject:
   m_ObjectHideFlags: 0
@@ -11229,12 +11341,12 @@ GameObject:
   - component: {fileID: 4407040995403431151}
   - component: {fileID: 5458592915363849132}
   - component: {fileID: 2127653731591406986}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4407040995403431151
 Transform:
@@ -11308,12 +11420,12 @@ GameObject:
   - component: {fileID: 8799587984902961264}
   - component: {fileID: 2600296012088140132}
   - component: {fileID: 4400365549892388555}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8799587984902961264
 Transform:
@@ -11387,12 +11499,12 @@ GameObject:
   - component: {fileID: 5135023118922012548}
   - component: {fileID: 3321982932540029137}
   - component: {fileID: 2039509518310986123}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box162
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5135023118922012548
 Transform:
@@ -11466,12 +11578,12 @@ GameObject:
   - component: {fileID: 3135357001438896489}
   - component: {fileID: 4734825422638250523}
   - component: {fileID: 3614695594099129552}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box125
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3135357001438896489
 Transform:
@@ -11545,12 +11657,12 @@ GameObject:
   - component: {fileID: 6009050574298010833}
   - component: {fileID: 8966516745617776510}
   - component: {fileID: 3798079333040060033}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box193
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6009050574298010833
 Transform:
@@ -11624,12 +11736,12 @@ GameObject:
   - component: {fileID: 2110311866177630426}
   - component: {fileID: 8731873260774303507}
   - component: {fileID: 8018906725777153558}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2110311866177630426
 Transform:
@@ -11703,12 +11815,12 @@ GameObject:
   - component: {fileID: 7165699469128044673}
   - component: {fileID: 8895595390239190881}
   - component: {fileID: 3689815609058457958}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box168
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7165699469128044673
 Transform:
@@ -11782,12 +11894,12 @@ GameObject:
   - component: {fileID: 4825947334549966240}
   - component: {fileID: 2473227544207087277}
   - component: {fileID: 8485360249839810928}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box118
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4825947334549966240
 Transform:
@@ -11861,12 +11973,12 @@ GameObject:
   - component: {fileID: 8560943759214600209}
   - component: {fileID: 4931741303635789127}
   - component: {fileID: 8427190998170370877}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8560943759214600209
 Transform:
@@ -11940,12 +12052,12 @@ GameObject:
   - component: {fileID: 6199581269279189115}
   - component: {fileID: 8820236776418146395}
   - component: {fileID: 3835939063995956956}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box156
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6199581269279189115
 Transform:
@@ -12019,12 +12131,12 @@ GameObject:
   - component: {fileID: 9119340958275606961}
   - component: {fileID: 3677789990123569361}
   - component: {fileID: 1032736590103763532}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box121
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9119340958275606961
 Transform:
@@ -12098,12 +12210,12 @@ GameObject:
   - component: {fileID: 4488929863127242004}
   - component: {fileID: 7472884334338153387}
   - component: {fileID: 1911332514776614095}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box040
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4488929863127242004
 Transform:
@@ -12177,12 +12289,12 @@ GameObject:
   - component: {fileID: 478208652525350378}
   - component: {fileID: 3353594345031683450}
   - component: {fileID: 7112811142200430590}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box210
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &478208652525350378
 Transform:
@@ -12256,12 +12368,12 @@ GameObject:
   - component: {fileID: 5609838259555939110}
   - component: {fileID: 5321222483679322036}
   - component: {fileID: 3099604937019762022}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box171
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5609838259555939110
 Transform:
@@ -12335,12 +12447,12 @@ GameObject:
   - component: {fileID: 711213177183098996}
   - component: {fileID: 1608412178079009986}
   - component: {fileID: 6453678746524053235}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box165
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &711213177183098996
 Transform:
@@ -12414,12 +12526,12 @@ GameObject:
   - component: {fileID: 2834308810421447002}
   - component: {fileID: 934716487737456451}
   - component: {fileID: 2329467344992384470}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2834308810421447002
 Transform:
@@ -12493,12 +12605,12 @@ GameObject:
   - component: {fileID: 6195777608676599657}
   - component: {fileID: 1306499262287042463}
   - component: {fileID: 5030113196155477003}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box196
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6195777608676599657
 Transform:
@@ -12572,12 +12684,12 @@ GameObject:
   - component: {fileID: 2018220991143310440}
   - component: {fileID: 1403289120634642479}
   - component: {fileID: 6556743273427553915}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box149
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2018220991143310440
 Transform:
@@ -12651,12 +12763,12 @@ GameObject:
   - component: {fileID: 6510315620957743556}
   - component: {fileID: 3325677046871883749}
   - component: {fileID: 7606413659332920923}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6510315620957743556
 Transform:
@@ -12730,12 +12842,12 @@ GameObject:
   - component: {fileID: 6377777785550687768}
   - component: {fileID: 8538865105749452681}
   - component: {fileID: 3971872101319936568}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box051
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6377777785550687768
 Transform:
@@ -12809,12 +12921,12 @@ GameObject:
   - component: {fileID: 4371572552425098811}
   - component: {fileID: 391086937464668654}
   - component: {fileID: 6181035129691886496}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box173
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4371572552425098811
 Transform:
@@ -12888,12 +13000,12 @@ GameObject:
   - component: {fileID: 8555045566047073873}
   - component: {fileID: 1824281278250822987}
   - component: {fileID: 2692050779305146375}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box194
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8555045566047073873
 Transform:
@@ -12967,12 +13079,12 @@ GameObject:
   - component: {fileID: 817502649275259505}
   - component: {fileID: 167143522906768323}
   - component: {fileID: 3179520988381101418}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box119
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &817502649275259505
 Transform:
@@ -13046,12 +13158,12 @@ GameObject:
   - component: {fileID: 4633634098398153529}
   - component: {fileID: 7675455811452378517}
   - component: {fileID: 6360166898883417177}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box200
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4633634098398153529
 Transform:
@@ -13125,12 +13237,12 @@ GameObject:
   - component: {fileID: 1428589681902862562}
   - component: {fileID: 6644250017612270826}
   - component: {fileID: 8892390226132315431}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gema007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1428589681902862562
 Transform:
@@ -13204,12 +13316,12 @@ GameObject:
   - component: {fileID: 3736766472091509718}
   - component: {fileID: 1781535890270574323}
   - component: {fileID: 5088663701096491940}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box122
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3736766472091509718
 Transform:
@@ -13283,12 +13395,12 @@ GameObject:
   - component: {fileID: 3250486938847500211}
   - component: {fileID: 1932908612467737174}
   - component: {fileID: 4790772444895019627}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3250486938847500211
 Transform:
@@ -13362,12 +13474,12 @@ GameObject:
   - component: {fileID: 6060628386205249269}
   - component: {fileID: 2618475252905760986}
   - component: {fileID: 2471132230678487812}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box084
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6060628386205249269
 Transform:
@@ -13439,12 +13551,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5681550007239007171}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Puente_Ruinas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5681550007239007171
 Transform:
@@ -13453,9 +13565,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8683980742693202384}
-  m_LocalRotation: {x: -0, y: 0.55404854, z: -0, w: 0.8324844}
+  m_LocalRotation: {x: 0, y: 0.5540455, z: 0, w: 0.8324864}
   m_LocalPosition: {x: 185.94, y: 9.129999, z: -91.65}
-  m_LocalScale: {x: 4.764516, y: 3.1175265, z: 3.1175265}
+  m_LocalScale: {x: 4.7645154, y: 3.1175265, z: 3.1175263}
   m_Children:
   - {fileID: 362282296826478619}
   - {fileID: 3884610035669715517}
@@ -13650,12 +13762,12 @@ GameObject:
   - component: {fileID: 1889057446466356033}
   - component: {fileID: 2284765525607131775}
   - component: {fileID: 4419927383266656567}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box204
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1889057446466356033
 Transform:
@@ -13729,12 +13841,12 @@ GameObject:
   - component: {fileID: 1050783049620010182}
   - component: {fileID: 2543477318431479795}
   - component: {fileID: 3149935073544549101}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1050783049620010182
 Transform:
@@ -13808,12 +13920,12 @@ GameObject:
   - component: {fileID: 9067444072890051591}
   - component: {fileID: 6423820229484207114}
   - component: {fileID: 6556964883102289216}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box191
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9067444072890051591
 Transform:
@@ -13887,12 +13999,12 @@ GameObject:
   - component: {fileID: 7626152112539496933}
   - component: {fileID: 1497388417859659403}
   - component: {fileID: 6156417235636682292}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box146
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7626152112539496933
 Transform:
@@ -13966,12 +14078,12 @@ GameObject:
   - component: {fileID: 2803704989578274023}
   - component: {fileID: 9033011887628585223}
   - component: {fileID: 6779087706152591971}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box035
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2803704989578274023
 Transform:
@@ -14045,12 +14157,12 @@ GameObject:
   - component: {fileID: 1555059311887916552}
   - component: {fileID: 3786654983992718454}
   - component: {fileID: 5851219378304598934}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box128
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1555059311887916552
 Transform:
@@ -14124,12 +14236,12 @@ GameObject:
   - component: {fileID: 3492936882730737015}
   - component: {fileID: 2159360735709207499}
   - component: {fileID: 2120519093124092486}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box199
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3492936882730737015
 Transform:
@@ -14203,12 +14315,12 @@ GameObject:
   - component: {fileID: 7309212927445493201}
   - component: {fileID: 5911531581912395793}
   - component: {fileID: 2700759817557568980}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box083
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7309212927445493201
 Transform:
@@ -14282,12 +14394,12 @@ GameObject:
   - component: {fileID: 1375690053238573598}
   - component: {fileID: 1922567344578520116}
   - component: {fileID: 6542937399110175721}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box183
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1375690053238573598
 Transform:

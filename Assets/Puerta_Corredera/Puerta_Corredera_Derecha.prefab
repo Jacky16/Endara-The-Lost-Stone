@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2108817969833739998}
   - component: {fileID: 6926255277333921000}
   - component: {fileID: 3684939626660904977}
+  - component: {fileID: 2528760051788113604}
   m_Layer: 0
   m_Name: Puerta_Corredera_Derecha
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2528760051788113604
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107306848960672973}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.2527575, y: 0.8343897, z: 7.677888}
+  m_Center: {x: -3.6130288, y: 0.23840722, z: -0.24045753}

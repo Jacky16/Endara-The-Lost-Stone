@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4640551078079154728}
   - component: {fileID: 4412835086315679774}
   - component: {fileID: 7926620436332416231}
+  - component: {fileID: 9186638801407552105}
   m_Layer: 0
   m_Name: Piedras_Grandes_05
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &9186638801407552105
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520200568916949051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8655273338874609274, guid: 71160bcd8eccef0419ae6dd898ea48de, type: 3}

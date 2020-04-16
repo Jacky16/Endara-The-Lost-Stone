@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6526598869231015052}
   - component: {fileID: 7807159214273269116}
   - component: {fileID: 3811455981728378465}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Columna_Lateral_Puerta_002 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

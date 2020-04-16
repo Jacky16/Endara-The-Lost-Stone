@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7256905490426976663}
   - component: {fileID: 4817970394989945396}
   - component: {fileID: 7128370479697843461}
+  - component: {fileID: 6178434973846550191}
   m_Layer: 0
   m_Name: Cilindro_Parte_Arriba (2)
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6178434973846550191
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4942831552008188107}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8201243976377812674, guid: 3c4783f808ce1c748af4e293bfaebb86, type: 3}

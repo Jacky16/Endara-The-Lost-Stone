@@ -12,14 +12,12 @@ GameObject:
   - component: {fileID: 284839961254165080}
   - component: {fileID: 8924526447711199134}
   - component: {fileID: 1306587247}
-  - component: {fileID: 1306587244}
-  - component: {fileID: 1306587248}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Plataformas_Arenosas_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &139546941101496271
 Transform:
@@ -98,32 +96,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1306587244
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5879983189977041344}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.896842, y: 4.388867, z: 2.3245707}
-  m_Center: {x: 0.5014339, y: -0.26812744, z: -1.1622853}
---- !u!114 &1306587248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5879983189977041344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86706d285b98eab49a4aa8b56053a466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useGravity: 0
 --- !u!1 &7116453293464481749
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,13 +105,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6096151270883401158}
-  - component: {fileID: 2642736334660116187}
-  m_Layer: 0
+  - component: {fileID: 4239806018827615562}
+  m_Layer: 13
   m_Name: Plataformas_Arenosas_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6096151270883401158
 Transform:
@@ -156,17 +128,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2642736334660116187
-MonoBehaviour:
+--- !u!64 &4239806018827615562
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7116453293464481749}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad10297cdcbbd4946871a0a4ed570d49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMin: 0.5
-  speedMax: 0.8
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
