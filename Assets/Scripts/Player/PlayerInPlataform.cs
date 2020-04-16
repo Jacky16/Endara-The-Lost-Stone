@@ -4,14 +4,20 @@ using UnityEngine;
 using DG.Tweening;
 public class PlayerInPlataform : MonoBehaviour
 {
+    [SerializeField]
+    bool doAnimationFall;
 
- 
+    Vector3 originalPosition;
+    private void Start()
+    {
+        originalPosition = transform.position;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.transform.parent = transform;
-        }
+        other.transform.parent.SetParent(transform);
+        AnimationFall();
+        
     }
     private void OnTriggerStay(Collider other)
     {
@@ -30,10 +36,13 @@ public class PlayerInPlataform : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            collision.gameObject.transform.parent = transform;
-        }
+
+        //if (collision.gameObject.CompareTag("Player"))
+        //{
+        //    collision.gameObject.transform.parent = transform;
+        //}
+        //AnimationFall();
+        
     }
     private void OnCollisionExit(Collision collision)
     {
@@ -41,6 +50,17 @@ public class PlayerInPlataform : MonoBehaviour
         {
             collision.gameObject.transform.parent = transform;
         }
+    }
+    void AnimationFall()
+    {
+        
+        
+        Sequence secuence = DOTween.Sequence();
+        secuence.Append(transform.DOMoveY(transform.position.y - 1f, .5f).SetEase(Ease.OutQuint));
+        secuence.Append(transform.DOMoveY(originalPosition.y, 1.5f).SetEase(Ease.OutQuint)); 
+
+
+
     }
 }
 
