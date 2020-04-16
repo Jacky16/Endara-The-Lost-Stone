@@ -52,7 +52,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_38A8FB04: 0.2
-    - Vector1_6DE758: 0.3
+    - Vector1_6DE758: 0.2
     - _AlphaCutoffEnable: 1
     - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1

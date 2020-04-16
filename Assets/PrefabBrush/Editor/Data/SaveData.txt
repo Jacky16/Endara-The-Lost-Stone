@@ -1,11 +1,11 @@
-Layer Selection: Default
+Layer Selection: Terrain
 Brush Max Size: 20
-Brush Size: 1,15
+Brush Size: 0,2
 Fill Mode: True
 Fill Rate: 0,01
 
 Game Object: Assets/Assets_Endara/Hierba/Grass_Mesh.prefab
-Layer: Default
+Layer: Terrain
 Toggle: True
 Slider: 1
 Lock Orientation Toggle: True
@@ -14,8 +14,8 @@ Random Rotation X: False
 Random Rotation Y: True
 Random Rotation Z: False
 Random Scale Toggle: True
-Random Scale Min: 0,5
-Random Scale Max: 1,5
+Random Scale Min: 1
+Random Scale Max: 2
 Fixed Rotation Toggle: True
 Fixed Rotation X: 90
 Fixed Rotation Y: 0
