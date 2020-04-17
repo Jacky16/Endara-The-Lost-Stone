@@ -1,5 +1,99 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1985953948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1985953949}
+  - component: {fileID: 1985953952}
+  - component: {fileID: 1985953951}
+  - component: {fileID: 3082832810196558015}
+  m_Layer: 13
+  m_Name: Piedras_Puente_01 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1985953949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985953948}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.0037604, y: 0, z: 4.4223}
+  m_LocalScale: {x: 1, y: 1.204067, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5681550007239007171}
+  m_RootOrder: 179
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1985953952
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985953948}
+  m_Mesh: {fileID: -6930744268484536821, guid: c89ef31931305ff418ae08dc11444a0e, type: 3}
+--- !u!23 &1985953951
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985953948}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f3597d57c67d4604ea1e34f18bb1feae, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &3082832810196558015
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985953948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6930744268484536821, guid: c89ef31931305ff418ae08dc11444a0e, type: 3}
 --- !u!1 &1511851792683499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1606,7 @@ GameObject:
   - component: {fileID: 2133229681068372501}
   - component: {fileID: 7438552086667215515}
   - component: {fileID: 1666341242212854550}
-  - component: {fileID: 4731596147913280376}
+  - component: {fileID: 476666729835079127}
   m_Layer: 13
   m_Name: Piedras_Puente_006
   m_TagString: Untagged
@@ -1581,8 +1675,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4731596147913280376
-BoxCollider:
+--- !u!64 &476666729835079127
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1591,9 +1685,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6226735, y: 1.0450939, z: 0.7711336}
-  m_Center: {x: -3.424519e-15, y: -0.00000007634646, z: 0.38556665}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7747520053473447544, guid: c89ef31931305ff418ae08dc11444a0e, type: 3}
 --- !u!1 &968354733931893887
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,7 +2497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9130164605836400295
 Transform:
   m_ObjectHideFlags: 0
@@ -2476,7 +2571,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.206149, y: 1.1009614, z: 0.68995064}
-  m_Center: {x: 0.0000038146973, y: -0.5504766, z: 0.34497532}
+  m_Center: {x: 0.0000038146973, y: -0.5504766, z: 0.07}
 --- !u!1 &1900972304197473527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3199,7 +3294,7 @@ GameObject:
   - component: {fileID: 8828115334108814578}
   - component: {fileID: 2215666294569787370}
   - component: {fileID: 1010831631705158026}
-  - component: {fileID: 5429798317784865803}
+  - component: {fileID: 3134697618330758480}
   m_Layer: 13
   m_Name: Piedras_Puente_005
   m_TagString: Untagged
@@ -3268,8 +3363,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5429798317784865803
-BoxCollider:
+--- !u!64 &3134697618330758480
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3278,9 +3373,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6226735, y: 1.0450939, z: 0.6898946}
-  m_Center: {x: -0.0000038146973, y: 0.000003746394, z: 0.3449474}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2304595483339565316, guid: c89ef31931305ff418ae08dc11444a0e, type: 3}
 --- !u!1 &2548320627798974967
 GameObject:
   m_ObjectHideFlags: 0
@@ -6294,7 +6390,7 @@ GameObject:
   - component: {fileID: 8469941214569643012}
   - component: {fileID: 4018421015670049906}
   - component: {fileID: 5403530522330502091}
-  - component: {fileID: 1557515527893218154}
+  - component: {fileID: 4500220062149519436}
   m_Layer: 13
   m_Name: Piedras_Puente001
   m_TagString: Untagged
@@ -6363,8 +6459,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1557515527893218154
-BoxCollider:
+--- !u!64 &4500220062149519436
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6373,9 +6469,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.2061498, y: 1.1009616, z: 0.6899509}
-  m_Center: {x: -0.0000038064945, y: -0.55047715, z: 0.34497544}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8928763625265208721, guid: c89ef31931305ff418ae08dc11444a0e, type: 3}
 --- !u!1 &4904345394517941135
 GameObject:
   m_ObjectHideFlags: 0
@@ -7809,7 +7906,7 @@ GameObject:
   - component: {fileID: 2106209504001156163}
   - component: {fileID: 6078398308501446241}
   - component: {fileID: 4317152842823370433}
-  - component: {fileID: 1903628278341867924}
+  - component: {fileID: 7203281598297364753}
   m_Layer: 13
   m_Name: Piedras_Puente_003
   m_TagString: Untagged
@@ -7878,8 +7975,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1903628278341867924
-BoxCollider:
+--- !u!64 &7203281598297364753
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7888,9 +7985,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.622673, y: 1.0450938, z: 0.7711333}
-  m_Center: {x: 0.0000038146973, y: 3.424519e-16, z: 0.38556665}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4622408427324003611, guid: c89ef31931305ff418ae08dc11444a0e, type: 3}
 --- !u!1 &5744263388886340106
 GameObject:
   m_ObjectHideFlags: 0
@@ -9008,7 +9106,7 @@ GameObject:
   - component: {fileID: 4680880670720308607}
   - component: {fileID: 1904577216494017094}
   - component: {fileID: 8500150126876614984}
-  - component: {fileID: 2113964240390915802}
+  - component: {fileID: 241074206660661122}
   m_Layer: 13
   m_Name: Piedras_Puente_01
   m_TagString: Untagged
@@ -9077,8 +9175,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2113964240390915802
-BoxCollider:
+--- !u!64 &241074206660661122
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9087,9 +9185,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.622673, y: 1.0450938, z: 0.6898943}
-  m_Center: {x: 0, y: 3.0637454e-16, z: 0.34494692}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6930744268484536821, guid: c89ef31931305ff418ae08dc11444a0e, type: 3}
 --- !u!1 &6577485376855426632
 GameObject:
   m_ObjectHideFlags: 0
@@ -9654,7 +9753,7 @@ GameObject:
   - component: {fileID: 5658322816223202738}
   - component: {fileID: 7224721439753607349}
   - component: {fileID: 3696001993327729326}
-  - component: {fileID: 9097359487553835918}
+  - component: {fileID: 4790936572767663639}
   m_Layer: 13
   m_Name: Piedras_Puente_004
   m_TagString: Untagged
@@ -9723,8 +9822,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &9097359487553835918
-BoxCollider:
+--- !u!64 &4790936572767663639
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9733,9 +9832,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6226735, y: 1.0450939, z: 0.7711336}
-  m_Center: {x: -3.424519e-15, y: 0.0000037383509, z: 0.3855669}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5035155669732068896, guid: c89ef31931305ff418ae08dc11444a0e, type: 3}
 --- !u!1 &6929163123388097912
 GameObject:
   m_ObjectHideFlags: 0
@@ -11248,7 +11348,7 @@ GameObject:
   - component: {fileID: 2171535810888634137}
   - component: {fileID: 7748785449286442448}
   - component: {fileID: 2172874166353937610}
-  - component: {fileID: 4522277378032422465}
+  - component: {fileID: 1523499568490222697}
   m_Layer: 13
   m_Name: Piedras_Puente_02
   m_TagString: Untagged
@@ -11317,8 +11417,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4522277378032422465
-BoxCollider:
+--- !u!64 &1523499568490222697
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11327,9 +11427,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.622673, y: 1.0450938, z: 0.7711333}
-  m_Center: {x: 0.0000038146973, y: 3.424519e-16, z: 0.3855669}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1839508762628791686, guid: c89ef31931305ff418ae08dc11444a0e, type: 3}
 --- !u!1 &7645293392370902854
 GameObject:
   m_ObjectHideFlags: 0
@@ -13567,7 +13668,7 @@ Transform:
   m_GameObject: {fileID: 8683980742693202384}
   m_LocalRotation: {x: 0, y: 0.5540455, z: 0, w: 0.8324864}
   m_LocalPosition: {x: 185.94, y: 9.129999, z: -91.65}
-  m_LocalScale: {x: 4.7645154, y: 3.1175265, z: 3.1175263}
+  m_LocalScale: {x: 4.764515, y: 3.1175265, z: 3.1175263}
   m_Children:
   - {fileID: 362282296826478619}
   - {fileID: 3884610035669715517}
@@ -13748,6 +13849,7 @@ Transform:
   - {fileID: 7979810266117747927}
   - {fileID: 2472374762197553700}
   - {fileID: 3283256681075429468}
+  - {fileID: 1985953949}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 67.29, z: 0}
