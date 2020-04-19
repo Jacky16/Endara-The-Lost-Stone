@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 public class Puzzle2Manager : MonoBehaviour
 {
-    public bool _column1;
-    public bool _column2;
-    public bool _column3;
-
+    bool _column1;
+    bool _column2;
+    bool _column3;
+    [SerializeField]
+    PlayableDirector playableDirector;
     [Header("Animator columnas")]
 
     [SerializeField]
@@ -43,6 +46,11 @@ public class Puzzle2Manager : MonoBehaviour
         if(_column1 && _column2 && _column3) 
         {
             print("Has solucionado el puzzle 2");
+            Invoke("PlayCinematic", 1.5f);
         }
+    }
+    void PlayCinematic()
+    {
+        playableDirector.Play();
     }
 }
