@@ -33,7 +33,7 @@ Material:
     - Vector1_BDC16BB3: 0.85
     - Vector1_BE0D204F: -2.68
     - Vector1_CECF9D3F: 0.0472
-    - Vector1_E247E729: -0.393
+    - Vector1_E247E729: 1.5
     m_Colors:
     - Color_2B751C2F: {r: 1.0737418e+9, g: 185273100, b: 0, a: 1}
     - Color_4A457C36: {r: 1.5529412, g: 0.26666668, b: 0, a: 1}
