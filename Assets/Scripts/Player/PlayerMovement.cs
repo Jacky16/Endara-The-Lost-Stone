@@ -92,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        print("Player is grounded : " + player.isGrounded);
         if (canMove)
         {
             Movimiento();
@@ -175,8 +176,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 fallvelocity -= gravity * Time.deltaTime;
                 movePlayer.y = fallvelocity;
-                anim.SetFloat("PlayerVerticalVelocity", player.velocity.y);
             }
+            anim.SetFloat("PlayerVerticalVelocity", player.velocity.y);
+
         }
     }
     void ModeGod()
