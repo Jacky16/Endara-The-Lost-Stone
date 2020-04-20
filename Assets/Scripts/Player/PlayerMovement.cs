@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Start()
     {
-        attackCollider.enabled = false;
+        //attackCollider.enabled = false;
       
         //godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
         //Cursor.visible = false;
