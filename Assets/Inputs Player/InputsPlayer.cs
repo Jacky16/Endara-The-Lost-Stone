@@ -97,7 +97,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""id"": ""87e76f3e-935b-484b-8199-ebbeecaa1adb"",
                     ""path"": ""<DualShockGamepad>/leftStick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone"",
                     ""groups"": ""PS4"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,

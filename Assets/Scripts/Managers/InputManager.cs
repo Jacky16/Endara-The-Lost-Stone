@@ -27,9 +27,7 @@ public class InputManager : MonoBehaviour
         playerInputs = new InputsPlayer();
         playerInput = GetComponent<PlayerInput>();
     }
-    private void Start()
-    {
-    }
+  
     private void Update()
     {
         movement = playerInputs.PlayerInputs.Movement.ReadValue<Vector2>();
@@ -122,6 +120,7 @@ public class InputManager : MonoBehaviour
     private void OnEnable()
     {
         playerInputs.Enable();
+        SwitchInputs();
     }
     private void OnDisable()
     {
