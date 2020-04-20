@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 5903817753728149134
-    second: JumpLoop
+    second: JumpPeak
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: JumpLoop
+      name: JumpPeak
       takeName: JumpLoop
       internalID: 0
       firstFrame: 0
