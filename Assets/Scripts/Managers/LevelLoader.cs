@@ -14,8 +14,11 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]
     GameObject _canvasLoadingScreen;
 
-    [SerializeField]
     Slider slider;
+    private void Awake()
+    {
+        slider = _canvasLoadingScreen.GetComponent<Slider>();
+    }
     private void Start()
     {
         _canvasLoadingScreen.SetActive(false);

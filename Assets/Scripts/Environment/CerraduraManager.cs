@@ -20,18 +20,11 @@ public class CerraduraManager : MonoBehaviour
         if(other.tag == "Caja" || other.gameObject.name == "Llave")
         {
             isKeyInside = true;
-            StartCoroutine(CameraSwitch(other));
+            other.transform.SetParent(transform);
+            other.transform.DOLocalMove(Vector3.zero, 1).OnComplete(() => StartCoroutine(CameraSwitch(other)));
         }
     }
     
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Caja" || other.gameObject.name == "Llave")
-        {
-
-
-        }
-    }
 
 
     private void OnTriggerExit(Collider other)
@@ -44,14 +37,17 @@ public class CerraduraManager : MonoBehaviour
     }
     IEnumerator CameraSwitch(Collider other)
     {
-        other.GetComponent<ObjetoPickeable>().isPickeable = false;
+        
         yield return new WaitForSeconds(1f);
         _camera.Priority = 10;
         PlayerMovement.canMove = false;
+
         yield return new WaitForSeconds(2f);
-        gameObjectDoor.SetActive(false);
-        particleSystem.Play();
+        gameObjectDoor.transform.DOMoveY(gameObjectDoor.transform.position.y - 8, 1);
+        //particleSystem.Play();
+
         yield return new WaitForSeconds(1f);
+
         PlayerMovement.canMove = true;
         _camera.Priority = 0;
 
