@@ -36,6 +36,7 @@ public class CofreManager : MonoBehaviour
         {
             if (InputManager.playerInputs.PlayerInputs.CatchObject.triggered && !isOpen)
             {
+                other.GetComponent<Animator>().SetTrigger("Open");
                 anim.SetTrigger("Open");
                 isOpen = true;
             }
