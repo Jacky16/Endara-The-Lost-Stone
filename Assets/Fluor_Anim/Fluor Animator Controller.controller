@@ -76,41 +76,65 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 1f8eec3fbb18dd24ea8f39ca0d858033, type: 2}
-    m_Threshold: -15
+    m_Motion: {fileID: 7400000, guid: 0969c6ccdfc7d4a4b82ff93b42ea2bf8, type: 2}
+    m_Threshold: -22
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: PlayerWalkVelocity
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: b6e00b1cd6990d64cae5b090facd1474, type: 2}
-    m_Threshold: -10
+    m_Motion: {fileID: 7400000, guid: 0969c6ccdfc7d4a4b82ff93b42ea2bf8, type: 2}
+    m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: PlayerWalkVelocity
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: ffcee2d0dc9659a4ea13ff520e700d37, type: 2}
-    m_Threshold: 0.9
+    m_Motion: {fileID: 7400000, guid: bfacb5e31f04d414986f39700584338a, type: 2}
+    m_Threshold: 24.5
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: PlayerWalkVelocity
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: e1eea4bdc0833a042b385ead677a8bdd, type: 2}
-    m_Threshold: 5
+    m_Motion: {fileID: 7400000, guid: 4a066819a45cea244aa39cddf3527350, type: 2}
+    m_Threshold: 25
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: PlayerWalkVelocity
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: eaf159233f207274c84c76fbff841620, type: 2}
+    m_Threshold: 25.5
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: PlayerWalkVelocity
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 00f2519e9a0c45c4d86a3e00792b5307, type: 2}
+    m_Threshold: 26
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: PlayerWalkVelocity
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 7d9c6f6f36c45b940b755da49d81511f, type: 2}
+    m_Threshold: 26.5
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: PlayerWalkVelocity
     m_Mirror: 0
   m_BlendParameter: PlayerVerticalVelocity
-  m_BlendParameterY: PlayerWalkVelocity
-  m_MinThreshold: -15
-  m_MaxThreshold: 5
+  m_BlendParameterY: Blend
+  m_MinThreshold: -22
+  m_MaxThreshold: 26.5
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 0

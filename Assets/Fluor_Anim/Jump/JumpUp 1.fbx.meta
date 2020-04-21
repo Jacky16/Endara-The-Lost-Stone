@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 0151d0447d54d624bb07a4834cd6d670
+guid: 3da05ec73127861498b177cbac5afbe4
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
-      74: -1167829936386037490
-    second: Fallen
+      74: 8521470458871766595
+    second: JumpUp1
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Fallen
-      takeName: Fall Down
+      name: JumpUp1
+      takeName: JumpUp
       internalID: 0
-      firstFrame: 24.1
-      lastFrame: 25.7
+      firstFrame: 24.2
+      lastFrame: 25.2
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
