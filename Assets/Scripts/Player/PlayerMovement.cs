@@ -130,14 +130,8 @@ public class PlayerMovement : MonoBehaviour
             currentSpeed = Mathf.Clamp(currentSpeed, 0f, speedMax);
         }
 
-        if (PickUpObjects.IsCatchedObject())
-        {
-            movePlayerXZ = (movePlayer * (currentSpeed / PickUpObjects.MassObjectPicked() * Time.deltaTime));
-        }
-        else
-        {
-            movePlayerXZ = (movePlayer * currentSpeed * Time.deltaTime);
-        }
+        movePlayerXZ = (movePlayer * currentSpeed * Time.deltaTime);
+
 
         //Si estas en 2.5D, el eje Z se desactiva
         if (playerIn2D)
