@@ -92,7 +92,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        print("Player is grounded : " + player.isGrounded);
         if (canMove)
         {
             Movimiento();
@@ -155,7 +154,6 @@ public class PlayerMovement : MonoBehaviour
         movePlayerXZ.y = 0;
 
         //Pasar informacion al animator
-        anim.SetBool("isGrounded", player.isGrounded);
         anim.SetFloat("PlayerWalkVelocity", playerInput.magnitude * currentSpeed);
     }
     public void SetGravity()
@@ -273,8 +271,10 @@ public class PlayerMovement : MonoBehaviour
     }
     public void MeleAtack()
     {
-        transform.DOLocalRotate(new Vector3(0, 360, 0), .5f, RotateMode.LocalAxisAdd).OnComplete(() => attackCollider.enabled = false);
-        attackCollider.enabled = true;
+        //transform.DOLocalRotate(new Vector3(0, 360, 0), .5f, RotateMode.LocalAxisAdd).OnComplete(() => attackCollider.enabled = false);
+        //attackCollider.enabled = true;
+
+        anim.SetTrigger("Attack");
     }
     public void SetRespawn(Transform t)
     {
@@ -314,7 +314,6 @@ public class PlayerMovement : MonoBehaviour
         //    }
 
         //}
-        bool isMoving = false;
         if (hit.collider.CompareTag("Cubo"))
         {
             float valueMass;
@@ -333,9 +332,22 @@ public class PlayerMovement : MonoBehaviour
             Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
             rb.velocity = (pushDir * pushPower) / valueMass;
+            if(rb.velocity.magnitude <= 0.499f)
+            {
+                anim.SetBool("isPushing", false);
+            }
+            if (rb.velocity.magnitude > 0)
+            {
+                anim.SetBool("isPushing", true);
+            }
+            print(rb.velocity.magnitude);
+
         }
-      
+
     }
+
+
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Final")

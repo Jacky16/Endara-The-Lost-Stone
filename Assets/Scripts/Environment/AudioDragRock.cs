@@ -45,5 +45,25 @@ public class AudioDragRock : MonoBehaviour
     {
         return _AudioClips[Random.Range(0, _AudioClips.Length)];
     }
-    
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        other.GetComponent<Animator>().SetBool("isPushing", true);
+    //    }
+    //    print(gameObject.name);
+
+    //}
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<Animator>().SetBool("isPushing", false);
+        }
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        print(collision.gameObject.name);
+    }
+
 }

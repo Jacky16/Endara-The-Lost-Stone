@@ -11,38 +11,49 @@ public class PickUpObjects : MonoBehaviour
     static bool _isRotable;
     static bool _canThrowObject;
     static float massPickedObject;
+    Animator animPlayer;
 
-    private void Start()
+    private void Awake()
     {
         _interactionZone = GameObject.FindGameObjectWithTag("TransformObjectPickUp").GetComponent<Transform>();
+        animPlayer = GetComponent<Animator>();
     }
     void Update()
     {
-        //if (objectToPickup != null)
+        //if (_isCatched)
         //{
-        //    _isCatchObject = true;
+        //    _canCatchObject = false;
+        //    _isRotable = false;
         //}
-        //else
-        //{
-        //    _isCatchObject = false;
-        //    _canThrowObject = false;
-        //}
-
-        //if (PickedObject != null)
-        //{
-        //    _isCatchObject = false;
-        //}
-        if (Input.GetMouseButtonDown(0))
+    }
+    public void CatchObjectSystem()
+    {
+        if (CanCatchObject()) //Pillar el objeto
         {
-            ThrowObject();
+            animPlayer.SetTrigger("PickUp");
         }
-        if (_isCatched)
+        else //Soltar el objeto
+
         {
-            _canCatchObject = false;
-            _isRotable = false;
+            if (PickedObject != null)
+            {
+                animPlayer.SetTrigger("PickUp");
+                _isCatched = false;
+                _canCatchObject = true;
+                PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
+                PickedObject.transform.SetParent(null);
+                _canThrowObject = false;
+                PickedObject.GetComponent<Rigidbody>().useGravity = true;
+                PickedObject.GetComponent<Rigidbody>().isKinematic = false;
+                PickedObject.GetComponent<BoxCollider>().isTrigger = false;
+                PickedObject.GetComponent<Rigidbody>().AddForce(Vector3.down * 4);
+                PickedObject = null;
+                animPlayer.SetBool("isCatched", PickedObject);
+            }
         }
     }
-    public void PillarElObjeto()
+
+    public void EventCatchObjectSystem() // Se ejecuta en la animacion de catch
     {
         if (objectToPickup != null && objectToPickup.GetComponent<ObjetoPickeable>().isPickeable == true && PickedObject == null)
         {
@@ -58,43 +69,12 @@ public class PickUpObjects : MonoBehaviour
             PickedObject.GetComponent<Rigidbody>().isKinematic = true;
             PickedObject.GetComponent<BoxCollider>().isTrigger = true;
             massPickedObject = PickedObject.GetComponent<Rigidbody>().mass;
+            animPlayer.SetBool("isCatched", PickedObject);
 
         }
-        else if (PickedObject != null)
-        {
-            //Soltar el objeto
-            _isCatched = false;
-            _canCatchObject = true;
-            PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
-            PickedObject.transform.SetParent(null);
-            _canThrowObject = false;
-            PickedObject.GetComponent<Rigidbody>().useGravity = true;
-            PickedObject.GetComponent<Rigidbody>().isKinematic = false;
-            PickedObject.GetComponent<BoxCollider>().isTrigger = false;
-            PickedObject.GetComponent<Rigidbody>().AddForce(Vector3.down * 4);
-            PickedObject = null;
 
-        }
     }
-    public void ThrowObject()
-    {
-        if (_isCatched)
-        {
-            PickedObject = objectToPickup;
-            if (PickedObject)
-            {
-                PickedObject.GetComponent<BoxCollider>().isTrigger = true;
-                PickedObject.GetComponent<Rigidbody>().isKinematic = false;
-                PickedObject.transform.SetParent(null);
-                _canThrowObject = false;
-                PickedObject.GetComponent<Rigidbody>().useGravity = true;
-                PickedObject.GetComponent<Rigidbody>().AddForce(this.transform.forward + Camera.main.transform.forward * 50);
-                PickedObject.GetComponent<BoxCollider>().isTrigger = false;
-                PickedObject.GetComponent<ObjetoPickeable>().isPickeable = true;
-                PickedObject = null;
-            }         
-        }
-    }
+    
     public bool CanThrow()
     {
         if (PickedObject.GetComponent<ObjetoPickeable>().isPickeable == true)
@@ -156,7 +136,6 @@ public class PickUpObjects : MonoBehaviour
         
 
     }
-
     public static bool CanCatchObject()
     {
         return _canCatchObject;

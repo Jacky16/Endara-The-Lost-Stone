@@ -70,16 +70,16 @@ public class InputManager : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext ctx)
     {
-        if (ctx.started && !_pickUpsObjects.objectToPickup)
+        if (ctx.started && !PickUpObjects.CanCatchObject())
         {
             _player.MeleAtack();
         }
     }
     public void CatchObject(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.started)
         {
-            _pickUpsObjects.PillarElObjeto();
+            _pickUpsObjects.CatchObjectSystem();
         }
     }
     public void SwitchInputs()
@@ -89,14 +89,11 @@ public class InputManager : MonoBehaviour
         {
             case "PS4":
                 controlsState = ControlsState.PS4;
-                print("PS4");
                 break;
             case "Xbox":
                 controlsState = ControlsState.Xbox;
-                print("Xbox");
                 break;
             case "KeyboardMouse":
-                print("KeyboardMouse");
                 controlsState = ControlsState.KeyBoard;
                 break;
         }
