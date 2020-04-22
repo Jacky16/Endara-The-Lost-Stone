@@ -15,9 +15,12 @@ public class PlayerInPlataform : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.transform.parent.SetParent(transform);
-        AnimationFall();
-        
+        if (other.gameObject.name == "Detection Enemy")
+        {
+            other.transform.parent.SetParent(transform);
+            AnimationFall();
+        }
+
     }
     private void OnTriggerStay(Collider other)
     {
@@ -25,6 +28,7 @@ public class PlayerInPlataform : MonoBehaviour
         {
             other.GetComponent<PlayerMovement>().SetMovingPlattform(true);
         }
+
     }
     private void OnTriggerExit(Collider other)
     {
@@ -42,6 +46,7 @@ public class PlayerInPlataform : MonoBehaviour
         //    collision.gameObject.transform.parent = transform;
         //}
         //AnimationFall();
+        print(collision.gameObject.name);
         
     }
     private void OnCollisionExit(Collision collision)
