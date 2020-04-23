@@ -84,7 +84,7 @@ public class InputManager : MonoBehaviour
     }
     public void SwitchInputs()
     {
-        print(playerInput.currentControlScheme);
+        //print(playerInput.currentControlScheme);
         switch (playerInput.currentControlScheme)
         {
             case "PS4":

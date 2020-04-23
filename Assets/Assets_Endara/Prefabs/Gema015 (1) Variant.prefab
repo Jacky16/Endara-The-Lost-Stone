@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 786019236065638167, guid: a912e1a5c6c087447a385f12bf7129ee,
         type: 3}
       propertyPath: m_Name
-      value: Gema015 (1)
+      value: Gema015 (1) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 786019236065638167, guid: a912e1a5c6c087447a385f12bf7129ee,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6393076314436312976, guid: a912e1a5c6c087447a385f12bf7129ee,
         type: 3}
