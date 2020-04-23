@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5325120500558041537}
   - component: {fileID: 3800376586367577079}
   - component: {fileID: 7458294366741550862}
+  - component: {fileID: 397535644071066042}
   m_Layer: 0
   m_Name: CuboLargo
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &397535644071066042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204787237739258834}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7425026, y: 1.7425061, z: 18.737778}
+  m_Center: {x: 7.791422e-13, y: 0.0000020984735, z: -9.368889}

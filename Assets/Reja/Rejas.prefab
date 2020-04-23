@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 6829759498642234227}
   - component: {fileID: 5190318750809067941}
   - component: {fileID: 5692523570847602413}
+  - component: {fileID: 3682203919303509776}
   m_Layer: 0
   m_Name: Pared_Rejas
   m_TagString: Untagged
@@ -190,3 +191,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3682203919303509776
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6093559436799073942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3689315, y: 4.1722145, z: 0.09306065}
+  m_Center: {x: 3.868181e-18, y: -0.069682956, z: 0.046530288}

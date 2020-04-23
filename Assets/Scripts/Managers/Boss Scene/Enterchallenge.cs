@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Cinemachine;
+using DG.Tweening;
 
 public class Enterchallenge : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class Enterchallenge : MonoBehaviour
 
     [SerializeField]
     Animator anim;
+
+    [SerializeField]
+    Transform _pivotDoor;
 
     [Header("Manager Challenges")]
     [SerializeField]
@@ -56,6 +60,7 @@ public class Enterchallenge : MonoBehaviour
                 break;
         }
         PlayerMovement.canMove = false;
+        _pivotDoor.DOLocalRotate(new Vector3(0, -90, 0), 1);
         anim.SetTrigger("Start");
 
         yield return new WaitForSeconds(1.3f);
