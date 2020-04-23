@@ -251,7 +251,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.8534628, b: 0, a: 1}
   m_Intensity: 2825354.2
-  m_Range: 21.261703
+  m_Range: 32.69249
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 128
     m_UseOverride: 1
     m_Level: 0
   m_ShadowDimmer: 1
@@ -406,7 +406,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 0
+  showAdditionalSettings: 4
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
 --- !u!1 &5311815002288728574

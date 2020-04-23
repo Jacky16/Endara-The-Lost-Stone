@@ -22,7 +22,7 @@ public class ExitDoor : MonoBehaviour
         //El player no puedo entrar otra vez a este reto si lo ha superado
         enterchallenge.CanEnter(false);
         //Restar una vida al boss y sacar al player del reto
-        bossManager.RestAttempBoss(_positionDoorChallenge);
+        bossManager.SubstractAttempBoss(_positionDoorChallenge);
         //Parar la cuenta atras
         _timeManager.SetCanSubstractTime(false);
     }

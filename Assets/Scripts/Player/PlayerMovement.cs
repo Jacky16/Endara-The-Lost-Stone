@@ -119,19 +119,21 @@ public class PlayerMovement : MonoBehaviour
 
         SetGravity();
         JumpPlayer();
+        float downVelocity = movePlayer.y;
         //Aceleracion
-        if (movePlayer.magnitude > 0.1f)
+        if (playerInput.magnitude > 0.1f)
         {
             currentSpeed += acceleration * Time.deltaTime;
             currentSpeed = Mathf.Clamp(currentSpeed, 0f, speedMax);
         }
-        else if(playerInput == Vector3.zero)
+        else 
         {
             currentSpeed -= acceleration * Time.deltaTime;
             currentSpeed = Mathf.Clamp(currentSpeed, 0f, speedMax);
         }
 
         movePlayerXZ = (movePlayer * currentSpeed * Time.deltaTime);
+        movePlayerXZ.y = downVelocity;
 
 
         //Si estas en 2.5D, el eje Z se desactiva
@@ -149,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
         movePlayerXZ.y = 0;
 
         //Pasar informacion al animator
-        anim.SetFloat("PlayerWalkVelocity", playerInput.magnitude * currentSpeed);
+        anim.SetFloat("PlayerWalkVelocity", currentSpeed);
     }
     public void SetGravity()
     {
@@ -160,6 +162,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             anim.SetBool("isGrounded", player.isGrounded);
+            //print("PLayer is grounded: " + player.isGrounded);
             if (player.isGrounded)
             {
                 fallvelocity = -gravity * Time.deltaTime;

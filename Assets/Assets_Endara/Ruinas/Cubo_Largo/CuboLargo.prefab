@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3800376586367577079}
   - component: {fileID: 7458294366741550862}
   - component: {fileID: 397535644071066042}
+  - component: {fileID: 8042295306131227591}
+  - component: {fileID: 148025224480859238}
   m_Layer: 0
   m_Name: CuboLargo
   m_TagString: Untagged
@@ -26,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9204787237739258834}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 17.758295, y: -3.1662002, z: -11.969349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
 --- !u!33 &3800376586367577079
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -91,5 +93,31 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7425026, y: 1.7425061, z: 18.737778}
-  m_Center: {x: 7.791422e-13, y: 0.0000020984735, z: -9.368889}
+  m_Size: {x: 3.1365047, y: 3.1365116, z: 33.727997}
+  m_Center: {x: 1.4379107e-12, y: 0.00000402069, z: -16.863998}
+--- !u!114 &8042295306131227591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204787237739258834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86706d285b98eab49a4aa8b56053a466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doAnimationFall: 0
+--- !u!114 &148025224480859238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204787237739258834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad10297cdcbbd4946871a0a4ed570d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1

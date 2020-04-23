@@ -5,6 +5,7 @@ using TMPro;
 using Cinemachine;
 using DG.Tweening;
 
+
 public class Enterchallenge : MonoBehaviour
 {
     [SerializeField]
@@ -66,7 +67,8 @@ public class Enterchallenge : MonoBehaviour
         yield return new WaitForSeconds(1.3f);
 
         //Mover al player a su respectivo reto
-        other.transform.position = _positionInChallenge.position;
+        other.transform.DOMove(_positionInChallenge.position, .2f);
+
         other.transform.localRotation = _positionInChallenge.localRotation;
        
         //Asignar donde reaparecerá una vez conseguido el reto
