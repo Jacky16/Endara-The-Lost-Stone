@@ -5,12 +5,13 @@ using DG.Tweening;
 public class PlayerInPlataform : MonoBehaviour
 {
     [SerializeField]
-    bool doAnimationFall;
+    bool doAnimationFall = false;
 
     Vector3 originalPosition;
     private void Start()
     {
         originalPosition = transform.position;
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -18,9 +19,11 @@ public class PlayerInPlataform : MonoBehaviour
         if (other.gameObject.name == "Detection Enemy")
         {
             other.transform.parent.SetParent(transform);
-            AnimationFall();
+            if (doAnimationFall)
+            {
+                AnimationFall();
+            }
         }
-
     }
     private void OnTriggerStay(Collider other)
     {
@@ -38,17 +41,6 @@ public class PlayerInPlataform : MonoBehaviour
             other.GetComponent<PlayerMovement>().SetMovingPlattform(false);
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-
-        //if (collision.gameObject.CompareTag("Player"))
-        //{
-        //    collision.gameObject.transform.parent = transform;
-        //}
-        //AnimationFall();
-        print(collision.gameObject.name);
-        
-    }
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -58,14 +50,9 @@ public class PlayerInPlataform : MonoBehaviour
     }
     void AnimationFall()
     {
-        
-        
         Sequence secuence = DOTween.Sequence();
-        secuence.Append(transform.DOMoveY(transform.position.y - 1f, .5f).SetEase(Ease.OutQuint));
+        secuence.Append(transform.DOMoveY(transform.position.y - 1f, .3f).SetEase(Ease.OutQuint));
         secuence.Append(transform.DOMoveY(originalPosition.y, 1.5f).SetEase(Ease.OutQuint)); 
-
-
-
     }
 }
 

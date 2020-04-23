@@ -11,6 +11,7 @@ public class CrushingStone : MonoBehaviour
         _originalPosition = transform.position;
 
         Sequence sequence = DOTween.Sequence();
+        sequence.AppendInterval(2);
         sequence.Append(transform.DOShakePosition(0.3f, .5f));
         sequence.Append(transform.DOMoveY(transform.position.y - 6f, .3f));
         sequence.AppendInterval(2);

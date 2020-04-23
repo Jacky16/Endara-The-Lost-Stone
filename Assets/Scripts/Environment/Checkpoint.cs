@@ -9,7 +9,7 @@ public class Checkpoint : MonoBehaviour
     Animator anim;
     AudioSource _audioSource;
     [SerializeField]
-    ParticleSystem[] _particleSystems;
+    //ParticleSystem[] _particleSystems;
     bool playerHaveCheckpoint;
     private void Awake()
     {
@@ -25,7 +25,7 @@ public class Checkpoint : MonoBehaviour
             player.SetRespawn(respawnTransform);
             SaveData(player);
             _audioSource.Play();
-            Playparticles();
+            //Playparticles();
             playerHaveCheckpoint = true;
         }
 
@@ -34,11 +34,11 @@ public class Checkpoint : MonoBehaviour
     {
         //SaveSystem.SavePlayer(player);
     }
-    void Playparticles()
-    {
-        foreach(ParticleSystem ps in _particleSystems)
-        {
-            ps.Play();
-        }
-    }
+    //void Playparticles()
+    //{
+    //    foreach(ParticleSystem ps in _particleSystems)
+    //    {
+    //        ps.Play();
+    //    }
+    //}
 }

@@ -11,6 +11,7 @@ public class OpenDoor : MonoBehaviour
 
     [SerializeField]
     CinemachineVirtualCamera cinemachineVirtualCamera;
+    
     public void OpenDoorAnimation()
     {
         StartCoroutine(CoroutineDoorAnimation());
@@ -18,9 +19,9 @@ public class OpenDoor : MonoBehaviour
     IEnumerator CoroutineDoorAnimation()
     {
         cinemachineVirtualCamera.Priority = 10;
-        yield return new WaitForSeconds(.5f);
-        _transformDoor.DOLocalMoveY(_transformDoor.localPosition.y - 5, 1);
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(1.5f);
+        _transformDoor.DOMoveY(_transformDoor.transform.position.y - 5, 1);
+        yield return new WaitForSeconds(1f);
         cinemachineVirtualCamera.Priority = 0;
     }
 }

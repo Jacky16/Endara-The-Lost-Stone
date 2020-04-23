@@ -11,6 +11,8 @@ public class AudioDragRock : MonoBehaviour
 
     AudioSource audioSource;
     Rigidbody rb;
+
+    bool playerIsPushing;
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -18,10 +20,10 @@ public class AudioDragRock : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (rb.velocity.magnitude > 0)
+        if (rb.velocity.magnitude > 0 && playerIsPushing)
         {
             PlayAudio();
-        }else if(rb.velocity.magnitude <= 0)
+        }else if(rb.velocity.magnitude <= 0 && !playerIsPushing)
         {
             StopAudio();
         }
@@ -46,14 +48,21 @@ public class AudioDragRock : MonoBehaviour
     {
         return _AudioClips[Random.Range(0, _AudioClips.Length)];
     }
-  
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.GetComponent<Animator>().SetBool("isPushing", false);
+            playerIsPushing = true;
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             other.GetComponent<Animator>().SetBool("isPushing", false);
+            playerIsPushing = false;
         }
-        print(other.gameObject.name);
     }
     private void OnCollisionExit(Collision collision)
     {

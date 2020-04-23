@@ -58,9 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTransform: {fileID: 96638849}
-  _particleSystems:
-  - {fileID: 7315538038768629138}
-  - {fileID: 6351295754147633000}
+  playerHaveCheckpoint: 0
 --- !u!1 &660368871699940875
 GameObject:
   m_ObjectHideFlags: 0
@@ -5364,7 +5362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5897959975500754747
 Transform:
   m_ObjectHideFlags: 0
