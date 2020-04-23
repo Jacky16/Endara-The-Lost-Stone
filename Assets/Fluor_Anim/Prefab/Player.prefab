@@ -88,51 +88,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.18950179
   m_Center: {x: 0, y: -0.31049824, z: 0}
---- !u!1 &1088047950
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1088047951}
-  - component: {fileID: 1088047952}
-  m_Layer: 0
-  m_Name: Colla_Collider
-  m_TagString: Cola
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1088047951
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088047950}
-  m_LocalRotation: {x: 0.5682013, y: 0.047948506, z: -0.06907723, w: 0.81858206}
-  m_LocalPosition: {x: -0.102, y: -0.534, z: -0.439}
-  m_LocalScale: {x: 0.26398, y: 0.86018074, z: 0.26398}
-  m_Children: []
-  m_Father: {fileID: 6264280960719904299}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 69.531006, y: 0, z: -9.647}
---- !u!136 &1088047952
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088047950}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1244344715
 GameObject:
   m_ObjectHideFlags: 0
@@ -3789,8 +3744,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.9712749, z: -0.6931453}
   m_LocalScale: {x: 1.0000006, y: 1.0000006, z: 1.0000006}
-  m_Children:
-  - {fileID: 1088047951}
+  m_Children: []
   m_Father: {fileID: 380722199729238279}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5487,7 +5441,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   _coinManager: {fileID: 0}
   initialPosition: {fileID: 0}
-  attackCollider: {fileID: 1088047952}
+  attackCollider: {fileID: 0}
   speedMax: 8
   acceleration: 10
   gravity: 5.5

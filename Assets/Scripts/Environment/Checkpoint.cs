@@ -10,6 +10,7 @@ public class Checkpoint : MonoBehaviour
     AudioSource _audioSource;
     [SerializeField]
     ParticleSystem[] _particleSystems;
+    bool playerHaveCheckpoint;
     private void Awake()
     {
         anim = GetComponentInParent<Animator>();
@@ -17,7 +18,7 @@ public class Checkpoint : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !playerHaveCheckpoint)
         {
             PlayerMovement player = other.GetComponent<PlayerMovement>();
             anim.SetTrigger("Checkpoint");
@@ -25,7 +26,7 @@ public class Checkpoint : MonoBehaviour
             SaveData(player);
             _audioSource.Play();
             Playparticles();
-
+            playerHaveCheckpoint = true;
         }
 
     }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class AudioDragRock : MonoBehaviour
 {
     [SerializeField]
@@ -45,25 +46,23 @@ public class AudioDragRock : MonoBehaviour
     {
         return _AudioClips[Random.Range(0, _AudioClips.Length)];
     }
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        other.GetComponent<Animator>().SetBool("isPushing", true);
-    //    }
-    //    print(gameObject.name);
-
-    //}
+  
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             other.GetComponent<Animator>().SetBool("isPushing", false);
         }
+        print(other.gameObject.name);
     }
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionExit(Collision collision)
     {
-        print(collision.gameObject.name);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<Animator>().SetBool("isPushing", false);
+
+        }
     }
+   
 
 }

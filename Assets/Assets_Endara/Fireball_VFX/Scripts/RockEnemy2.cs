@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Cinemachine;
 
 public class RockEnemy2 : MonoBehaviour
 {
@@ -13,10 +14,12 @@ public class RockEnemy2 : MonoBehaviour
     Animator anim;
     Vector3 directionToPlayer;
     bool canGo;
+    CinemachineCollisionImpulseSource cinemachineCollisionImpulse;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        cinemachineCollisionImpulse = GetComponent<CinemachineCollisionImpulseSource>();
     }
     private void FixedUpdate()
     {
@@ -29,10 +32,9 @@ public class RockEnemy2 : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        
         speed = 0;
-           
-        if(collision.collider.gameObject.name != gameObject.name && collision.collider.gameObject.tag != "Player")
+        cinemachineCollisionImpulse.GenerateImpulse();
+        if(collision.gameObject.name != gameObject.name && collision.gameObject.tag != "Player")
         {
             ContactPoint contactPoint = collision.contacts[0];
             Quaternion rot = Quaternion.FromToRotation(Vector3.up, contactPoint.normal);
@@ -42,9 +44,10 @@ public class RockEnemy2 : MonoBehaviour
             print(collision.gameObject.name);
             Destroy(impact, 5);
         }
-        if(collision.collider.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player")
         {
-            GameObject impact = Instantiate(impactPrefab, collision.transform.position, Quaternion.identity);
+            GameObject impact = Instantiate(impactPlayer, collision.transform.position, Quaternion.identity);
+            collision.gameObject.GetComponent<PlayerLifeManager>().SubstractLife();
             Destroy(impact, 5);
         }
 
@@ -62,9 +65,6 @@ public class RockEnemy2 : MonoBehaviour
             }
         }
         Destroy(gameObject);
-
-        
-
     }
     public void ShootRock(Vector3 dir, bool b)
     {

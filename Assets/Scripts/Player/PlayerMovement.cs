@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 {
     //Componentes
     [Header("Components")]
-    Animator anim;
+    [HideInInspector]public Animator anim;
 
     CharacterController player;
 
@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
     bool isInMovingPlattform;
 
     public bool playerIn2D;
-
+    bool _activeAttackCollider;
     private void Awake()
     {
         player = GetComponent<CharacterController>();
@@ -83,8 +83,9 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Start()
     {
-        //attackCollider.enabled = false;
-      
+        attackCollider.enabled = false;
+        _activeAttackCollider = false; 
+
         //godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
         //Cursor.visible = false;
         //Cursor.lockState = CursorLockMode.Locked;
@@ -124,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
             currentSpeed += acceleration * Time.deltaTime;
             currentSpeed = Mathf.Clamp(currentSpeed, 0f, speedMax);
         }
-        else
+        else if(playerInput == Vector3.zero)
         {
             currentSpeed -= acceleration * Time.deltaTime;
             currentSpeed = Mathf.Clamp(currentSpeed, 0f, speedMax);
@@ -248,7 +249,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(playerLifeManager.AttempsPlayer() <= 0)
         {
-            StartCoroutine(DeadCanvasAnimation());
+            gameObject.tag = "Untagged";
+            anim.SetTrigger("Dead");
         }
     }
     public void RespawnToWaypoint()
@@ -265,10 +267,12 @@ public class PlayerMovement : MonoBehaviour
     }
     public void MeleAtack()
     {
-        //transform.DOLocalRotate(new Vector3(0, 360, 0), .5f, RotateMode.LocalAxisAdd).OnComplete(() => attackCollider.enabled = false);
-        //attackCollider.enabled = true;
-
-        anim.SetTrigger("Attack");
+         anim.SetTrigger("Attack");
+    }
+    public void ColliderAttack()
+    {
+        _activeAttackCollider =! _activeAttackCollider;
+        attackCollider.enabled = _activeAttackCollider;
     }
     public void SetRespawn(Transform t)
     {
@@ -280,7 +284,7 @@ public class PlayerMovement : MonoBehaviour
         print(isInMovingPlattform);
     }
     
-    IEnumerator DeadCanvasAnimation() // Cuando te quedas sin vida
+    IEnumerator DeadCanvasAnimation() // Cuando te quedas sin vida, se ejecuta en un evento de la animacion de muerte
     {
         if (playerLifeManager.AttempsPlayer() <= 0)
         {
@@ -290,8 +294,8 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(1f);
             animDead.SetTrigger("EndDead");
             playerLifeManager.SetLifeToMax();
-        }
-        
+            gameObject.tag = "Player";
+        }     
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -355,7 +359,13 @@ public class PlayerMovement : MonoBehaviour
             _coinManager.SumCoins();
             Destroy(other.gameObject);
         }
-        
+        if (other.CompareTag("Muerte_Vacio"))
+        {
+
+        }
+
+
+
     }
     private void OnParticleCollision(GameObject other)
     {

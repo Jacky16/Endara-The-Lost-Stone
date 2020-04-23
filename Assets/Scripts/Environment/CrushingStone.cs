@@ -12,10 +12,17 @@ public class CrushingStone : MonoBehaviour
 
         Sequence sequence = DOTween.Sequence();
         sequence.Append(transform.DOShakePosition(0.3f, .5f));
-        sequence.Append(transform.DOMoveY(transform.position.y - 6.3f, .5f));
+        sequence.Append(transform.DOMoveY(transform.position.y - 6f, .3f));
         sequence.AppendInterval(2);
-        sequence.Append(transform.DOMoveY(_originalPosition.y, .5f));
+        sequence.Append(transform.DOMoveY(_originalPosition.y, .3f));
         
         sequence.SetLoops(-1);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerLifeManager>().SubstractLife();
+        }
     }
 }

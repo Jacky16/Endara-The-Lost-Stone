@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public abstract class Enemy : MonoBehaviour
 {
@@ -46,6 +47,9 @@ public abstract class Enemy : MonoBehaviour
     //Tipo de enemigo
     public enum EnemyType { Enemy1, Enemy2, Enemy3};
     public EnemyType enemyType;
+
+    [SerializeField]
+    UnityEvent onDead;
     #endregion
     private void Start()
     {
@@ -222,7 +226,8 @@ public abstract class Enemy : MonoBehaviour
     public abstract void FarAttackPlayer(); 
     public void Dead()
     {
-        //Dead
+        onDead.Invoke();
+        Destroy(gameObject);
     }
     public void Chase()
     {
@@ -241,13 +246,19 @@ public abstract class Enemy : MonoBehaviour
         yield return new WaitForSeconds(2f);
         canPath = true;
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Caja")
+        if (other.gameObject.tag == "Cola")
         {
-            Dead();
-            Destroy(collision.gameObject);
+            life -= 50;
+            print("Life Enemy: " + life); 
+            anim.SetTrigger("hit");
+            if (life <= 0)
+            {
+                Dead();
+            }
         }
+        print(other.gameObject.name);
     }
     private void OnDrawGizmos()
     {

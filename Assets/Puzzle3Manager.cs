@@ -45,7 +45,6 @@ public class Puzzle3Manager : MonoBehaviour
     private void Awake()
     {
         rocksPuzzle3 = RocksCanMove.GetComponentsInChildren<RockPuzzle3>();
-        print(rocksPuzzle3.Length);
     }
     public void ResetPuzzle3(InputAction.CallbackContext inputAction)
     {
