@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class CofreManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class CofreManager : MonoBehaviour
     ParticleSystem particleSystem;
     [SerializeField]
     Light light;
+
+    public UnityEvent onOpen;
     private void Awake()
     {
         anim = GetComponent<Animator>();  
@@ -43,6 +46,10 @@ public class CofreManager : MonoBehaviour
         }
     }
     void Opened()
+    {
+        onOpen.Invoke();
+    }
+    public void ParticleCoins()
     {
         particleSystem.Play();
         light.enabled = true;
