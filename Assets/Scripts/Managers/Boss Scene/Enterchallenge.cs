@@ -68,6 +68,7 @@ public class Enterchallenge : MonoBehaviour
 
         //Mover al player a su respectivo reto
         other.transform.DOMove(_positionInChallenge.position, .2f);
+        _pivotDoor.DOLocalRotate(new Vector3(0, 0, 0), 1);
 
         other.transform.localRotation = _positionInChallenge.localRotation;
        
