@@ -8,10 +8,11 @@ public class PlayerInPlataform : MonoBehaviour
     bool doAnimationFall = false;
 
     Vector3 originalPosition;
+    bool b = false;
     private void Start()
     {
         originalPosition = transform.position;
-        
+        b = true;   
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,8 +20,9 @@ public class PlayerInPlataform : MonoBehaviour
         if (other.gameObject.name == "Player")
         {
             other.transform.SetParent(transform);
-            if (doAnimationFall)
+            if (doAnimationFall && b)
             {
+                b = false;
                 AnimationFall();
             }
             print(other.gameObject.name);

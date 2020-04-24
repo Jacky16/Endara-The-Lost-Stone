@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     CoinManager _coinManager;
 
     PlayerLifeManager playerLifeManager;
+    [SerializeField]
     GodManager godManager;
     PlayerSoundMovement playerSoundMovement;
 
@@ -64,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     GameObject _prefabParticleCoin;
 
-    float unitsGod;
 
     //Variables booleanas
     public static bool canMove = true;
@@ -89,9 +89,9 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         attackCollider.enabled = false;
-        _activeAttackCollider = false; 
+        _activeAttackCollider = false;
 
-        //godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
+
         //Cursor.visible = false;
         //Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
@@ -163,6 +163,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGod)
         {
             ModeGod();
+            currentSpeed *= 5;
         }
         else
         {
@@ -179,22 +180,22 @@ public class PlayerMovement : MonoBehaviour
                 movePlayer.y = fallvelocity;
             }
             animPlayer.SetFloat("PlayerVerticalVelocity", characterController.velocity.y);
+            
 
         }
     }
     void ModeGod()
     {
-        unitsGod = godManager.UnitsToJumpInModeGod();
         if (isGod)
         {
             Debug.Log("Es Dios");
             if (Input.GetKey(KeyCode.Space))
             {
-                movePlayer.y += unitsGod;
+                movePlayer.y += 2;
             }
             else if (Input.GetKey(KeyCode.LeftShift))
             {
-                movePlayer.y -= unitsGod;
+                movePlayer.y -= 2;
 
             }
 
@@ -207,8 +208,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void JumpPlayer()
     {
-        print(gravity);
-        print(jumpForce);
+        //print(gravity);
+        //print(jumpForce);
         if (InputManager.playerInputs.PlayerInputs.Jump.triggered)
         {
             if (!doubleJump)
