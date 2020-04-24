@@ -17,7 +17,7 @@ public class GravityPlataform : MonoBehaviour
     {
         if (_isGravity)
         {
-            this.transform.Translate(-Vector3.forward * speed * Time.deltaTime);
+            this.transform.Translate(Vector3.down * speed * Time.deltaTime);
         }
     }
     public void SetGravity(bool b)

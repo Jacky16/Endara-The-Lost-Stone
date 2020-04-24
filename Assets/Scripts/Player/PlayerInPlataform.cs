@@ -18,7 +18,6 @@ public class PlayerInPlataform : MonoBehaviour
     {
         if (other.gameObject.name == "Detection Enemy")
         {
-            other.GetComponentInParent<PlayerMovement>().SetMovingPlattform(true);
             other.transform.parent.SetParent(transform);
             if (doAnimationFall)
             {
@@ -34,24 +33,21 @@ public class PlayerInPlataform : MonoBehaviour
         }
 
     }
-    
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<PlayerMovement>().SetMovingPlattform(false);
             other.transform.parent = null;
-
+            other.GetComponent<PlayerMovement>().SetMovingPlattform(false);
         }
-        print(other.gameObject.name);
     }
-    //private void OnCollisionExit(Collision collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        collision.gameObject.transform.parent = transform;
-    //    }
-    //}
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.transform.parent = transform;
+        }
+    }
     void AnimationFall()
     {
         Sequence secuence = DOTween.Sequence();
