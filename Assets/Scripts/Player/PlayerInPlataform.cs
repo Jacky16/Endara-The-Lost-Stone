@@ -16,13 +16,14 @@ public class PlayerInPlataform : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Detection Enemy")
+        if (other.gameObject.CompareTag("Player"))
         {
-            other.transform.parent.SetParent(transform);
+            other.transform.SetParent(transform);
             if (doAnimationFall)
             {
                 AnimationFall();
             }
+            print(other.gameObject.name);
         }
     }
     private void OnTriggerStay(Collider other)

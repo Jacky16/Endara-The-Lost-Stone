@@ -4,12 +4,11 @@ using UnityEngine;
 using DG.Tweening;
 using Cinemachine;
 
-public class CerraduraManager : MonoBehaviour
+public class SolutionPuzzle3 : MonoBehaviour
 {
     [SerializeField] GameObject gameObjectDoor;
     [SerializeField] CinemachineVirtualCamera _camera;
     [SerializeField] bool isKeyInside = false;
-    [SerializeField] ParticleSystem particleSystem;
     private void Start()
     {
         _camera.Priority = 0;
@@ -44,7 +43,6 @@ public class CerraduraManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         gameObjectDoor.transform.DOMoveY(gameObjectDoor.transform.position.y - 8, 1);
-        //particleSystem.Play();
 
         yield return new WaitForSeconds(1f);
 

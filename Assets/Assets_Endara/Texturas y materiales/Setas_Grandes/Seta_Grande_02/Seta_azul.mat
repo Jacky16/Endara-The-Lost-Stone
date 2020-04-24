@@ -169,7 +169,7 @@ Material:
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 0.802
     - _EmissiveIntensity: 17
-    - _EmissiveIntensityUnit: 0
+    - _EmissiveIntensityUnit: 1
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
