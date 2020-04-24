@@ -11,9 +11,9 @@ public class PlayerMovement : MonoBehaviour
 {
     //Componentes
     [Header("Components")]
-    [HideInInspector]public Animator anim;
+    [HideInInspector] public Animator animPlayer;
 
-    CharacterController player;
+    CharacterController characterController;
 
     [SerializeField]
     Animator animDead;
@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     PlayerLifeManager playerLifeManager;
     GodManager godManager;
+    PlayerSoundMovement playerSoundMovement;
+
     public Transform initialPosition;
 
     [SerializeField] 
@@ -35,11 +37,13 @@ public class PlayerMovement : MonoBehaviour
     public float speedMax;
     public float acceleration = 20f;
     private float currentSpeed = 0f;
+
     [Header("Controles")]
     private Vector3 playerInput;
     private Vector3 movePlayer;
     private Vector3 camForward;
     private Vector3 camRight;
+
     [Header("Gravedad")]
     [SerializeField] 
     float gravity;
@@ -77,9 +81,10 @@ public class PlayerMovement : MonoBehaviour
     bool _activeAttackCollider;
     private void Awake()
     {
-        player = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>();
+        characterController = GetComponent<CharacterController>();
+        animPlayer = GetComponent<Animator>();
         playerLifeManager = GetComponent<PlayerLifeManager>();
+        playerSoundMovement = GetComponent<PlayerSoundMovement>();
     }
     private void Start()
     {
@@ -99,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            anim.SetFloat("PlayerWalkVelocity", 0);
+            animPlayer.SetFloat("PlayerWalkVelocity", 0);
         }
     }
     public void Movimiento()
@@ -147,11 +152,11 @@ public class PlayerMovement : MonoBehaviour
         movePlayer.z = movePlayerXZ.z;
 
         //Asignar movimiento al Character Controller
-        player.Move(movePlayerXZ);
+        characterController.Move(movePlayerXZ);
         movePlayerXZ.y = 0;
 
         //Pasar informacion al animator
-        anim.SetFloat("PlayerWalkVelocity", currentSpeed);
+        animPlayer.SetFloat("PlayerWalkVelocity", currentSpeed);
     }
     public void SetGravity()
     {
@@ -161,9 +166,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            anim.SetBool("isGrounded", player.isGrounded);
+            animPlayer.SetBool("isGrounded", characterController.isGrounded);
             //print("PLayer is grounded: " + player.isGrounded);
-            if (player.isGrounded)
+            if (characterController.isGrounded)
             {
                 fallvelocity = -gravity * Time.deltaTime;
                 movePlayer.y = fallvelocity;
@@ -173,7 +178,7 @@ public class PlayerMovement : MonoBehaviour
                 fallvelocity -= gravity * Time.deltaTime;
                 movePlayer.y = fallvelocity;
             }
-            anim.SetFloat("PlayerVerticalVelocity", player.velocity.y);
+            animPlayer.SetFloat("PlayerVerticalVelocity", characterController.velocity.y);
 
         }
     }
@@ -209,7 +214,7 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
 
-            if (!player.isGrounded && !isInMovingPlattform)
+            if (!characterController.isGrounded && !isInMovingPlattform)
             {
                 doubleJump = false;
 
@@ -227,11 +232,11 @@ public class PlayerMovement : MonoBehaviour
                 print(jumpForce);
             }
             movePlayer.y = fallvelocity;
-            anim.SetTrigger("PlayerJump");
-
+            animPlayer.SetTrigger("PlayerJump");
+            playerSoundMovement.PlaySoundJump();
         }
 
-        if (!doubleJump &&(player.isGrounded || isInMovingPlattform))
+        if (!doubleJump &&(characterController.isGrounded || isInMovingPlattform))
         {
             doubleJump = true;
         }
@@ -253,7 +258,7 @@ public class PlayerMovement : MonoBehaviour
         if(playerLifeManager.AttempsPlayer() <= 0)
         {
             gameObject.tag = "Untagged";
-            anim.SetTrigger("Dead");
+            animPlayer.SetTrigger("Dead");
         }
     }
     public void RespawnToWaypoint()
@@ -270,7 +275,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void MeleAtack()
     {
-         anim.SetTrigger("Attack");
+         animPlayer.SetTrigger("Attack");
     }
     public void ColliderAttack()
     {
@@ -335,11 +340,11 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = (pushDir * pushPower) / valueMass;
             if(rb.velocity.magnitude <= 0.499f)
             {
-                anim.SetBool("isPushing", false);
+                animPlayer.SetBool("isPushing", false);
             }
             if (rb.velocity.magnitude > 0)
             {
-                anim.SetBool("isPushing", true);
+                animPlayer.SetBool("isPushing", true);
             }
             print(rb.velocity.magnitude);
 
