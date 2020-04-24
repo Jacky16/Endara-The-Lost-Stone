@@ -207,6 +207,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void JumpPlayer()
     {
+        print(gravity);
+        print(jumpForce);
         if (InputManager.playerInputs.PlayerInputs.Jump.triggered)
         {
             if (!doubleJump)
@@ -219,7 +221,6 @@ public class PlayerMovement : MonoBehaviour
                 doubleJump = false;
 
             }
-            Debug.Log("He saltado");
             if (PickUpObjects.IsCatchedObject())
             {
                 float myJumpForce = jumpForce / PickUpObjects.MassObjectPicked();
@@ -338,14 +339,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
             rb.velocity = (pushDir * pushPower) / valueMass;
-            if(rb.velocity.magnitude <= 0.499f)
-            {
-                animPlayer.SetBool("isPushing", false);
-            }
-            if (rb.velocity.magnitude > 0)
-            {
-                animPlayer.SetBool("isPushing", true);
-            }
+            
             print(rb.velocity.magnitude);
 
         }

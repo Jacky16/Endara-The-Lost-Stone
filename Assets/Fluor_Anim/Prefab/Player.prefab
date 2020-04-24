@@ -5347,6 +5347,7 @@ GameObject:
   - component: {fileID: 4135277023578034378}
   - component: {fileID: 4043093755355513614}
   - component: {fileID: 5437293477021998719}
+  - component: {fileID: 4126182287297406477}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5438,7 +5439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f598c6148496054fb9a8d0206ce0b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  animPlayer: {fileID: 0}
   animDead: {fileID: 0}
   mainCam: {fileID: 0}
   _coinManager: {fileID: 0}
@@ -5603,6 +5604,60 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4126182287297406477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322622648257989031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31cf67f69a52c7f49b3b63d7f95026f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audiosWalk:
+  - {fileID: 8300000, guid: d18ae6ec148f736429673f4861e56eb4, type: 3}
+  - {fileID: 8300000, guid: b76978e2cda7313468993945ea4a39d8, type: 3}
+  - {fileID: 8300000, guid: aa7b4275a846c0f4d986e7d7f157d888, type: 3}
+  - {fileID: 8300000, guid: 441e7649ce61ca844b2b747299ece527, type: 3}
+  - {fileID: 8300000, guid: 97ffa275989c76941aadf0eaf3e6650a, type: 3}
+  - {fileID: 8300000, guid: fb9a0b1d4d37b3249b5b0eef379dc601, type: 3}
+  - {fileID: 8300000, guid: fadda5b30aeb74d48ae17905e8d9260d, type: 3}
+  - {fileID: 8300000, guid: 2efbc61c97ede0c459598b46e0b5209b, type: 3}
+  - {fileID: 8300000, guid: 41563eadb8c228749ae88b5873d04039, type: 3}
+  - {fileID: 8300000, guid: 60395ab90041f37479cb8b233d53b1af, type: 3}
+  - {fileID: 8300000, guid: 0ff61d1eaa214c749ba275a4881b8ea3, type: 3}
+  - {fileID: 8300000, guid: 528475682c3dd8748b71674cabf88b38, type: 3}
+  - {fileID: 8300000, guid: 1ef4cb12d004a844c9aefaa1e8b0bb48, type: 3}
+  - {fileID: 8300000, guid: 7a5d24028076cf746b12fb6ebe1ccdd1, type: 3}
+  - {fileID: 8300000, guid: 876d91eeb956c3b4e995e88b7036513a, type: 3}
+  audiosRun:
+  - {fileID: 8300000, guid: 868dae775a10142cfacdcd001ef59621, type: 3}
+  - {fileID: 8300000, guid: 959eaf0b722474122a0707d5cba67bd6, type: 3}
+  - {fileID: 8300000, guid: d02d13c77adfd4f409d2b35798c3d86f, type: 3}
+  - {fileID: 8300000, guid: e71ecb2ef5d3a0e4aa4b4d8af4d01c0f, type: 3}
+  - {fileID: 8300000, guid: 87a1fba82257d6b42ab3af875cce00b1, type: 3}
+  - {fileID: 8300000, guid: 8e77e86b3a60efc46a0c3119855d34dc, type: 3}
+  - {fileID: 8300000, guid: 6bd0e6cc2ae78bb4492fdc2b849c4894, type: 3}
+  - {fileID: 8300000, guid: 462ed82962ec759468b3388fc859f6ef, type: 3}
+  - {fileID: 8300000, guid: 6836952ca4685044aadaecddae98fefd, type: 3}
+  - {fileID: 8300000, guid: 60e172e2f80e2944ea7b3bb7ad35dfde, type: 3}
+  - {fileID: 8300000, guid: 5836e22e57e621444847e5513bf628da, type: 3}
+  - {fileID: 8300000, guid: d9ea775dba147fe4bbe4b30d558f97ba, type: 3}
+  - {fileID: 8300000, guid: 4f86c050cf8ae464f930d079c0b2b75d, type: 3}
+  - {fileID: 8300000, guid: 8123135d25f77ec41b319d0f1efd9bbc, type: 3}
+  - {fileID: 8300000, guid: 2cd456ce04edb9f4f827779d6ab12e61, type: 3}
+  - {fileID: 8300000, guid: 9f6489e8576e4f04a90cf9437411e8ec, type: 3}
+  - {fileID: 8300000, guid: 9ad931cf019f07044a308ceb19be83f4, type: 3}
+  - {fileID: 8300000, guid: b66937caa0ead5b40ab5a373588fa946, type: 3}
+  - {fileID: 8300000, guid: 746998262406c414bb57d182c5ce2e98, type: 3}
+  - {fileID: 8300000, guid: 89a4b4bbca6a8504e91baf5f3380aa16, type: 3}
+  audiosJump:
+  - {fileID: 8300000, guid: 3f998b74096ac814abe901f3da4773c2, type: 3}
+  - {fileID: 8300000, guid: a613f6d882d247e4cbbd43562cac6e70, type: 3}
+  - {fileID: 8300000, guid: f50b6ab71cdb8b140b8e5a83f5e509a3, type: 3}
+  audioAttack: {fileID: 8300000, guid: c6995da1f90e0794092e466fc5225b11, type: 3}
 --- !u!1 &5352845137664940069
 GameObject:
   m_ObjectHideFlags: 0
