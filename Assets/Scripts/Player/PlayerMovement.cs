@@ -11,9 +11,9 @@ public class PlayerMovement : MonoBehaviour
 {
     //Componentes
     [Header("Components")]
-    [HideInInspector] public Animator animPlayer;
+    [HideInInspector]public Animator anim;
 
-    CharacterController characterController;
+    CharacterController player;
 
     [SerializeField]
     Animator animDead;
@@ -25,10 +25,7 @@ public class PlayerMovement : MonoBehaviour
     CoinManager _coinManager;
 
     PlayerLifeManager playerLifeManager;
-    [SerializeField]
     GodManager godManager;
-    PlayerSoundMovement playerSoundMovement;
-
     public Transform initialPosition;
 
     [SerializeField] 
@@ -38,13 +35,11 @@ public class PlayerMovement : MonoBehaviour
     public float speedMax;
     public float acceleration = 20f;
     private float currentSpeed = 0f;
-
     [Header("Controles")]
     private Vector3 playerInput;
     private Vector3 movePlayer;
     private Vector3 camForward;
     private Vector3 camRight;
-
     [Header("Gravedad")]
     [SerializeField] 
     float gravity;
@@ -65,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     GameObject _prefabParticleCoin;
 
+    float unitsGod;
 
     //Variables booleanas
     public static bool canMove = true;
@@ -81,17 +77,16 @@ public class PlayerMovement : MonoBehaviour
     bool _activeAttackCollider;
     private void Awake()
     {
-        characterController = GetComponent<CharacterController>();
-        animPlayer = GetComponent<Animator>();
+        player = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
         playerLifeManager = GetComponent<PlayerLifeManager>();
-        playerSoundMovement = GetComponent<PlayerSoundMovement>();
     }
     private void Start()
     {
         attackCollider.enabled = false;
-        _activeAttackCollider = false;
+        _activeAttackCollider = false; 
 
-
+        //godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
         //Cursor.visible = false;
         //Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
@@ -104,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            animPlayer.SetFloat("PlayerWalkVelocity", 0);
+            anim.SetFloat("PlayerWalkVelocity", 0);
         }
     }
     public void Movimiento()
@@ -152,24 +147,23 @@ public class PlayerMovement : MonoBehaviour
         movePlayer.z = movePlayerXZ.z;
 
         //Asignar movimiento al Character Controller
-        characterController.Move(movePlayerXZ);
+        player.Move(movePlayerXZ);
         movePlayerXZ.y = 0;
 
         //Pasar informacion al animator
-        animPlayer.SetFloat("PlayerWalkVelocity", currentSpeed);
+        anim.SetFloat("PlayerWalkVelocity", currentSpeed);
     }
     public void SetGravity()
     {
         if (isGod)
         {
             ModeGod();
-            currentSpeed *= 5;
         }
         else
         {
-            animPlayer.SetBool("isGrounded", characterController.isGrounded);
+            anim.SetBool("isGrounded", player.isGrounded);
             //print("PLayer is grounded: " + player.isGrounded);
-            if (characterController.isGrounded)
+            if (player.isGrounded)
             {
                 fallvelocity = -gravity * Time.deltaTime;
                 movePlayer.y = fallvelocity;
@@ -179,23 +173,23 @@ public class PlayerMovement : MonoBehaviour
                 fallvelocity -= gravity * Time.deltaTime;
                 movePlayer.y = fallvelocity;
             }
-            animPlayer.SetFloat("PlayerVerticalVelocity", characterController.velocity.y);
-            
+            anim.SetFloat("PlayerVerticalVelocity", player.velocity.y);
 
         }
     }
     void ModeGod()
     {
+        unitsGod = godManager.UnitsToJumpInModeGod();
         if (isGod)
         {
             Debug.Log("Es Dios");
             if (Input.GetKey(KeyCode.Space))
             {
-                movePlayer.y += 2;
+                movePlayer.y += unitsGod;
             }
             else if (Input.GetKey(KeyCode.LeftShift))
             {
-                movePlayer.y -= 2;
+                movePlayer.y -= unitsGod;
 
             }
 
@@ -208,8 +202,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void JumpPlayer()
     {
-        //print(gravity);
-        //print(jumpForce);
         if (InputManager.playerInputs.PlayerInputs.Jump.triggered)
         {
             if (!doubleJump)
@@ -217,11 +209,12 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
 
-            if (!characterController.isGrounded && !isInMovingPlattform)
+            if (!player.isGrounded && !isInMovingPlattform)
             {
                 doubleJump = false;
 
             }
+            Debug.Log("He saltado");
             if (PickUpObjects.IsCatchedObject())
             {
                 float myJumpForce = jumpForce / PickUpObjects.MassObjectPicked();
@@ -234,11 +227,11 @@ public class PlayerMovement : MonoBehaviour
                 print(jumpForce);
             }
             movePlayer.y = fallvelocity;
-            animPlayer.SetTrigger("PlayerJump");
-            playerSoundMovement.PlaySoundJump();
+            anim.SetTrigger("PlayerJump");
+
         }
 
-        if (!doubleJump &&(characterController.isGrounded || isInMovingPlattform))
+        if (!doubleJump &&(player.isGrounded || isInMovingPlattform))
         {
             doubleJump = true;
         }
@@ -260,7 +253,7 @@ public class PlayerMovement : MonoBehaviour
         if(playerLifeManager.AttempsPlayer() <= 0)
         {
             gameObject.tag = "Untagged";
-            animPlayer.SetTrigger("Dead");
+            anim.SetTrigger("Dead");
         }
     }
     public void RespawnToWaypoint()
@@ -277,7 +270,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void MeleAtack()
     {
-         animPlayer.SetTrigger("Attack");
+         anim.SetTrigger("Attack");
     }
     public void ColliderAttack()
     {
@@ -340,7 +333,14 @@ public class PlayerMovement : MonoBehaviour
             Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
             rb.velocity = (pushDir * pushPower) / valueMass;
-            
+            if(rb.velocity.magnitude <= 0.499f)
+            {
+                anim.SetBool("isPushing", false);
+            }
+            if (rb.velocity.magnitude > 0)
+            {
+                anim.SetBool("isPushing", true);
+            }
             print(rb.velocity.magnitude);
 
         }

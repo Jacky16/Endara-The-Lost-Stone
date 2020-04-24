@@ -8,24 +8,22 @@ public class PlayerInPlataform : MonoBehaviour
     bool doAnimationFall = false;
 
     Vector3 originalPosition;
-    bool b = false;
     private void Start()
     {
         originalPosition = transform.position;
-        b = true;   
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.name == "Detection Enemy")
         {
-            other.transform.SetParent(transform);
-            if (doAnimationFall && b)
+            other.GetComponentInParent<PlayerMovement>().SetMovingPlattform(true);
+            other.transform.parent.SetParent(transform);
+            if (doAnimationFall)
             {
-                b = false;
                 AnimationFall();
             }
-            print(other.gameObject.name);
         }
     }
     private void OnTriggerStay(Collider other)
@@ -36,21 +34,24 @@ public class PlayerInPlataform : MonoBehaviour
         }
 
     }
+    
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.name == "Player")
         {
-            other.transform.parent = null;
             other.GetComponent<PlayerMovement>().SetMovingPlattform(false);
+            other.transform.parent = null;
+
         }
+        print(other.gameObject.name);
     }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            collision.gameObject.transform.parent = transform;
-        }
-    }
+    //private void OnCollisionExit(Collision collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        collision.gameObject.transform.parent = transform;
+    //    }
+    //}
     void AnimationFall()
     {
         Sequence secuence = DOTween.Sequence();
