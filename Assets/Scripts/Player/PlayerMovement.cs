@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     CoinManager _coinManager;
 
+    PlayerSoundMovement playerSoundMovement;
     PlayerLifeManager playerLifeManager;
     GodManager godManager;
     public Transform initialPosition;
@@ -35,11 +36,13 @@ public class PlayerMovement : MonoBehaviour
     public float speedMax;
     public float acceleration = 20f;
     private float currentSpeed = 0f;
+
     [Header("Controles")]
     private Vector3 playerInput;
     private Vector3 movePlayer;
     private Vector3 camForward;
     private Vector3 camRight;
+
     [Header("Gravedad")]
     [SerializeField] 
     float gravity;
@@ -80,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         playerLifeManager = GetComponent<PlayerLifeManager>();
+        playerSoundMovement = GetComponent<PlayerSoundMovement>();
     }
     private void Start()
     {
@@ -214,7 +218,6 @@ public class PlayerMovement : MonoBehaviour
                 doubleJump = false;
 
             }
-            Debug.Log("He saltado");
             if (PickUpObjects.IsCatchedObject())
             {
                 float myJumpForce = jumpForce / PickUpObjects.MassObjectPicked();
@@ -226,9 +229,10 @@ public class PlayerMovement : MonoBehaviour
                 fallvelocity = jumpForce;
                 print(jumpForce);
             }
+            playerSoundMovement.PlaySoundJump();
             movePlayer.y = fallvelocity;
             anim.SetTrigger("PlayerJump");
-
+            
         }
 
         if (!doubleJump &&(player.isGrounded || isInMovingPlattform))

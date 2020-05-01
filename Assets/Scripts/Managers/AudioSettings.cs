@@ -26,12 +26,13 @@ public class AudioSettings : MonoBehaviour
         sliderVolumenGeneral.value = PlayerPrefs.GetFloat("GeneralVolume");
         sliderVolumenMusica.value = PlayerPrefs.GetFloat("MusicVolume");
         sliderVolumenFX.value = PlayerPrefs.GetFloat("FxVolume");
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        VolumeManager();
+        //VolumeManager();
     }
     public void VolumeManager()
     {

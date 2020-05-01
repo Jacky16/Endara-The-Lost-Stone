@@ -45,17 +45,20 @@ public class Laser : MonoBehaviour
     Vector3 distanceParticle;
 
     //Audio
-    AudioSource _audioSource;
+  
+    [SerializeField]
+    AudioSource _audioSourceLaserActive;
+
+    [SerializeField]
+    AudioSource _audioSourceLaserIdle;
+
     bool isPlayedSound = false;
 
     private void Awake()
     {
         _currentMaterial = GetComponent<MeshRenderer>().material;
         _lineRenderer = GetComponent<LineRenderer>();
-        if(estados == States.Hijo)
-        {
-            _audioSource = GetComponent<AudioSource>();
-        }
+       
     }
     void Start()
     {
@@ -198,6 +201,11 @@ public class Laser : MonoBehaviour
         _lineRenderer.enabled = true;
         _currentMaterial = _materialWithEmision;
         particleSystem.SetActive(true);
+        if (!_audioSourceLaserIdle.isPlaying)
+        {
+            _audioSourceLaserIdle.Play();
+        }
+        
     }
     public void SaveRotation()
     {
@@ -213,6 +221,7 @@ public class Laser : MonoBehaviour
         _lineRenderer.enabled = false;
         particleSystem.SetActive(false);
         _currentMaterial = _materialWithoutEmision;
+        _audioSourceLaserIdle.Stop();
     }
 
     void SnapRotation(Vector3 cubeToLook)
@@ -223,7 +232,8 @@ public class Laser : MonoBehaviour
     {
         if (!isPlayedSound)
         {
-            _audioSource.Play();
+            //_audioSource.Play();
+            _audioSourceLaserActive.Play();
             isPlayedSound = true;
         }
 

@@ -70,7 +70,7 @@ public class InputManager : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext ctx)
     {
-        if (ctx.started && !PickUpObjects.CanCatchObject())
+        if (ctx.started && !PickUpObjects.CanCatchObject() && PlayerMovement.canMove)
         {
             _player.MeleAtack();
         }
