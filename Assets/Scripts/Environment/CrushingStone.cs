@@ -21,16 +21,9 @@ public class CrushingStone : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerLifeManager>().SubstractLife();
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.name == "Player")
-        {
-            other.gameObject.GetComponent<PlayerLifeManager>().SubstractLife();
         }
     }
 }

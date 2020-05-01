@@ -24,7 +24,7 @@ public class Checkpoint : MonoBehaviour
             anim.SetTrigger("Checkpoint");
             player.SetRespawn(respawnTransform);
             SaveData(player);
-
+            _audioSource.Play();
             //Playparticles();
             playerHaveCheckpoint = true;
         }
