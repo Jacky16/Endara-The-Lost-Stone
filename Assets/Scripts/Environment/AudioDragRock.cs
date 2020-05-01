@@ -20,13 +20,7 @@ public class AudioDragRock : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (rb.velocity.magnitude > 0 && playerIsPushing)
-        {
-            PlayAudio();
-        }else if(rb.velocity.magnitude <= 0 && !playerIsPushing)
-        {
-            StopAudio();
-        }
+        
     }
     public void PlayAudio()
     {
@@ -54,6 +48,18 @@ public class AudioDragRock : MonoBehaviour
         {
             other.GetComponent<Animator>().SetBool("isPushing", false);
             playerIsPushing = true;
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        print(rb.velocity.magnitude);
+        if (rb.velocity.magnitude > 0 && playerIsPushing)
+        {
+            PlayAudio();
+        }
+        else if (rb.velocity.magnitude <= 0)
+        {
+            StopAudio();
         }
     }
     private void OnTriggerExit(Collider other)

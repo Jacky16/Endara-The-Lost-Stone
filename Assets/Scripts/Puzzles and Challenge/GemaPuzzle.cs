@@ -35,9 +35,9 @@ public class GemaPuzzle : MonoBehaviour
     [SerializeField]
     AudioClip _audioClipCupula;
 
-    [Header("Spawn Baldosas")]
+    [Header("CameraSwitch")]
     [SerializeField]
-    SpawnBaldosas[] _spawnBaldosas;
+    GameObject gameObjectCameraSwitch;
 
     static bool isSolution;
     private void Awake()
@@ -55,7 +55,7 @@ public class GemaPuzzle : MonoBehaviour
     {
         _audioSource.PlayOneShot(_audioClipGema);
         _cameraGema.Priority = 10;
-
+        gameObjectCameraSwitch.SetActive(false);
         yield return new WaitForSeconds(1);
 
         _cameraEsfera.Priority = 10;

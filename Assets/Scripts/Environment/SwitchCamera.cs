@@ -63,6 +63,20 @@ public class SwitchCamera : MonoBehaviour
             }
         }
     }
+    private void OnDisable()
+    {
+        cinemachineVirtualCamera.Priority = 0;
+        _playerIsInside = false;
+        if (_followPlayer)
+        {
+            cinemachineVirtualCamera.Follow = null;
+        }
+        if (_lookAtPlayer)
+        {
+            cinemachineVirtualCamera.LookAt = null;
+        }
+
+    }
     public bool PlayerIsInside()
     {
         return _playerIsInside;
