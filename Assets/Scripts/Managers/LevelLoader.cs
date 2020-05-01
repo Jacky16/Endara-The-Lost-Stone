@@ -17,7 +17,7 @@ public class LevelLoader : MonoBehaviour
     Slider slider;
     private void Awake()
     {
-        slider = _canvasLoadingScreen.GetComponent<Slider>();
+        slider = _canvasLoadingScreen.GetComponentInChildren<Slider>();
     }
     private void Start()
     {

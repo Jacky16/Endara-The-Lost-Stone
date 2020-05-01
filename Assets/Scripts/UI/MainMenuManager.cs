@@ -29,6 +29,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     Sprite _spritePS4Controls;
 
+
     PlayerInput playerInput;
     private void Awake()
     {
@@ -39,11 +40,11 @@ public class MainMenuManager : MonoBehaviour
     {
         StartCoroutine(LoadSceneCoroutine("GameplayScreen_Bosque"));
     }
-    public void ActiveSettings()
-    {
-        _canvasSettings.SetActive(true);
-        _canvasMainMenu.SetActive(false);
-    }
+    //public void ActiveSettings()
+    //{
+    //    _canvasSettings.SetActive(true);
+    //    _canvasMainMenu.SetActive(false);
+    //}
     public void Quit()
     {
         Application.Quit();
@@ -55,7 +56,7 @@ public class MainMenuManager : MonoBehaviour
     IEnumerator LoadSceneCoroutine(string scene)
     {
         anim.SetTrigger("Start");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(scene);
     }
     

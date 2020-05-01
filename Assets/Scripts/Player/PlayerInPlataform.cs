@@ -8,11 +8,10 @@ public class PlayerInPlataform : MonoBehaviour
     bool doAnimationFall = false;
 
     Vector3 originalPosition;
-    bool b = false;
+    bool animationFallRuning = false;
     private void Start()
     {
         originalPosition = transform.position;
-        b = true;   
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,10 +19,9 @@ public class PlayerInPlataform : MonoBehaviour
         if (other.gameObject.name == "Player")
         {
             other.transform.SetParent(transform);
-            if (doAnimationFall && b)
+            if (doAnimationFall && !animationFallRuning)
             {
-                b = false;
-                AnimationFall();
+                AnimationFallInit();
             }
             print(other.gameObject.name);
         }
@@ -51,11 +49,17 @@ public class PlayerInPlataform : MonoBehaviour
             collision.gameObject.transform.parent = transform;
         }
     }
-    void AnimationFall()
+    void AnimationFallInit()
     {
+        animationFallRuning = true;
         Sequence secuence = DOTween.Sequence();
-        secuence.Append(transform.DOMoveY(transform.position.y - 1f, .3f).SetEase(Ease.OutQuint));
+        secuence.Append(transform.DOMoveY(originalPosition.y - 1f, .3f).SetEase(Ease.OutQuint));
+        secuence.AppendCallback(AnimationFallEnd);
         secuence.Append(transform.DOMoveY(originalPosition.y, 1.5f).SetEase(Ease.OutQuint)); 
+    }
+    void AnimationFallEnd()
+    {
+        animationFallRuning = false;
     }
 }
 
