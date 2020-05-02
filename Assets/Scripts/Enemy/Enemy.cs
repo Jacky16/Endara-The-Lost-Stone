@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -20,6 +21,9 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float farRadiusAttack;
     [SerializeField] bool isFollowPath;
     [SerializeField] LayerMask layerMask;
+
+    Vector3 initialPosition;
+    Vector3 initialRotation;
     //Componentes
     [Header("Componentes")]
     [SerializeField]protected NavMeshAgent navMeshAgent;
@@ -41,7 +45,7 @@ public abstract class Enemy : MonoBehaviour
     protected float BetweenDistance;
 
     //Maquina de estados
-    protected enum States { Chase, NearAttack,FarAttack, FollowPath };
+    protected enum States { Chase, NearAttack,FarAttack, FollowPath,Idle};
     [SerializeField]protected States EnemyStates;
 
     //Tipo de enemigo
@@ -53,7 +57,10 @@ public abstract class Enemy : MonoBehaviour
     #endregion
     private void Start()
     {
-        _nextPosition = 0;     
+        _nextPosition = 0;
+        initialPosition = transform.position;
+        initialRotation = transform.rotation.eulerAngles;
+
     }
     
     #region FovLogic
@@ -78,14 +85,12 @@ public abstract class Enemy : MonoBehaviour
                         {
                             Debug.Log("IsInFov");
                             isInFov = true;
-                            anim.SetBool("isInFov", true);
                         }
                     }
                 }
                 else
                 {
                     isInFov = false;
-                    anim.SetBool("isInFov", false);
                 }
             }
         }
@@ -112,6 +117,7 @@ public abstract class Enemy : MonoBehaviour
                 Enemy2();
                 break;
             case EnemyType.Enemy3:
+                Enemy3();
                 break;
         }
         StateMachine();
@@ -185,6 +191,55 @@ public abstract class Enemy : MonoBehaviour
             EnemyStates = States.FollowPath;
         }
     }
+    void Enemy3()
+    {
+        anim.SetBool("isInNearAttack", isInNearAttack);
+        anim.SetBool("isInFarAttack", isInFarAttack);
+        anim.SetFloat("speed", navMeshAgent.speed);
+
+        //print("FarAttack: " + isInFarAttack);
+        //print("NearAttack: " + isInNearAttack);
+
+        //Distancia entre el enemigo y el player
+        BetweenDistance = Vector3.Distance(transform.position, player.position);
+        //print(EnemyStates);
+        //Persecucion: si es mayor que el radio de ataque y si la distancia al player es menor que el radio y maximo y en el campo de vision
+        if (BetweenDistance > nearRadiusAttack && BetweenDistance < _maxRadius && isInFov)
+        {
+            EnemyStates = States.Chase;
+        }
+        //Ataque cercano : si la distancia es menor que el radio de ataque y si esta en el campo de vision
+        if (BetweenDistance <= nearRadiusAttack && isInFov)
+        {
+            EnemyStates = States.NearAttack;
+            isInFarAttack = false;
+            isInNearAttack = true;
+        }
+        else if (BetweenDistance <= farRadiusAttack && isInFov)
+        {
+            EnemyStates = States.FarAttack;
+            isInFarAttack = true;
+            isInNearAttack = false;
+        }
+        else
+        {
+            isInFarAttack = false;
+            isInNearAttack = false;
+        }
+        //Path: sigue la ruta si la distancia es mayor que el radio maximo
+        if (BetweenDistance > _maxRadius || !isInFov)
+        {
+            //Siguiendo el Path
+            if (isFollowPath)
+            {
+                EnemyStates = States.FollowPath;
+            }
+            else
+            {
+                EnemyStates = States.Idle;
+            }
+        }
+    }
     public void StateMachine()
     {
         switch (EnemyStates)
@@ -200,6 +255,9 @@ public abstract class Enemy : MonoBehaviour
                 break;
             case States.FarAttack:
                 FarAttackPlayer();
+                break;
+            case States.Idle:
+                Idle();
                 break;
         }
     }
@@ -235,14 +293,36 @@ public abstract class Enemy : MonoBehaviour
         navMeshAgent.speed = _speed;
         if (!isInFov)
         {
-            EnemyStates = States.FollowPath;
+            if (isFollowPath)
+            {
+                EnemyStates = States.FollowPath;
+            }
+            else
+            {
+                EnemyStates = States.Idle;
+
+            }
         }
+    }
+    public void Idle()
+    {
+        if(Vector3.Distance(transform.position,initialPosition) < 1f)
+        {
+            transform.DORotate(initialRotation, 2);
+            navMeshAgent.speed = 0;
+
+        }
+        else
+        {
+            navMeshAgent.SetDestination(initialPosition);
+            navMeshAgent.speed = _speed;
+        }
+
     }
     IEnumerator DelayMovement(Transform nextPoint)
     {
         canPath = false;
-        //Quaternion lookAt = Quaternion.LookRotation(nextPoint.position + transform.forward, Vector3.up);
-        //transform.localRotation = Quaternion.Lerp(transform.rotation, lookAt, 2);
+        
         yield return new WaitForSeconds(2f);
         canPath = true;
     }

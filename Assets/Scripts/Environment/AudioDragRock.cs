@@ -52,7 +52,6 @@ public class AudioDragRock : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        print(rb.velocity.magnitude);
         if (rb.velocity.magnitude > 0 && playerIsPushing)
         {
             PlayAudio();
