@@ -348,6 +348,7 @@ public class PlayerMovement : MonoBehaviour
             print(rb.velocity.magnitude);
 
         }
+        
 
     }
 

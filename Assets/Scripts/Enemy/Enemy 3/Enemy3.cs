@@ -10,23 +10,7 @@ public class Enemy3 : Enemy
     [SerializeField] float timeToShoot;
     public override void NearAttackPlayer()
     {
-        //navMeshAgent.speed = 0;
-        //Vector3 rotationDirection = (player.position - transform.position).normalized;
-        //Quaternion rotationToPlayer = Quaternion.LookRotation(rotationDirection);
-        //transform.rotation = Quaternion.Lerp(transform.rotation, rotationToPlayer, 1 * Time.deltaTime);
-        //if (!isInFov)
-        //{
-        //    EnemyStates = States.FollowPath;
-        //}
-        //counter = counter + Time.deltaTime;
-        ////Instanciar Rayos
-        //if (counter > timeToShoot)
-        //{
-        //    LanzarRayo();
-        //    counter = 0;
-        //}
-
-        // StartCoroutine(CoroutineLanzarRayo());
+        
         print("Atacando de cerca");
     }
     public override void FarAttackPlayer()
@@ -35,7 +19,10 @@ public class Enemy3 : Enemy
         navMeshAgent.SetDestination(Vector3.zero);
         Vector3 rotationDirection = (player.position - transform.position).normalized;
         Quaternion rotationToPlayer = Quaternion.LookRotation(rotationDirection);
-        transform.rotation = Quaternion.Lerp(transform.rotation, rotationToPlayer, 1.5f * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotationToPlayer, 3f * Time.deltaTime);
+
+        anim.SetTrigger("farAttack");
+
     }
 
     public void Dead()
@@ -54,12 +41,4 @@ public class Enemy3 : Enemy
         yield return new WaitForSeconds(1f);
         canPath = true;
     }
-   
-    IEnumerator CoroutineLanzarRayo()
-    {
-        LanzarRayo();
-        yield return new WaitForSeconds(1);
-    }
-  
-
 }
