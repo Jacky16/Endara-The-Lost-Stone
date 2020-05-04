@@ -6,12 +6,21 @@ using UnityEngine.AI;
 public class Enemy2 : Enemy
 {
     [Header("Propiedades Roca")]
-    [SerializeField] GameObject _rockPrefab;
+
+    [SerializeField] 
+    GameObject _rockPrefab;
     GameObject _rockThrowed;
-    [SerializeField] Transform _transformRockPrefab;
-    [SerializeField] Vector3 offsetRock = new Vector3(0, 0.09f, 0);
-    float counter;
-    [SerializeField] float _timeToShoot;
+
+    [SerializeField] 
+    Transform _transformRockPrefab;
+
+    [SerializeField] 
+    Vector3 offsetRock = new Vector3(0, 0.09f, 0);
+
+    [SerializeField]
+    GameObject gameObjectNearAttack;
+    bool activateNearAttack = false;
+    
     public override void NearAttackPlayer()
     {
         anim.SetTrigger("nearAttack");
@@ -28,11 +37,21 @@ public class Enemy2 : Enemy
         {
             EnemyStates = States.FollowPath;
         }
-       
+
     }
 
-   
-    void ThrowRock()
+    public void NearAttack()
+    {
+        activateNearAttack = !activateNearAttack;
+        gameObjectNearAttack.SetActive(activateNearAttack);
+    }
+
+    void InvokeRock()// Se ejecuta en un evento en la animacion de Invocar la roca
+    {
+        _rockThrowed = Instantiate(_rockPrefab, _transformRockPrefab.position, Quaternion.identity, transform) as GameObject;
+
+    }
+    void ThrowRock()// Se ejecuta en un evento en la animacion de lanzar la roca
     {
         RockEnemy2 rockEnemy2 = _rockThrowed.GetComponent<RockEnemy2>();
         Rigidbody rb = _rockThrowed.GetComponent<Rigidbody>();
@@ -43,11 +62,7 @@ public class Enemy2 : Enemy
         Vector3 dir = player.position - transform.position;
         rockEnemy2.ShootRock(dir.normalized + offsetRock, true);
     }
-    void InvokeRock()
-    {
-       _rockThrowed = Instantiate(_rockPrefab, _transformRockPrefab.position, Quaternion.identity,transform) as GameObject;
-       
-    }
+   
     public void CheckRock()
     {
         if (_rockThrowed)
@@ -60,8 +75,8 @@ public class Enemy2 : Enemy
 
             }
         }
-       
-        
-    }
+
+
+    } // Se ejecuta al principio de cada animacion (en eventos) que no sea de lanzar las rocas
 
 }

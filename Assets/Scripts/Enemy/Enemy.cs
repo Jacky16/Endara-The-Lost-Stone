@@ -156,7 +156,7 @@ public abstract class Enemy : MonoBehaviour
 
         //Distancia entre el enemigo y el player
         BetweenDistance = Vector3.Distance(transform.position, player.position);
-        
+
         //Persecucion: si es mayor que el radio de ataque y si la distancia al player es menor que el radio y maximo y en el campo de vision
         if (BetweenDistance > nearRadiusAttack && BetweenDistance < _maxRadius && isInFov)
         {
@@ -181,10 +181,16 @@ public abstract class Enemy : MonoBehaviour
             isInNearAttack = false;
         }
         //Path: sigue la ruta si la distancia es mayor que el radio maximo
-        if (BetweenDistance > _maxRadius)
+        if (BetweenDistance > _maxRadius || !isInFov)
         {
-            //Siguiendo el Path
-            EnemyStates = States.FollowPath;
+            if (isFollowPath)
+            {
+                EnemyStates = States.FollowPath;
+            }
+            else
+            {
+                EnemyStates = States.Idle;
+            }
         }
     }
     void Enemy3()
@@ -323,7 +329,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Cola")
         {
-            life -= 50;
+            life -= 25;
             print("Life Enemy: " + life); 
             anim.SetTrigger("hit");
             if (life <= 0)
