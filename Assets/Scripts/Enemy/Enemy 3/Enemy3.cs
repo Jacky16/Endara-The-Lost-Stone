@@ -6,12 +6,20 @@ using UnityEngine.AI;
 public class Enemy3 : Enemy
 {
     [SerializeField]GameObject rayoPrefab;
+    [SerializeField] GameObject PrefabParticlesNearAttack;
     float counter;
     [SerializeField] float timeToShoot;
+    public LayerMask layerMaskRay;
+    [SerializeField] Transform positionParticlesNearAttack;
     public override void NearAttackPlayer()
     {
-        
-        print("Atacando de cerca");
+        navMeshAgent.speed = 0;
+        navMeshAgent.SetDestination(Vector3.zero);
+        Vector3 rotationDirection = (player.position - transform.position).normalized;
+        Quaternion rotationToPlayer = Quaternion.LookRotation(rotationDirection);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotationToPlayer, 3f * Time.deltaTime);
+        anim.SetTrigger("nearAttack");
+
     }
     public override void FarAttackPlayer()
     {
@@ -20,19 +28,30 @@ public class Enemy3 : Enemy
         Vector3 rotationDirection = (player.position - transform.position).normalized;
         Quaternion rotationToPlayer = Quaternion.LookRotation(rotationDirection);
         transform.rotation = Quaternion.Lerp(transform.rotation, rotationToPlayer, 3f * Time.deltaTime);
-
         anim.SetTrigger("farAttack");
-
     }
-
-    public void Dead()
+    public void Pisoton()
     {
-        //Dead
+        GameObject g = PrefabParticlesNearAttack;
+        Instantiate(g, positionParticlesNearAttack.position, Quaternion.identity);
     }
-
     public void LanzarRayo()
     {
-        Instantiate(rayoPrefab, player.position, Quaternion.identity);
+        GameObject g = rayoPrefab;
+        if (isInFarAttack)
+        {
+            RaycastHit hit;
+            Ray ray;
+            if (Physics.Raycast(player.position, transform.TransformDirection(Vector3.down), out hit, 10, layerMaskRay))
+            {
+                Instantiate(g, hit.point, Quaternion.identity);
+                Destroy(g, 6);
+            }
+        }
+        else
+        {
+            DestroyImmediate(g,true);
+        } 
     }
     
     IEnumerator DelayMovement()

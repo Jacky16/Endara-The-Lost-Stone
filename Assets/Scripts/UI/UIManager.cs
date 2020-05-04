@@ -224,7 +224,7 @@ public class UIManager : MonoBehaviour
     #endregion
     public void ChangeUI()
     {
-        print(InputManager.controlsState);
+       // print(InputManager.controlsState);
         switch (InputManager.controlsState)
         {
             case InputManager.ControlsState.KeyBoard:

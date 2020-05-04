@@ -295,6 +295,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (playerLifeManager.AttempsPlayer() <= 0)
         {
+            canMove = false;
             animDead.SetTrigger("StartDead");
             yield return new WaitForSeconds(1f);
             RespawnToWaypoint();
@@ -302,6 +303,7 @@ public class PlayerMovement : MonoBehaviour
             animDead.SetTrigger("EndDead");
             playerLifeManager.SetLifeToMax();
             gameObject.tag = "Player";
+            canMove = true;
         }     
     }
 

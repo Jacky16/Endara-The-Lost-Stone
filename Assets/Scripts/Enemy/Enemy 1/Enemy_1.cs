@@ -29,11 +29,6 @@ public class Enemy_1 : Enemy
         return damageExplosion/3.0f;
     }
     
-
-    public float Damage()
-    {
-        return attackDamage;
-    }
     public void RestLife(float lifeToRest)
     {
         life -= lifeToRest;

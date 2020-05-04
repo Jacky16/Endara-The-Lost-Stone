@@ -13,16 +13,27 @@ public class RayDamage : MonoBehaviour
     {
         if (other.gameObject.name == "Detection Enemy")
         {
+            if(other.GetComponentInParent<PlayerLifeManager>().AttempsPlayer() <= 0)
+            {
+                Destroy(transform.root.gameObject);
+            }
             other.GetComponentInParent<PlayerLifeManager>().SubstractLife();
+
         }
     }
     void ActivateCollider()
     {
-        boxCollider.enabled = true;
+        StartCoroutine(CoroutineBoxCollider());
     }
     private void OnEnable()
     {    
         Invoke("ActivateCollider", ps.startDelay);
         //Destroy(transform.root, 1);
+    }
+    IEnumerator CoroutineBoxCollider()
+    {
+        boxCollider.enabled = true;
+        yield return new WaitForSeconds(0.2f);
+        boxCollider.enabled = false;
     }
 }

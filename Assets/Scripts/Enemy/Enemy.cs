@@ -10,7 +10,6 @@ public abstract class Enemy : MonoBehaviour
     #region Variables
     [Header("Ajustes de daño y vida")]
     [SerializeField] protected float life = 100;
-    [SerializeField] protected float attackDamage;
     
     //Ajustes del enemigo
     [SerializeField] protected Transform player;
@@ -155,12 +154,9 @@ public abstract class Enemy : MonoBehaviour
         anim.SetBool("isInFarAttack", isInFarAttack);
         anim.SetFloat("speed", navMeshAgent.speed);
 
-        //print("FarAttack: " + isInFarAttack);
-        //print("NearAttack: " + isInNearAttack);
-
         //Distancia entre el enemigo y el player
         BetweenDistance = Vector3.Distance(transform.position, player.position);
-        //print(EnemyStates);
+        
         //Persecucion: si es mayor que el radio de ataque y si la distancia al player es menor que el radio y maximo y en el campo de vision
         if (BetweenDistance > nearRadiusAttack && BetweenDistance < _maxRadius && isInFov)
         {
@@ -196,9 +192,6 @@ public abstract class Enemy : MonoBehaviour
         anim.SetBool("isInNearAttack", isInNearAttack);
         anim.SetBool("isInFarAttack", isInFarAttack);
         anim.SetFloat("speed", navMeshAgent.speed);
-
-        //print("FarAttack: " + isInFarAttack);
-        //print("NearAttack: " + isInNearAttack);
 
         //Distancia entre el enemigo y el player
         BetweenDistance = Vector3.Distance(transform.position, player.position);
@@ -282,7 +275,7 @@ public abstract class Enemy : MonoBehaviour
     }
     public abstract void NearAttackPlayer();
     public abstract void FarAttackPlayer(); 
-    public void Dead()
+    public void DeadEnemy()
     {
         onDead.Invoke();
         Destroy(gameObject);
@@ -335,7 +328,14 @@ public abstract class Enemy : MonoBehaviour
             anim.SetTrigger("hit");
             if (life <= 0)
             {
-                Dead();
+                navMeshAgent.speed = 0;
+                anim.SetTrigger("Dead");
+                Invoke("DeadEnemy", 3);
+                CapsuleCollider capsuleCollider;
+                if(TryGetComponent<CapsuleCollider>(out capsuleCollider))
+                {
+                    capsuleCollider.enabled = false;
+                }
             }
         }
         print(other.gameObject.name);

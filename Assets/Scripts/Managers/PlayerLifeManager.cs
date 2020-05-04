@@ -34,7 +34,7 @@ public class PlayerLifeManager : MonoBehaviour
         _currentAttemps --;
         Debug.Log("Vida del player: " + _currentAttemps);
         LifeSpritesManager();
-        if(_currentAttemps <= 0)
+        if(_currentAttemps == 0)
         {
             _player.PlayerDead();
         }
