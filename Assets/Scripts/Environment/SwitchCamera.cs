@@ -15,6 +15,7 @@ public class SwitchCamera : MonoBehaviour
     bool _lookAtPlayer;
 
     public UnityEvent onCameraChange;
+    public UnityEvent onCameraExit;
     bool _playerIsInside;
     private void Start()
     {
@@ -53,6 +54,7 @@ public class SwitchCamera : MonoBehaviour
         {
             cinemachineVirtualCamera.Priority = 0;
             _playerIsInside = false;
+            onCameraExit.Invoke();
             if (_followPlayer)
             {
                 cinemachineVirtualCamera.Follow = null;

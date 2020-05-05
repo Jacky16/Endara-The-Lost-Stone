@@ -8,6 +8,8 @@ public class GravityPlataform : MonoBehaviour
     float speed;
     bool _isGravity;
     Vector3 originalPosition;
+    [SerializeField]enum States{Y,Z }
+    [SerializeField] States axes = States.Z;
     private void Start()
     {
         originalPosition = transform.position;
@@ -17,7 +19,16 @@ public class GravityPlataform : MonoBehaviour
     {
         if (_isGravity)
         {
-            this.transform.Translate(-Vector3.forward * speed * Time.deltaTime);
+            if(axes == States.Y)
+            {
+                this.transform.Translate(Vector3.down * speed * Time.deltaTime);
+
+            }
+            if (axes == States.Z)
+            {
+                this.transform.Translate(-Vector3.forward * speed * Time.deltaTime);
+
+            }
         }
     }
     public void SetGravity(bool b)
