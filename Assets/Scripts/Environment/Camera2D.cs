@@ -5,6 +5,7 @@ using Cinemachine;
 public class Camera2D : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera cameraVirtual;
+
     private void Start()
     {
         cameraVirtual.Priority = 0;
@@ -13,7 +14,7 @@ public class Camera2D : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             StartCoroutine(SwitchToEnableCamera(other));
         }
@@ -23,11 +24,12 @@ public class Camera2D : MonoBehaviour
         if (other.tag == "Player")
         {
             cameraVirtual.Priority = 11;
+
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.name == "Player")
         {
             other.GetComponent<PlayerMovement>().SetPlayer2D(false);
             StartCoroutine(SwitchToDisableCamera(other));
@@ -46,6 +48,7 @@ public class Camera2D : MonoBehaviour
     }
     IEnumerator SwitchToDisableCamera(Collider other)
     {
+        yield return new WaitForSeconds(0.5f);
         cameraVirtual.Follow = null;
         cameraVirtual.Priority = 0;
         cameraVirtual.enabled = false;
