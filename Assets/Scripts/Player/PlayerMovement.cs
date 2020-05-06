@@ -11,14 +11,15 @@ public class PlayerMovement : MonoBehaviour
 {
     //Componentes
     [Header("Components")]
-    [HideInInspector]public Animator anim;
+    [HideInInspector]
+    public Animator anim;
 
-    CharacterController player;
+    CharacterController characterController;
 
     [SerializeField]
     Animator animDead;
-   
-    [SerializeField] 
+
+    [SerializeField]
     Camera mainCam;
 
     [SerializeField]
@@ -29,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     GodManager godManager;
     public Transform initialPosition;
 
-    [SerializeField] 
+    [SerializeField]
     CapsuleCollider attackCollider;
 
     [Header("Velocidad")]
@@ -44,10 +45,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 camRight;
 
     [Header("Gravedad")]
-    [SerializeField] 
+    [SerializeField]
     float gravity;
 
-    [SerializeField] 
+    [SerializeField]
     float jumpForce;
 
     float fallvelocity;
@@ -78,9 +79,13 @@ public class PlayerMovement : MonoBehaviour
 
     public bool playerIn2D;
     bool _activeAttackCollider;
+
+    //Doubble Jump
+    float coolDown;
+    float timetoJump = 0.2f;
     private void Awake()
     {
-        player = GetComponent<CharacterController>();
+        characterController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         playerLifeManager = GetComponent<PlayerLifeManager>();
         playerSoundMovement = GetComponent<PlayerSoundMovement>();
@@ -88,14 +93,14 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         attackCollider.enabled = false;
-        _activeAttackCollider = false; 
+        _activeAttackCollider = false;
 
         //godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
         //Cursor.visible = false;
         //Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
     }
-    void Update()
+    void FixedUpdate()
     {
         if (canMove)
         {
@@ -108,78 +113,60 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Movimiento()
     {
-        Vector3 movePlayerXZ = Vector3.zero;
         //Obtener los inputs del Input Manager
-        playerInput = new Vector3(InputManager.Vector2Movement().x, 0, InputManager.Vector2Movement().y);
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
 
         //Calcular la direccion del player respecto a la camara
         CamDirection();
         movePlayer = playerInput.x * camRight + playerInput.z * camForward;
 
-        //Calcular el angulo del jostyck de moviemiento y asignarlo a la rotacion del player
-        float shortestAngle = Vector3.SignedAngle(transform.forward, movePlayer, Vector3.up);
-        transform.Rotate(Vector3.up * shortestAngle / 1.5f);
+        if (playerInput.sqrMagnitude > 0.1f)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movePlayer), .5f);
+        }
 
-        SetGravity();
-        JumpPlayer();
-        float downVelocity = movePlayer.y;
         //Aceleracion
         if (playerInput.magnitude > 0.1f)
         {
             currentSpeed += acceleration * Time.deltaTime;
             currentSpeed = Mathf.Clamp(currentSpeed, 0f, speedMax);
         }
-        else 
+        else
         {
             currentSpeed -= acceleration * Time.deltaTime;
             currentSpeed = Mathf.Clamp(currentSpeed, 0f, speedMax);
         }
-
-        movePlayerXZ = (movePlayer * currentSpeed * Time.deltaTime);
-        movePlayerXZ.y = downVelocity;
-
+        anim.SetFloat("PlayerWalkVelocity", currentSpeed);
+        movePlayer *= currentSpeed;
 
         //Si estas en 2.5D, el eje Z se desactiva
         if (playerIn2D)
         {
-            movePlayerXZ.z = 0;
+            movePlayer.z = 0;
         }
-
-        //Asignar el movimiento al vector
-        movePlayer.x = movePlayerXZ.x;
-        movePlayer.z = movePlayerXZ.z;
+        SetGravity();
+        JumpPlayer();
 
         //Asignar movimiento al Character Controller
-        player.Move(movePlayerXZ);
-        movePlayerXZ.y = 0;
+        characterController.Move(movePlayer * Time.deltaTime);
 
-        //Pasar informacion al animator
-        anim.SetFloat("PlayerWalkVelocity", currentSpeed);
     }
     public void SetGravity()
     {
-        if (isGod)
+        anim.SetBool("isGrounded", characterController.isGrounded);
+        if (characterController.isGrounded)
         {
-            ModeGod();
+            fallvelocity = -gravity * Time.deltaTime;
+            movePlayer.y = fallvelocity;
         }
         else
         {
-            anim.SetBool("isGrounded", player.isGrounded);
-            //print("PLayer is grounded: " + player.isGrounded);
-            if (player.isGrounded)
-            {
-                fallvelocity = -gravity * Time.deltaTime;
-                movePlayer.y = fallvelocity;
-            }
-            else
-            {
-                fallvelocity -= gravity * Time.deltaTime;
-                movePlayer.y = fallvelocity;
-            }
-            anim.SetFloat("PlayerVerticalVelocity", player.velocity.y);
-
+            fallvelocity -= gravity * Time.deltaTime;
+            movePlayer.y = fallvelocity;
         }
+        anim.SetFloat("PlayerVerticalVelocity", fallvelocity);
+
+
     }
     void ModeGod()
     {
@@ -206,40 +193,32 @@ public class PlayerMovement : MonoBehaviour
     }
     void JumpPlayer()
     {
-        if (InputManager.playerInputs.PlayerInputs.Jump.triggered)
+        coolDown += Time.deltaTime;
+
+        if (InputManager.playerInputs.PlayerInputs.Jump.triggered && coolDown >= timetoJump)
         {
             if (!doubleJump)
             {
                 return;
             }
 
-            if (!player.isGrounded && !isInMovingPlattform)
+            if (!characterController.isGrounded && !isInMovingPlattform)
             {
-                doubleJump = false;
+                 doubleJump = false;
 
             }
-            if (PickUpObjects.IsCatchedObject())
-            {
-                float myJumpForce = jumpForce / PickUpObjects.MassObjectPicked();
-                fallvelocity = myJumpForce;
-                print(myJumpForce);
-            }
-            if (!PickUpObjects.IsCatchedObject())
-            {
-                fallvelocity = jumpForce;
-                print(jumpForce);
-            }
-            playerSoundMovement.PlaySoundJump();
+
+            fallvelocity = jumpForce;
+            print(jumpForce);
             movePlayer.y = fallvelocity;
             anim.SetTrigger("PlayerJump");
-            
+            coolDown = 0;
         }
 
-        if (!doubleJump &&(player.isGrounded || isInMovingPlattform))
+        if (!doubleJump && (characterController.isGrounded || isInMovingPlattform))
         {
             doubleJump = true;
         }
-
     }
     void CamDirection()
     {
@@ -254,7 +233,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void PlayerDead()
     {
-        if(playerLifeManager.AttempsPlayer() <= 0)
+        if (playerLifeManager.AttempsPlayer() <= 0)
         {
             gameObject.tag = "Untagged";
             anim.SetTrigger("Dead");
@@ -274,11 +253,11 @@ public class PlayerMovement : MonoBehaviour
     }
     public void MeleAtack()
     {
-         anim.SetTrigger("Attack");
+        anim.SetTrigger("Attack");
     }
     public void ColliderAttack()
     {
-        _activeAttackCollider =! _activeAttackCollider;
+        _activeAttackCollider = !_activeAttackCollider;
         attackCollider.enabled = _activeAttackCollider;
     }
     public void SetRespawn(Transform t)
@@ -290,12 +269,11 @@ public class PlayerMovement : MonoBehaviour
         isInMovingPlattform = b;
         print(isInMovingPlattform);
     }
-    
+
     IEnumerator DeadCanvasAnimation() // Cuando te quedas sin vida, se ejecuta en un evento de la animacion de muerte
     {
         if (playerLifeManager.AttempsPlayer() <= 0)
         {
-            canMove = false;
             animDead.SetTrigger("StartDead");
             yield return new WaitForSeconds(1f);
             RespawnToWaypoint();
@@ -303,8 +281,7 @@ public class PlayerMovement : MonoBehaviour
             animDead.SetTrigger("EndDead");
             playerLifeManager.SetLifeToMax();
             gameObject.tag = "Player";
-            canMove = true;
-        }     
+        }
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -339,7 +316,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
             rb.velocity = (pushDir * pushPower) / valueMass;
-            if(rb.velocity.magnitude <= 0.499f)
+            if (rb.velocity.magnitude <= 0.499f)
             {
                 anim.SetBool("isPushing", false);
             }
@@ -350,19 +327,22 @@ public class PlayerMovement : MonoBehaviour
             print(rb.velocity.magnitude);
 
         }
-        
 
     }
 
+    public void Axis(float h, float v)
+    {
+        playerInput.x = h;
+        playerInput.z = v;
+    }
 
-    
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Final")
         {
             SceneManager.LoadScene("VictoryScreen");
         }
-        
+
         if (other.CompareTag("Coin"))
         {
             Instantiate(_prefabParticleCoin, other.transform.position, Quaternion.identity);

@@ -6,16 +6,16 @@ using Cinemachine;
 public class InputManager : MonoBehaviour
 {
     [Header("Componentes Player")]
-    [SerializeField] PlayerMovement _player;
+    [SerializeField] PlayerMovement playerMovement;
     [SerializeField] PickUpObjects _pickUpsObjects;
 
     [Header("Camara Player")]
-    public  CinemachineFreeLook _freeLookCamera;
+    public CinemachineFreeLook _freeLookCamera;
     [Header("Componentes para los inputs")]
     public static InputsPlayer playerInputs;
     public PlayerInput playerInput;
     Vector2 _inputsValueCamera;
-    public static Vector2 movement;
+    Vector2 axisMovement;
     public enum ControlsState { PS4, Xbox, KeyBoard };
     public static ControlsState controlsState;
 
@@ -27,10 +27,9 @@ public class InputManager : MonoBehaviour
         playerInputs = new InputsPlayer();
         playerInput = GetComponent<PlayerInput>();
     }
-  
+
     private void Update()
     {
-        movement = playerInputs.PlayerInputs.Movement.ReadValue<Vector2>();
         playerInputs.PlayerInputs.MovementCamera.canceled += ctx => _freeLookCamera.m_XAxis.m_InputAxisValue = 0;
         #region Comprobacion: Rotacion de objetos
 
@@ -43,6 +42,19 @@ public class InputManager : MonoBehaviour
             _pickUpsObjects.Rotate_R(2.5f);
         }
 
+    }
+    public void ReadValuesAxisMovement(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            axisMovement = ctx.ReadValue<Vector2>();
+            playerMovement.Axis(axisMovement.x, axisMovement.y);
+        }
+        if (ctx.canceled)
+        {
+            axisMovement = ctx.ReadValue<Vector2>();
+            playerMovement.Axis(axisMovement.x, axisMovement.y);
+        }
     }
     public void Rotate_L(InputAction.CallbackContext ctx)
     {
@@ -68,11 +80,13 @@ public class InputManager : MonoBehaviour
     }
     #endregion
 
+
+
     public void Attack(InputAction.CallbackContext ctx)
     {
         if (ctx.started && !PickUpObjects.CanCatchObject() && PlayerMovement.canMove)
         {
-            _player.MeleAtack();
+            playerMovement.MeleAtack();
         }
     }
     public void CatchObject(InputAction.CallbackContext ctx)
@@ -109,11 +123,8 @@ public class InputManager : MonoBehaviour
         }
         _freeLookCamera.m_YAxis.m_InputAxisValue = _inputsValueCamera.y;
     }
-    
-    public static Vector2 Vector2Movement()
-    {
-        return movement;
-    }
+
+
     private void OnEnable()
     {
         playerInputs.Enable();
