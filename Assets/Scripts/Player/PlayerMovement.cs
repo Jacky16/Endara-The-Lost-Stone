@@ -213,6 +213,7 @@ public class PlayerMovement : MonoBehaviour
             movePlayer.y = fallvelocity;
             anim.SetTrigger("PlayerJump");
             coolDown = 0;
+            playerSoundMovement.PlaySoundJump();
         }
 
         if (!doubleJump && (characterController.isGrounded || isInMovingPlattform))
