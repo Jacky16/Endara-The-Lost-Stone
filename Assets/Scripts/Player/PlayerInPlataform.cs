@@ -9,6 +9,20 @@ public class PlayerInPlataform : MonoBehaviour
 
     Vector3 originalPosition;
     bool animationFallRuning = false;
+    [Header("Velocity Animation")]
+    [SerializeField]
+    float velocityFall = 0.3f;
+
+    [SerializeField]
+    float velocityUp = 1.5f;
+
+    [Header("Easies")]
+    [SerializeField]
+    Ease easeFall;
+
+    [SerializeField]
+    Ease easeUp;
+
     private void Start()
     {
         originalPosition = transform.position;
@@ -36,7 +50,7 @@ public class PlayerInPlataform : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.name == "Player")
         {
             other.transform.parent = null;
             other.GetComponent<PlayerMovement>().SetMovingPlattform(false);
@@ -53,9 +67,9 @@ public class PlayerInPlataform : MonoBehaviour
     {
         animationFallRuning = true;
         Sequence secuence = DOTween.Sequence();
-        secuence.Append(transform.DOMoveY(originalPosition.y - 1f, .3f).SetEase(Ease.OutQuint));
+        secuence.Append(transform.DOMoveY(originalPosition.y - 1f, velocityFall).SetEase(easeFall));
         secuence.AppendCallback(AnimationFallEnd);
-        secuence.Append(transform.DOMoveY(originalPosition.y, 1.5f).SetEase(Ease.OutQuint)); 
+        secuence.Append(transform.DOMoveY(originalPosition.y, velocityUp)).SetEase(easeUp);
     }
     void AnimationFallEnd()
     {

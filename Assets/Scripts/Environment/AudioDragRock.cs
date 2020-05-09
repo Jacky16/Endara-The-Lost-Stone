@@ -24,19 +24,17 @@ public class AudioDragRock : MonoBehaviour
     }
     public void PlayAudio()
     {
-        if (!audioSource.isPlaying)
-        {
-            audioSource.volume = 1;
-            audioSource.PlayOneShot(AudiosDragRock());
-        }
+       
+        audioSource.DOFade(.1f, 1f).OnStart(() => audioSource.PlayOneShot(AudiosDragRock()));
+            
+        
            
     }
     public void StopAudio()
     {
-        if (audioSource.isPlaying)
-        {
-            audioSource.DOFade(0, 1).OnComplete(() => audioSource.Stop());
-        }
+        
+        audioSource.DOFade(0, 1).OnComplete(() => audioSource.Stop());
+        
     }
     private AudioClip AudiosDragRock()
     {
@@ -44,39 +42,34 @@ public class AudioDragRock : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.name == "Interaction Zone")
         {
-            other.GetComponent<Animator>().SetBool("isPushing", false);
             playerIsPushing = true;
+            other.GetComponentInParent<Animator>().SetBool("isPushing", playerIsPushing);
         }
     }
     private void OnTriggerStay(Collider other)
     {
-        if (rb.velocity.magnitude > 0 && playerIsPushing)
+        float magnitudeRock = Mathf.Clamp01(rb.velocity.magnitude);
+        print(magnitudeRock);
+        if (magnitudeRock > 0 && playerIsPushing)
         {
             PlayAudio();
         }
-        else if (rb.velocity.magnitude <= 0)
+        else if (magnitudeRock <= 0)
         {
             StopAudio();
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.name == "Interaction Zone")
         {
-            other.GetComponent<Animator>().SetBool("isPushing", false);
             playerIsPushing = false;
+            other.GetComponentInParent<Animator>().SetBool("isPushing", playerIsPushing);
         }
     }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            collision.gameObject.GetComponent<Animator>().SetBool("isPushing", false);
-
-        }
-    }
+    
    
 
 }
