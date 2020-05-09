@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9017985685608602109}
   - component: {fileID: 8187842495758389857}
   - component: {fileID: 1067089395}
-  - component: {fileID: 1067089394}
+  - component: {fileID: 2744816331851313108}
   m_Layer: 0
   m_Name: Plataforma_02
   m_TagString: Untagged
@@ -112,7 +112,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &1067089394
+--- !u!114 &2744816331851313108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,4 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86706d285b98eab49a4aa8b56053a466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGravity: 0
+  doAnimationFall: 1
+  velocityFall: 0.7
+  velocityUp: 1
+  easeFall: 3
+  easeUp: 3

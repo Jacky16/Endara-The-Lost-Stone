@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5649066177010387590}
   - component: {fileID: 4709163842789352107}
   - component: {fileID: 185445340}
-  - component: {fileID: 185445339}
   m_Layer: 0
   m_Name: Plataforma_03
   m_TagString: Untagged
@@ -109,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86706d285b98eab49a4aa8b56053a466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGravity: 0
+  doAnimationFall: 0
 --- !u!54 &185445340
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,20 +125,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &185445339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5746137538505819577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217b39f7720b5b34c8292e3d5e0f6351, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformsPositions:
-  - {fileID: 0}
-  - {fileID: 0}
-  speed: 5
-  timeBetweenPoints: 0.5

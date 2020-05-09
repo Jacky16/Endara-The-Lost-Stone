@@ -317,16 +317,6 @@ public class PlayerMovement : MonoBehaviour
             Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
             rb.velocity = (pushDir * pushPower) / valueMass;
-            if (rb.velocity.magnitude <= 0.499f)
-            {
-                anim.SetBool("isPushing", false);
-            }
-            if (rb.velocity.magnitude > 0)
-            {
-                anim.SetBool("isPushing", true);
-            }
-            print(rb.velocity.magnitude);
-
         }
 
     }
