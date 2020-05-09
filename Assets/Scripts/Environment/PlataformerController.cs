@@ -25,8 +25,6 @@ public class PlataformerController : MonoBehaviour
     }
     public void Movement()
     {
-
-
         if (canMove)
         {
            
@@ -54,18 +52,18 @@ public class PlataformerController : MonoBehaviour
         yield return new WaitForSeconds(time);
         canMove = true;
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.transform.parent = transform;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.transform.parent = null;
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Player"))
+    //    {
+    //        other.transform.parent = transform;
+    //    }
+    //}
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Player"))
+    //    {
+    //        other.transform.parent = null;
+    //    }
+    //}
 }

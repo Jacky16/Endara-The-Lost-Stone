@@ -50,7 +50,7 @@ public class PlayerInPlataform : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.name == "Player")
         {
             other.transform.parent = null;
             other.GetComponent<PlayerMovement>().SetMovingPlattform(false);
