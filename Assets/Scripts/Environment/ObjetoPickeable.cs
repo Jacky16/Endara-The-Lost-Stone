@@ -8,6 +8,11 @@ public class ObjetoPickeable : MonoBehaviour
 {
     public bool isPickeable = true;
     public bool isRoteable = false;
+    [SerializeField]
+    bool emitParticleSmoke;
+
+    [SerializeField]
+    ParticleSystem particleSmoke;
    
     private void OnTriggerEnter(Collider other)
     {
@@ -18,6 +23,7 @@ public class ObjetoPickeable : MonoBehaviour
             other.GetComponentInParent<PickUpObjects>().SetCanRotate(isRoteable && true);
 
         }
+       
     }
     private void OnTriggerExit(Collider other)
     {
@@ -26,10 +32,16 @@ public class ObjetoPickeable : MonoBehaviour
             other.GetComponentInParent<PickUpObjects>().objectToPickup = null;
             other.GetComponentInParent<PickUpObjects>().SetCanCatch(false);
             other.GetComponentInParent<PickUpObjects>().SetCanRotate(!isRoteable && false);
-
-
         }
     }
-    
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (emitParticleSmoke)
+        {
+            particleSmoke.Play();
+        }
+        
+    }
+
+
 }

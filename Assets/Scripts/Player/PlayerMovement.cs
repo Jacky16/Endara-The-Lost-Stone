@@ -66,8 +66,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     GameObject _prefabParticleCoin;
     [SerializeField]
-    ParticleSystem particleSystem_Movement;
-    [SerializeField]
     ParticleSystem particleSystem_Jump;
     
     //Variables booleanas
@@ -154,7 +152,6 @@ public class PlayerMovement : MonoBehaviour
     public void SetGravity()
     {
         anim.SetBool("isGrounded", characterController.isGrounded);
-        ParticlesMovement(characterController.isGrounded); //Activavion o desactivacion de las particulas de movimiento
         if (characterController.isGrounded)
         {
             fallvelocity = -gravity * Time.deltaTime;
@@ -270,17 +267,7 @@ public class PlayerMovement : MonoBehaviour
         isInMovingPlattform = b;
         print(isInMovingPlattform);
     }
-    void ParticlesMovement(bool playerGrounded)
-    {
-        if (playerGrounded)
-        {
-            particleSystem_Movement.enableEmission = true;
-        }
-        else
-        {
-            particleSystem_Movement.enableEmission = false;
-        }
-    }
+   
     void ParticlesJump()
     {
         particleSystem_Jump.Play();
