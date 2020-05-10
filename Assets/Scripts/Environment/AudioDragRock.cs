@@ -24,11 +24,11 @@ public class AudioDragRock : MonoBehaviour
     }
     public void PlayAudio()
     {
-       
-        audioSource.DOFade(.1f, 1f).OnStart(() => audioSource.PlayOneShot(AudiosDragRock()));
-            
+        if (!audioSource.isPlaying)
+        {
+            audioSource.DOFade(.1f, 1f).OnStart(() => audioSource.PlayOneShot(AudiosDragRock()));
+        }
         
-           
     }
     public void StopAudio()
     {
