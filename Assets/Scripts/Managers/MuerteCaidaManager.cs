@@ -18,7 +18,7 @@ public class MuerteCaidaManager : MonoBehaviour
     }
     IEnumerator DeadFallAnimationCanvas() //Cuando te caes al vacio
     {
-        if (player.playerIn2D)
+        if (player.PlayerIn2D())
         {
             player.SetPlayer2D(false);
         }

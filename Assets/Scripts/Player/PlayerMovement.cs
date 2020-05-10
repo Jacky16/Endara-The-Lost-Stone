@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using System.Diagnostics;
+
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
@@ -17,9 +19,9 @@ public class PlayerMovement : MonoBehaviour
     CharacterController characterController;
 
     [SerializeField]
+    [Header("Animator Canvas Dead")]
     Animator animDead;
 
-    [SerializeField]
     Camera mainCam;
 
     [SerializeField]
@@ -33,18 +35,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     CapsuleCollider attackCollider;
 
-    [Header("Velocidad")]
+    [Header("Velocidad y aceleración")]
     public float speedMax;
     public float acceleration = 20f;
     private float currentSpeed = 0f;
 
-    [Header("Controles")]
+    //Vectores
     private Vector3 playerInput;
     private Vector3 movePlayer;
     private Vector3 camForward;
     private Vector3 camRight;
 
-    [Header("Gravedad")]
+    [Header("Gravedad y salto")]
     [SerializeField]
     float gravity;
 
@@ -54,41 +56,39 @@ public class PlayerMovement : MonoBehaviour
     float fallvelocity;
 
     [Header("Fuerza de empuje")]
-    public float pushPower = 2f;
-
-    [Header("Respawn Position")]
     [SerializeField]
+    float pushPower = 2f;
+
+    //Donde se almacena la posicion del checkpoint
     Transform respawnCheckpoint;
 
-    [Header("Particle Coin")]
+    [Header("Particulas")]
     [SerializeField]
     GameObject _prefabParticleCoin;
-
-    float unitsGod;
-
+    [SerializeField]
+    ParticleSystem particleSystem_Movement;
+    [SerializeField]
+    ParticleSystem particleSystem_Jump;
+    
     //Variables booleanas
     public static bool canMove = true;
-    public bool isGod;
-    [SerializeField]
-    bool isInitialPosition;
-
-    public bool doubleJump = true;
-
-    [SerializeField]
+    [HideInInspector] public bool isModeGod;
+    float unitsGod;
     bool isInMovingPlattform;
-
-    public bool playerIn2D;
+    bool playerIn2D;
     bool _activeAttackCollider;
 
-    //Doubble Jump
+    //Double Jump
     float coolDown;
     float timetoJump = 0.2f;
+    bool doubleJump = true;
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         playerLifeManager = GetComponent<PlayerLifeManager>();
         playerSoundMovement = GetComponent<PlayerSoundMovement>();
+        mainCam = Camera.main;
     }
     private void Start()
     {
@@ -154,6 +154,7 @@ public class PlayerMovement : MonoBehaviour
     public void SetGravity()
     {
         anim.SetBool("isGrounded", characterController.isGrounded);
+        ParticlesMovement(characterController.isGrounded); //Activavion o desactivacion de las particulas de movimiento
         if (characterController.isGrounded)
         {
             fallvelocity = -gravity * Time.deltaTime;
@@ -171,9 +172,8 @@ public class PlayerMovement : MonoBehaviour
     void ModeGod()
     {
         unitsGod = godManager.UnitsToJumpInModeGod();
-        if (isGod)
+        if (isModeGod)
         {
-            Debug.Log("Es Dios");
             if (Input.GetKey(KeyCode.Space))
             {
                 movePlayer.y += unitsGod;
@@ -194,7 +194,6 @@ public class PlayerMovement : MonoBehaviour
     void JumpPlayer()
     {
         coolDown += Time.deltaTime;
-
         if (InputManager.playerInputs.PlayerInputs.Jump.triggered && coolDown >= timetoJump)
         {
             if (!doubleJump)
@@ -214,6 +213,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetTrigger("PlayerJump");
             coolDown = 0;
             playerSoundMovement.PlaySoundJump();
+            ParticlesJump(); //Particulas al saltar
         }
 
         if (!doubleJump && (characterController.isGrounded || isInMovingPlattform))
@@ -270,7 +270,21 @@ public class PlayerMovement : MonoBehaviour
         isInMovingPlattform = b;
         print(isInMovingPlattform);
     }
-
+    void ParticlesMovement(bool playerGrounded)
+    {
+        if (playerGrounded)
+        {
+            particleSystem_Movement.enableEmission = true;
+        }
+        else
+        {
+            particleSystem_Movement.enableEmission = false;
+        }
+    }
+    void ParticlesJump()
+    {
+        particleSystem_Jump.Play();
+    }
     IEnumerator DeadCanvasAnimation() // Cuando te quedas sin vida, se ejecuta en un evento de la animacion de muerte
     {
         if (playerLifeManager.AttempsPlayer() <= 0)
@@ -284,21 +298,8 @@ public class PlayerMovement : MonoBehaviour
             gameObject.tag = "Player";
         }
     }
-
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        ////Salto entre plataformas
-        //if (!player.isGrounded && hit.normal.y < 0.1f)
-        //{
-        //Debug.Log("He saltado en entre plataformas");
-
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //    {
-        //    verticalVelocity = jumpForce;
-        //    movePlayer = hit.normal * 1.5f;
-        //    }
-
-        //}
         if (hit.collider.CompareTag("Cubo"))
         {
             float valueMass;
@@ -320,13 +321,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-
     public void Axis(float h, float v)
     {
         playerInput.x = h;
         playerInput.z = v;
     }
-
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Final")
@@ -356,6 +355,14 @@ public class PlayerMovement : MonoBehaviour
             _coinManager.SumCoins();
             Destroy(other.gameObject);
         }
+    }
+    public bool PlayerIn2D()
+    {
+        return playerIn2D;
+    }
+    public bool IsModeGod()
+    {
+        return isModeGod;
     }
 
 }
