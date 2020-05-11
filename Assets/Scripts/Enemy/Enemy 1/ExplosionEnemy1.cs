@@ -6,20 +6,26 @@ using UnityEngine.Events;
 
 public class ExplosionEnemy1 : MonoBehaviour
 {
-    [SerializeField]float damageExplosion = 5;
-    public float radiusExplosion;
+    bool canDamage = true;
     public CinemachineImpulseSource cinemachineImpulseSource;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "Detection Enemy")
+        if(other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponentInParent<PlayerLifeManager>().SubstractLife();
-            cinemachineImpulseSource.GenerateImpulse();
+            if (canDamage)
+            {
+                other.gameObject.GetComponent<PlayerLifeManager>().SubstractLife();
+                cinemachineImpulseSource.GenerateImpulse();
+                
+            }
+            canDamage = false;
         }
+
     }
     private void OnEnable()
     {
-        Destroy(gameObject, 1f);
+        canDamage = true;
+        Destroy(gameObject, 10f);
     }
 
 }

@@ -22,9 +22,9 @@ public class GodManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F10))
         {
-           playerMovement.isGod = !playerMovement.isGod;
+           playerMovement.isModeGod = !playerMovement.IsModeGod();
         }
-        if (playerMovement.isGod)
+        if (playerMovement.IsModeGod())
         {
             canvasModeGod.SetActive(true);
             textSpaceUp.text = "Space = Up " + UnitsToJumpInModeGod().ToString() + " Units";

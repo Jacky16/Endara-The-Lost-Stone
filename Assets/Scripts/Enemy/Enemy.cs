@@ -329,20 +329,28 @@ public abstract class Enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Cola")
         {
-            life -= 25;
-            print("Life Enemy: " + life); 
-            anim.SetTrigger("hit");
-            if (life <= 0)
+            if(enemyType != EnemyType.Enemy1)
             {
-                navMeshAgent.speed = 0;
-                anim.SetTrigger("Dead");
-                Invoke("DeadEnemy", 3);
-                CapsuleCollider capsuleCollider;
-                if(TryGetComponent<CapsuleCollider>(out capsuleCollider))
+                life -= 25;
+                print("Life Enemy: " + life);
+                anim.SetTrigger("hit");
+                if (life <= 0)
                 {
-                    capsuleCollider.enabled = false;
+                    navMeshAgent.speed = 0;
+                    anim.SetTrigger("Dead");
+                    Invoke("DeadEnemy", 3);
+                    CapsuleCollider capsuleCollider;
+                    if (TryGetComponent<CapsuleCollider>(out capsuleCollider))
+                    {
+                        capsuleCollider.enabled = false;
+                    }
                 }
             }
+            else
+            {
+                anim.SetTrigger("Explosion");
+            }
+            
         }
         print(other.gameObject.name);
     }

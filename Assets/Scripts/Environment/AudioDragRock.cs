@@ -11,6 +11,8 @@ public class AudioDragRock : MonoBehaviour
 
     AudioSource audioSource;
     Rigidbody rb;
+    [SerializeField]
+    ParticleSystem particleSystemSmoke;
 
     bool playerIsPushing;
     private void Awake()
@@ -18,23 +20,16 @@ public class AudioDragRock : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
     }
-    private void FixedUpdate()
-    {
-        
-    }
     public void PlayAudio()
     {
-       
-        audioSource.DOFade(.1f, 1f).OnStart(() => audioSource.PlayOneShot(AudiosDragRock()));
-            
-        
-           
+        if (!audioSource.isPlaying)
+        {
+            audioSource.DOFade(.1f, 1f).OnStart(() => audioSource.PlayOneShot(AudiosDragRock()));
+        } 
     }
     public void StopAudio()
-    {
-        
-        audioSource.DOFade(0, 1).OnComplete(() => audioSource.Stop());
-        
+    {    
+        audioSource.DOFade(0, 1).OnComplete(() => audioSource.Stop());       
     }
     private AudioClip AudiosDragRock()
     {
@@ -69,7 +64,4 @@ public class AudioDragRock : MonoBehaviour
             other.GetComponentInParent<Animator>().SetBool("isPushing", playerIsPushing);
         }
     }
-    
-   
-
 }
