@@ -76,6 +76,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ResetPuzzle_3",
+                    "type": "Button",
+                    "id": "4408f104-1405-47fa-96ab-d51b4c98b163",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -417,6 +425,39 @@
                     "processors": "",
                     "groups": "PS4",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9fd58d25-1ff1-40b9-907d-d2523492360d",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "ResetPuzzle_3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "24308e80-6dfb-4d2b-b2fa-1813ae34f0d3",
+                    "path": "<XInputController>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox",
+                    "action": "ResetPuzzle_3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "21f3de08-c583-47f8-a852-c58be4ce1fe5",
+                    "path": "<DualShockGamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PS4",
+                    "action": "ResetPuzzle_3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -89,6 +89,14 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ResetPuzzle_3"",
+                    ""type"": ""Button"",
+                    ""id"": ""4408f104-1405-47fa-96ab-d51b4c98b163"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -432,6 +440,39 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9fd58d25-1ff1-40b9-907d-d2523492360d"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardMouse"",
+                    ""action"": ""ResetPuzzle_3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""24308e80-6dfb-4d2b-b2fa-1813ae34f0d3"",
+                    ""path"": ""<XInputController>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox"",
+                    ""action"": ""ResetPuzzle_3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""21f3de08-c583-47f8-a852-c58be4ce1fe5"",
+                    ""path"": ""<DualShockGamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PS4"",
+                    ""action"": ""ResetPuzzle_3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -488,6 +529,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
         m_PlayerInputs_Attack = m_PlayerInputs.FindAction("Attack", throwIfNotFound: true);
         m_PlayerInputs_MovementCamera = m_PlayerInputs.FindAction("MovementCamera", throwIfNotFound: true);
         m_PlayerInputs_Pause = m_PlayerInputs.FindAction("Pause", throwIfNotFound: true);
+        m_PlayerInputs_ResetPuzzle_3 = m_PlayerInputs.FindAction("ResetPuzzle_3", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -546,6 +588,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerInputs_Attack;
     private readonly InputAction m_PlayerInputs_MovementCamera;
     private readonly InputAction m_PlayerInputs_Pause;
+    private readonly InputAction m_PlayerInputs_ResetPuzzle_3;
     public struct PlayerInputsActions
     {
         private @InputsPlayer m_Wrapper;
@@ -559,6 +602,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
         public InputAction @Attack => m_Wrapper.m_PlayerInputs_Attack;
         public InputAction @MovementCamera => m_Wrapper.m_PlayerInputs_MovementCamera;
         public InputAction @Pause => m_Wrapper.m_PlayerInputs_Pause;
+        public InputAction @ResetPuzzle_3 => m_Wrapper.m_PlayerInputs_ResetPuzzle_3;
         public InputActionMap Get() { return m_Wrapper.m_PlayerInputs; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -595,6 +639,9 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                 @Pause.started -= m_Wrapper.m_PlayerInputsActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_PlayerInputsActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_PlayerInputsActionsCallbackInterface.OnPause;
+                @ResetPuzzle_3.started -= m_Wrapper.m_PlayerInputsActionsCallbackInterface.OnResetPuzzle_3;
+                @ResetPuzzle_3.performed -= m_Wrapper.m_PlayerInputsActionsCallbackInterface.OnResetPuzzle_3;
+                @ResetPuzzle_3.canceled -= m_Wrapper.m_PlayerInputsActionsCallbackInterface.OnResetPuzzle_3;
             }
             m_Wrapper.m_PlayerInputsActionsCallbackInterface = instance;
             if (instance != null)
@@ -626,6 +673,9 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
+                @ResetPuzzle_3.started += instance.OnResetPuzzle_3;
+                @ResetPuzzle_3.performed += instance.OnResetPuzzle_3;
+                @ResetPuzzle_3.canceled += instance.OnResetPuzzle_3;
             }
         }
     }
@@ -668,5 +718,6 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnMovementCamera(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnResetPuzzle_3(InputAction.CallbackContext context);
     }
 }

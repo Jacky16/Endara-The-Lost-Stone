@@ -46,7 +46,6 @@ public class AudioDragRock : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         float magnitudeRock = Mathf.Clamp01(rb.velocity.magnitude);
-        print(magnitudeRock);
         if (magnitudeRock > 0 && playerIsPushing)
         {
             PlayAudio();
