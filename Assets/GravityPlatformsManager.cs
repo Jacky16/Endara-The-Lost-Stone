@@ -6,8 +6,6 @@ public class GravityPlatformsManager : MonoBehaviour
 {
     [SerializeField]
     GameObject[] _gameObjectsPlattforms;
-
-
     List<GravityPlataform> _listGravityPlattforms = new List<GravityPlataform>();
     private void Start()
     {
@@ -21,9 +19,7 @@ public class GravityPlatformsManager : MonoBehaviour
         {
             gp.SetGravity(false);
         }
-
     }
- 
     public void ActivateGravityPlattforms()
     {
         foreach (GravityPlataform gp in _listGravityPlattforms)

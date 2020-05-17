@@ -9,8 +9,9 @@ public class PlayerLifeManager : MonoBehaviour
 {
     [SerializeField] 
     float _maxAttemps = 3;
-    [SerializeField]
+  
     float _currentAttemps;
+
     private PlayerMovement _player;
 
     [SerializeField] 
