@@ -7,14 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_DistortionShader
-  m_Shader: {fileID: -6465566751694194690, guid: d1ef0879b0da90546a1299447eadd8f2,
+  m_Name: Shader Graphs_Distorsion Shader
+  m_Shader: {fileID: -6465566751694194690, guid: f62fa6d0fdd8e6c469d24ac73c4548d3,
     type: 3}
   m_ShaderKeywords: _BLENDMODE_ALPHA _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap:
     MotionVector: User
     RenderType: Transparent
@@ -23,25 +23,21 @@ Material:
   - TransparentBackface
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - Texture2D_4BD08423:
-        m_Texture: {fileID: 2800000, guid: 2f18b1e8de951e143a43334eec6e45a4, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_839BA913:
-        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Floats:
-    - Vector1_6091EA2C: 0
-    - Vector1_62C9B90: 1
-    - Vector1_9A9133CA: 1.19
+    - Vector1_62F6E73B: 8.09
+    - Vector1_6A6D5FAA: 72.44
+    - Vector1_6EB37231: 0.63
+    - Vector1_758553B3: 0
+    - Vector1_A3C61524: 8.5
+    - Vector1_EF730B23: 80.1
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
     - _BlendMode: 0
     - _CullMode: 2
     - _CullModeForward: 2
+    - _DiffusionProfileHash: 0
     - _DoubleSidedEnable: 0
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 10
@@ -64,21 +60,20 @@ Material:
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentSortPriority: 0
-    - _TransparentZWrite: 0
+    - _TransparentZWrite: 1
     - _UseShadowThreshold: 0
-    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestDepthEqualForOpaque: 0
     - _ZTestGBuffer: 4
-    - _ZTestTransparent: 4
-    - _ZWrite: 0
+    - _ZTestTransparent: 0
+    - _ZWrite: 1
     m_Colors:
-    - Color_8229043B: {r: NaN, g: NaN, b: NaN, a: 1}
-    - Vector2_3BC2A210: {r: 0.2, g: 0.2, b: 0, a: 0}
-    - Vector2_60EA7447: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_D04A456E: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_D15838FE: {r: 0.5, g: 0.5, b: 0, a: 0}
-    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - Color_A4CAD641: {r: 785404, g: 0, b: 304292.66, a: 0}
+    - Vector2_BE72FE7B: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_F6AC0B77: {r: 289.28, g: 0, b: 1, a: 0}
+    - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &8402768538559121387
+--- !u!114 &8952932602737138670
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
