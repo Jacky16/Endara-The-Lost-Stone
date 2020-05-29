@@ -41,7 +41,6 @@ public class InputManager : MonoBehaviour
         {
             _pickUpsObjects.Rotate_R(2.5f);
         }
-
     }
     public void ReadValuesAxisMovement(InputAction.CallbackContext ctx)
     {
@@ -79,8 +78,6 @@ public class InputManager : MonoBehaviour
         }
     }
     #endregion
-
-
 
     public void Attack(InputAction.CallbackContext ctx)
     {

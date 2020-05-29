@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PickUpObjects : MonoBehaviour
 {
-    public GameObject objectToPickup;
-    public GameObject PickedObject;
+    [HideInInspector] public GameObject objectToPickup;
+    [HideInInspector] public GameObject PickedObject;
     Transform _interactionZone;
     static bool _canCatchObject;
     static bool _isCatched;

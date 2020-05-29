@@ -33,6 +33,7 @@ public class PlayerInPlataform : MonoBehaviour
         if (other.gameObject.name == "Player")
         {
             other.transform.SetParent(transform);
+            other.GetComponent<PlayerMovement>().SetMovingPlattform(true);
             if (doAnimationFall && !animationFallRuning)
             {
                 AnimationFallInit();
@@ -42,7 +43,7 @@ public class PlayerInPlataform : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.name == "Player")
         {
             other.GetComponent<PlayerMovement>().SetMovingPlattform(true);
         }
@@ -52,7 +53,7 @@ public class PlayerInPlataform : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            other.transform.parent = null;
+            other.transform.SetParent(null);
             other.GetComponent<PlayerMovement>().SetMovingPlattform(false);
         }
     }

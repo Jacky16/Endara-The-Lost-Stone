@@ -92,6 +92,10 @@ public class PlayerMovement : MonoBehaviour
     {
         attackCollider.enabled = false;
         _activeAttackCollider = false;
+        speedMax = 10;
+        acceleration = 40;
+        gravity = 20;
+        jumpForce = 9.5f;
 
         //godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
         //Cursor.visible = false;
@@ -201,7 +205,6 @@ public class PlayerMovement : MonoBehaviour
             if (!characterController.isGrounded && !isInMovingPlattform)
             {
                  doubleJump = false;
-
             }
 
             fallvelocity = jumpForce;
