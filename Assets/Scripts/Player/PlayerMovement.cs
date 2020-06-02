@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         //Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
     }
-    void FixedUpdate()
+    void Update()
     {
         if (canMove)
         {

@@ -82,7 +82,6 @@ public abstract class Enemy : MonoBehaviour
 
                         if (hit.transform == target.transform)
                         {
-                            Debug.Log("IsInFov");
                             isInFov = true;
                         }
                     }
