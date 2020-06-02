@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
-
+using UnityEngine.Events;
 
 public class PlayerLifeManager : MonoBehaviour
 {
@@ -18,6 +18,7 @@ public class PlayerLifeManager : MonoBehaviour
     Image [] _imagesLife;
     [SerializeField] 
     float numHeards;
+    public UnityEvent OnDead;
 
     private void Awake()
     {
@@ -38,6 +39,7 @@ public class PlayerLifeManager : MonoBehaviour
         if(_currentAttemps == 0)
         {
             _player.PlayerDead();
+            OnDead.Invoke();
         }
     }
     public float AttempsPlayer()
