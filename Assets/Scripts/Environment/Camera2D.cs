@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using DG.Tweening;
+
 public class Camera2D : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera cameraVirtual;
-
+    [SerializeField]
+    Transform cv_OrinalPositon;
+    [SerializeField]
+    Transform center2D;
     private void Start()
     {
         cameraVirtual.Priority = 0;
@@ -17,6 +22,7 @@ public class Camera2D : MonoBehaviour
         if (other.tag == "Player")
         {
             StartCoroutine(SwitchToEnableCamera(other));
+            other.transform.DOMoveZ(center2D.position.z, 1).SetEase(Ease.Linear);
         }
     }
     private void OnTriggerStay(Collider other)
@@ -36,6 +42,17 @@ public class Camera2D : MonoBehaviour
 
         }
     }
+    public void ResetPosition()
+    {
+        StartCoroutine(DelayResetPositionCV());
+    }
+    public IEnumerator DelayResetPositionCV()
+    {
+        yield return new WaitForSeconds(1.5f);
+        cameraVirtual.Priority = 0;
+        cameraVirtual.Follow = cv_OrinalPositon;
+    }
+
 
     IEnumerator SwitchToEnableCamera(Collider other)
     {
