@@ -27,7 +27,9 @@ public class RockPuzzle3 : MonoBehaviour
     {
         boxCollider.enabled = false;
         canSnap = true;
+        rb.isKinematic = false;
         transform.position = _OriginalPosition;
+        transform.SetParent(null);
         yield return new WaitForSeconds(.5f);
         boxCollider.enabled = true;
     }

@@ -41,6 +41,18 @@ public class Puzzle3Manager : MonoBehaviour
 
     [SerializeField]
     Sprite _spriteButtonRestet_PS4;
+    
+    //Cajas destruibles
+    [Header("Box Componentes")]
+    [SerializeField]
+    GameObject destructibleBox;
+    [SerializeField]
+    Transform[] positionBoxes;
+    bool isDestroyed_Box1;
+    bool isDestroyed_Box2;
+    bool isDestroyed_Box3;
+    [SerializeField]
+    CofreManager[] cofreManagers;
 
     private void Awake()
     {
@@ -82,7 +94,11 @@ public class Puzzle3Manager : MonoBehaviour
             animFade.SetTrigger("DeadCaida_Start");
 
             yield return new WaitForSeconds(1);
-
+            SpawnBoxes();
+            CloseAllCofres();
+            isDestroyed_Box1 = false;
+            isDestroyed_Box2 = false;
+            isDestroyed_Box3 = false;
             playerTransform.position = _spawnPosition.position;
             foreach (RockPuzzle3 rp3 in rocksPuzzle3)
             {
@@ -91,5 +107,42 @@ public class Puzzle3Manager : MonoBehaviour
             animFade.SetTrigger("DeadCaida_End");
 
         }
+    }
+    void CloseAllCofres()
+    {
+        foreach(CofreManager cm in cofreManagers)
+        {
+            cm.Close();
+        }
+    }
+    void SpawnBoxes()
+    {
+        if (isDestroyed_Box1)
+        {
+            GameObject go = Instantiate(destructibleBox, positionBoxes[0].position, positionBoxes[0].rotation);
+            go.transform.localScale = new Vector3(1.368012f, 1.368012f, 1.368012f);
+        }
+        if (isDestroyed_Box2)
+        {
+            GameObject go = Instantiate(destructibleBox, positionBoxes[1].position, positionBoxes[1].rotation);
+            go.transform.localScale = new Vector3(1.368012f, 1.368012f, 1.368012f);
+        }
+        if (isDestroyed_Box3)
+        {
+            GameObject go = Instantiate(destructibleBox, positionBoxes[2].position, positionBoxes[2].rotation);
+            go.transform.localScale = new Vector3(1.368012f, 1.368012f, 1.368012f);
+        }
+    }
+    public void Box1Destroyed()
+    {
+        isDestroyed_Box1 = true;
+    }
+    public void Box2Destroyed()
+    {
+        isDestroyed_Box2 = true;
+    }
+    public void Box3Destroyed()
+    {
+        isDestroyed_Box3 = true;
     }
 }

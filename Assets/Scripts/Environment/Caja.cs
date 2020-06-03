@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class Caja : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Caja : MonoBehaviour
     float _explosionRadius;
 
     AudioSource _audioSource;
+    public UnityEvent OnDestroy;
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -27,6 +29,7 @@ public class Caja : MonoBehaviour
         if (other.CompareTag("Cola"))
         {
             Explosion();
+            OnDestroy.Invoke();
         }
     }
     void Explosion()

@@ -60,5 +60,9 @@ public class CofreManager : MonoBehaviour
         {
             UIManager.SetPlayerCofre(false);
         }
-    }  
+    } 
+    public void Close()
+    {
+        anim.SetTrigger("Close");
+    }
 }
