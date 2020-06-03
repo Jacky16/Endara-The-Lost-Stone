@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 44660424c8db33946a0a7b6f877f1c03, type: 2}
+  - {fileID: 2100000, guid: 9fdf43820dba09b48a17d7e5ee7169d9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,8 +108,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.1336, y: 2.1336, z: 0.4466137}
-  m_Center: {x: 0, y: 0, z: 0.22330685}
+  m_Size: {x: 2.667, y: 2.667, z: 0.5582671}
+  m_Center: {x: 0, y: 0, z: 0.27913356}
 --- !u!54 &7300846912150131340
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -139,3 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doAnimationFall: 0
+  velocityFall: 0.3
+  velocityUp: 1.5
+  easeFall: 0
+  easeUp: 0
