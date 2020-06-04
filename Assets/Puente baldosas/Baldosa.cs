@@ -8,11 +8,15 @@ public class Baldosa : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField]float speed;
     Vector3 direction;
-  
+    Animator anim;
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     private void Update()
     {
         transform.Translate(direction * speed * Time.deltaTime);
-
     }
     public void SetMove(Vector3 v,float f,string s)
     {
@@ -29,7 +33,8 @@ public class Baldosa : MonoBehaviour
         }
         if (other.gameObject.name == stringCollision)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,1);
+            anim.SetTrigger("Destroy");
         }
     }
     private void OnTriggerExit(Collider other)
