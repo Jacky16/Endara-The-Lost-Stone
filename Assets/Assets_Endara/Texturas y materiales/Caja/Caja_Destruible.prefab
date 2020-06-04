@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2117521058810211179}
   - component: {fileID: 8051690737267068321}
   - component: {fileID: 6904817465359967834}
-  m_Layer: 14
+  m_Layer: 16
   m_Name: Hoja004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,9 +88,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566435734073314931}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 10
-  m_AngularDrag: 0
+  m_Mass: 3
+  m_Drag: 5
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 6556575402651348676}
   - component: {fileID: 5633446984655331492}
   - component: {fileID: 5811439380731374111}
-  m_Layer: 14
+  m_Layer: 16
   m_Name: Caja_Parte_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,9 +199,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663126979060886183}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 10
-  m_AngularDrag: 0
+  m_Mass: 4
+  m_Drag: 0.5
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 4778785963853736949}
   - component: {fileID: 3176402268842879342}
   - component: {fileID: 2436628300794857456}
-  m_Layer: 14
+  m_Layer: 16
   m_Name: Caja_Parte_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,9 +310,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117772259848185123}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 10
-  m_AngularDrag: 0
+  m_Mass: 4
+  m_Drag: 0.5
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -5201,7 +5201,7 @@ GameObject:
   - component: {fileID: 7101434427034719634}
   - component: {fileID: 8185409351352017484}
   - component: {fileID: 668388361795784904}
-  m_Layer: 14
+  m_Layer: 16
   m_Name: Caja_Parte_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5291,9 +5291,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3111380183771347172}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 10
-  m_AngularDrag: 0
+  m_Mass: 4
+  m_Drag: 0.5
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -5311,7 +5311,7 @@ GameObject:
   - component: {fileID: 192005381820346578}
   - component: {fileID: 6646301021963035285}
   - component: {fileID: 7711371400861524893}
-  m_Layer: 14
+  m_Layer: 16
   m_Name: Rama_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5387,9 +5387,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3304919912932837483}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 10
-  m_AngularDrag: 0
+  m_Mass: 3
+  m_Drag: 5
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -5407,7 +5407,7 @@ GameObject:
   - component: {fileID: 8499316347386756883}
   - component: {fileID: 2543118968095933983}
   - component: {fileID: 1001333972285444282}
-  m_Layer: 14
+  m_Layer: 16
   m_Name: Hoja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5483,9 +5483,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3922419367016099388}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 10
-  m_AngularDrag: 0
+  m_Mass: 3
+  m_Drag: 5
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -5545,7 +5545,7 @@ GameObject:
   - component: {fileID: 6330791981064031742}
   - component: {fileID: 2850173494552832631}
   - component: {fileID: 3355589393303450196}
-  m_Layer: 14
+  m_Layer: 16
   m_Name: Hoja003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5621,9 +5621,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4923645731575735715}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 10
-  m_AngularDrag: 0
+  m_Mass: 3
+  m_Drag: 5
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -5641,7 +5641,7 @@ GameObject:
   - component: {fileID: 3185851275952145995}
   - component: {fileID: 4702162584782418875}
   - component: {fileID: 1344311466482334150}
-  m_Layer: 14
+  m_Layer: 16
   m_Name: Hoja001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5717,9 +5717,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5906433703491375818}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 10
-  m_AngularDrag: 0
+  m_Mass: 3
+  m_Drag: 5
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -5737,7 +5737,7 @@ GameObject:
   - component: {fileID: 6107940795822790279}
   - component: {fileID: 1583156565179996835}
   - component: {fileID: 6765719567322779739}
-  m_Layer: 14
+  m_Layer: 16
   m_Name: Rama_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5813,9 +5813,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7614503163130256623}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 10
-  m_AngularDrag: 0
+  m_Mass: 3
+  m_Drag: 5
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -5833,7 +5833,7 @@ GameObject:
   - component: {fileID: 5000496345721669395}
   - component: {fileID: 5119871710467843287}
   - component: {fileID: 8836767280322407293}
-  m_Layer: 14
+  m_Layer: 16
   m_Name: Hoja005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5909,9 +5909,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8966312599771575920}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 10
-  m_AngularDrag: 0
+  m_Mass: 3
+  m_Drag: 5
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -5929,7 +5929,7 @@ GameObject:
   - component: {fileID: 3312710970704116560}
   - component: {fileID: 4924419433242314958}
   - component: {fileID: 4505939220378121734}
-  m_Layer: 14
+  m_Layer: 16
   m_Name: Hoja002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6005,9 +6005,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9133452553713813661}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 10
-  m_AngularDrag: 0
+  m_Mass: 3
+  m_Drag: 5
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
