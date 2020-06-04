@@ -26,19 +26,16 @@ public class Puzzle2Manager : MonoBehaviour
     public void Column1(bool b)
     {
         _column1 = b;
-        animColumn_1.SetTrigger("SwitchColor");
         CheckSoulution();
     }
     public void Column2(bool b)
     {
         _column2 = b;
-        animColumn_2.SetTrigger("SwitchColor");
         CheckSoulution();
     }
     public void Column3(bool b)
     {
         _column3 = b;
-        animColumn_3.SetTrigger("SwitchColor");
         CheckSoulution();
     }
     void CheckSoulution()
@@ -46,6 +43,9 @@ public class Puzzle2Manager : MonoBehaviour
         if(_column1 && _column2 && _column3) 
         {
             print("Has solucionado el puzzle 2");
+            animColumn_1.SetTrigger("SwitchColor");
+            animColumn_2.SetTrigger("SwitchColor");
+            animColumn_3.SetTrigger("SwitchColor");
             Invoke("PlayCinematic", 1.5f);
         }
     }
