@@ -206,12 +206,5 @@ public class UIManager : MonoBehaviour
         //Open
         _imageOpen.sprite = _spriteCatchObject_PS4;
     }
-    public static void SetPlayerPalanca(bool b)
-    {
-        _playerInPalanca = b;
-    }
-    public static void SetPlayerCofre(bool b)
-    {
-        _playerInCofre = b;
-    }
+    
 }

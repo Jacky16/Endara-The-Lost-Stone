@@ -9,24 +9,24 @@ public class Palanca : MonoBehaviour
     GameObject [] _activateBridge;
 
     [SerializeField]
-    CinemachineVirtualCamera camera;
+    CinemachineVirtualCamera cameraBridge;
 
-    [SerializeField]
     Animator anim;
-    bool _isInPalanca;
 
     AudioSource _audioSource;
+    UIManager uIManager;
     private void Awake()
     {
         anim = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
+        uIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
     }
-   
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            UIManager.SetPlayerPalanca(true);
+            uIManager.AnimationScaleActiveButtonUse();
         }      
     }
     private void OnTriggerStay(Collider other)
@@ -43,31 +43,28 @@ public class Palanca : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            UIManager.SetPlayerPalanca(false);
+            uIManager.AnimationScaleDisableButtonUse();
         }
     }
-    void ActivateBridge() // Se ejecuta en la animacion
+    void ActivateBridge() // Se ejecuta en la animacion de la palanca
     {
         StartCoroutine(SwitchCamera());
     }
     IEnumerator SwitchCamera()
     {
-        camera.Priority = 10;
-        _isInPalanca = false;
+        cameraBridge.Priority = 10;
+        uIManager.AnimationScaleDisableButtonUse();
         yield return new WaitForSeconds(1);
         foreach (GameObject s in _activateBridge)
         {
             s.GetComponent<SpawnBaldosas>().IsSpawingBool(true);
         }
         yield return new WaitForSeconds(4);
-        camera.Priority = 0;
+        cameraBridge.Priority = 0;
     }
     public void PlaySound()
     {
         _audioSource.Play();
     }
-    public bool PlayerInPalanca()
-    {
-        return _isInPalanca;
-    }
+   
 }
