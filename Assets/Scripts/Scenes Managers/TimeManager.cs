@@ -10,6 +10,8 @@ public class TimeManager : MonoBehaviour
     [SerializeField] 
     float _startTime;
     PlayerMovement _playerMovement;
+    [SerializeField]
+    BossManager bossManager;
 
     [Header("GameObjects textos canvas")]
 
@@ -18,6 +20,7 @@ public class TimeManager : MonoBehaviour
 
     [SerializeField]
     GameObject _gameObjecttimeSubstracted;
+
 
     public bool _canSubstractTime;
 
@@ -59,6 +62,8 @@ public class TimeManager : MonoBehaviour
         if(currentTime <= 0)
         {
             _playerMovement.PlayerDead();
+            ResetTime();
+            bossManager.ResetChallenges();
         }
     }
     public void ResetTime()

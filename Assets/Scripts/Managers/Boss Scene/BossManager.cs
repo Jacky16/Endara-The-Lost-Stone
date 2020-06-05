@@ -16,10 +16,20 @@ public class BossManager : MonoBehaviour
     CinemachineVirtualCamera _virtualCamera;
     [SerializeField]
     PlayerMovement player;
+
+    [Header("Enter Challenges")]
+    [SerializeField]
+    Enterchallenge enterchallenge_1;
+    [SerializeField]
+    Enterchallenge enterchallenge_2;
+    [SerializeField]
+    Enterchallenge enterchallenge_3;
     private void Start()
     {
         _virtualCamera.Priority = 0;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        ResetChallenges();
+        
     }
     public void SubstractAttempBoss(Transform pos)
     {
@@ -44,5 +54,23 @@ public class BossManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         _virtualCamera.Priority = 0;
+    }
+    public void ResetChallenges()
+    {
+        SetCanOpenChallenge_1(true);
+        SetCanOpenChallenge_2(false);
+        SetCanOpenChallenge_3(false);
+    }
+    public void SetCanOpenChallenge_1(bool b)
+    {
+        enterchallenge_1.CanEnter(b);
+    } 
+    public void SetCanOpenChallenge_2(bool b)
+    {
+        enterchallenge_2.CanEnter(b);
+    }
+    public void SetCanOpenChallenge_3(bool b)
+    {
+        enterchallenge_3.CanEnter(b);
     }
 }

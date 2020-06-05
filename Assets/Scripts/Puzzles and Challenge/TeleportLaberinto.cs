@@ -12,5 +12,8 @@ public class TeleportLaberinto : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         bossManager.SubstractAttempBoss(spawnPlayer);
+        bossManager.SetCanOpenChallenge_1(false);
+        bossManager.SetCanOpenChallenge_2(true);
+        bossManager.SetCanOpenChallenge_3(false);
     }
 }
