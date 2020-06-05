@@ -6,12 +6,6 @@ using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("Referencias a scripts")]
-    //[SerializeField]
-    //Palanca _palanca;
-    static bool _playerInCofre;
-    static bool _playerInPalanca;
-
     //RectTransform buttons------------------------------
 
     [Header("RectTransform Catch Object")]
@@ -94,88 +88,22 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     Sprite _spriteInteractionButton_PS4;
     [SerializeField]float timeAnimations = 0.3f;
-   
-    private void Update()
+
+    private void Start()
     {
-        LogicButtonsUI();
         ChangeUI();
     }
-    void LogicButtonsUI()
-    {
-        if (PickUpObjects.CanCatchObject() && PickUpObjects.IsRotableObject()) // SI se puede pillar el objeto y rotarlo
-        {
-            AnimationScaleActiveButtonCatch();
-
-            AnimationMoveUpButtonsRotate();
-        }
-        if (!PickUpObjects.CanCatchObject() && PickUpObjects.IsRotableObject()) //NO se puede pillar el objeto pero SI rotarlo
-        {
-            AnimationScaleDisableButtonCatch();
-
-            AnimationMoveUpButtonsRotate();
-        }
-        if (PickUpObjects.CanCatchObject() && !PickUpObjects.IsRotableObject()) //SI se puede pillar el objeto pero NO rotarlo
-        {
-            AnimationScaleActiveButtonCatch();
-
-            AnimationMoveDownButtonsRotate();
-        }
-
-        //Desactiv
-        if (!PickUpObjects.CanCatchObject() && !PickUpObjects.IsRotableObject())
-        {
-            AnimationScaleDisableButtonCatch();
-
-            AnimationMoveDownButtonsRotate();
-
-
-        }
-
-        //Cuando el objeto esta pillado
-        if (PickUpObjects.IsCatchedObject())
-        {
-            Sequence _sequence = DOTween.Sequence();
-            _sequence.Append(_rectTransformButtonCatchObject.DOScale(new Vector2(0, 0), timeAnimations));
-            _sequence.Append(_rectTransformDropButton.DOAnchorPosY(0, timeAnimations));
-            AnimationMoveDownButtonsRotate();
-            AnimationScaleDisableButtonCatch();
-            //AnimationMoveUpDropButton();
-        }
-        else
-        {
-            AnimationMoveDownDropButton();
-        }
-
-        //Interaccion con la palanca del 1r puzzle
-        if (_playerInPalanca) //ToDo: cambiar la variable bool
-        {
-            AnimationScaleActiveButtonUse();
-        }
-        else
-        {
-            AnimationScaleDisableButtonUse();
-        }
-        //Interaccion con los cofres
-        if (_playerInCofre)
-        {
-            AnimationScaleActiveButtonOpen();
-        }
-        else
-        {
-            AnimationScaleDisableButtonOpen();
-        }
-    }
-    
+   
     #region Animations
     //Animaciones botones de rotar
-    void AnimationMoveUpButtonsRotate()
+    public void AnimationMoveUpButtonsRotate()
     {
         foreach (RectTransform r in _rectTransformsButtonsRotate)
         {
             r.DOAnchorPosY(0, timeAnimations);
         }
     }
-    void AnimationMoveDownButtonsRotate()
+   public  void AnimationMoveDownButtonsRotate()
     {
         foreach (RectTransform r in _rectTransformsButtonsRotate)
         {
@@ -184,40 +112,40 @@ public class UIManager : MonoBehaviour
     }
 
     //Animaciones botones de pillar el objeto
-    void AnimationScaleActiveButtonCatch()
+    public void AnimationScaleActiveButtonCatch()
     {
         _rectTransformButtonCatchObject.DOScale(new Vector2(1,1), timeAnimations);
     }
-    void AnimationScaleDisableButtonCatch()
+    public void AnimationScaleDisableButtonCatch()
     {
         _rectTransformButtonCatchObject.DOScale(new Vector2(0, 0), timeAnimations);
     }
 
     //Animaciones Desactivar botones de usar
-    void AnimationScaleDisableButtonUse()
+    public void AnimationScaleDisableButtonUse()
     {
         _rectTransformButtonUseObject.DOScale(new Vector2(0, 0), timeAnimations);
     }
-    void AnimationScaleActiveButtonUse()
+    public void AnimationScaleActiveButtonUse()
     {
         _rectTransformButtonUseObject.DOScale(new Vector2(1,1), timeAnimations);
     }
 
     //Animaciones de dropear el objeto
-    void AnimationMoveUpDropButton()
+    public void AnimationMoveUpDropButton()
     {
         _rectTransformDropButton.DOAnchorPosY(0, timeAnimations);
     }
-    void AnimationMoveDownDropButton()
+    public void AnimationMoveDownDropButton()
     {
         _rectTransformDropButton.DOAnchorPosY(-140, timeAnimations);
     }
     //Animaciones de Abrir el objeto
-    void AnimationScaleActiveButtonOpen()
+    public void AnimationScaleActiveButtonOpen()
     {
         _rectTransformButtonOpenObject.DOScale(new Vector2(1, 1), timeAnimations);
     }
-    void AnimationScaleDisableButtonOpen()
+    public void AnimationScaleDisableButtonOpen()
     {
         _rectTransformButtonOpenObject.DOScale(new Vector2(0, 0), timeAnimations);
     }

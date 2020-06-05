@@ -7,10 +7,7 @@ public class ColumnPuzzle2 : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] 
     Transform _column;
-
-    [SerializeField]
-    UIManager _uiManager;
-
+    UIManager uIManager;
     [SerializeField]
     Puzzle2Manager _puzzle2Manager;
     
@@ -18,6 +15,10 @@ public class ColumnPuzzle2 : MonoBehaviour
     public NumberColumn numberColumn;
     bool _playerInside;
     bool canRotate = true;
+    private void Awake()
+    {
+        uIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+    }
     private void Start()
     {
         canRotate = true;
@@ -29,6 +30,11 @@ public class ColumnPuzzle2 : MonoBehaviour
         if (other.CompareTag("Solution"))
         {
             Invoke("OnCompleteRotation", .5f);
+        }
+        if (other.CompareTag("Player"))
+        {
+            uIManager.AnimationMoveUpButtonsRotate();
+
         }
     }
     private void OnTriggerStay(Collider other)
@@ -44,7 +50,7 @@ public class ColumnPuzzle2 : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _playerInside = false;
-
+            uIManager.AnimationMoveDownButtonsRotate();
         }
     }
    

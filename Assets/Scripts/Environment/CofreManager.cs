@@ -13,11 +13,12 @@ public class CofreManager : MonoBehaviour
     ParticleSystem particleSystem;
     [SerializeField]
     Light light;
-
+    UIManager uIManager;
     public UnityEvent onOpen;
     private void Awake()
     {
-        anim = GetComponent<Animator>();  
+        anim = GetComponent<Animator>();
+        uIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
     }
     private void Start()
     {
@@ -29,7 +30,7 @@ public class CofreManager : MonoBehaviour
         {
             if (!isOpen)
             {
-                UIManager.SetPlayerCofre(true);
+                uIManager.AnimationScaleActiveButtonOpen(); //Activar boton de abrir
             }
         }
     }
@@ -58,7 +59,7 @@ public class CofreManager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            UIManager.SetPlayerCofre(false);
+            uIManager.AnimationScaleDisableButtonOpen();//Desctivar boton de cerrar
         }
     } 
     public void Close()

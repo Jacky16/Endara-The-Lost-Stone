@@ -10,10 +10,14 @@ public class ObjetoPickeable : MonoBehaviour
     public bool isRoteable;
     [SerializeField]
     bool emitParticleSmoke;
-
+    UIManager uIManager;
     [SerializeField]
     ParticleSystem particleSmoke;
-   
+
+    private void Awake()
+    {
+        uIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "PlayerInteraction")
@@ -22,8 +26,26 @@ public class ObjetoPickeable : MonoBehaviour
             other.GetComponentInParent<PickUpObjects>().SetCanCatch(isPickeable);
             other.GetComponentInParent<PickUpObjects>().SetCanRotate(isRoteable);
 
-        }
-       
+            //Controlador de las animaciones de la UI
+            if (isPickeable && isRoteable)
+            {
+                uIManager.AnimationScaleActiveButtonCatch();
+
+                uIManager.AnimationMoveUpButtonsRotate();
+            }
+            if(!isPickeable && isRoteable)
+            {
+                uIManager.AnimationScaleDisableButtonCatch();
+
+                uIManager.AnimationMoveUpButtonsRotate();
+            }
+            if (isPickeable && !isRoteable)
+            {
+                uIManager.AnimationScaleActiveButtonCatch();
+
+                uIManager.AnimationMoveDownButtonsRotate();
+            }
+        }  
     }
     private void OnTriggerExit(Collider other)
     {
@@ -32,6 +54,26 @@ public class ObjetoPickeable : MonoBehaviour
             other.GetComponentInParent<PickUpObjects>().objectToPickup = null;
             other.GetComponentInParent<PickUpObjects>().SetCanCatch(false);
             other.GetComponentInParent<PickUpObjects>().SetCanRotate(!isRoteable && false);
+
+            //Controlador de las animaciones de la UI
+            if (isPickeable && isRoteable)
+            {
+                uIManager.AnimationScaleDisableButtonCatch();
+
+                uIManager.AnimationMoveDownButtonsRotate();
+            }
+            if (!isPickeable && isRoteable)
+            {
+                uIManager.AnimationScaleDisableButtonCatch();
+
+                uIManager.AnimationMoveDownButtonsRotate();
+            }
+            if (isPickeable && !isRoteable)
+            {
+                uIManager.AnimationScaleDisableButtonCatch();
+
+                uIManager.AnimationMoveDownButtonsRotate();
+            }
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -42,6 +84,4 @@ public class ObjetoPickeable : MonoBehaviour
         }
         
     }
-
-
 }

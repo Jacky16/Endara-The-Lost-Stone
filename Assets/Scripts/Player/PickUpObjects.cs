@@ -12,24 +12,22 @@ public class PickUpObjects : MonoBehaviour
     static bool _canThrowObject;
     static float massPickedObject;
     Animator animPlayer;
-
+    UIManager uIManager;
     private void Awake()
     {
         _interactionZone = GameObject.FindGameObjectWithTag("TransformObjectPickUp").GetComponent<Transform>();
+        uIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
         animPlayer = GetComponent<Animator>();
     }
-    void Update()
-    {
-        //if (_isCatched)
-        //{
-        //    _canCatchObject = false;
-        //    _isRotable = false;
-        //}
-    }
+  
     public void CatchObjectSystem()
     {
         if (CanCatchObject()) //Pillar el objeto
         {
+            uIManager.AnimationMoveUpDropButton();
+            uIManager.AnimationMoveDownButtonsRotate();
+            uIManager.AnimationScaleDisableButtonCatch();
+
             animPlayer.SetTrigger("PickUp");
         }
         else //Soltar el objeto
@@ -37,6 +35,7 @@ public class PickUpObjects : MonoBehaviour
         {
             if (PickedObject != null)
             {
+                uIManager.AnimationMoveDownDropButton();
                 animPlayer.SetTrigger("PickUp");
                 _isCatched = false;
                 _canCatchObject = true;
@@ -96,14 +95,14 @@ public class PickUpObjects : MonoBehaviour
     }
     public void Rotate_R(float grades)
     {
-        if (objectToPickup)
+        if (objectToPickup != null || PickedObject != null)
         {
-            if (objectToPickup.tag == "Cubo" && objectToPickup.GetComponent<ObjetoPickeable>().isRoteable)
+            if (objectToPickup.tag == "Cubo" && _isRotable)
             {
                 objectToPickup.transform.DOLocalRotate(new Vector3(0, grades, 0), 0.2f, RotateMode.LocalAxisAdd);
             }
 
-            if (PickedObject.tag == "Cubo" && PickedObject.GetComponent<ObjetoPickeable>().isRoteable)
+            if (PickedObject.tag == "Cubo" && _isRotable)
             {
                 PickedObject.transform.DOLocalRotate(new Vector3(0, grades, 0), 0.2f, RotateMode.LocalAxisAdd);
             }
@@ -112,25 +111,16 @@ public class PickUpObjects : MonoBehaviour
     }
     public void Rotate_L(float grades)
     {
-        if (objectToPickup || PickedObject)
+        if (objectToPickup != null || PickedObject != null)
         {
-            if (objectToPickup.tag == "Cubo" && objectToPickup.GetComponent<ObjetoPickeable>().isRoteable)
+            if (objectToPickup.tag == "Cubo" && _isRotable)
             {
                 objectToPickup.transform.DOLocalRotate(new Vector3(0, -grades, 0), 0.2f, RotateMode.LocalAxisAdd);
-                _isRotable = true;
             }
-            else
-            {
-                _isRotable = false;
-            }
-            if (PickedObject.tag == "Cubo" && PickedObject.GetComponent<ObjetoPickeable>().isRoteable)
+           
+            if (PickedObject.tag == "Cubo" && _isRotable)
             {
                 PickedObject.transform.DOLocalRotate(new Vector3(0, -grades, 0), 0.2f, RotateMode.LocalAxisAdd);
-                _isRotable = true;
-            }
-            else
-            {
-                _isRotable = false;
             }
         }
         
