@@ -30,6 +30,7 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
+        SwitchInputs();
         playerInputs.PlayerInputs.MovementCamera.canceled += ctx => _freeLookCamera.m_XAxis.m_InputAxisValue = 0;
         #region Comprobacion: Rotacion de objetos
 
