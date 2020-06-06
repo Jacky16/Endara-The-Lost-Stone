@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Unity.Mathematics;
 
 public class Laser : MonoBehaviour
 {
@@ -53,6 +54,7 @@ public class Laser : MonoBehaviour
     AudioSource _audioSourceLaserIdle;
 
     bool isPlayedSound = false;
+    bool canSnap = false;
 
     private void Awake()
     {
@@ -72,7 +74,6 @@ public class Laser : MonoBehaviour
         {
             DisableRay();
         }
-        
     }
 
     // Update is called once per frame
@@ -123,16 +124,21 @@ public class Laser : MonoBehaviour
             //Si tiene el tag "Cubo", tiene el componente Laser y no es el mismo cubo
             if (hit.collider.gameObject.CompareTag("Cubo") && hit.collider.gameObject.GetComponent<Laser>() && hit.collider.gameObject != gameObject)
             {
+                canSnap = true;
                 _laser = hit.collider.gameObject.GetComponent<Laser>();
                 _laser.EnableRay();
                 _laser._reciboRaycast = true;
+                
+                
                 SnapRotation(transform.localRotation.eulerAngles);
+                
                 _laser.PlayLaserSound();
                     
             }
             else if(!hit.collider.gameObject.CompareTag("Cubo") && !hit.collider.gameObject.GetComponent<Laser>())
             {
-                if(_laser != null)
+                canSnap = false;
+                if (_laser != null)
                 {
                     _laser.DisableRay();
                     _laser._reciboRaycast = false;
@@ -224,9 +230,14 @@ public class Laser : MonoBehaviour
         _audioSourceLaserIdle.Stop();
     }
 
-    void SnapRotation(Vector3 cubeToLook)
-    {
-        transform.DOLocalRotate(cubeToLook, 5).SetEase(Ease.InExpo);
+    void SnapRotation(Vector3 currentRotation)
+    {   
+        if(estados == States.Hijo)
+        {
+
+            transform.DOLocalRotate(currentRotation, 2).Kill(canSnap);
+        }
+
     }
     public void PlayLaserSound()
     {
