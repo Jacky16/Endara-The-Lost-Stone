@@ -5,7 +5,6 @@ using TMPro;
 
 public class GodManager : MonoBehaviour
 {
-    PlayerMovement playerMovement;
     [SerializeField] GameObject canvasModeGod;
     public float unitsGravityModeGod;
     public TextMeshProUGUI textSpaceUp;
@@ -14,7 +13,6 @@ public class GodManager : MonoBehaviour
 
     private void Start()
     {
-        playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         unitsGravityModeGod = 5;
 
     }
@@ -22,9 +20,9 @@ public class GodManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F10))
         {
-           playerMovement.isModeGod = !playerMovement.IsModeGod();
+           PlayerMovement.isModeGod = !PlayerMovement.IsModeGod();
         }
-        if (playerMovement.IsModeGod())
+        if (PlayerMovement.IsModeGod())
         {
             canvasModeGod.SetActive(true);
             textSpaceUp.text = "Space = Up " + UnitsToJumpInModeGod().ToString() + " Units";

@@ -238,6 +238,7 @@ public class PlayerMovement : MonoBehaviour
         {
             gameObject.tag = "Untagged";
             anim.SetTrigger("Dead");
+            canMove = false;
         }
     }
     public void RespawnToWaypoint()
@@ -286,6 +287,7 @@ public class PlayerMovement : MonoBehaviour
             animDead.SetTrigger("EndDead");
             playerLifeManager.SetLifeToMax();
             gameObject.tag = "Player";
+            canMove = true;
         }
     }
     void OnControllerColliderHit(ControllerColliderHit hit)

@@ -79,6 +79,7 @@ public class SwitchCamera : MonoBehaviour
         }
 
     }
+    
     public bool PlayerIsInside()
     {
         return _playerIsInside;
