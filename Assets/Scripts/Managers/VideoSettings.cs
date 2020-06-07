@@ -37,11 +37,12 @@ public class VideoSettings : MonoBehaviour
         {
             motionBlur = motionB;
         }
+        _sliderContrast.value = colorAdjustments.contrast.value;
+        _sliderBrightness.value = colorAdjustments.postExposure.value;
     }
     private void OnEnable()
     {
         ResolutionStart();
-
     }
 
     public void SetResolution(int resolutionIndex)

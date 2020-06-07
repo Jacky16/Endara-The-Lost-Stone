@@ -5,10 +5,12 @@ using UnityEngine.EventSystems;
 
 public class GUIManager : MonoBehaviour
 {
-    public EventSystem eventSystem;
+    EventSystem eventSystem;
     public GameObject firstSelected;
+   
     private void OnEnable()
     {
+        eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
         eventSystem.SetSelectedGameObject(firstSelected);
     }
     
