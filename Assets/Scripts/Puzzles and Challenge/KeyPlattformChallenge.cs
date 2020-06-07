@@ -11,6 +11,8 @@ public class KeyPlattformChallenge : MonoBehaviour
 
     [SerializeField]
     GameObject _gameObjectExit;
+    [SerializeField]
+    GameObject currentWall;
 
     [SerializeField]
     ZonaSaltosManager _zonaSaltosManager;
@@ -30,6 +32,7 @@ public class KeyPlattformChallenge : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         _gameObjectExit.SetActive(true);
+        currentWall.SetActive(false);
         PlayerMovement.canMove = false;
 
         yield return new WaitForSeconds(2);

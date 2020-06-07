@@ -36,7 +36,7 @@ public class Enterchallenge : MonoBehaviour
     ZonaSaltosManager zonaSaltosManager; //Third Challenge
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && canEnter)
+        if (other.CompareTag("Player") && canEnter || (other.CompareTag("Player") && PlayerMovement.IsModeGod())
         {
            StartCoroutine(MovePlayerToChallenge(other)); 
         }

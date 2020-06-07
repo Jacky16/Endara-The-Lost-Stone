@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
     
     //Variables booleanas
     public static bool canMove = true;
-    [HideInInspector] public bool isModeGod;
+    [HideInInspector] public static bool isModeGod;
     float unitsGod;
     bool isInMovingPlattform;
     bool playerIn2D;
@@ -350,7 +350,7 @@ public class PlayerMovement : MonoBehaviour
     {
         return playerIn2D;
     }
-    public bool IsModeGod()
+    public static bool IsModeGod()
     {
         return isModeGod;
     }
