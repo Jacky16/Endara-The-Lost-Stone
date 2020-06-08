@@ -72,7 +72,7 @@ public class @InputsPlayer : IInputActionCollection, IDisposable
                     ""id"": ""52be8462-97e2-4051-bf40-4fee0f95a8c6"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": ""Tap""
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""MovementCamera"",

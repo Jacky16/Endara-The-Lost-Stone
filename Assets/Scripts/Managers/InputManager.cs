@@ -22,6 +22,8 @@ public class InputManager : MonoBehaviour
     bool _isRotating_L = false;
     bool _isRotating_R = false;
     public float deadZoneX;
+    float counterAttack;
+    float timeToAttack = 0.2f;
     private void Awake()
     {
         playerInputs = new InputsPlayer();
@@ -30,8 +32,17 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        SwitchInputs();
+        //SwitchInputs();
         playerInputs.PlayerInputs.MovementCamera.canceled += ctx => _freeLookCamera.m_XAxis.m_InputAxisValue = 0;
+        if(timeToAttack >= counterAttack)
+        {
+            playerInputs.PlayerInputs.Attack.started += ctx => Attack();
+            counterAttack = 0;
+        }
+        else
+        {
+            counterAttack += Time.deltaTime;
+        }
         #region Comprobacion: Rotacion de objetos
 
         if (_isRotating_L)
@@ -80,9 +91,9 @@ public class InputManager : MonoBehaviour
     }
     #endregion
 
-    public void Attack(InputAction.CallbackContext ctx)
+    public void Attack()
     {
-        if (ctx.started && !PickUpObjects.CanCatchObject() && PlayerMovement.canMove)
+        if (!PickUpObjects.CanCatchObject() && PlayerMovement.canMove)
         {
             playerMovement.MeleAtack();
         }
