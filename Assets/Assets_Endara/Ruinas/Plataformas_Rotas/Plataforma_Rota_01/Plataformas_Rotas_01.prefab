@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 6028999939764642938}
   - component: {fileID: 42721437799028867}
   - component: {fileID: 7675905778237394528}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Plataformas_Rotas_01
-  m_TagString: Untagged
+  m_TagString: Ground_Tierra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3382283857340063308
 Transform:
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1777533064027319391}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -36.437782, y: 45.90385, z: 103.05745}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.34461}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

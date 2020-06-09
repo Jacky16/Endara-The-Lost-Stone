@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 5378112768770477215}
   m_Layer: 13
   m_Name: Piedras_Puente_01
-  m_TagString: Untagged
+  m_TagString: Ground_Piedra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -977,7 +977,7 @@ GameObject:
   - component: {fileID: 6037600286389069036}
   m_Layer: 13
   m_Name: Piedras_Puente002
-  m_TagString: Untagged
+  m_TagString: Ground_Piedra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1861,7 +1861,7 @@ GameObject:
   - component: {fileID: 3866478573106685336}
   m_Layer: 13
   m_Name: Piedras_Puente_007
-  m_TagString: Untagged
+  m_TagString: Ground_Piedra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5851,7 +5851,7 @@ GameObject:
   - component: {fileID: 5303889833239917425}
   m_Layer: 13
   m_Name: Piedras_Puente_010
-  m_TagString: Untagged
+  m_TagString: Ground_Piedra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6340,7 +6340,7 @@ GameObject:
   - component: {fileID: 410285973998376885}
   m_Layer: 13
   m_Name: Piedras_Puente_02
-  m_TagString: Untagged
+  m_TagString: Ground_Piedra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9199,7 +9199,7 @@ GameObject:
   - component: {fileID: 5841363047952045846}
   m_Layer: 13
   m_Name: Piedras_Puente_008
-  m_TagString: Untagged
+  m_TagString: Ground_Piedra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10004,7 +10004,7 @@ GameObject:
   - component: {fileID: 3708243932436166118}
   m_Layer: 13
   m_Name: Piedras_Puente_009
-  m_TagString: Untagged
+  m_TagString: Ground_Piedra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12231,7 +12231,7 @@ GameObject:
   - component: {fileID: 6352499726946410318}
   m_Layer: 13
   m_Name: Piedras_Puente003
-  m_TagString: Untagged
+  m_TagString: Ground_Piedra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

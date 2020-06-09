@@ -311,8 +311,8 @@ public class PlayerMovement : MonoBehaviour
 
             rb.velocity = (pushDir * pushPower) / valueMass;
         }
-
     }
+   
     public void Axis(float h, float v)
     {
         playerInput.x = h;
@@ -335,9 +335,6 @@ public class PlayerMovement : MonoBehaviour
         {
 
         }
-
-
-
     }
     private void OnParticleCollision(GameObject other)
     {

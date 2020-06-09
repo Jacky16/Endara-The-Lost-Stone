@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 397535644071066042}
   - component: {fileID: 8042295306131227591}
   - component: {fileID: 148025224480859238}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: CuboLargo
-  m_TagString: Untagged
+  m_TagString: Ground_Piedra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +108,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doAnimationFall: 0
+  velocityFall: 0.3
+  velocityUp: 1.5
+  easeFall: 0
+  easeUp: 0
 --- !u!114 &148025224480859238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,3 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  axes: 1

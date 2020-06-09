@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5649066177010387590}
   - component: {fileID: 4709163842789352107}
   - component: {fileID: 185445340}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Plataforma_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,6 +109,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doAnimationFall: 0
+  velocityFall: 0.3
+  velocityUp: 1.5
+  easeFall: 0
+  easeUp: 0
 --- !u!54 &185445340
 Rigidbody:
   m_ObjectHideFlags: 0

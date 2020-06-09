@@ -29,8 +29,11 @@ public class AudioDragRock : MonoBehaviour
         } 
     }
     public void StopAudio()
-    {    
-        audioSource.DOFade(0, 1).OnComplete(() => audioSource.Stop());       
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.DOFade(0, 1).OnComplete(() => audioSource.Stop());
+        }
     }
     private AudioClip AudiosDragRock()
     {

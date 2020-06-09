@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4212182686317473400}
   m_Layer: 13
   m_Name: Suelo_Arenoso
-  m_TagString: Untagged
+  m_TagString: Ground_Piedra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

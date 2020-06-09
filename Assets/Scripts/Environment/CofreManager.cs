@@ -15,9 +15,11 @@ public class CofreManager : MonoBehaviour
     Light light;
     UIManager uIManager;
     public UnityEvent onOpen;
+    AudioSource audioSource;
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         uIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
     }
     private void Start()
@@ -31,6 +33,7 @@ public class CofreManager : MonoBehaviour
             if (!isOpen)
             {
                 uIManager.AnimationScaleActiveButtonOpen(); //Activar boton de abrir
+                
             }
         }
     }
@@ -42,6 +45,7 @@ public class CofreManager : MonoBehaviour
             {
                 other.GetComponent<Animator>().SetTrigger("Open");
                 anim.SetTrigger("Open");
+                audioSource.Play(); // Sonido del cofre abbriendose
                 isOpen = true;
             }
         }

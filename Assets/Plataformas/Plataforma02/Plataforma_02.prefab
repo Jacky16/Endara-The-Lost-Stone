@@ -14,12 +14,12 @@ GameObject:
   - component: {fileID: 8187842495758389857}
   - component: {fileID: 1067089395}
   - component: {fileID: 2744816331851313108}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Plataforma_02
-  m_TagString: Untagged
+  m_TagString: Ground_Tierra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &5999320167107452722
 Transform:
