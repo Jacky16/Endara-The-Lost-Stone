@@ -9,18 +9,26 @@ public class Enemy2 : Enemy
 
     [SerializeField] 
     GameObject _rockPrefab;
-    GameObject _rockThrowed;
+
+    [HideInInspector]public GameObject _rockThrowed;
 
     [SerializeField] 
     Transform _transformRockPrefab;
 
-    [SerializeField] 
-    Vector3 offsetRock = new Vector3(0, 0.09f, 0);
+    public Vector3 offsetRock = new Vector3(0, 0.09f, 0);
 
     [SerializeField]
     GameObject gameObjectNearAttack;
     bool activateNearAttack = false;
-    
+
+    [Header("Audio")]
+    [SerializeField]
+    AudioClip audioInvokeRock;
+    AudioSource audioSource;
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public override void NearAttackPlayer()
     {
         anim.SetTrigger("nearAttack");
@@ -48,6 +56,11 @@ public class Enemy2 : Enemy
 
     void InvokeRock()// Se ejecuta en un evento en la animacion de Invocar la roca
     {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(audioInvokeRock);
+        }
+        
         _rockThrowed = Instantiate(_rockPrefab, _transformRockPrefab.position, Quaternion.identity, transform) as GameObject;
 
     }
@@ -60,7 +73,7 @@ public class Enemy2 : Enemy
         rb.useGravity = true;
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
         Vector3 dir = player.position - transform.position;
-        rockEnemy2.ShootRock(dir.normalized + offsetRock, true);
+        //rockEnemy2.ShootRock(dir.normalized + offsetRock, true);
     }
    
     public void CheckRock()
@@ -72,11 +85,12 @@ public class Enemy2 : Enemy
             if (velocityRock == Vector3.zero)
             {
                 Destroy(_rockThrowed);
-
             }
         }
-
-
     } // Se ejecuta al principio de cada animacion (en eventos) que no sea de lanzar las rocas
 
+    public Vector3 PlayerPosition()
+    {
+        return player.position;
+    }
 }

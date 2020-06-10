@@ -15,11 +15,13 @@ public class RockEnemy2 : MonoBehaviour
     Vector3 directionToPlayer;
     bool canGo;
     CinemachineCollisionImpulseSource cinemachineCollisionImpulse;
+    AudioSource audioSource;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         cinemachineCollisionImpulse = GetComponent<CinemachineCollisionImpulseSource>();
+        audioSource = GetComponent<AudioSource>();
     }
     private void FixedUpdate()
     {
@@ -27,6 +29,9 @@ public class RockEnemy2 : MonoBehaviour
         {
             rb.velocity = directionToPlayer * (speed * Time.deltaTime);
             transform.DOLocalRotate(new Vector3(100, 0, 0), 3, RotateMode.LocalAxisAdd).SetLoops(-1);
+            if(!audioSource.isPlaying)
+            audioSource.Play();
+
         }
         
     }
@@ -42,12 +47,14 @@ public class RockEnemy2 : MonoBehaviour
 
             GameObject impact = Instantiate(impactPrefab, pos, rot) as GameObject;
             print(collision.gameObject.name);
+            audioSource.Stop();
             Destroy(impact, 5);
         }
         if(collision.gameObject.tag == "Player")
         {
             GameObject impact = Instantiate(impactPlayer, collision.transform.position, Quaternion.identity);
             collision.gameObject.GetComponent<PlayerLifeManager>().SubstractLife();
+            audioSource.Stop();
             Destroy(impact, 5);
         }
 

@@ -4126,6 +4126,81 @@ Transform:
   m_Father: {fileID: 5928356654393655766}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.93112946, y: 1.2255378, z: 5.178498}
+--- !u!1 &3600699262796084692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8989129124855033573}
+  - component: {fileID: 8401079795910241475}
+  - component: {fileID: 5055145723492573031}
+  - component: {fileID: 5892879597121494730}
+  m_Layer: 0
+  m_Name: SoundLanding
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8989129124855033573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600699262796084692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.128, z: 0}
+  m_LocalScale: {x: 0.40362, y: 0.24605885, z: 0.40362}
+  m_Children: []
+  m_Father: {fileID: 9189200048440425396}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8401079795910241475
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600699262796084692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5055145723492573031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600699262796084692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b7064d28abf0f47826ff95e1140477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &5892879597121494730
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600699262796084692}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &3630571190291234698
 GameObject:
   m_ObjectHideFlags: 0
@@ -5395,6 +5470,7 @@ GameObject:
   - component: {fileID: 4043093755355513614}
   - component: {fileID: 5437293477021998719}
   - component: {fileID: 4126182287297406477}
+  - component: {fileID: 7340160251436501700}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5422,6 +5498,7 @@ Transform:
   - {fileID: 2282498206522575917}
   - {fileID: 6446629538000080337}
   - {fileID: 8137101720529422631}
+  - {fileID: 8989129124855033573}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5662,20 +5739,137 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typeOfGroundState: 0
-  audiosWalk_Tierra: []
-  audiosWalk_Hierba: []
-  audiosWalk_Piedra: []
-  audiosRun_Tierra: []
-  audiosRun_Hierba: []
-  audiosRun_Piedra: []
-  audiosLanding_Tierra: []
-  audiosLanding_Hierba: []
-  audiosLanding_Piedra: []
+  audiosWalk_Tierra:
+  - {fileID: 8300000, guid: d18ae6ec148f736429673f4861e56eb4, type: 3}
+  - {fileID: 8300000, guid: b76978e2cda7313468993945ea4a39d8, type: 3}
+  - {fileID: 8300000, guid: aa7b4275a846c0f4d986e7d7f157d888, type: 3}
+  - {fileID: 8300000, guid: 441e7649ce61ca844b2b747299ece527, type: 3}
+  - {fileID: 8300000, guid: 97ffa275989c76941aadf0eaf3e6650a, type: 3}
+  - {fileID: 8300000, guid: fb9a0b1d4d37b3249b5b0eef379dc601, type: 3}
+  - {fileID: 8300000, guid: fadda5b30aeb74d48ae17905e8d9260d, type: 3}
+  - {fileID: 8300000, guid: 2efbc61c97ede0c459598b46e0b5209b, type: 3}
+  - {fileID: 8300000, guid: 41563eadb8c228749ae88b5873d04039, type: 3}
+  - {fileID: 8300000, guid: 60395ab90041f37479cb8b233d53b1af, type: 3}
+  - {fileID: 8300000, guid: 0ff61d1eaa214c749ba275a4881b8ea3, type: 3}
+  - {fileID: 8300000, guid: 528475682c3dd8748b71674cabf88b38, type: 3}
+  - {fileID: 8300000, guid: 1ef4cb12d004a844c9aefaa1e8b0bb48, type: 3}
+  - {fileID: 8300000, guid: 7a5d24028076cf746b12fb6ebe1ccdd1, type: 3}
+  - {fileID: 8300000, guid: 876d91eeb956c3b4e995e88b7036513a, type: 3}
+  audiosWalk_Hierba:
+  - {fileID: 8300000, guid: 8f4ad30a069d2ba448ed95151123af4a, type: 3}
+  - {fileID: 8300000, guid: b4c5b69001fe6cd448be1595c2e9258c, type: 3}
+  - {fileID: 8300000, guid: 140b746861b081e40894c4b500a8481d, type: 3}
+  - {fileID: 8300000, guid: 99c95c388baa4da4db060631b287e6b3, type: 3}
+  - {fileID: 8300000, guid: 882f61e9d9105174ea28d4367758ae6e, type: 3}
+  - {fileID: 8300000, guid: 238969c79efc12b499ab54e8002e37a6, type: 3}
+  - {fileID: 8300000, guid: c511fa9e7770d7f4ca8e5cc8072307b4, type: 3}
+  - {fileID: 8300000, guid: 796cb710279456245b508bc82562d20b, type: 3}
+  - {fileID: 8300000, guid: dfb92d50abf34304fa871df443534635, type: 3}
+  - {fileID: 8300000, guid: ccd34f77d48d24546bab554899b64f14, type: 3}
+  - {fileID: 8300000, guid: 658ce48837f79c449a333006cfbc7793, type: 3}
+  - {fileID: 8300000, guid: b699b49cb20981640af8407129f98892, type: 3}
+  - {fileID: 8300000, guid: 633b34f4ea4c82d4c8f2202d314eba9e, type: 3}
+  - {fileID: 8300000, guid: 155fc8bde8eacc9478003182d831a06c, type: 3}
+  - {fileID: 8300000, guid: 8bca3ec5bf388e6438e9bcbc6ec9f9e0, type: 3}
+  audiosWalk_Piedra:
+  - {fileID: 8300000, guid: 618996d253b766c4491148a51483b79a, type: 3}
+  - {fileID: 8300000, guid: 924b9950d9a62c4418b624689f91b2d3, type: 3}
+  - {fileID: 8300000, guid: c8bd7c06e327f3a499af9319bafd453e, type: 3}
+  - {fileID: 8300000, guid: 67951c66ec65c8340af618671f1c6ce4, type: 3}
+  - {fileID: 8300000, guid: 7ba4095da38c81346a25c34d7399c8c8, type: 3}
+  - {fileID: 8300000, guid: bbacaf34140a3534cbd478a743304e1c, type: 3}
+  - {fileID: 8300000, guid: eadf7a0ebe29ed84da2b3fe5e2d9f3c0, type: 3}
+  - {fileID: 8300000, guid: fddcec16087afc346b10154515c22661, type: 3}
+  - {fileID: 8300000, guid: 224db78e6abff7346bdd88a31527c2a3, type: 3}
+  - {fileID: 8300000, guid: b7b961d48e680c34ab7b80c0c7eaea37, type: 3}
+  - {fileID: 8300000, guid: 2275cbcc2b9a68e4d9bf7e7b4ab63251, type: 3}
+  - {fileID: 8300000, guid: 8672997f69fd9264c9010a422407edf8, type: 3}
+  - {fileID: 8300000, guid: 2c930ddfc1b3ca54fbd614dfa7f2ba80, type: 3}
+  - {fileID: 8300000, guid: bfd4c5b7c718f83428d7b481008b1a1e, type: 3}
+  - {fileID: 8300000, guid: 28c786b2565ab3342aa598ff59b96f9d, type: 3}
+  - {fileID: 8300000, guid: f0b7fa9a5a73b43439ae079883ecaccd, type: 3}
+  - {fileID: 8300000, guid: 58f85a8ab6a84b74398feb57dd41c863, type: 3}
+  audiosRun_Tierra:
+  - {fileID: 8300000, guid: 868dae775a10142cfacdcd001ef59621, type: 3}
+  - {fileID: 8300000, guid: 959eaf0b722474122a0707d5cba67bd6, type: 3}
+  - {fileID: 8300000, guid: d02d13c77adfd4f409d2b35798c3d86f, type: 3}
+  - {fileID: 8300000, guid: e71ecb2ef5d3a0e4aa4b4d8af4d01c0f, type: 3}
+  - {fileID: 8300000, guid: 87a1fba82257d6b42ab3af875cce00b1, type: 3}
+  - {fileID: 8300000, guid: 8e77e86b3a60efc46a0c3119855d34dc, type: 3}
+  - {fileID: 8300000, guid: 6bd0e6cc2ae78bb4492fdc2b849c4894, type: 3}
+  - {fileID: 8300000, guid: 462ed82962ec759468b3388fc859f6ef, type: 3}
+  - {fileID: 8300000, guid: 6836952ca4685044aadaecddae98fefd, type: 3}
+  - {fileID: 8300000, guid: 60e172e2f80e2944ea7b3bb7ad35dfde, type: 3}
+  - {fileID: 8300000, guid: 5836e22e57e621444847e5513bf628da, type: 3}
+  - {fileID: 8300000, guid: d9ea775dba147fe4bbe4b30d558f97ba, type: 3}
+  - {fileID: 8300000, guid: 4f86c050cf8ae464f930d079c0b2b75d, type: 3}
+  - {fileID: 8300000, guid: 8123135d25f77ec41b319d0f1efd9bbc, type: 3}
+  - {fileID: 8300000, guid: 2cd456ce04edb9f4f827779d6ab12e61, type: 3}
+  - {fileID: 8300000, guid: 9f6489e8576e4f04a90cf9437411e8ec, type: 3}
+  - {fileID: 8300000, guid: 9ad931cf019f07044a308ceb19be83f4, type: 3}
+  - {fileID: 8300000, guid: b66937caa0ead5b40ab5a373588fa946, type: 3}
+  - {fileID: 8300000, guid: 746998262406c414bb57d182c5ce2e98, type: 3}
+  - {fileID: 8300000, guid: 89a4b4bbca6a8504e91baf5f3380aa16, type: 3}
+  audiosRun_Hierba:
+  - {fileID: 8300000, guid: 963185e4e22ea9b48a563cfb311fc212, type: 3}
+  - {fileID: 8300000, guid: 2962fbd86cddad04198df498faa8c252, type: 3}
+  - {fileID: 8300000, guid: 88476f852d365fb48855b26b1412f2b2, type: 3}
+  - {fileID: 8300000, guid: b18230e9c6fa4254e917558d4ff912bc, type: 3}
+  - {fileID: 8300000, guid: c1baf7c5a9a461e488158a1bcd73b313, type: 3}
+  - {fileID: 8300000, guid: 271be4005893f3a4f844f3da26028d3f, type: 3}
+  - {fileID: 8300000, guid: 141219e7f765ffb4988e0bddda1ae5db, type: 3}
+  - {fileID: 8300000, guid: 7ee5f46bd01caf1438e4bf32d0a10caa, type: 3}
+  - {fileID: 8300000, guid: d4406c166283cf749a16558b1c8e3c50, type: 3}
+  - {fileID: 8300000, guid: fed65da47e946c8428903da6dc7068f6, type: 3}
+  - {fileID: 8300000, guid: 3d4f4e566bc9b794aa56d2783dde98dd, type: 3}
+  - {fileID: 8300000, guid: 51734770148f94046b756a11c761fdfe, type: 3}
+  - {fileID: 8300000, guid: f2912f46a8d79ef4897e2dce87411864, type: 3}
+  - {fileID: 8300000, guid: 614cccbb035ba1449bac1db72f0e843f, type: 3}
+  - {fileID: 8300000, guid: a4c638569e36c2f40abce6b8021b93d6, type: 3}
+  - {fileID: 8300000, guid: 8aad5b9516a5e9640af64304f40582e1, type: 3}
+  - {fileID: 8300000, guid: f98b841ce5ea44d42812f292d8d32c61, type: 3}
+  - {fileID: 8300000, guid: 762779a85f4087244bafedcbab413868, type: 3}
+  - {fileID: 8300000, guid: 352319a9ec5ca6043ad727ec8cd672f3, type: 3}
+  - {fileID: 8300000, guid: c81006af04d1d2146a3da11010f3eb25, type: 3}
+  audiosRun_Piedra:
+  - {fileID: 8300000, guid: 4a31c46fa0d854f45ab9c48c5e03c7fd, type: 3}
+  - {fileID: 8300000, guid: 0fac45da3c3892f45bcab081f8035ff6, type: 3}
+  - {fileID: 8300000, guid: f11ccf8956f53574d80f2d2c394f5943, type: 3}
+  - {fileID: 8300000, guid: a7c42b4f888c9f848bd735d21743e58a, type: 3}
+  - {fileID: 8300000, guid: 9acdc01caf772f14c8ca1b094620267c, type: 3}
+  - {fileID: 8300000, guid: e409b797163be1b42ac898412cb3e997, type: 3}
+  - {fileID: 8300000, guid: bb3f0974244ca924a9cd4f4a8b0475c3, type: 3}
+  - {fileID: 8300000, guid: f1dc1db3e28251a41b0d9a97061dc9df, type: 3}
+  - {fileID: 8300000, guid: e0eb5c0c5dd277b41b496564bef38276, type: 3}
+  - {fileID: 8300000, guid: f147e0db288e23e4985b6dbf42f0c190, type: 3}
+  - {fileID: 8300000, guid: 9b6ddb1b65886284cb2358aab624106c, type: 3}
+  - {fileID: 8300000, guid: 8010ad6971b141a4b9a83253054c149a, type: 3}
+  - {fileID: 8300000, guid: 30fbff5c4fd7d4c45bfe93ca6a57ae44, type: 3}
+  - {fileID: 8300000, guid: 9765b25ca1dfbe2449f108e02b3efe78, type: 3}
+  - {fileID: 8300000, guid: c223d417d5912724c85e71b9760634e6, type: 3}
+  - {fileID: 8300000, guid: a801d58363ffa6e45b678cc6db81a168, type: 3}
+  - {fileID: 8300000, guid: 65d56dfbee73964418affc4093fe5c5e, type: 3}
+  - {fileID: 8300000, guid: 98e150e28bfc87047bd8a58c4c868c85, type: 3}
+  - {fileID: 8300000, guid: 85d0b29e4a2b8564fbca5538950fdab5, type: 3}
+  audiosLanding_Tierra:
+  - {fileID: 8300000, guid: 6432fadeb5eb5ac429d6924eb0f5b672, type: 3}
+  audiosLanding_Hierba:
+  - {fileID: 8300000, guid: 0682d794b3ca46f4caed9368cb6ab56c, type: 3}
+  audiosLanding_Piedra:
+  - {fileID: 8300000, guid: c0e84c7dbfab6c64a99b4aa8b52e9e82, type: 3}
   audioAttack: {fileID: 8300000, guid: c6995da1f90e0794092e466fc5225b11, type: 3}
   audiosJump:
   - {fileID: 8300000, guid: 3f998b74096ac814abe901f3da4773c2, type: 3}
   - {fileID: 8300000, guid: a613f6d882d247e4cbbd43562cac6e70, type: 3}
   - {fileID: 8300000, guid: f50b6ab71cdb8b140b8e5a83f5e509a3, type: 3}
+--- !u!81 &7340160251436501700
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322622648257989031}
+  m_Enabled: 1
 --- !u!1 &5352845137664940069
 GameObject:
   m_ObjectHideFlags: 0
