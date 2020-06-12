@@ -102,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
         //Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
     }
+    
     void Update()
     {
         if (canMove)
@@ -113,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetFloat("PlayerWalkVelocity", 0);
         }
     }
-    public void Movimiento()
+    void Movimiento()
     {
         //Obtener los inputs del Input Manager
         playerInput = Vector3.ClampMagnitude(playerInput, 1);

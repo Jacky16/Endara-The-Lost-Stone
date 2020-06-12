@@ -60,8 +60,6 @@ public class AudioSettings : MonoBehaviour
         musicVolume = curreVolumeMusic;
         fxVolume = currentVolumeFx;
 
-
-
         audioMixer.SetFloat("generalVolume", currentVolumeGeneral);
         audioMixer.SetFloat("fxVolume", fxVolume);
         audioMixer.SetFloat("musicVolume", musicVolume);
