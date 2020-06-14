@@ -346,6 +346,10 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+    public void SetPlayerCanMove()
+    {
+        canMove =! canMove;
+    }
     public bool PlayerIn2D()
     {
         return playerIn2D;

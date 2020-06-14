@@ -15,5 +15,6 @@ public class TeleportLaberinto : MonoBehaviour
         bossManager.SetCanOpenChallenge_1(false);
         bossManager.SetCanOpenChallenge_2(true);
         bossManager.SetCanOpenChallenge_3(false);
+        bossManager.DoAnimationBoss(1);
     }
 }

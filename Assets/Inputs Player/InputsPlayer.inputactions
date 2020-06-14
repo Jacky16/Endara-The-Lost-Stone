@@ -84,6 +84,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "SkipDialogue",
+                    "type": "Button",
+                    "id": "550baba0-4843-4a02-9b49-2da8e9a9c418",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -458,6 +466,39 @@
                     "processors": "",
                     "groups": "PS4",
                     "action": "ResetPuzzle_3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8e104407-6978-4a34-be98-b76d133b9d49",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "SkipDialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "559f7905-8768-4baf-8d96-eaf2f20a3a70",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox",
+                    "action": "SkipDialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df3fac20-a144-43c4-a129-a33c45e7b83e",
+                    "path": "<DualShockGamepad>/buttonSouth",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "PS4",
+                    "action": "SkipDialogue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

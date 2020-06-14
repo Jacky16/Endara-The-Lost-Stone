@@ -24,12 +24,22 @@ public class BossManager : MonoBehaviour
     Enterchallenge enterchallenge_2;
     [SerializeField]
     Enterchallenge enterchallenge_3;
+
+    [Header("TimeLines")]
+    [SerializeField]
+    PlayableDirector playableDirector_Reto_1;
+    [SerializeField]
+    PlayableDirector playableDirector_Reto_2;
+    [SerializeField]
+    PlayableDirector playableDirector_Reto_3;
+
+    [SerializeField]
+    Animator animBoss;
     private void Start()
     {
         _virtualCamera.Priority = 0;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        ResetChallenges();
-        
+        ResetChallenges();        
     }
     public void SubstractAttempBoss(Transform pos)
     {
@@ -45,7 +55,6 @@ public class BossManager : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        transform.DOMoveY(transform.position.y - 1, 1);
         _attemptLifeBoss--;
         //Asigno la posicion de la puerta del reto en el que estaba
         player.SetRespawn(posDoorChallange);
@@ -72,5 +81,41 @@ public class BossManager : MonoBehaviour
     public void SetCanOpenChallenge_3(bool b)
     {
         enterchallenge_3.CanEnter(b);
+    }
+    public void DoAnimationBoss(int challenge)
+    {
+        if(challenge == 1)
+        {
+            playableDirector_Reto_1.Play();
+        }
+        if (challenge == 2)
+        {
+            playableDirector_Reto_2.Play();
+        }
+        if (challenge == 3)
+        {
+            playableDirector_Reto_3.Play();
+        }
+        RandomAnimBoss(Random.Range(1, 4));
+    }
+
+    void RandomAnimBoss(int number)
+    {
+        if(number == 1)
+        {
+            animBoss.SetTrigger("Angry_1");
+        }
+        else if(number == 2)
+        {
+            animBoss.SetTrigger("Angry_2");
+        }
+        else if(number == 3)
+        {
+            animBoss.SetTrigger("Angry_3");
+        }
+        else if(number == 4)
+        {
+            animBoss.SetTrigger("Angry_4");
+        }
     }
 }

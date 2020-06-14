@@ -46,6 +46,8 @@ public class ZonaSaltosManager : MonoBehaviour
         _enterchallenge.CanEnter(false);
         //Restar una vida al boss y sacar al player del reto
         _bossManager.SubstractAttempBoss(_positionDoorChallenge);
+        //Ejecutar la animacion del boss
+        _bossManager.DoAnimationBoss(3);
         //Parar la cuenta atras
         _timeManager.SetCanSubstractTime(false);
         return;    
