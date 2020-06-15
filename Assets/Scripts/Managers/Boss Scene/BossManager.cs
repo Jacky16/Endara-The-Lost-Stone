@@ -35,11 +35,17 @@ public class BossManager : MonoBehaviour
 
     [SerializeField]
     Animator animBoss;
+
+    [Header("Reset trono")]
+    [SerializeField]
+    Transform transformSpawnTrono;
+    [SerializeField]
+    GameObject tronoPrefab;
     private void Start()
     {
         _virtualCamera.Priority = 0;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        ResetChallenges();        
+                
     }
     public void SubstractAttempBoss(Transform pos)
     {
@@ -69,6 +75,8 @@ public class BossManager : MonoBehaviour
         SetCanOpenChallenge_1(true);
         SetCanOpenChallenge_2(false);
         SetCanOpenChallenge_3(false);
+        Destroy(transform.FindChild("Trono_Piedras"));
+        Instantiate(tronoPrefab, transformSpawnTrono.position, Quaternion.identity);
     }
     public void SetCanOpenChallenge_1(bool b)
     {
