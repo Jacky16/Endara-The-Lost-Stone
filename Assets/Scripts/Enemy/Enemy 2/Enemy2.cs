@@ -24,6 +24,8 @@ public class Enemy2 : Enemy
     [Header("Audio")]
     [SerializeField]
     AudioClip audioInvokeRock;
+    [SerializeField]
+    AudioClip audioNearAttack;
     AudioSource audioSource;
     private void Awake()
     {
@@ -48,10 +50,18 @@ public class Enemy2 : Enemy
 
     }
 
-    public void NearAttack()
+    public void NearAttack() //Se ejecuta en la animacion 
     {
         activateNearAttack = !activateNearAttack;
         gameObjectNearAttack.SetActive(activateNearAttack);
+        
+    }
+    public void PlaySoundNearAttack()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(audioNearAttack);
+        }
     }
 
     void InvokeRock()// Se ejecuta en un evento en la animacion de Invocar la roca

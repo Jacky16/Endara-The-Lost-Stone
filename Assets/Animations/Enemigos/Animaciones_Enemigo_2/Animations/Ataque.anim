@@ -20950,8 +20950,22 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.4666667
+  - time: 0.06666667
+    functionName: CheckRock
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.6
     functionName: NearAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.6666667
+    functionName: PlaySoundNearAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

@@ -39,6 +39,13 @@ public class VideoSettings : MonoBehaviour
         }
         _sliderContrast.value = colorAdjustments.contrast.value;
         _sliderBrightness.value = colorAdjustments.postExposure.value;
+
+        //Valores Motion Bloor
+        motionBlur.intensity.value = .5f;
+        motionBlur.maximumVelocity.value = 200;
+        motionBlur.minimumVelocity.value = 2;
+        motionBlur.cameraRotationVelocityClamp.value = .1f;
+        motionBlur.cameraMotionBlur.value = true;
     }
     private void OnEnable()
     {
