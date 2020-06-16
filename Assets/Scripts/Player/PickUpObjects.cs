@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PickUpObjects : MonoBehaviour
 {
-    [HideInInspector] public GameObject objectToPickup;
-    [HideInInspector] public GameObject PickedObject;
+    public GameObject objectToPickup;
+    public GameObject PickedObject;
     Transform _interactionZone;
     static bool _canCatchObject;
     static bool _isCatched;
@@ -19,16 +19,31 @@ public class PickUpObjects : MonoBehaviour
         uIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
         animPlayer = GetComponent<Animator>();
     }
-  
+    //private void Update()
+    //{
+    //    if (!IsCatchedObject())
+    //    {
+    //        uIManager.AnimationMoveDownDropButton();
+    //    }
+    //}
+
     public void CatchObjectSystem()
     {
+        
         if (CanCatchObject()) //Pillar el objeto
         {
             uIManager.AnimationMoveUpDropButton();
             uIManager.AnimationMoveDownButtonsRotate();
             uIManager.AnimationScaleDisableButtonCatch();
-
-            animPlayer.SetTrigger("PickUp");
+            
+            if (objectToPickup != null)
+            {
+                animPlayer.SetTrigger("PickUp");
+                //Variables a la hora de pillar el objeto
+                _isCatched = true;
+                _canCatchObject = false;
+                _canThrowObject = true;
+            }
         }
         else //Soltar el objeto
 
@@ -56,10 +71,7 @@ public class PickUpObjects : MonoBehaviour
     {
         if (objectToPickup != null && objectToPickup.GetComponent<ObjetoPickeable>().isPickeable == true && PickedObject == null)
         {
-            //Pillar el objeto 
-            _isCatched = true;
-            _canCatchObject = false;
-            _canThrowObject = true;
+            
             PickedObject = objectToPickup;
             PickedObject.GetComponent<ObjetoPickeable>().isPickeable = false;
             PickedObject.transform.SetParent(_interactionZone);

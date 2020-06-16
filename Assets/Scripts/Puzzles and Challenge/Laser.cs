@@ -178,7 +178,9 @@ public class Laser : MonoBehaviour
         meshRenderer.material.SetFloat("Alpha", 2);
         gemaPuzzle.SolutionInGema(true);
         anim.SetBool("Iluminate", true);
+
         GameObject [] op = GameObject.FindGameObjectsWithTag("Cubo");
+
         foreach(GameObject go in op)
         {
             ObjetoPickeable ob;

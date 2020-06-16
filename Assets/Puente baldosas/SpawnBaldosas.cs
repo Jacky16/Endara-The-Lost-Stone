@@ -16,7 +16,7 @@ public class SpawnBaldosas : MonoBehaviour
     private void Start()
     {
         //timeToSpawn = firstTime;
-        isSpawingBaldosas = false;
+        isSpawingBaldosas = true;
     }
     private void FixedUpdate()
     {

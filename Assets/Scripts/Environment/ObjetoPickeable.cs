@@ -74,6 +74,11 @@ public class ObjetoPickeable : MonoBehaviour
 
                 uIManager.AnimationMoveDownButtonsRotate();
             }
+            
+        }
+        if (!PickUpObjects.IsCatchedObject())
+        {
+            uIManager.AnimationMoveDownDropButton();
         }
     }
     private void OnCollisionEnter(Collision collision)

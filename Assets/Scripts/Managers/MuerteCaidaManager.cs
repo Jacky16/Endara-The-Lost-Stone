@@ -11,7 +11,7 @@ public class MuerteCaidaManager : MonoBehaviour
     [SerializeField] UnityEvent onDead;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "Player")
+        if(other.tag == "Player" || other.name == "Player")
         {
             StartCoroutine(DeadFallAnimationCanvas());
         }

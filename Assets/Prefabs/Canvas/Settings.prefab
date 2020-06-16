@@ -796,11 +796,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Bajos
+    - m_Text: Low
       m_Image: {fileID: 21300000, guid: d34a8b81133306a4ea1b27e661822466, type: 3}
-    - m_Text: Medios
+    - m_Text: Mid
       m_Image: {fileID: 0}
-    - m_Text: Altos
+    - m_Text: High
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
