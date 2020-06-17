@@ -10,7 +10,7 @@ public class GUIManager : MonoBehaviour
    
     private void OnEnable()
     {
-        eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+        eventSystem = FindObjectOfType<EventSystem>();
         eventSystem.SetSelectedGameObject(firstSelected);
     }
     

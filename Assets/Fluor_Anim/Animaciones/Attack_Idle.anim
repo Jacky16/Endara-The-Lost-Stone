@@ -102530,14 +102530,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 1.9333333
-    functionName: ColliderAttack
+    functionName: ActiveColliderAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2.2333333
-    functionName: ColliderAttack
+    functionName: DisableColliderAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

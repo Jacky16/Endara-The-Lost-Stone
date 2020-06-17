@@ -58,6 +58,10 @@ public class Puzzle3Manager : MonoBehaviour
     {
         rocksPuzzle3 = RocksCanMove.GetComponentsInChildren<RockPuzzle3>();
     }
+    private void Update()
+    {
+        ChangeSprite();
+    }
     public void ResetPuzzle3(InputAction.CallbackContext inputAction)
     {
         if (inputAction.started)

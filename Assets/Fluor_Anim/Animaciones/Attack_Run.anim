@@ -115150,14 +115150,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 1.9666667
-    functionName: ColliderAttack
+    functionName: ActiveColliderAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2.2666667
-    functionName: ColliderAttack
+    functionName: DisableColliderAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

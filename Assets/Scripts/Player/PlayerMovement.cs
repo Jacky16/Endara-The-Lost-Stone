@@ -258,10 +258,13 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetTrigger("Attack");
     }
-    public void ColliderAttack()
+    public void ActiveColliderAttack()
     {
-        _activeAttackCollider = !_activeAttackCollider;
-        attackCollider.enabled = _activeAttackCollider;
+        attackCollider.enabled = true;
+    }
+    public void DisableColliderAttack()
+    {
+        attackCollider.enabled = false;
     }
     public void SetRespawn(Transform t)
     {
