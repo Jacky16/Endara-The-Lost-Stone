@@ -8,9 +8,14 @@ public class Portal : MonoBehaviour
 {
     [SerializeField]
     PlayableDirector playableDirector;
+    AudioSource audioSource;
 
     private void OnTriggerEnter(Collider other)
     {
         playableDirector.Play();
+    }
+    public void PlayAudio()
+    {
+        audioSource.Play();
     }
 }

@@ -40,7 +40,7 @@ public class VideoSettings : MonoBehaviour
         _sliderContrast.value = colorAdjustments.contrast.value;
         _sliderBrightness.value = colorAdjustments.postExposure.value;
 
-        //Valores Motion Bloor
+        //Valores Motion Blur
         motionBlur.intensity.value = .5f;
         motionBlur.maximumVelocity.value = 200;
         motionBlur.minimumVelocity.value = 2;

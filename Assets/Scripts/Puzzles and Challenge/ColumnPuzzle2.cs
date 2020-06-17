@@ -10,6 +10,9 @@ public class ColumnPuzzle2 : MonoBehaviour
     UIManager uIManager;
     [SerializeField]
     Puzzle2Manager _puzzle2Manager;
+    [SerializeField]
+    ParticleSystem smokeColumn;
+    AudioSource audioColumnRotating;
     
     public enum NumberColumn{ Column1,Column2,Column3};
     public NumberColumn numberColumn;
@@ -18,6 +21,7 @@ public class ColumnPuzzle2 : MonoBehaviour
     private void Awake()
     {
         uIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+        audioColumnRotating = GetComponent<AudioSource>();
     }
     private void Start()
     {
@@ -39,7 +43,7 @@ public class ColumnPuzzle2 : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && canRotate)
         {
             _playerInside = true;
 
@@ -61,7 +65,10 @@ public class ColumnPuzzle2 : MonoBehaviour
         {
             if (canRotate) //Variable que controla que si pulsas en mitad de la rotacion, no se sume el angulo por pulsar varias veces
             {
-                _column.transform.DOLocalRotate(new Vector3(0, 0, 90), 1f, RotateMode.LocalAxisAdd).OnStart(() => canRotate = false).OnComplete(() => canRotate = true);
+                smokeColumn.Play();
+                _column.transform.DOLocalRotate(new Vector3(0, 0, 90), audioColumnRotating.clip.length, RotateMode.LocalAxisAdd).OnStart(() => canRotate = false).OnComplete(() => canRotate = true);
+                if(!audioColumnRotating.isPlaying)
+                    audioColumnRotating.Play();
             }
         }
     }
@@ -72,9 +79,11 @@ public class ColumnPuzzle2 : MonoBehaviour
         {
             if (canRotate) //Variable que controla que si pulsas en mitad de la rotacion, no se sume el angulo por pulsar varias veces
             {
-                _column.transform.DOLocalRotate(new Vector3(0, 0, -90), 1f, RotateMode.LocalAxisAdd).OnStart(() => canRotate = false).OnComplete(() => canRotate = true);
+                smokeColumn.Play();
+                _column.transform.DOLocalRotate(new Vector3(0, 0, -90), audioColumnRotating.clip.length, RotateMode.LocalAxisAdd).OnStart(() => canRotate = false).OnComplete(() => canRotate = true);
                 Vector3 currentRotation = _column.transform.localRotation.eulerAngles;
-                print(currentRotation);
+                if (!audioColumnRotating.isPlaying)
+                    audioColumnRotating.Play();
             }
         }
     }
@@ -85,12 +94,15 @@ public class ColumnPuzzle2 : MonoBehaviour
         {
             case NumberColumn.Column1:
                 _puzzle2Manager.Column1(true);
+                smokeColumn.Stop();
                 break;
             case NumberColumn.Column2:
                 _puzzle2Manager.Column2(true);
+                smokeColumn.Stop();
                 break;
             case NumberColumn.Column3:
                 _puzzle2Manager.Column3(true);
+                smokeColumn.Stop();
                 break;
         }
     }

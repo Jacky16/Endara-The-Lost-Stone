@@ -22,7 +22,15 @@ public class Puzzle2Manager : MonoBehaviour
     [SerializeField]
     Animator animColumn_3;
 
+    //Audio puzzle 2
+    AudioSource audioSource;
+    [SerializeField]
+    AudioClip audioCorrectPuzzle;
 
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void Column1(bool b)
     {
         _column1 = b;
@@ -51,6 +59,8 @@ public class Puzzle2Manager : MonoBehaviour
     }
     void PlayCinematic()
     {
+        audioSource.PlayOneShot(audioCorrectPuzzle);
+
         playableDirector.Play();
     }
 }

@@ -27,7 +27,6 @@ public class RockEnemy2 : MonoBehaviour
     {
         if (canGo)
         {
-            directionToPlayer.y *= -100;
             rb.velocity = directionToPlayer * (speed * Time.deltaTime);
             
             transform.DOLocalRotate(new Vector3(100, 0, 0), 3, RotateMode.LocalAxisAdd).SetLoops(-1);

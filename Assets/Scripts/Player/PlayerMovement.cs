@@ -98,8 +98,8 @@ public class PlayerMovement : MonoBehaviour
         jumpForce = 9.5f;
 
         //godManager = GameObject.Find("Mode God Manager").GetComponent<GodManager>();
-        //Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         movePlayer.y = 0;
     }
     

@@ -27,6 +27,9 @@ public abstract class Enemy : MonoBehaviour
     [Header("Componentes")]
     [SerializeField]protected NavMeshAgent navMeshAgent;
     [SerializeField] protected Animator anim;
+    [SerializeField] AudioClip soundHit;
+    [SerializeField]
+    AudioSource audioSource;
 
     [Header("Path Enemy")]
     [SerializeField] Transform[] pathEnemy;
@@ -54,6 +57,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField]
     UnityEvent onDead;
     #endregion
+   
     private void Start()
     {
         _nextPosition = 0;
@@ -333,6 +337,7 @@ public abstract class Enemy : MonoBehaviour
                 life -= 25;
                 print("Life Enemy: " + life);
                 anim.SetTrigger("hit");
+                audioSource.PlayOneShot(soundHit);
                 if (life <= 0)
                 {
                     navMeshAgent.speed = 0;

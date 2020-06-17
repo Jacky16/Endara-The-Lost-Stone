@@ -11,7 +11,7 @@ public class RayDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Detection Enemy")
+        if (other.gameObject.name == "Player")
         {
             if(other.GetComponentInParent<PlayerLifeManager>().AttempsPlayer() <= 0)
             {
