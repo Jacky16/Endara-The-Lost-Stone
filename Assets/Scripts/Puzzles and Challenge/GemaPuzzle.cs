@@ -39,6 +39,9 @@ public class GemaPuzzle : MonoBehaviour
     [SerializeField]
     GameObject gameObjectCameraSwitch;
 
+    [SerializeField]
+    UIManager uIManager;
+
     static bool isSolution;
     private void Awake()
     {
@@ -48,6 +51,7 @@ public class GemaPuzzle : MonoBehaviour
     public void SolutionInGema(bool b)
     {
         isSolution = b;
+        uIManager.AnimationMoveDownButtonsRotate();
         anim.SetBool("Iluminate", IsSolution());
        
     }
