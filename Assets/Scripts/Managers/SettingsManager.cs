@@ -27,10 +27,10 @@ public class SettingsManager : MonoBehaviour
     }
     public void Return()
     {
-        canvasSettings.SetActive(false);
-        canvasSettingsAudio.SetActive(false);
-        canvasSettingsVideo.SetActive(false);
-        canvasBeforeCanvasSettings.SetActive(true);
+        //canvasSettings.SetActive(false);
+        //canvasSettingsAudio.SetActive(false);
+        //canvasSettingsVideo.SetActive(false);
+        //canvasBeforeCanvasSettings.SetActive(true);
     }
     //public void ExitToMainMenu()
     //{

@@ -1,5 +1,4 @@
-﻿using Boo.Lang;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,7 +10,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] GameObject canvasSettings;
     [SerializeField] GameObject[] _canvasInsideSettings;
     bool activePause = false;
-    Boo.Lang.List<AudioSource> audioSources = new Boo.Lang.List<AudioSource>();
+    System.Collections.Generic.List<AudioSource> audioSources = new System.Collections.Generic.List<AudioSource>();
 
     void Start()
     {
@@ -22,7 +21,7 @@ public class PauseManager : MonoBehaviour
 
     public void Pause()
     {
-        foreach(AudioSource a in FindObjectsOfType<AudioSource>())
+        foreach (AudioSource a in FindObjectsOfType<AudioSource>())
         {
             if (a.isPlaying)
             {

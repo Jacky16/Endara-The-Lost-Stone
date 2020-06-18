@@ -34,6 +34,12 @@ public class Enterchallenge : MonoBehaviour
     [Header("Manager Challenges")]
     [SerializeField]
     ZonaSaltosManager zonaSaltosManager; //Third Challenge
+
+    AudioSource doorSound;
+    private void Awake()
+    {
+        doorSound = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && canEnter || (other.CompareTag("Player") && PlayerMovement.IsModeGod()))
@@ -61,7 +67,8 @@ public class Enterchallenge : MonoBehaviour
                 break;
         }
         PlayerMovement.canMove = false;
-        _pivotDoor.DOLocalRotate(new Vector3(0, -90, 0), 1);
+        doorSound.Play();
+        _pivotDoor.DOLocalRotate(new Vector3(0, -90, 0), doorSound.clip.length);
         anim.SetTrigger("Start");
 
         yield return new WaitForSeconds(1.3f);

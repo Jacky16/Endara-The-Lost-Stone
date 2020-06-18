@@ -17,7 +17,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     GameObject _canvasGameControls;
     [SerializeField]
-    Animator anim;
+    Image anim;
 
     [Header("Game Controls")]
     [SerializeField]
@@ -34,6 +34,7 @@ public class MainMenuManager : MonoBehaviour
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
+        anim.DOFade(0, 4);
     }
 
     public void Play()
@@ -55,7 +56,7 @@ public class MainMenuManager : MonoBehaviour
     }
     IEnumerator LoadSceneCoroutine(string scene)
     {
-        anim.SetTrigger("Start");
+        anim.DOFade(1, 1);
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(scene);
     }
