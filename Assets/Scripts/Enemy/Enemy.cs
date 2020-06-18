@@ -337,7 +337,11 @@ public abstract class Enemy : MonoBehaviour
                 life -= 25;
                 print("Life Enemy: " + life);
                 anim.SetTrigger("hit");
-                audioSource.PlayOneShot(soundHit);
+                if(audioSource != null)
+                {
+                    audioSource.PlayOneShot(soundHit);
+                }
+                print("Vida actual enemigo " + life);
                 if (life <= 0)
                 {
                     navMeshAgent.speed = 0;

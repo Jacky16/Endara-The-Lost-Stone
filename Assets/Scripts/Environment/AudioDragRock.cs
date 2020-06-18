@@ -11,8 +11,7 @@ public class AudioDragRock : MonoBehaviour
 
     AudioSource audioSource;
     Rigidbody rb;
-    [SerializeField]
-    ParticleSystem particleSystemSmoke;
+    
 
     bool playerIsPushing;
     private void Awake()

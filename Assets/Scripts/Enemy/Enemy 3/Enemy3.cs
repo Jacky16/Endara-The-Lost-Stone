@@ -37,21 +37,18 @@ public class Enemy3 : Enemy
     }
     public void LanzarRayo()
     {
-        GameObject g = rayoPrefab;
+       
         if (isInFarAttack)
         {
             RaycastHit hit;
             Ray ray;
             if (Physics.Raycast(player.position, transform.TransformDirection(Vector3.down), out hit, 10, layerMaskRay))
             {
-                Instantiate(g, hit.point, Quaternion.identity);
+                GameObject g = Instantiate(rayoPrefab, hit.point, Quaternion.identity);
                 Destroy(g, 6);
             }
         }
-        else
-        {
-            DestroyImmediate(g,true);
-        } 
+
     }
     
     IEnumerator DelayMovement()

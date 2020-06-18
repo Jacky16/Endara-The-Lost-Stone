@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Boo.Lang;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] GameObject canvasSettings;
     [SerializeField] GameObject[] _canvasInsideSettings;
     bool activePause = false;
+    Boo.Lang.List<AudioSource> audioSources = new Boo.Lang.List<AudioSource>();
 
     void Start()
     {
@@ -20,7 +22,13 @@ public class PauseManager : MonoBehaviour
 
     public void Pause()
     {
-        
+        foreach(AudioSource a in FindObjectsOfType<AudioSource>())
+        {
+            if (a.isPlaying)
+            {
+                audioSources.Add(a);
+            }
+        }
         if (!activePause)
         {
             activePause = !activePause;
@@ -29,6 +37,11 @@ public class PauseManager : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             PlayerMovement.canMove = false;
+            foreach (AudioSource a in audioSources)
+            {
+                a.Pause();
+            }
+
         }
         else if (activePause)
         {
@@ -38,10 +51,11 @@ public class PauseManager : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             PlayerMovement.canMove = true;
-            foreach (GameObject g in _canvasInsideSettings)
+            foreach (AudioSource a in audioSources)
             {
-                g.SetActive(false);
+                a.Play();
             }
+            audioSources.Clear();
         }
     }
     public void Resume()
@@ -52,6 +66,11 @@ public class PauseManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         PlayerMovement.canMove = true;
+        foreach (AudioSource a in audioSources)
+        {
+            a.Play();
+        }
+        audioSources.Clear();
 
     }
     public void Settings()
