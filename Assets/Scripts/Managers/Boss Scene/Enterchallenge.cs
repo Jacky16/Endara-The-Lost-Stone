@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using Cinemachine;
 using DG.Tweening;
-
+using UnityEngine.Events;
 
 public class Enterchallenge : MonoBehaviour
 {
@@ -34,7 +34,7 @@ public class Enterchallenge : MonoBehaviour
     [Header("Manager Challenges")]
     [SerializeField]
     ZonaSaltosManager zonaSaltosManager; //Third Challenge
-
+    public UnityEvent OnEnterChallenge;
     AudioSource doorSound;
     private void Awake()
     {
@@ -80,7 +80,7 @@ public class Enterchallenge : MonoBehaviour
         //Mover al player a su respectivo reto
         other.transform.DOMove(_positionInChallenge.position, .2f);
         _pivotDoor.DOLocalRotate(new Vector3(0, 0, 0), 1);
-
+        OnEnterChallenge.Invoke();
         other.transform.localRotation = _positionInChallenge.localRotation;
        
         //Asignar donde reaparecerá una vez conseguido el reto

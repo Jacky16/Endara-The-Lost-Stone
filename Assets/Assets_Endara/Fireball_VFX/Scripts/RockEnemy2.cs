@@ -28,7 +28,7 @@ public class RockEnemy2 : MonoBehaviour
         if (canGo)
         {
             rb.velocity = directionToPlayer * (speed * Time.deltaTime);
-            transform.Translate(Vector3.down * 2 * Time.deltaTime);
+            transform.Translate(Vector3.down * 1.5f * Time.deltaTime);
             //transform.DOLocalRotate(new Vector3(100, 0, 0), 3, RotateMode.LocalAxisAdd).SetLoops(-1);
             if(!audioSource.isPlaying)
             audioSource.Play();
