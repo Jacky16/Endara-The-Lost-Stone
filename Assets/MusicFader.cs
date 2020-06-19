@@ -13,14 +13,19 @@ public class MusicFader : MonoBehaviour
 
     [SerializeField]
     AudioClip challengeMusic;
+    private void Awake()
+    {
+        audioSourceChallengeMusic.volume = 0.3f;
+    }
     public void FadeInMusic()
     {
         mainMusic.DOFade(0, 1);
-        audioSourceChallengeMusic.DOFade(0.5f, 1).OnStart(() => audioSourceChallengeMusic.PlayOneShot(challengeMusic));
+        print(mainMusic.volume);
+        audioSourceChallengeMusic.DOFade(0.3f, 1).OnStart(() => audioSourceChallengeMusic.PlayOneShot(challengeMusic));
     }
     public void FadeOutMusic()
     {
-        mainMusic.DOFade(0.5f, 1);
+        mainMusic.DOFade(0.3f, 1);
         audioSourceChallengeMusic.DOFade(0f, 1);
     }
 

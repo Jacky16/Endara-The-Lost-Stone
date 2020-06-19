@@ -45,9 +45,9 @@ public class BossManager : MonoBehaviour
     {
         _virtualCamera.Priority = 0;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        SetCanOpenChallenge_1(false);
+        SetCanOpenChallenge_1(true);
         SetCanOpenChallenge_2(false);
-        SetCanOpenChallenge_3(true);
+        SetCanOpenChallenge_3(false);
     }
     public void SubstractAttempBoss(Transform pos)
     {

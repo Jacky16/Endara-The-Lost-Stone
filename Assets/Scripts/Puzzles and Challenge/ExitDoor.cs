@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ExitDoor : MonoBehaviour
 {
+    public UnityEvent OnChallengeComplete;
     [SerializeField]
     Enterchallenge enterchallenge;
 
@@ -29,6 +31,7 @@ public class ExitDoor : MonoBehaviour
         bossManager.SetCanOpenChallenge_2(false);
         bossManager.SetCanOpenChallenge_3(false);
         bossManager.DoAnimationBoss(3);
+        OnChallengeComplete.Invoke();
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PuzzleEstatuaManager : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class PuzzleEstatuaManager : MonoBehaviour
     bool isSolutionFirst;
     bool isSolutionSecond;
     bool isSolutionThird;
-
+    public UnityEvent OnChallengeComplete;
     [SerializeField]
     Enterchallenge enterchallenge;
 
@@ -50,6 +51,7 @@ public class PuzzleEstatuaManager : MonoBehaviour
             bossManager.SetCanOpenChallenge_1(false);
             bossManager.SetCanOpenChallenge_2(false);
             bossManager.SetCanOpenChallenge_3(true);
+            OnChallengeComplete.Invoke();
             return;
         }
     }
