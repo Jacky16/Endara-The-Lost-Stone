@@ -44,7 +44,11 @@ public class Enterchallenge : MonoBehaviour
     {
         if (other.CompareTag("Player") && canEnter || (other.CompareTag("Player") && PlayerMovement.IsModeGod()))
         {
-           StartCoroutine(MovePlayerToChallenge(other)); 
+            if (canEnter)
+            {
+                print(canEnter);
+                StartCoroutine(MovePlayerToChallenge(other));
+            }
         }
     }
     public void CanEnter(bool b)

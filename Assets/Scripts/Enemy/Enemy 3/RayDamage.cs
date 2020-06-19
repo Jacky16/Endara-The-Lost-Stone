@@ -8,17 +8,18 @@ public class RayDamage : MonoBehaviour
     ParticleSystem ps;
     [SerializeField]
     BoxCollider boxCollider;
+    bool isDamaged;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.name == "Player" && !isDamaged)
         {
             if(other.GetComponentInParent<PlayerLifeManager>().AttempsPlayer() <= 0)
             {
                 Destroy(transform.root.gameObject);
             }
             other.GetComponentInParent<PlayerLifeManager>().SubstractLife();
-
+            isDamaged = true;
         }
     }
     void ActivateCollider()

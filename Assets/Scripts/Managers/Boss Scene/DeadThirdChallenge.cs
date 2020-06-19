@@ -19,14 +19,16 @@ public class DeadThirdChallenge : MonoBehaviour
     GameObject _gameObjectKey;
     
     [SerializeField]
-    GameObject _gameObjectExitDoor;
+    GameObject _gameObjectExitDoor; 
+    [SerializeField]
+    GameObject _gameObjectCurrentWall;
     private void Start()
     {
         _zonaSaltosManager = GetComponentInParent<ZonaSaltosManager>();
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.name == "Player")
         {
             StartCoroutine(DeadPlayer(other));
         }
@@ -34,6 +36,7 @@ public class DeadThirdChallenge : MonoBehaviour
     IEnumerator DeadPlayer(Collider other)
     {
         _gameObjectExitDoor.SetActive(false);
+        _gameObjectCurrentWall.SetActive(true);
         _gameObjectKey.SetActive(true);
         PlayerMovement.canMove = false;
         _animFade.SetTrigger("DeadCaida_Start");

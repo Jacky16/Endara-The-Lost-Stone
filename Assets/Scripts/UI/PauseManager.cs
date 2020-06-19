@@ -10,7 +10,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] GameObject canvasSettings;
     [SerializeField] GameObject[] _canvasInsideSettings;
     bool activePause = false;
-    System.Collections.Generic.List<AudioSource> audioSources = new System.Collections.Generic.List<AudioSource>();
+    List<AudioSource> audioSources = new List<AudioSource>();
 
     void Start()
     {

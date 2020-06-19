@@ -28,6 +28,7 @@ public class ExitDoor : MonoBehaviour
         bossManager.SetCanOpenChallenge_1(false);
         bossManager.SetCanOpenChallenge_2(false);
         bossManager.SetCanOpenChallenge_3(false);
+        bossManager.DoAnimationBoss(3);
     }
     private void OnTriggerEnter(Collider other)
     {

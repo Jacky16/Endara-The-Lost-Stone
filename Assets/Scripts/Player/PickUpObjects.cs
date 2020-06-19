@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PickUpObjects : MonoBehaviour
 {
-    public GameObject objectToPickup;
-    public GameObject PickedObject;
+    [HideInInspector]public GameObject objectToPickup;
+    [HideInInspector] public GameObject PickedObject;
     Transform _interactionZone;
     static bool _canCatchObject;
     static bool _isCatched;
@@ -19,13 +19,10 @@ public class PickUpObjects : MonoBehaviour
         uIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
         animPlayer = GetComponent<Animator>();
     }
-    //private void Update()
-    //{
-    //    if (!IsCatchedObject())
-    //    {
-    //        uIManager.AnimationMoveDownDropButton();
-    //    }
-    //}
+    private void Update()
+    {
+        
+    }
 
     public void CatchObjectSystem()
     {
@@ -35,7 +32,6 @@ public class PickUpObjects : MonoBehaviour
             uIManager.AnimationMoveUpDropButton();
             uIManager.AnimationMoveDownButtonsRotate();
             uIManager.AnimationScaleDisableButtonCatch();
-            
             if (objectToPickup != null)
             {
                 animPlayer.SetTrigger("PickUp");
@@ -43,6 +39,12 @@ public class PickUpObjects : MonoBehaviour
                 _isCatched = true;
                 _canCatchObject = false;
                 _canThrowObject = true;
+                if (PickedObject == null)
+                {
+                    uIManager.AnimationMoveDownDropButton();
+                }
+               
+               
             }
         }
         else //Soltar el objeto
@@ -71,7 +73,7 @@ public class PickUpObjects : MonoBehaviour
     {
         if (objectToPickup != null && objectToPickup.GetComponent<ObjetoPickeable>().isPickeable == true && PickedObject == null)
         {
-            
+            uIManager.AnimationMoveUpDropButton();
             PickedObject = objectToPickup;
             PickedObject.GetComponent<ObjetoPickeable>().isPickeable = false;
             PickedObject.transform.SetParent(_interactionZone);
@@ -83,6 +85,8 @@ public class PickUpObjects : MonoBehaviour
             animPlayer.SetBool("isCatched", PickedObject);
 
         }
+
+       
 
     }
     

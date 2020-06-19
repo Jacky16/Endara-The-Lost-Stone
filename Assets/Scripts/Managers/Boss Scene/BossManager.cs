@@ -45,7 +45,9 @@ public class BossManager : MonoBehaviour
     {
         _virtualCamera.Priority = 0;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-                
+        SetCanOpenChallenge_1(false);
+        SetCanOpenChallenge_2(false);
+        SetCanOpenChallenge_3(true);
     }
     public void SubstractAttempBoss(Transform pos)
     {
@@ -103,10 +105,17 @@ public class BossManager : MonoBehaviour
         if (challenge == 3)
         {
             playableDirector_Reto_3.Play();
+            print((float)playableDirector_Reto_3.duration);
+            Invoke("PlayDeadAnimation",5);
         }
         RandomAnimBoss(Random.Range(1, 4));
     }
-
+    void PlayDeadAnimation()
+    {
+        PlayableDirector playableDirector;
+        playableDirector = transform.Find("Trono_Piedras").Find("Trono").Find("Boss").GetComponent<PlayableDirector>();
+        playableDirector.Play();
+    }
     void RandomAnimBoss(int number)
     {
         if(number == 1)
