@@ -23,6 +23,7 @@ public class GodManager : MonoBehaviour
         {
             PlayerMovement.isModeGod = !PlayerMovement.IsModeGod();
         }
+        
         if (PlayerMovement.IsModeGod())
         {
             canvasModeGod.SetActive(true);

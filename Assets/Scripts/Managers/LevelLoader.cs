@@ -29,6 +29,7 @@ public class LevelLoader : MonoBehaviour
     }
     IEnumerator LoadAsync(string sceneName)
     {
+        yield return new WaitForSeconds(.1f);
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
         _canvasLoadingScreen.SetActive(true);
         while (!operation.isDone)

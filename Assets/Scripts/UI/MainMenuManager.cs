@@ -6,6 +6,7 @@ using DG.Tweening;
 using Cinemachine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.Video;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -29,12 +30,28 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     Sprite _spritePS4Controls;
 
+    [Header("Video Principal Cinematica")]
+    [SerializeField]
+    VideoPlayer videoPlayer_PrimeraCinematica;
+    [SerializeField]
+    GameObject canvasCinematica;
 
     PlayerInput playerInput;
+    [SerializeField]
+    AudioSource mainMusic;
+    bool canPlayCinematic;
+    int firstCinematic;
+    [SerializeField]
+    LevelLoader levelLoader;
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        anim.DOFade(0, 4);
+        anim.DOFade(0, 1);
+    }
+    private void Start()
+    {
+        
+
     }
 
     public void Play()
@@ -56,9 +73,31 @@ public class MainMenuManager : MonoBehaviour
     }
     IEnumerator LoadSceneCoroutine(string scene)
     {
-        anim.DOFade(1, 1);
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(scene);
+        if (PlayerPrefs.HasKey("firstCinematic"))
+        {
+            canPlayCinematic = false;
+        }
+        else
+        {
+            PlayerPrefs.SetInt("firstCinematic", 0);
+            canPlayCinematic = true;
+        }
+        if (canPlayCinematic)
+        {
+            anim.DOFade(1, 1);
+            yield return new WaitForSeconds(1f);
+            PlayCinematica();
+            yield return new WaitForSeconds((float)videoPlayer_PrimeraCinematica.length + 1);
+            canvasCinematica.SetActive(false);
+            levelLoader.LoadScene();
+        }
+        else
+        {
+            anim.DOFade(1, 1);
+            yield return new WaitForSeconds(1f);
+            levelLoader.LoadScene();
+        }
+        
     }
     
     public void ChangeSpritesControlls()
@@ -78,5 +117,12 @@ public class MainMenuManager : MonoBehaviour
                 _imageControl.sprite = _spritePCcontrols;
                 break;
         }
+    }
+    void PlayCinematica()
+    {
+        mainMusic.DOFade(0, 1);
+        canvasCinematica.SetActive(true);
+        videoPlayer_PrimeraCinematica.Play();
+       
     }
 }

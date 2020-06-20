@@ -33,7 +33,7 @@ public class AudioSettings : MonoBehaviour
         sliderVolumenMusica.minValue = -60;
 
         sliderVolumenMusica.maxValue = -20;
-        sliderVolumenFX.value = sliderVolumenFX.maxValue;
+        
 
 
 
