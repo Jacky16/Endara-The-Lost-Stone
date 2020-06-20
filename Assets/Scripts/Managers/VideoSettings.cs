@@ -54,8 +54,12 @@ public class VideoSettings : MonoBehaviour
 
     public void SetResolution(int resolutionIndex)
     {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        if(resolutionIndex != null)
+        {
+            Resolution resolution = resolutions[resolutionIndex];
+            Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        }
+        
     }
     public void SetFullScree(bool fullScreen)
     {
@@ -87,7 +91,10 @@ public class VideoSettings : MonoBehaviour
     }
     public void SetContrast()
     {
-        colorAdjustments.contrast.value = _sliderContrast.value;
+        if(colorAdjustments != null)
+        {
+            colorAdjustments.contrast.value = _sliderContrast.value;
+        }
     }
     public void SetBrightness()
     {

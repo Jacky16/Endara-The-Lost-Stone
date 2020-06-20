@@ -47,7 +47,14 @@ public class GodManager : MonoBehaviour
     }
     public void Teleport(Transform tpPosition)
     {
-        playerTransform.DOMove(tpPosition.position, .1f);
+        if(tpPosition != null)
+        {
+            CharacterController cc = playerTransform.GetComponent<CharacterController>();
+            cc.enabled = false;
+            playerTransform.position = tpPosition.position;
+            cc.enabled = true;
+            print(tpPosition.name);
+        }
     }
     public float UnitsToJumpInModeGod()
     {

@@ -19,7 +19,7 @@ public class Camera2D : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.name == "Player")
         {
             StartCoroutine(SwitchToEnableCamera(other));
             other.transform.DOMoveZ(center2D.position.z, 1).SetEase(Ease.Linear);
@@ -27,7 +27,7 @@ public class Camera2D : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.name == "Player")
         {
             cameraVirtual.Priority = 11;
 
@@ -35,9 +35,8 @@ public class Camera2D : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.name == "Player" || other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerMovement>().SetPlayer2D(false);
             StartCoroutine(SwitchToDisableCamera(other));
 
         }
@@ -58,6 +57,7 @@ public class Camera2D : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         other.GetComponent<PlayerMovement>().SetPlayer2D(true);
+        cameraVirtual.gameObject.SetActive(true);
         cameraVirtual.enabled = true;
         cameraVirtual.Priority = 11;
         yield return new WaitForSeconds(1);
@@ -65,10 +65,12 @@ public class Camera2D : MonoBehaviour
     }
     IEnumerator SwitchToDisableCamera(Collider other)
     {
+        other.GetComponent<PlayerMovement>().SetPlayer2D(false);
         yield return new WaitForSeconds(0.5f);
         cameraVirtual.Follow = null;
         cameraVirtual.Priority = 0;
         cameraVirtual.enabled = false;
-        yield return null;
+        cameraVirtual.gameObject.SetActive(false);
+        
     }
 }

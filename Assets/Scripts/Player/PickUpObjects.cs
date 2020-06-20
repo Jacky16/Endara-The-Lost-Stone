@@ -53,6 +53,7 @@ public class PickUpObjects : MonoBehaviour
             if (PickedObject != null)
             {
                 uIManager.AnimationMoveDownDropButton();
+                uIManager.AnimationScaleDisableButtonCatch();
                 animPlayer.SetTrigger("PickUp");
                 _isCatched = false;
                 _canCatchObject = true;

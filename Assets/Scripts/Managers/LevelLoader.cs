@@ -17,15 +17,24 @@ public class LevelLoader : MonoBehaviour
     Slider slider;
     private void Awake()
     {
-        slider = _canvasLoadingScreen.GetComponentInChildren<Slider>();
+        if (_canvasLoadingScreen != null)
+            slider = _canvasLoadingScreen.GetComponentInChildren<Slider>();
     }
     private void Start()
     {
-        _canvasLoadingScreen.SetActive(false);
+        if (_canvasLoadingScreen != null)
+            _canvasLoadingScreen.SetActive(false);
     }
     public void LoadScene()
     {
-        StartCoroutine(LoadAsync(_sceneToLoad));
+        if(_canvasLoadingScreen != null)
+        {
+            StartCoroutine(LoadAsync(_sceneToLoad));
+        }
+        else
+        {
+            SceneManager.LoadScene(_sceneToLoad);
+        }
     }
     IEnumerator LoadAsync(string sceneName)
     {

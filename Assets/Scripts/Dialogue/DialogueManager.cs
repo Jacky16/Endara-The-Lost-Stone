@@ -53,6 +53,7 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         rectTransform_Dialogue.anchoredPosition = new Vector2(0, -400);
+        
     }
     public void StartDialogue(Dialogue dialogue)
     {

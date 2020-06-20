@@ -21,11 +21,11 @@ public class MusicFader : MonoBehaviour
     {
         mainMusic.DOFade(0, 1);
         print(mainMusic.volume);
-        audioSourceChallengeMusic.DOFade(0.3f, 1).OnStart(() => audioSourceChallengeMusic.PlayOneShot(challengeMusic));
+        audioSourceChallengeMusic.DOFade(1f, 1).OnStart(() => audioSourceChallengeMusic.PlayOneShot(challengeMusic));
     }
     public void FadeOutMusic()
     {
-        mainMusic.DOFade(0.3f, 1);
+        mainMusic.DOFade(.5f, 1);
         audioSourceChallengeMusic.DOFade(0f, 1);
     }
 

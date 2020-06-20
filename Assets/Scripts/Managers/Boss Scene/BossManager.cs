@@ -8,10 +8,8 @@ using UnityEngine.Playables;
 
 public class BossManager : MonoBehaviour
 {
-    float _lifeBoss;
-    bool canHitMe;
     [SerializeField]
-    int _attemptLifeBoss = 4;
+    int _attemptLifeBoss = 3;
     [SerializeField]
     CinemachineVirtualCamera _virtualCamera;
     [SerializeField]
@@ -41,6 +39,7 @@ public class BossManager : MonoBehaviour
     Transform transformSpawnTrono;
     [SerializeField]
     GameObject tronoPrefab;
+
     private void Start()
     {
         _virtualCamera.Priority = 0;
@@ -52,10 +51,7 @@ public class BossManager : MonoBehaviour
     public void SubstractAttempBoss(Transform pos)
     {
         StartCoroutine(RestAttempBossCoroutine(pos));
-        if(_attemptLifeBoss <= 0) // Cuando este abajo de todo el boss se podra pegarle para que reciba impactos del player
-        {
-            canHitMe = true;
-        }
+        
     }
     IEnumerator RestAttempBossCoroutine(Transform posDoorChallange) // Animacion camara cuando le quitas vida al Boss y mover al player a la zona del boss
     {
@@ -116,6 +112,7 @@ public class BossManager : MonoBehaviour
         playableDirector = transform.Find("Trono_Piedras").Find("Trono").Find("Boss").GetComponent<PlayableDirector>();
         playableDirector.Play();
     }
+   
     void RandomAnimBoss(int number)
     {
         if(number == 1)
