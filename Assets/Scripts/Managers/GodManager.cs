@@ -38,11 +38,9 @@ public class GodManager : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+                playerTransform.name = "Player";
+                canvasModeGod.SetActive(false);
             }
-            canvasModeGod.SetActive(false);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            playerTransform.name = "Player";
         }
 
     }

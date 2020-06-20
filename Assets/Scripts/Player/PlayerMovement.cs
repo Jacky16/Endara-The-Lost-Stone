@@ -348,6 +348,7 @@ public class PlayerMovement : MonoBehaviour
             _coinManager.SumCoins();
             Destroy(other.gameObject);
         }
+        
     }
     public void SetPlayerCanMove()
     {

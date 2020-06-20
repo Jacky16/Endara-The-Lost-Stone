@@ -27,10 +27,13 @@ public class ExitDoor : MonoBehaviour
         bossManager.SubstractAttempBoss(_positionDoorChallenge);
         //Parar la cuenta atras
         _timeManager.SetCanSubstractTime(false);
+        //Que no puedas entrar en ningun reto
         bossManager.SetCanOpenChallenge_1(false);
         bossManager.SetCanOpenChallenge_2(false);
         bossManager.SetCanOpenChallenge_3(false);
+        //Haces una animacion del boss
         bossManager.DoAnimationBoss(3);
+        PlayerMovement.canMove = false;
         OnChallengeComplete.Invoke();
     }
     private void OnTriggerEnter(Collider other)

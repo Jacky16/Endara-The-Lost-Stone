@@ -27,10 +27,16 @@ public class AudioSettings : MonoBehaviour
         sliderVolumenMusica.value = PlayerPrefs.GetFloat("MusicVolume");
         sliderVolumenFX.value = PlayerPrefs.GetFloat("FxVolume");
 
+        //Setear valores Slider
         sliderVolumenFX.minValue = -60;
         sliderVolumenGeneral.minValue = -60;
         sliderVolumenMusica.minValue = -60;
-      
+
+        sliderVolumenMusica.maxValue = -20;
+        sliderVolumenFX.value = sliderVolumenFX.maxValue;
+
+
+
     }
 
     // Update is called once per frame
