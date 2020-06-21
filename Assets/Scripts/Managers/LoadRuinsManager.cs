@@ -8,14 +8,16 @@ public class LoadRuinsManager : MonoBehaviour
     Animator animFade;
 
     LevelLoader _levelLoader;
+    bool isLoaded;
     private void Awake()
     {
         _levelLoader = GetComponent<LevelLoader>();
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isLoaded)
         {
+            isLoaded = true;
             StartCoroutine(TransitionRuinsScene());
         }
     }

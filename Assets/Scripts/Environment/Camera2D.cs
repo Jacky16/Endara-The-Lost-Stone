@@ -22,7 +22,8 @@ public class Camera2D : MonoBehaviour
         if (other.tag == "Player" || other.name == "Player")
         {
             StartCoroutine(SwitchToEnableCamera(other));
-            other.transform.DOMoveZ(center2D.position.z, 1).SetEase(Ease.Linear);
+            CharacterController cc = other.GetComponent<CharacterController>();
+            other.transform.DOMoveZ(center2D.position.z, .5f).SetEase(Ease.Linear).OnStart(() => cc.enabled = false).OnComplete(() => cc.enabled = true);
         }
     }
     private void OnTriggerStay(Collider other)

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 185445340}
   m_Layer: 13
   m_Name: Plataforma_03
-  m_TagString: Untagged
+  m_TagString: Ground_Piedra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
