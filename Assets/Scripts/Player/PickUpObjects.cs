@@ -48,7 +48,6 @@ public class PickUpObjects : MonoBehaviour
             }
         }
         else //Soltar el objeto
-
         {
             if (PickedObject != null)
             {

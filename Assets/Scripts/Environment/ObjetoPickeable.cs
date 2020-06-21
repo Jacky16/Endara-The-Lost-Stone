@@ -45,6 +45,10 @@ public class ObjetoPickeable : MonoBehaviour
 
                 uIManager.AnimationMoveDownButtonsRotate();
             }
+            if(!isPickeable && !isRoteable)
+            {
+                uIManager.AnimationScaleDisableButtonCatch();
+            }
         }  
     }
     private void OnTriggerExit(Collider other)
@@ -74,8 +78,11 @@ public class ObjetoPickeable : MonoBehaviour
 
                 uIManager.AnimationMoveDownButtonsRotate();
             }
-            
-            //uIManager.AnimationMoveDownDropButton();
+            if (!isPickeable && !isRoteable)
+            {
+                uIManager.AnimationScaleDisableButtonCatch();
+            }
+
         }
         
 

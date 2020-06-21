@@ -93,7 +93,10 @@ public class UIManager : MonoBehaviour
     {
         ChangeUI();
     }
-   
+    private void Update()
+    {
+        ChangeUI();
+    }
     #region Animations
     //Animaciones botones de rotar
     public void AnimationMoveUpButtonsRotate()
