@@ -106,9 +106,9 @@ public class ColumnPuzzle2 : MonoBehaviour
                 break;
         }
     }
-
-    
-    
-
+    private void OnDisable()
+    {
+        uIManager.AnimationMoveDownButtonsRotate();
+    }
 
 }

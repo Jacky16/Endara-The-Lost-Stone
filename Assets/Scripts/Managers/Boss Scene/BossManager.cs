@@ -30,6 +30,8 @@ public class BossManager : MonoBehaviour
     PlayableDirector playableDirector_Reto_2;
     [SerializeField]
     PlayableDirector playableDirector_Reto_3;
+    [SerializeField]
+    PlayableDirector playableDirector_DeadAnimation;
 
     [SerializeField]
     Animator animBoss;
@@ -40,18 +42,27 @@ public class BossManager : MonoBehaviour
     [SerializeField]
     GameObject tronoPrefab;
 
+    //Music cinematic dead
+    MusicFader musicFader;
+    AudioSource audioSource;
+
+    private void Awake()
+    {
+        musicFader = GetComponent<MusicFader>();
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void Start()
     {
         _virtualCamera.Priority = 0;
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         SetCanOpenChallenge_1(true);
         SetCanOpenChallenge_2(false);
         SetCanOpenChallenge_3(false);
+        playableDirector_DeadAnimation.Stop();
     }
     public void SubstractAttempBoss(Transform pos)
     {
-        StartCoroutine(RestAttempBossCoroutine(pos));
-        
+        StartCoroutine(RestAttempBossCoroutine(pos));     
     }
     IEnumerator RestAttempBossCoroutine(Transform posDoorChallange) // Animacion camara cuando le quitas vida al Boss y mover al player a la zona del boss
     {
@@ -88,6 +99,8 @@ public class BossManager : MonoBehaviour
     {
         enterchallenge_3.CanEnter(b);
     }
+
+    //Se ejecuta cada vez que te pasas un reto
     public void DoAnimationBoss(int challenge)
     {
         if(challenge == 1)
@@ -101,35 +114,21 @@ public class BossManager : MonoBehaviour
         if (challenge == 3)
         {
             playableDirector_Reto_3.Play();
-            print((float)playableDirector_Reto_3.duration);
-            Invoke("PlayDeadAnimation",5);
+            Invoke("PlayDeadAnimation", 5);
         }
-        RandomAnimBoss(Random.Range(1, 4));
+        animBoss.SetTrigger("Angry_1");
     }
     void PlayDeadAnimation()
     {
-        PlayableDirector playableDirector;
-        playableDirector = transform.Find("Trono_Piedras").Find("Trono").Find("Boss").GetComponent<PlayableDirector>();
-        playableDirector.Play();
+        playableDirector_DeadAnimation.Play();
+        musicFader.FadeInMusic();
+        Invoke("StopMusicCinematic", 25);
+        
+    }
+    void StopMusicCinematic()
+    {
+        audioSource.DOFade(0, 2);
     }
    
-    void RandomAnimBoss(int number)
-    {
-        if(number == 1)
-        {
-            animBoss.SetTrigger("Angry_1");
-        }
-        else if(number == 2)
-        {
-            animBoss.SetTrigger("Angry_2");
-        }
-        else if(number == 3)
-        {
-            animBoss.SetTrigger("Angry_3");
-        }
-        else if(number == 4)
-        {
-            animBoss.SetTrigger("Angry_4");
-        }
-    }
+    
 }

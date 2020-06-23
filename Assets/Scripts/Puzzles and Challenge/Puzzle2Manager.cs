@@ -60,7 +60,13 @@ public class Puzzle2Manager : MonoBehaviour
     void PlayCinematic()
     {
         audioSource.PlayOneShot(audioCorrectPuzzle);
-
         playableDirector.Play();
+        
+        //Desactivar los objetos triggers para quitar la UI de rotar
+        ColumnPuzzle2[] columnPuzzle2s = GetComponentsInChildren<ColumnPuzzle2>();
+        foreach(ColumnPuzzle2 cp2 in columnPuzzle2s)
+        {
+            cp2.gameObject.SetActive(false);
+        }
     }
 }
