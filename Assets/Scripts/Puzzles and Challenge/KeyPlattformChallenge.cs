@@ -20,6 +20,8 @@ public class KeyPlattformChallenge : MonoBehaviour
     AudioSource audioSource;
     [SerializeField]
     AudioClip pickUpKeyAudio;
+    [SerializeField]
+    AudioClip keyAudio;
 
     bool isKeyPicked = false;
     private void Awake()
@@ -46,22 +48,32 @@ public class KeyPlattformChallenge : MonoBehaviour
         audioSource.loop = false;
         audioSource.playOnAwake = false;
         audioSource.PlayOneShot(pickUpKeyAudio);
+
         _virtualCamera.Priority = 10;
+
         PlayerMovement.canMove = false;
+
         _zonaSaltosManager.DisableGravityPlattforms();
 
         yield return new WaitForSeconds(2);
 
         _gameObjectExit.SetActive(true);
         currentWall.SetActive(false);
+
         PlayerMovement.canMove = false;
 
         yield return new WaitForSeconds(2);
 
-        PlayerMovement.canMove = true;
         _virtualCamera.Priority = 0;
         PlayerMovement.canMove = true;
         _zonaSaltosManager.ActivateGravityPlattforms();
         gameObject.SetActive(false);
+    }
+    private void OnEnable()
+    {
+        isKeyPicked = false;
+        audioSource.playOnAwake = true;
+        audioSource.loop = true;
+        audioSource.PlayOneShot(keyAudio);
     }
 }
