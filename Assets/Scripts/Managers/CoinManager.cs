@@ -14,6 +14,7 @@ public class CoinManager : MonoBehaviour
     RectTransform _rectTransformImageCoin;
     [SerializeField]
     RectTransform _rectTransformTextCoin;
+    bool sumCoins = false;
     private void Start()
     {
         coins = PlayerPrefs.GetInt("coins");
@@ -21,11 +22,15 @@ public class CoinManager : MonoBehaviour
     }
     public void SumCoins()
     {
-        coins = coins + 1;
-        _textCoins.text = coins.ToString();
-        PlayerPrefs.SetInt("coins", coins);
-        print("Coins: " + coins);
-        StartCoroutine(AnimationGUI());
+        if (!sumCoins)
+        {
+            sumCoins = true;
+            coins = coins + 1;
+            _textCoins.text = coins.ToString();
+            PlayerPrefs.SetInt("coins", coins);
+            print("Coins: " + coins);
+            StartCoroutine(AnimationGUI());
+        }
     }
     IEnumerator AnimationGUI()
     {
@@ -34,7 +39,5 @@ public class CoinManager : MonoBehaviour
         yield return new WaitForSeconds(5);
         _rectTransformImageCoin.DOAnchorPosX(-170, 0.5f).SetEase(Ease.OutBack);
         _rectTransformTextCoin.DOAnchorPosY(150, 0.5f).SetEase(Ease.OutBack);
-
-
     }
 }

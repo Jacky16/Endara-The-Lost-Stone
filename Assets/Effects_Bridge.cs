@@ -26,7 +26,7 @@ public class Effects_Bridge : MonoBehaviour
         }
 
         musicGamePlay.DOFade(0, 2);
-        musicBridge.DOFade(.5f, 2).OnStart(() => musicBridge.Play());
+        musicBridge.DOFade(0.8f, 2).OnStart(() => musicBridge.Play());
     }
     public void DisableEffectsBridge()
     {
