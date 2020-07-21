@@ -84,7 +84,7 @@ public class BossManager : MonoBehaviour
         SetCanOpenChallenge_1(true);
         SetCanOpenChallenge_2(false);
         SetCanOpenChallenge_3(false);
-        Destroy(transform.FindChild("Trono_Piedras"));
+        Destroy(transform.Find("Trono_Piedras"));
         Instantiate(tronoPrefab, transformSpawnTrono.position, Quaternion.identity,transform);
     }
     public void SetCanOpenChallenge_1(bool b)
