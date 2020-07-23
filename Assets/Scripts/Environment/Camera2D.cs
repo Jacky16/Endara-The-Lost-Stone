@@ -23,8 +23,7 @@ public class Camera2D : MonoBehaviour
         {
             StartCoroutine(SwitchToEnableCamera(other));
             PlayerMovement pm = other.GetComponent<PlayerMovement>();
-            pm.enabled = false;
-            other.transform.DOMoveZ(center2D.position.z, .1f).SetEase(Ease.Linear).OnComplete(() => pm.enabled = true);
+            other.transform.DOMoveZ(center2D.position.z, .1f).SetEase(Ease.Linear).OnComplete(() => pm.enabled = true).OnStart(() => pm.enabled = false);
         }
     }
     private void OnTriggerStay(Collider other)
@@ -32,7 +31,10 @@ public class Camera2D : MonoBehaviour
         if (other.tag == "Player" || other.name == "Player")
         {
             cameraVirtual.Priority = 11;
-
+            if(Vector3.Distance(other.transform.position,center2D.position) > .5f)
+            {
+                other.transform.DOMoveZ(center2D.position.z, 1f);
+            }
         }
     }
     private void OnTriggerExit(Collider other)
@@ -40,7 +42,6 @@ public class Camera2D : MonoBehaviour
         if (other.gameObject.name == "Player" || other.CompareTag("Player"))
         {
             StartCoroutine(SwitchToDisableCamera(other));
-
         }
     }
     public void ResetPosition()
@@ -57,6 +58,9 @@ public class Camera2D : MonoBehaviour
 
     IEnumerator SwitchToEnableCamera(Collider other)
     {
+        PlayerMovement.canMove = false;
+        yield return new WaitForSeconds(.01f);
+        PlayerMovement.canMove = true;
         yield return new WaitForSeconds(1f);
         other.GetComponent<PlayerMovement>().SetPlayer2D(true);
         cameraVirtual.gameObject.SetActive(true);

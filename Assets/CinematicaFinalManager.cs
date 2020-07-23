@@ -12,11 +12,15 @@ public class CinematicaFinalManager : MonoBehaviour
     GameObject canvasQuit;
     private void Awake()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         Invoke("QuitCanvas", (float)videoPlayer_CinematicaFinal.length);
     }
 
     void QuitCanvas()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         canvasQuit.SetActive(true);
     }
     public void Quit()

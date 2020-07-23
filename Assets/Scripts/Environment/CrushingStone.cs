@@ -50,7 +50,6 @@ public class CrushingStone : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-
         if (other.CompareTag("Player"))
         {
             rockTransform.GetComponent<BoxCollider>().isTrigger = false;
